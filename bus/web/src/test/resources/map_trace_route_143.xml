@@ -1,0 +1,2291 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<histdata>
+
+   <route_info>
+      <id>143</id>
+      <color>009900</color>
+      <transparency>60</transparency>
+      <line_width>7</line_width>
+   </route_info>
+
+   <item>
+      <sequence_no>1</sequence_no>
+      <latitude>42.28658</latitude>
+      <longitude>-83.73204</longitude>
+   </item>
+
+   <item>
+      <sequence_no>2</sequence_no>
+      <latitude>42.28658</latitude>
+      <longitude>-83.73205</longitude>
+   </item>
+
+   <item>
+      <sequence_no>3</sequence_no>
+      <latitude>42.28657</latitude>
+      <longitude>-83.7321</longitude>
+   </item>
+
+   <item>
+      <sequence_no>4</sequence_no>
+      <latitude>42.2865</latitude>
+      <longitude>-83.73236</longitude>
+   </item>
+
+   <item>
+      <sequence_no>5</sequence_no>
+      <latitude>42.28639</latitude>
+      <longitude>-83.73246</longitude>
+   </item>
+
+   <item>
+      <sequence_no>6</sequence_no>
+      <latitude>42.28627</latitude>
+      <longitude>-83.73248</longitude>
+   </item>
+
+   <item>
+      <sequence_no>7</sequence_no>
+      <latitude>42.28615</latitude>
+      <longitude>-83.73242</longitude>
+   </item>
+
+   <item>
+      <sequence_no>8</sequence_no>
+      <latitude>42.28603</latitude>
+      <longitude>-83.73234</longitude>
+   </item>
+
+   <item>
+      <sequence_no>9</sequence_no>
+      <latitude>42.2859</latitude>
+      <longitude>-83.73225</longitude>
+   </item>
+
+   <item>
+      <sequence_no>10</sequence_no>
+      <latitude>42.28576</latitude>
+      <longitude>-83.73213</longitude>
+   </item>
+
+   <item>
+      <sequence_no>11</sequence_no>
+      <latitude>42.28565</latitude>
+      <longitude>-83.732</longitude>
+   </item>
+
+   <item>
+      <sequence_no>12</sequence_no>
+      <latitude>42.28555</latitude>
+      <longitude>-83.73186</longitude>
+   </item>
+
+   <item>
+      <sequence_no>13</sequence_no>
+      <latitude>42.28546</latitude>
+      <longitude>-83.73169</longitude>
+   </item>
+
+   <item>
+      <sequence_no>14</sequence_no>
+      <latitude>42.28538</latitude>
+      <longitude>-83.73149</longitude>
+   </item>
+
+   <item>
+      <sequence_no>15</sequence_no>
+      <latitude>42.28532</latitude>
+      <longitude>-83.7313</longitude>
+   </item>
+
+   <item>
+      <sequence_no>16</sequence_no>
+      <latitude>42.28527</latitude>
+      <longitude>-83.73112</longitude>
+   </item>
+
+   <item>
+      <sequence_no>17</sequence_no>
+      <latitude>42.28525</latitude>
+      <longitude>-83.73094</longitude>
+   </item>
+
+   <item>
+      <sequence_no>18</sequence_no>
+      <latitude>42.28525</latitude>
+      <longitude>-83.73091</longitude>
+   </item>
+
+   <item>
+      <sequence_no>19</sequence_no>
+      <latitude>42.28525</latitude>
+      <longitude>-83.73092</longitude>
+   </item>
+
+   <item>
+      <sequence_no>20</sequence_no>
+      <latitude>42.28524</latitude>
+      <longitude>-83.73091</longitude>
+   </item>
+
+   <item>
+      <sequence_no>21</sequence_no>
+      <latitude>42.28528</latitude>
+      <longitude>-83.73068</longitude>
+   </item>
+
+   <item>
+      <sequence_no>22</sequence_no>
+      <latitude>42.28529</latitude>
+      <longitude>-83.73047</longitude>
+   </item>
+
+   <item>
+      <sequence_no>23</sequence_no>
+      <latitude>42.28529</latitude>
+      <longitude>-83.73023</longitude>
+   </item>
+
+   <item>
+      <sequence_no>24</sequence_no>
+      <latitude>42.2853</latitude>
+      <longitude>-83.72999</longitude>
+   </item>
+
+   <item>
+      <sequence_no>25</sequence_no>
+      <latitude>42.2853</latitude>
+      <longitude>-83.72962</longitude>
+   </item>
+
+   <item>
+      <sequence_no>26</sequence_no>
+      <latitude>42.28531</latitude>
+      <longitude>-83.72939</longitude>
+   </item>
+
+   <item>
+      <sequence_no>27</sequence_no>
+      <latitude>42.28531</latitude>
+      <longitude>-83.72917</longitude>
+   </item>
+
+   <item>
+      <sequence_no>28</sequence_no>
+      <latitude>42.28531</latitude>
+      <longitude>-83.72898</longitude>
+   </item>
+
+   <item>
+      <sequence_no>29</sequence_no>
+      <latitude>42.2853</latitude>
+      <longitude>-83.72884</longitude>
+   </item>
+
+   <item>
+      <sequence_no>30</sequence_no>
+      <latitude>42.28529</latitude>
+      <longitude>-83.72872</longitude>
+   </item>
+
+   <item>
+      <sequence_no>31</sequence_no>
+      <latitude>42.28522</latitude>
+      <longitude>-83.72838</longitude>
+   </item>
+
+   <item>
+      <sequence_no>32</sequence_no>
+      <latitude>42.28516</latitude>
+      <longitude>-83.72821</longitude>
+   </item>
+
+   <item>
+      <sequence_no>33</sequence_no>
+      <latitude>42.28506</latitude>
+      <longitude>-83.72805</longitude>
+   </item>
+
+   <item>
+      <sequence_no>34</sequence_no>
+      <latitude>42.28494</latitude>
+      <longitude>-83.72787</longitude>
+   </item>
+
+   <item>
+      <sequence_no>35</sequence_no>
+      <latitude>42.2848</latitude>
+      <longitude>-83.72769</longitude>
+   </item>
+
+   <item>
+      <sequence_no>36</sequence_no>
+      <latitude>42.28464</latitude>
+      <longitude>-83.72756</longitude>
+   </item>
+
+   <item>
+      <sequence_no>37</sequence_no>
+      <latitude>42.28449</latitude>
+      <longitude>-83.72745</longitude>
+   </item>
+
+   <item>
+      <sequence_no>38</sequence_no>
+      <latitude>42.28433</latitude>
+      <longitude>-83.72739</longitude>
+   </item>
+
+   <item>
+      <sequence_no>39</sequence_no>
+      <latitude>42.28415</latitude>
+      <longitude>-83.72735</longitude>
+   </item>
+
+   <item>
+      <sequence_no>40</sequence_no>
+      <latitude>42.28407</latitude>
+      <longitude>-83.72731</longitude>
+   </item>
+
+   <item>
+      <sequence_no>41</sequence_no>
+      <latitude>42.28399</latitude>
+      <longitude>-83.72725</longitude>
+   </item>
+
+   <item>
+      <sequence_no>42</sequence_no>
+      <latitude>42.28388</latitude>
+      <longitude>-83.72719</longitude>
+   </item>
+
+   <item>
+      <sequence_no>43</sequence_no>
+      <latitude>42.28376</latitude>
+      <longitude>-83.72711</longitude>
+   </item>
+
+   <item>
+      <sequence_no>44</sequence_no>
+      <latitude>42.2836</latitude>
+      <longitude>-83.72702</longitude>
+   </item>
+
+   <item>
+      <sequence_no>45</sequence_no>
+      <latitude>42.28343</latitude>
+      <longitude>-83.72691</longitude>
+   </item>
+
+   <item>
+      <sequence_no>46</sequence_no>
+      <latitude>42.28324</latitude>
+      <longitude>-83.72679</longitude>
+   </item>
+
+   <item>
+      <sequence_no>47</sequence_no>
+      <latitude>42.28306</latitude>
+      <longitude>-83.72668</longitude>
+   </item>
+
+   <item>
+      <sequence_no>48</sequence_no>
+      <latitude>42.28275</latitude>
+      <longitude>-83.72649</longitude>
+   </item>
+
+   <item>
+      <sequence_no>49</sequence_no>
+      <latitude>42.28264</latitude>
+      <longitude>-83.72642</longitude>
+   </item>
+
+   <item>
+      <sequence_no>50</sequence_no>
+      <latitude>42.28255</latitude>
+      <longitude>-83.72637</longitude>
+   </item>
+
+   <item>
+      <sequence_no>51</sequence_no>
+      <latitude>42.28244</latitude>
+      <longitude>-83.72631</longitude>
+   </item>
+
+   <item>
+      <sequence_no>52</sequence_no>
+      <latitude>42.28231</latitude>
+      <longitude>-83.72627</longitude>
+   </item>
+
+   <item>
+      <sequence_no>53</sequence_no>
+      <latitude>42.28216</latitude>
+      <longitude>-83.72625</longitude>
+   </item>
+
+   <item>
+      <sequence_no>54</sequence_no>
+      <latitude>42.28189</latitude>
+      <longitude>-83.72635</longitude>
+   </item>
+
+   <item>
+      <sequence_no>55</sequence_no>
+      <latitude>42.28171</latitude>
+      <longitude>-83.7265</longitude>
+   </item>
+
+   <item>
+      <sequence_no>56</sequence_no>
+      <latitude>42.28158</latitude>
+      <longitude>-83.7267</longitude>
+   </item>
+
+   <item>
+      <sequence_no>57</sequence_no>
+      <latitude>42.2815</latitude>
+      <longitude>-83.72695</longitude>
+   </item>
+
+   <item>
+      <sequence_no>58</sequence_no>
+      <latitude>42.28147</latitude>
+      <longitude>-83.72721</longitude>
+   </item>
+
+   <item>
+      <sequence_no>59</sequence_no>
+      <latitude>42.28149</latitude>
+      <longitude>-83.72747</longitude>
+   </item>
+
+   <item>
+      <sequence_no>60</sequence_no>
+      <latitude>42.28148</latitude>
+      <longitude>-83.72772</longitude>
+   </item>
+
+   <item>
+      <sequence_no>61</sequence_no>
+      <latitude>42.28148</latitude>
+      <longitude>-83.72798</longitude>
+   </item>
+
+   <item>
+      <sequence_no>62</sequence_no>
+      <latitude>42.28147</latitude>
+      <longitude>-83.72836</longitude>
+   </item>
+
+   <item>
+      <sequence_no>63</sequence_no>
+      <latitude>42.28147</latitude>
+      <longitude>-83.72861</longitude>
+   </item>
+
+   <item>
+      <sequence_no>64</sequence_no>
+      <latitude>42.28144</latitude>
+      <longitude>-83.72883</longitude>
+   </item>
+
+   <item>
+      <sequence_no>65</sequence_no>
+      <latitude>42.28144</latitude>
+      <longitude>-83.72897</longitude>
+   </item>
+
+   <item>
+      <sequence_no>66</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.72909</longitude>
+   </item>
+
+   <item>
+      <sequence_no>67</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.72926</longitude>
+   </item>
+
+   <item>
+      <sequence_no>68</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.72944</longitude>
+   </item>
+
+   <item>
+      <sequence_no>69</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.72964</longitude>
+   </item>
+
+   <item>
+      <sequence_no>70</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.72985</longitude>
+   </item>
+
+   <item>
+      <sequence_no>71</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.73008</longitude>
+   </item>
+
+   <item>
+      <sequence_no>72</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.73032</longitude>
+   </item>
+
+   <item>
+      <sequence_no>73</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.73055</longitude>
+   </item>
+
+   <item>
+      <sequence_no>74</sequence_no>
+      <latitude>42.28142</latitude>
+      <longitude>-83.73074</longitude>
+   </item>
+
+   <item>
+      <sequence_no>75</sequence_no>
+      <latitude>42.28144</latitude>
+      <longitude>-83.73087</longitude>
+   </item>
+
+   <item>
+      <sequence_no>76</sequence_no>
+      <latitude>42.2815</latitude>
+      <longitude>-83.73092</longitude>
+   </item>
+
+   <item>
+      <sequence_no>77</sequence_no>
+      <latitude>42.28153</latitude>
+      <longitude>-83.73095</longitude>
+   </item>
+
+   <item>
+      <sequence_no>78</sequence_no>
+      <latitude>42.28155</latitude>
+      <longitude>-83.73097</longitude>
+   </item>
+
+   <item>
+      <sequence_no>79</sequence_no>
+      <latitude>42.28163</latitude>
+      <longitude>-83.73104</longitude>
+   </item>
+
+   <item>
+      <sequence_no>80</sequence_no>
+      <latitude>42.28178</latitude>
+      <longitude>-83.73104</longitude>
+   </item>
+
+   <item>
+      <sequence_no>81</sequence_no>
+      <latitude>42.28184</latitude>
+      <longitude>-83.73102</longitude>
+   </item>
+
+   <item>
+      <sequence_no>82</sequence_no>
+      <latitude>42.28187</latitude>
+      <longitude>-83.73103</longitude>
+   </item>
+
+   <item>
+      <sequence_no>83</sequence_no>
+      <latitude>42.28194</latitude>
+      <longitude>-83.73104</longitude>
+   </item>
+
+   <item>
+      <sequence_no>84</sequence_no>
+      <latitude>42.28207</latitude>
+      <longitude>-83.73107</longitude>
+   </item>
+
+   <item>
+      <sequence_no>85</sequence_no>
+      <latitude>42.2822</latitude>
+      <longitude>-83.73104</longitude>
+   </item>
+
+   <item>
+      <sequence_no>86</sequence_no>
+      <latitude>42.28232</latitude>
+      <longitude>-83.73097</longitude>
+   </item>
+
+   <item>
+      <sequence_no>87</sequence_no>
+      <latitude>42.28241</latitude>
+      <longitude>-83.73096</longitude>
+   </item>
+
+   <item>
+      <sequence_no>88</sequence_no>
+      <latitude>42.28248</latitude>
+      <longitude>-83.73107</longitude>
+   </item>
+
+   <item>
+      <sequence_no>89</sequence_no>
+      <latitude>42.28244</latitude>
+      <longitude>-83.7313</longitude>
+   </item>
+
+   <item>
+      <sequence_no>90</sequence_no>
+      <latitude>42.28238</latitude>
+      <longitude>-83.73145</longitude>
+   </item>
+
+   <item>
+      <sequence_no>91</sequence_no>
+      <latitude>42.28236</latitude>
+      <longitude>-83.73166</longitude>
+   </item>
+
+   <item>
+      <sequence_no>92</sequence_no>
+      <latitude>42.28236</latitude>
+      <longitude>-83.73192</longitude>
+   </item>
+
+   <item>
+      <sequence_no>93</sequence_no>
+      <latitude>42.28235</latitude>
+      <longitude>-83.73219</longitude>
+   </item>
+
+   <item>
+      <sequence_no>94</sequence_no>
+      <latitude>42.28235</latitude>
+      <longitude>-83.73246</longitude>
+   </item>
+
+   <item>
+      <sequence_no>95</sequence_no>
+      <latitude>42.28235</latitude>
+      <longitude>-83.73271</longitude>
+   </item>
+
+   <item>
+      <sequence_no>96</sequence_no>
+      <latitude>42.28236</latitude>
+      <longitude>-83.73293</longitude>
+   </item>
+
+   <item>
+      <sequence_no>97</sequence_no>
+      <latitude>42.28236</latitude>
+      <longitude>-83.7331</longitude>
+   </item>
+
+   <item>
+      <sequence_no>98</sequence_no>
+      <latitude>42.28236</latitude>
+      <longitude>-83.73325</longitude>
+   </item>
+
+   <item>
+      <sequence_no>99</sequence_no>
+      <latitude>42.28236</latitude>
+      <longitude>-83.73338</longitude>
+   </item>
+
+   <item>
+      <sequence_no>100</sequence_no>
+      <latitude>42.28236</latitude>
+      <longitude>-83.73338</longitude>
+   </item>
+
+   <item>
+      <sequence_no>101</sequence_no>
+      <latitude>42.28237</latitude>
+      <longitude>-83.73348</longitude>
+   </item>
+
+   <item>
+      <sequence_no>102</sequence_no>
+      <latitude>42.28241</latitude>
+      <longitude>-83.73354</longitude>
+   </item>
+
+   <item>
+      <sequence_no>103</sequence_no>
+      <latitude>42.2825</latitude>
+      <longitude>-83.73353</longitude>
+   </item>
+
+   <item>
+      <sequence_no>104</sequence_no>
+      <latitude>42.28257</latitude>
+      <longitude>-83.73348</longitude>
+   </item>
+
+   <item>
+      <sequence_no>105</sequence_no>
+      <latitude>42.28266</latitude>
+      <longitude>-83.73347</longitude>
+   </item>
+
+   <item>
+      <sequence_no>106</sequence_no>
+      <latitude>42.28271</latitude>
+      <longitude>-83.73348</longitude>
+   </item>
+
+   <item>
+      <sequence_no>107</sequence_no>
+      <latitude>42.28283</latitude>
+      <longitude>-83.73352</longitude>
+   </item>
+
+   <item>
+      <sequence_no>108</sequence_no>
+      <latitude>42.28296</latitude>
+      <longitude>-83.73354</longitude>
+   </item>
+
+   <item>
+      <sequence_no>109</sequence_no>
+      <latitude>42.28309</latitude>
+      <longitude>-83.73358</longitude>
+   </item>
+
+   <item>
+      <sequence_no>110</sequence_no>
+      <latitude>42.28314</latitude>
+      <longitude>-83.73361</longitude>
+   </item>
+
+   <item>
+      <sequence_no>111</sequence_no>
+      <latitude>42.28323</latitude>
+      <longitude>-83.73386</longitude>
+   </item>
+
+   <item>
+      <sequence_no>112</sequence_no>
+      <latitude>42.28323</latitude>
+      <longitude>-83.73406</longitude>
+   </item>
+
+   <item>
+      <sequence_no>113</sequence_no>
+      <latitude>42.28322</latitude>
+      <longitude>-83.73426</longitude>
+   </item>
+
+   <item>
+      <sequence_no>114</sequence_no>
+      <latitude>42.28322</latitude>
+      <longitude>-83.73446</longitude>
+   </item>
+
+   <item>
+      <sequence_no>115</sequence_no>
+      <latitude>42.28321</latitude>
+      <longitude>-83.73464</longitude>
+   </item>
+
+   <item>
+      <sequence_no>116</sequence_no>
+      <latitude>42.28321</latitude>
+      <longitude>-83.73477</longitude>
+   </item>
+
+   <item>
+      <sequence_no>117</sequence_no>
+      <latitude>42.28321</latitude>
+      <longitude>-83.7349</longitude>
+   </item>
+
+   <item>
+      <sequence_no>118</sequence_no>
+      <latitude>42.28321</latitude>
+      <longitude>-83.735</longitude>
+   </item>
+
+   <item>
+      <sequence_no>119</sequence_no>
+      <latitude>42.28318</latitude>
+      <longitude>-83.73509</longitude>
+   </item>
+
+   <item>
+      <sequence_no>120</sequence_no>
+      <latitude>42.28318</latitude>
+      <longitude>-83.73516</longitude>
+   </item>
+
+   <item>
+      <sequence_no>121</sequence_no>
+      <latitude>42.28318</latitude>
+      <longitude>-83.73516</longitude>
+   </item>
+
+   <item>
+      <sequence_no>122</sequence_no>
+      <latitude>42.28318</latitude>
+      <longitude>-83.73522</longitude>
+   </item>
+
+   <item>
+      <sequence_no>123</sequence_no>
+      <latitude>42.28321</latitude>
+      <longitude>-83.73532</longitude>
+   </item>
+
+   <item>
+      <sequence_no>124</sequence_no>
+      <latitude>42.2833</latitude>
+      <longitude>-83.73536</longitude>
+   </item>
+
+   <item>
+      <sequence_no>125</sequence_no>
+      <latitude>42.28341</latitude>
+      <longitude>-83.73532</longitude>
+   </item>
+
+   <item>
+      <sequence_no>126</sequence_no>
+      <latitude>42.28355</latitude>
+      <longitude>-83.73532</longitude>
+   </item>
+
+   <item>
+      <sequence_no>127</sequence_no>
+      <latitude>42.28372</latitude>
+      <longitude>-83.73533</longitude>
+   </item>
+
+   <item>
+      <sequence_no>128</sequence_no>
+      <latitude>42.28399</latitude>
+      <longitude>-83.73533</longitude>
+   </item>
+
+   <item>
+      <sequence_no>129</sequence_no>
+      <latitude>42.28416</latitude>
+      <longitude>-83.73532</longitude>
+   </item>
+
+   <item>
+      <sequence_no>130</sequence_no>
+      <latitude>42.28434</latitude>
+      <longitude>-83.73529</longitude>
+   </item>
+
+   <item>
+      <sequence_no>131</sequence_no>
+      <latitude>42.2845</latitude>
+      <longitude>-83.73522</longitude>
+   </item>
+
+   <item>
+      <sequence_no>132</sequence_no>
+      <latitude>42.28464</latitude>
+      <longitude>-83.73512</longitude>
+   </item>
+
+   <item>
+      <sequence_no>133</sequence_no>
+      <latitude>42.28477</latitude>
+      <longitude>-83.73499</longitude>
+   </item>
+
+   <item>
+      <sequence_no>134</sequence_no>
+      <latitude>42.28488</latitude>
+      <longitude>-83.73487</longitude>
+   </item>
+
+   <item>
+      <sequence_no>135</sequence_no>
+      <latitude>42.28494</latitude>
+      <longitude>-83.73477</longitude>
+   </item>
+
+   <item>
+      <sequence_no>136</sequence_no>
+      <latitude>42.28507</latitude>
+      <longitude>-83.73455</longitude>
+   </item>
+
+   <item>
+      <sequence_no>137</sequence_no>
+      <latitude>42.28515</latitude>
+      <longitude>-83.73435</longitude>
+   </item>
+
+   <item>
+      <sequence_no>138</sequence_no>
+      <latitude>42.28522</latitude>
+      <longitude>-83.7341</longitude>
+   </item>
+
+   <item>
+      <sequence_no>139</sequence_no>
+      <latitude>42.28526</latitude>
+      <longitude>-83.73384</longitude>
+   </item>
+
+   <item>
+      <sequence_no>140</sequence_no>
+      <latitude>42.28526</latitude>
+      <longitude>-83.73355</longitude>
+   </item>
+
+   <item>
+      <sequence_no>141</sequence_no>
+      <latitude>42.28527</latitude>
+      <longitude>-83.73326</longitude>
+   </item>
+
+   <item>
+      <sequence_no>142</sequence_no>
+      <latitude>42.28527</latitude>
+      <longitude>-83.73301</longitude>
+   </item>
+
+   <item>
+      <sequence_no>143</sequence_no>
+      <latitude>42.28527</latitude>
+      <longitude>-83.73268</longitude>
+   </item>
+
+   <item>
+      <sequence_no>144</sequence_no>
+      <latitude>42.28528</latitude>
+      <longitude>-83.73247</longitude>
+   </item>
+
+   <item>
+      <sequence_no>145</sequence_no>
+      <latitude>42.28528</latitude>
+      <longitude>-83.73227</longitude>
+   </item>
+
+   <item>
+      <sequence_no>146</sequence_no>
+      <latitude>42.28531</latitude>
+      <longitude>-83.7321</longitude>
+   </item>
+
+   <item>
+      <sequence_no>147</sequence_no>
+      <latitude>42.28538</latitude>
+      <longitude>-83.73197</longitude>
+   </item>
+
+   <item>
+      <sequence_no>148</sequence_no>
+      <latitude>42.28544</latitude>
+      <longitude>-83.73193</longitude>
+   </item>
+
+   <item>
+      <sequence_no>149</sequence_no>
+      <latitude>42.28546</latitude>
+      <longitude>-83.73191</longitude>
+   </item>
+
+   <item>
+      <sequence_no>150</sequence_no>
+      <latitude>42.28559</latitude>
+      <longitude>-83.73184</longitude>
+   </item>
+
+   <item>
+      <sequence_no>151</sequence_no>
+      <latitude>42.28573</latitude>
+      <longitude>-83.73192</longitude>
+   </item>
+
+   <item>
+      <sequence_no>152</sequence_no>
+      <latitude>42.28585</latitude>
+      <longitude>-83.73205</longitude>
+   </item>
+
+   <item>
+      <sequence_no>153</sequence_no>
+      <latitude>42.28598</latitude>
+      <longitude>-83.73217</longitude>
+   </item>
+
+   <item>
+      <sequence_no>154</sequence_no>
+      <latitude>42.2861</latitude>
+      <longitude>-83.73224</longitude>
+   </item>
+
+   <item>
+      <sequence_no>155</sequence_no>
+      <latitude>42.2862</latitude>
+      <longitude>-83.73229</longitude>
+   </item>
+
+   <item>
+      <sequence_no>156</sequence_no>
+      <latitude>42.28628</latitude>
+      <longitude>-83.73232</longitude>
+   </item>
+
+   <item>
+      <sequence_no>157</sequence_no>
+      <latitude>42.28628</latitude>
+      <longitude>-83.73232</longitude>
+   </item>
+
+   <item>
+      <sequence_no>158</sequence_no>
+      <latitude>42.28635</latitude>
+      <longitude>-83.73233</longitude>
+   </item>
+
+   <item>
+      <sequence_no>159</sequence_no>
+      <latitude>42.28644</latitude>
+      <longitude>-83.73225</longitude>
+   </item>
+
+   <item>
+      <sequence_no>160</sequence_no>
+      <latitude>42.28646</latitude>
+      <longitude>-83.73209</longitude>
+   </item>
+
+   <item>
+      <sequence_no>161</sequence_no>
+      <latitude>42.28645</latitude>
+      <longitude>-83.7319</longitude>
+   </item>
+
+   <item>
+      <sequence_no>162</sequence_no>
+      <latitude>42.28649</latitude>
+      <longitude>-83.73152</longitude>
+   </item>
+
+   <item>
+      <sequence_no>163</sequence_no>
+      <latitude>42.28651</latitude>
+      <longitude>-83.73121</longitude>
+   </item>
+
+   <item>
+      <sequence_no>164</sequence_no>
+      <latitude>42.28654</latitude>
+      <longitude>-83.73086</longitude>
+   </item>
+
+   <item>
+      <sequence_no>165</sequence_no>
+      <latitude>42.28661</latitude>
+      <longitude>-83.73049</longitude>
+   </item>
+
+   <item>
+      <sequence_no>166</sequence_no>
+      <latitude>42.28669</latitude>
+      <longitude>-83.73011</longitude>
+   </item>
+
+   <item>
+      <sequence_no>167</sequence_no>
+      <latitude>42.28676</latitude>
+      <longitude>-83.72973</longitude>
+   </item>
+
+   <item>
+      <sequence_no>168</sequence_no>
+      <latitude>42.28681</latitude>
+      <longitude>-83.72934</longitude>
+   </item>
+
+   <item>
+      <sequence_no>169</sequence_no>
+      <latitude>42.28682</latitude>
+      <longitude>-83.72878</longitude>
+   </item>
+
+   <item>
+      <sequence_no>170</sequence_no>
+      <latitude>42.28683</latitude>
+      <longitude>-83.7284</longitude>
+   </item>
+
+   <item>
+      <sequence_no>171</sequence_no>
+      <latitude>42.28684</latitude>
+      <longitude>-83.72801</longitude>
+   </item>
+
+   <item>
+      <sequence_no>172</sequence_no>
+      <latitude>42.28686</latitude>
+      <longitude>-83.72762</longitude>
+   </item>
+
+   <item>
+      <sequence_no>173</sequence_no>
+      <latitude>42.2869</latitude>
+      <longitude>-83.72723</longitude>
+   </item>
+
+   <item>
+      <sequence_no>174</sequence_no>
+      <latitude>42.28696</latitude>
+      <longitude>-83.72682</longitude>
+   </item>
+
+   <item>
+      <sequence_no>175</sequence_no>
+      <latitude>42.287</latitude>
+      <longitude>-83.72642</longitude>
+   </item>
+
+   <item>
+      <sequence_no>176</sequence_no>
+      <latitude>42.28701</latitude>
+      <longitude>-83.72602</longitude>
+   </item>
+
+   <item>
+      <sequence_no>177</sequence_no>
+      <latitude>42.28701</latitude>
+      <longitude>-83.72581</longitude>
+   </item>
+
+   <item>
+      <sequence_no>178</sequence_no>
+      <latitude>42.28703</latitude>
+      <longitude>-83.7252</longitude>
+   </item>
+
+   <item>
+      <sequence_no>179</sequence_no>
+      <latitude>42.28704</latitude>
+      <longitude>-83.7248</longitude>
+   </item>
+
+   <item>
+      <sequence_no>180</sequence_no>
+      <latitude>42.28704</latitude>
+      <longitude>-83.72445</longitude>
+   </item>
+
+   <item>
+      <sequence_no>181</sequence_no>
+      <latitude>42.28705</latitude>
+      <longitude>-83.72416</longitude>
+   </item>
+
+   <item>
+      <sequence_no>182</sequence_no>
+      <latitude>42.28706</latitude>
+      <longitude>-83.72389</longitude>
+   </item>
+
+   <item>
+      <sequence_no>183</sequence_no>
+      <latitude>42.28707</latitude>
+      <longitude>-83.72362</longitude>
+   </item>
+
+   <item>
+      <sequence_no>184</sequence_no>
+      <latitude>42.28705</latitude>
+      <longitude>-83.72338</longitude>
+   </item>
+
+   <item>
+      <sequence_no>185</sequence_no>
+      <latitude>42.28704</latitude>
+      <longitude>-83.72322</longitude>
+   </item>
+
+   <item>
+      <sequence_no>186</sequence_no>
+      <latitude>42.28704</latitude>
+      <longitude>-83.72308</longitude>
+   </item>
+
+   <item>
+      <sequence_no>187</sequence_no>
+      <latitude>42.28704</latitude>
+      <longitude>-83.72306</longitude>
+   </item>
+
+   <item>
+      <sequence_no>188</sequence_no>
+      <latitude>42.28704</latitude>
+      <longitude>-83.72307</longitude>
+   </item>
+
+   <item>
+      <sequence_no>189</sequence_no>
+      <latitude>42.28706</latitude>
+      <longitude>-83.72299</longitude>
+   </item>
+
+   <item>
+      <sequence_no>190</sequence_no>
+      <latitude>42.2871</latitude>
+      <longitude>-83.72274</longitude>
+   </item>
+
+   <item>
+      <sequence_no>191</sequence_no>
+      <latitude>42.28712</latitude>
+      <longitude>-83.72252</longitude>
+   </item>
+
+   <item>
+      <sequence_no>192</sequence_no>
+      <latitude>42.28712</latitude>
+      <longitude>-83.72227</longitude>
+   </item>
+
+   <item>
+      <sequence_no>193</sequence_no>
+      <latitude>42.28713</latitude>
+      <longitude>-83.722</longitude>
+   </item>
+
+   <item>
+      <sequence_no>194</sequence_no>
+      <latitude>42.28713</latitude>
+      <longitude>-83.7217</longitude>
+   </item>
+
+   <item>
+      <sequence_no>195</sequence_no>
+      <latitude>42.28715</latitude>
+      <longitude>-83.72138</longitude>
+   </item>
+
+   <item>
+      <sequence_no>196</sequence_no>
+      <latitude>42.28716</latitude>
+      <longitude>-83.72106</longitude>
+   </item>
+
+   <item>
+      <sequence_no>197</sequence_no>
+      <latitude>42.28717</latitude>
+      <longitude>-83.72074</longitude>
+   </item>
+
+   <item>
+      <sequence_no>198</sequence_no>
+      <latitude>42.2872</latitude>
+      <longitude>-83.72029</longitude>
+   </item>
+
+   <item>
+      <sequence_no>199</sequence_no>
+      <latitude>42.28721</latitude>
+      <longitude>-83.72006</longitude>
+   </item>
+
+   <item>
+      <sequence_no>200</sequence_no>
+      <latitude>42.28723</latitude>
+      <longitude>-83.71985</longitude>
+   </item>
+
+   <item>
+      <sequence_no>201</sequence_no>
+      <latitude>42.28724</latitude>
+      <longitude>-83.71962</longitude>
+   </item>
+
+   <item>
+      <sequence_no>202</sequence_no>
+      <latitude>42.28726</latitude>
+      <longitude>-83.71938</longitude>
+   </item>
+
+   <item>
+      <sequence_no>203</sequence_no>
+      <latitude>42.28728</latitude>
+      <longitude>-83.71911</longitude>
+   </item>
+
+   <item>
+      <sequence_no>204</sequence_no>
+      <latitude>42.28731</latitude>
+      <longitude>-83.71882</longitude>
+   </item>
+
+   <item>
+      <sequence_no>205</sequence_no>
+      <latitude>42.28733</latitude>
+      <longitude>-83.71851</longitude>
+   </item>
+
+   <item>
+      <sequence_no>206</sequence_no>
+      <latitude>42.28736</latitude>
+      <longitude>-83.71819</longitude>
+   </item>
+
+   <item>
+      <sequence_no>207</sequence_no>
+      <latitude>42.28737</latitude>
+      <longitude>-83.7179</longitude>
+   </item>
+
+   <item>
+      <sequence_no>208</sequence_no>
+      <latitude>42.28738</latitude>
+      <longitude>-83.71763</longitude>
+   </item>
+
+   <item>
+      <sequence_no>209</sequence_no>
+      <latitude>42.28739</latitude>
+      <longitude>-83.71734</longitude>
+   </item>
+
+   <item>
+      <sequence_no>210</sequence_no>
+      <latitude>42.2874</latitude>
+      <longitude>-83.71703</longitude>
+   </item>
+
+   <item>
+      <sequence_no>211</sequence_no>
+      <latitude>42.28741</latitude>
+      <longitude>-83.71669</longitude>
+   </item>
+
+   <item>
+      <sequence_no>212</sequence_no>
+      <latitude>42.28742</latitude>
+      <longitude>-83.71634</longitude>
+   </item>
+
+   <item>
+      <sequence_no>213</sequence_no>
+      <latitude>42.28742</latitude>
+      <longitude>-83.71598</longitude>
+   </item>
+
+   <item>
+      <sequence_no>214</sequence_no>
+      <latitude>42.28744</latitude>
+      <longitude>-83.71545</longitude>
+   </item>
+
+   <item>
+      <sequence_no>215</sequence_no>
+      <latitude>42.28745</latitude>
+      <longitude>-83.71509</longitude>
+   </item>
+
+   <item>
+      <sequence_no>216</sequence_no>
+      <latitude>42.28746</latitude>
+      <longitude>-83.71476</longitude>
+   </item>
+
+   <item>
+      <sequence_no>217</sequence_no>
+      <latitude>42.28747</latitude>
+      <longitude>-83.7145</longitude>
+   </item>
+
+   <item>
+      <sequence_no>218</sequence_no>
+      <latitude>42.2875</latitude>
+      <longitude>-83.71429</longitude>
+   </item>
+
+   <item>
+      <sequence_no>219</sequence_no>
+      <latitude>42.28752</latitude>
+      <longitude>-83.71415</longitude>
+   </item>
+
+   <item>
+      <sequence_no>220</sequence_no>
+      <latitude>42.28761</latitude>
+      <longitude>-83.71399</longitude>
+   </item>
+
+   <item>
+      <sequence_no>221</sequence_no>
+      <latitude>42.28777</latitude>
+      <longitude>-83.71401</longitude>
+   </item>
+
+   <item>
+      <sequence_no>222</sequence_no>
+      <latitude>42.2879</latitude>
+      <longitude>-83.71401</longitude>
+   </item>
+
+   <item>
+      <sequence_no>223</sequence_no>
+      <latitude>42.28802</latitude>
+      <longitude>-83.71401</longitude>
+   </item>
+
+   <item>
+      <sequence_no>224</sequence_no>
+      <latitude>42.28814</latitude>
+      <longitude>-83.71401</longitude>
+   </item>
+
+   <item>
+      <sequence_no>225</sequence_no>
+      <latitude>42.2883</latitude>
+      <longitude>-83.714</longitude>
+   </item>
+
+   <item>
+      <sequence_no>226</sequence_no>
+      <latitude>42.28833</latitude>
+      <longitude>-83.71389</longitude>
+   </item>
+
+   <item>
+      <sequence_no>227</sequence_no>
+      <latitude>42.28829</latitude>
+      <longitude>-83.71379</longitude>
+   </item>
+
+   <item>
+      <sequence_no>228</sequence_no>
+      <latitude>42.28829</latitude>
+      <longitude>-83.71379</longitude>
+   </item>
+
+   <item>
+      <sequence_no>229</sequence_no>
+      <latitude>42.28829</latitude>
+      <longitude>-83.71369</longitude>
+   </item>
+
+   <item>
+      <sequence_no>230</sequence_no>
+      <latitude>42.2883</latitude>
+      <longitude>-83.71352</longitude>
+   </item>
+
+   <item>
+      <sequence_no>231</sequence_no>
+      <latitude>42.2883</latitude>
+      <longitude>-83.71334</longitude>
+   </item>
+
+   <item>
+      <sequence_no>232</sequence_no>
+      <latitude>42.2883</latitude>
+      <longitude>-83.71317</longitude>
+   </item>
+
+   <item>
+      <sequence_no>233</sequence_no>
+      <latitude>42.2883</latitude>
+      <longitude>-83.71311</longitude>
+   </item>
+
+   <item>
+      <sequence_no>234</sequence_no>
+      <latitude>42.28831</latitude>
+      <longitude>-83.71311</longitude>
+   </item>
+
+   <item>
+      <sequence_no>235</sequence_no>
+      <latitude>42.28831</latitude>
+      <longitude>-83.71312</longitude>
+   </item>
+
+   <item>
+      <sequence_no>236</sequence_no>
+      <latitude>42.28834</latitude>
+      <longitude>-83.71305</longitude>
+   </item>
+
+   <item>
+      <sequence_no>237</sequence_no>
+      <latitude>42.28845</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>238</sequence_no>
+      <latitude>42.28859</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>239</sequence_no>
+      <latitude>42.28873</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>240</sequence_no>
+      <latitude>42.2889</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>241</sequence_no>
+      <latitude>42.28909</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>242</sequence_no>
+      <latitude>42.28929</latitude>
+      <longitude>-83.71299</longitude>
+   </item>
+
+   <item>
+      <sequence_no>243</sequence_no>
+      <latitude>42.2896</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>244</sequence_no>
+      <latitude>42.28979</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>245</sequence_no>
+      <latitude>42.28996</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>246</sequence_no>
+      <latitude>42.2901</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>247</sequence_no>
+      <latitude>42.29022</latitude>
+      <longitude>-83.71298</longitude>
+   </item>
+
+   <item>
+      <sequence_no>248</sequence_no>
+      <latitude>42.29029</latitude>
+      <longitude>-83.71297</longitude>
+   </item>
+
+   <item>
+      <sequence_no>249</sequence_no>
+      <latitude>42.29032</latitude>
+      <longitude>-83.71292</longitude>
+   </item>
+
+   <item>
+      <sequence_no>250</sequence_no>
+      <latitude>42.29033</latitude>
+      <longitude>-83.71271</longitude>
+   </item>
+
+   <item>
+      <sequence_no>251</sequence_no>
+      <latitude>42.29037</latitude>
+      <longitude>-83.71253</longitude>
+   </item>
+
+   <item>
+      <sequence_no>252</sequence_no>
+      <latitude>42.29045</latitude>
+      <longitude>-83.71237</longitude>
+   </item>
+
+   <item>
+      <sequence_no>253</sequence_no>
+      <latitude>42.29055</latitude>
+      <longitude>-83.7122</longitude>
+   </item>
+
+   <item>
+      <sequence_no>254</sequence_no>
+      <latitude>42.29069</latitude>
+      <longitude>-83.71206</longitude>
+   </item>
+
+   <item>
+      <sequence_no>255</sequence_no>
+      <latitude>42.29087</latitude>
+      <longitude>-83.71196</longitude>
+   </item>
+
+   <item>
+      <sequence_no>256</sequence_no>
+      <latitude>42.29107</latitude>
+      <longitude>-83.71192</longitude>
+   </item>
+
+   <item>
+      <sequence_no>257</sequence_no>
+      <latitude>42.29128</latitude>
+      <longitude>-83.71195</longitude>
+   </item>
+
+   <item>
+      <sequence_no>258</sequence_no>
+      <latitude>42.29158</latitude>
+      <longitude>-83.71214</longitude>
+   </item>
+
+   <item>
+      <sequence_no>259</sequence_no>
+      <latitude>42.29177</latitude>
+      <longitude>-83.71233</longitude>
+   </item>
+
+   <item>
+      <sequence_no>260</sequence_no>
+      <latitude>42.29197</latitude>
+      <longitude>-83.71252</longitude>
+   </item>
+
+   <item>
+      <sequence_no>261</sequence_no>
+      <latitude>42.29219</latitude>
+      <longitude>-83.71268</longitude>
+   </item>
+
+   <item>
+      <sequence_no>262</sequence_no>
+      <latitude>42.29241</latitude>
+      <longitude>-83.71273</longitude>
+   </item>
+
+   <item>
+      <sequence_no>263</sequence_no>
+      <latitude>42.29264</latitude>
+      <longitude>-83.71269</longitude>
+   </item>
+
+   <item>
+      <sequence_no>264</sequence_no>
+      <latitude>42.29288</latitude>
+      <longitude>-83.71264</longitude>
+   </item>
+
+   <item>
+      <sequence_no>265</sequence_no>
+      <latitude>42.29311</latitude>
+      <longitude>-83.7126</longitude>
+   </item>
+
+   <item>
+      <sequence_no>266</sequence_no>
+      <latitude>42.29342</latitude>
+      <longitude>-83.71254</longitude>
+   </item>
+
+   <item>
+      <sequence_no>267</sequence_no>
+      <latitude>42.29355</latitude>
+      <longitude>-83.71252</longitude>
+   </item>
+
+   <item>
+      <sequence_no>268</sequence_no>
+      <latitude>42.2937</latitude>
+      <longitude>-83.7125</longitude>
+   </item>
+
+   <item>
+      <sequence_no>269</sequence_no>
+      <latitude>42.2938</latitude>
+      <longitude>-83.71249</longitude>
+   </item>
+
+   <item>
+      <sequence_no>270</sequence_no>
+      <latitude>42.29393</latitude>
+      <longitude>-83.71247</longitude>
+   </item>
+
+   <item>
+      <sequence_no>271</sequence_no>
+      <latitude>42.29398</latitude>
+      <longitude>-83.71235</longitude>
+   </item>
+
+   <item>
+      <sequence_no>272</sequence_no>
+      <latitude>42.29394</latitude>
+      <longitude>-83.7122</longitude>
+   </item>
+
+   <item>
+      <sequence_no>273</sequence_no>
+      <latitude>42.29394</latitude>
+      <longitude>-83.71201</longitude>
+   </item>
+
+   <item>
+      <sequence_no>274</sequence_no>
+      <latitude>42.29394</latitude>
+      <longitude>-83.71179</longitude>
+   </item>
+
+   <item>
+      <sequence_no>275</sequence_no>
+      <latitude>42.29394</latitude>
+      <longitude>-83.71153</longitude>
+   </item>
+
+   <item>
+      <sequence_no>276</sequence_no>
+      <latitude>42.29394</latitude>
+      <longitude>-83.71125</longitude>
+   </item>
+
+   <item>
+      <sequence_no>277</sequence_no>
+      <latitude>42.29394</latitude>
+      <longitude>-83.71096</longitude>
+   </item>
+
+   <item>
+      <sequence_no>278</sequence_no>
+      <latitude>42.29394</latitude>
+      <longitude>-83.71065</longitude>
+   </item>
+
+   <item>
+      <sequence_no>279</sequence_no>
+      <latitude>42.29395</latitude>
+      <longitude>-83.71019</longitude>
+   </item>
+
+   <item>
+      <sequence_no>280</sequence_no>
+      <latitude>42.29396</latitude>
+      <longitude>-83.70989</longitude>
+   </item>
+
+   <item>
+      <sequence_no>281</sequence_no>
+      <latitude>42.29402</latitude>
+      <longitude>-83.7096</longitude>
+   </item>
+
+   <item>
+      <sequence_no>282</sequence_no>
+      <latitude>42.29413</latitude>
+      <longitude>-83.70934</longitude>
+   </item>
+
+   <item>
+      <sequence_no>283</sequence_no>
+      <latitude>42.29427</latitude>
+      <longitude>-83.70909</longitude>
+   </item>
+
+   <item>
+      <sequence_no>284</sequence_no>
+      <latitude>42.29441</latitude>
+      <longitude>-83.70886</longitude>
+   </item>
+
+   <item>
+      <sequence_no>285</sequence_no>
+      <latitude>42.29458</latitude>
+      <longitude>-83.70864</longitude>
+   </item>
+
+   <item>
+      <sequence_no>286</sequence_no>
+      <latitude>42.29477</latitude>
+      <longitude>-83.70845</longitude>
+   </item>
+
+   <item>
+      <sequence_no>287</sequence_no>
+      <latitude>42.29507</latitude>
+      <longitude>-83.70821</longitude>
+   </item>
+
+   <item>
+      <sequence_no>288</sequence_no>
+      <latitude>42.29524</latitude>
+      <longitude>-83.70803</longitude>
+   </item>
+
+   <item>
+      <sequence_no>289</sequence_no>
+      <latitude>42.29536</latitude>
+      <longitude>-83.70785</longitude>
+   </item>
+
+   <item>
+      <sequence_no>290</sequence_no>
+      <latitude>42.29542</latitude>
+      <longitude>-83.70772</longitude>
+   </item>
+
+   <item>
+      <sequence_no>291</sequence_no>
+      <latitude>42.29543</latitude>
+      <longitude>-83.7077</longitude>
+   </item>
+
+   <item>
+      <sequence_no>292</sequence_no>
+      <latitude>42.29543</latitude>
+      <longitude>-83.70771</longitude>
+   </item>
+
+   <item>
+      <sequence_no>293</sequence_no>
+      <latitude>42.2955</latitude>
+      <longitude>-83.70756</longitude>
+   </item>
+
+   <item>
+      <sequence_no>294</sequence_no>
+      <latitude>42.2956</latitude>
+      <longitude>-83.70731</longitude>
+   </item>
+
+   <item>
+      <sequence_no>295</sequence_no>
+      <latitude>42.29563</latitude>
+      <longitude>-83.70709</longitude>
+   </item>
+
+   <item>
+      <sequence_no>296</sequence_no>
+      <latitude>42.29566</latitude>
+      <longitude>-83.70684</longitude>
+   </item>
+
+   <item>
+      <sequence_no>297</sequence_no>
+      <latitude>42.29564</latitude>
+      <longitude>-83.7064</longitude>
+   </item>
+
+   <item>
+      <sequence_no>298</sequence_no>
+      <latitude>42.29558</latitude>
+      <longitude>-83.7061</longitude>
+   </item>
+
+   <item>
+      <sequence_no>299</sequence_no>
+      <latitude>42.29552</latitude>
+      <longitude>-83.70583</longitude>
+   </item>
+
+   <item>
+      <sequence_no>300</sequence_no>
+      <latitude>42.29548</latitude>
+      <longitude>-83.70561</longitude>
+   </item>
+
+   <item>
+      <sequence_no>301</sequence_no>
+      <latitude>42.29545</latitude>
+      <longitude>-83.70547</longitude>
+   </item>
+
+   <item>
+      <sequence_no>302</sequence_no>
+      <latitude>42.29542</latitude>
+      <longitude>-83.70536</longitude>
+   </item>
+
+   <item>
+      <sequence_no>303</sequence_no>
+      <latitude>42.2954</latitude>
+      <longitude>-83.70526</longitude>
+   </item>
+
+   <item>
+      <sequence_no>304</sequence_no>
+      <latitude>42.29536</latitude>
+      <longitude>-83.70506</longitude>
+   </item>
+
+   <item>
+      <sequence_no>305</sequence_no>
+      <latitude>42.29531</latitude>
+      <longitude>-83.70486</longitude>
+   </item>
+
+   <item>
+      <sequence_no>306</sequence_no>
+      <latitude>42.29536</latitude>
+      <longitude>-83.70458</longitude>
+   </item>
+
+   <item>
+      <sequence_no>307</sequence_no>
+      <latitude>42.2955</latitude>
+      <longitude>-83.70456</longitude>
+   </item>
+
+   <item>
+      <sequence_no>308</sequence_no>
+      <latitude>42.29565</latitude>
+      <longitude>-83.7046</longitude>
+   </item>
+
+   <item>
+      <sequence_no>309</sequence_no>
+      <latitude>42.29582</latitude>
+      <longitude>-83.70465</longitude>
+   </item>
+
+   <item>
+      <sequence_no>310</sequence_no>
+      <latitude>42.29602</latitude>
+      <longitude>-83.7047</longitude>
+   </item>
+
+   <item>
+      <sequence_no>311</sequence_no>
+      <latitude>42.29624</latitude>
+      <longitude>-83.70475</longitude>
+   </item>
+
+   <item>
+      <sequence_no>312</sequence_no>
+      <latitude>42.29648</latitude>
+      <longitude>-83.70477</longitude>
+   </item>
+
+   <item>
+      <sequence_no>313</sequence_no>
+      <latitude>42.29674</latitude>
+      <longitude>-83.70475</longitude>
+   </item>
+
+   <item>
+      <sequence_no>314</sequence_no>
+      <latitude>42.29688</latitude>
+      <longitude>-83.70473</longitude>
+   </item>
+
+   <item>
+      <sequence_no>315</sequence_no>
+      <latitude>42.29729</latitude>
+      <longitude>-83.70455</longitude>
+   </item>
+
+   <item>
+      <sequence_no>316</sequence_no>
+      <latitude>42.29757</latitude>
+      <longitude>-83.7044</longitude>
+   </item>
+
+   <item>
+      <sequence_no>317</sequence_no>
+      <latitude>42.29785</latitude>
+      <longitude>-83.70427</longitude>
+   </item>
+
+   <item>
+      <sequence_no>318</sequence_no>
+      <latitude>42.29814</latitude>
+      <longitude>-83.7042</longitude>
+   </item>
+
+   <item>
+      <sequence_no>319</sequence_no>
+      <latitude>42.29844</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>320</sequence_no>
+      <latitude>42.29874</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>321</sequence_no>
+      <latitude>42.29903</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>322</sequence_no>
+      <latitude>42.29932</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>323</sequence_no>
+      <latitude>42.29975</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>324</sequence_no>
+      <latitude>42.30001</latitude>
+      <longitude>-83.70418</longitude>
+   </item>
+
+   <item>
+      <sequence_no>325</sequence_no>
+      <latitude>42.30025</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>326</sequence_no>
+      <latitude>42.3004</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>327</sequence_no>
+      <latitude>42.30042</latitude>
+      <longitude>-83.70417</longitude>
+   </item>
+
+   <item>
+      <sequence_no>328</sequence_no>
+      <latitude>42.30047</latitude>
+      <longitude>-83.70418</longitude>
+   </item>
+
+   <item>
+      <sequence_no>329</sequence_no>
+      <latitude>42.30057</latitude>
+      <longitude>-83.7042</longitude>
+   </item>
+
+   <item>
+      <sequence_no>330</sequence_no>
+      <latitude>42.30078</latitude>
+      <longitude>-83.70423</longitude>
+   </item>
+
+   <item>
+      <sequence_no>331</sequence_no>
+      <latitude>42.30095</latitude>
+      <longitude>-83.70425</longitude>
+   </item>
+
+   <item>
+      <sequence_no>332</sequence_no>
+      <latitude>42.30113</latitude>
+      <longitude>-83.70426</longitude>
+   </item>
+
+   <item>
+      <sequence_no>333</sequence_no>
+      <latitude>42.30135</latitude>
+      <longitude>-83.70429</longitude>
+   </item>
+
+   <item>
+      <sequence_no>334</sequence_no>
+      <latitude>42.30157</latitude>
+      <longitude>-83.70431</longitude>
+   </item>
+
+   <item>
+      <sequence_no>335</sequence_no>
+      <latitude>42.30181</latitude>
+      <longitude>-83.70433</longitude>
+   </item>
+
+   <item>
+      <sequence_no>336</sequence_no>
+      <latitude>42.30203</latitude>
+      <longitude>-83.70433</longitude>
+   </item>
+
+   <item>
+      <sequence_no>337</sequence_no>
+      <latitude>42.3022</latitude>
+      <longitude>-83.70434</longitude>
+   </item>
+
+   <item>
+      <sequence_no>338</sequence_no>
+      <latitude>42.30233</latitude>
+      <longitude>-83.70435</longitude>
+   </item>
+
+   <item>
+      <sequence_no>339</sequence_no>
+      <latitude>42.30243</latitude>
+      <longitude>-83.70436</longitude>
+   </item>
+
+   <item>
+      <sequence_no>340</sequence_no>
+      <latitude>42.30254</latitude>
+      <longitude>-83.70439</longitude>
+   </item>
+
+   <item>
+      <sequence_no>341</sequence_no>
+      <latitude>42.30263</latitude>
+      <longitude>-83.70454</longitude>
+   </item>
+
+   <item>
+      <sequence_no>342</sequence_no>
+      <latitude>42.30264</latitude>
+      <longitude>-83.70475</longitude>
+   </item>
+
+   <item>
+      <sequence_no>343</sequence_no>
+      <latitude>42.3026</latitude>
+      <longitude>-83.705</longitude>
+   </item>
+
+   <item>
+      <sequence_no>344</sequence_no>
+      <latitude>42.3026</latitude>
+      <longitude>-83.70525</longitude>
+   </item>
+
+   <item>
+      <sequence_no>345</sequence_no>
+      <latitude>42.30259</latitude>
+      <longitude>-83.70552</longitude>
+   </item>
+
+   <item>
+      <sequence_no>346</sequence_no>
+      <latitude>42.30259</latitude>
+      <longitude>-83.70582</longitude>
+   </item>
+
+   <item>
+      <sequence_no>347</sequence_no>
+      <latitude>42.30258</latitude>
+      <longitude>-83.70612</longitude>
+   </item>
+
+   <item>
+      <sequence_no>348</sequence_no>
+      <latitude>42.30257</latitude>
+      <longitude>-83.70639</longitude>
+   </item>
+
+   <item>
+      <sequence_no>349</sequence_no>
+      <latitude>42.30254</latitude>
+      <longitude>-83.70674</longitude>
+   </item>
+
+   <item>
+      <sequence_no>350</sequence_no>
+      <latitude>42.30253</latitude>
+      <longitude>-83.70689</longitude>
+   </item>
+
+   <item>
+      <sequence_no>351</sequence_no>
+      <latitude>42.30253</latitude>
+      <longitude>-83.70697</longitude>
+   </item>
+
+   <item>
+      <sequence_no>352</sequence_no>
+      <latitude>42.30249</latitude>
+      <longitude>-83.70723</longitude>
+   </item>
+
+   <item>
+      <sequence_no>353</sequence_no>
+      <latitude>42.30235</latitude>
+      <longitude>-83.70731</longitude>
+   </item>
+
+   <item>
+      <sequence_no>354</sequence_no>
+      <latitude>42.30222</latitude>
+      <longitude>-83.70735</longitude>
+   </item>
+
+   <item>
+      <sequence_no>355</sequence_no>
+      <latitude>42.30215</latitude>
+      <longitude>-83.70751</longitude>
+   </item>
+
+   <item>
+      <sequence_no>356</sequence_no>
+      <latitude>42.30213</latitude>
+      <longitude>-83.70771</longitude>
+   </item>
+
+   <item>
+      <sequence_no>357</sequence_no>
+      <latitude>42.30209</latitude>
+      <longitude>-83.70793</longitude>
+   </item>
+
+   <item>
+      <sequence_no>358</sequence_no>
+      <latitude>42.30202</latitude>
+      <longitude>-83.70816</longitude>
+   </item>
+
+   <item>
+      <sequence_no>359</sequence_no>
+      <latitude>42.30188</latitude>
+      <longitude>-83.70832</longitude>
+   </item>
+
+   <item>
+      <sequence_no>360</sequence_no>
+      <latitude>42.30162</latitude>
+      <longitude>-83.70839</longitude>
+   </item>
+
+   <item>
+      <sequence_no>361</sequence_no>
+      <latitude>42.30146</latitude>
+      <longitude>-83.70833</longitude>
+   </item>
+
+   <item>
+      <sequence_no>362</sequence_no>
+      <latitude>42.30137</latitude>
+      <longitude>-83.70825</longitude>
+   </item>
+
+   <item>
+      <sequence_no>363</sequence_no>
+      <latitude>42.30137</latitude>
+      <longitude>-83.70823</longitude>
+   </item>
+
+   <item>
+      <sequence_no>364</sequence_no>
+      <latitude>42.30125</latitude>
+      <longitude>-83.70808</longitude>
+   </item>
+
+   <item>
+      <sequence_no>365</sequence_no>
+      <latitude>42.30116</latitude>
+      <longitude>-83.70791</longitude>
+   </item>
+
+   <item>
+      <sequence_no>366</sequence_no>
+      <latitude>42.30111</latitude>
+      <longitude>-83.70771</longitude>
+   </item>
+
+   <item>
+      <sequence_no>367</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70735</longitude>
+   </item>
+
+   <item>
+      <sequence_no>368</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70713</longitude>
+   </item>
+
+   <item>
+      <sequence_no>369</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70691</longitude>
+   </item>
+
+   <item>
+      <sequence_no>370</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70669</longitude>
+   </item>
+
+   <item>
+      <sequence_no>371</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70648</longitude>
+   </item>
+
+   <item>
+      <sequence_no>372</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70626</longitude>
+   </item>
+
+   <item>
+      <sequence_no>373</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70606</longitude>
+   </item>
+
+   <item>
+      <sequence_no>374</sequence_no>
+      <latitude>42.3011</latitude>
+      <longitude>-83.70591</longitude>
+   </item>
+
+   <item>
+      <sequence_no>375</sequence_no>
+      <latitude>42.30107</latitude>
+      <longitude>-83.70581</longitude>
+   </item>
+
+   <item>
+      <sequence_no>376</sequence_no>
+      <latitude>42.30107</latitude>
+      <longitude>-83.70568</longitude>
+   </item>
+
+</histdata>

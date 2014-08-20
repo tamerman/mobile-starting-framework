@@ -1,0 +1,171 @@
+
+<categorys>
+	<category>
+		<campus>ALL</campus>
+		<id>1</id>
+		<name>Auditions</name>
+		<order>1</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=1
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>2</id>
+		<name>Career Fair</name>
+		<order>2</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=2
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>3</id>
+		<name>Ceremony / Service</name>
+		<order>3</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=3
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>8</id>
+		<name>Class / Instruction</name>
+		<order>4</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=8
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>4</id>
+		<name>Community Service</name>
+		<order>5</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=4
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>5</id>
+		<name>Conference / Symposium</name>
+		<order>6</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=5
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>6</id>
+		<name>Exercise / Fitness</name>
+		<order>7</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=6
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>7</id>
+		<name>Exhibition</name>
+		<order>8</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=7
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>10</id>
+		<name>Fair / Festival</name>
+		<order>9</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=10
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>11</id>
+		<name>Film Screening</name>
+		<order>10</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=11
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>12</id>
+		<name>Health / Wellness Clinic</name>
+		<order>11</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=12
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>13</id>
+		<name>Lecture / Discussion</name>
+		<order>12</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=13
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>14</id>
+		<name>Meeting</name>
+		<order>13</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=14
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>15</id>
+		<name>Performance</name>
+		<order>14</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=15
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>16</id>
+		<name>Presentation</name>
+		<order>15</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=16
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>9</id>
+		<name>Rally / Mass Meeting</name>
+		<order>16</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=9
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>17</id>
+		<name>Reception / Open House</name>
+		<order>17</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=17
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>18</id>
+		<name>Recreational / Games</name>
+		<order>18</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=18
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>19</id>
+		<name>Social / Informal Gathering</name>
+		<order>19</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=19
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>20</id>
+		<name>Sporting Event</name>
+		<order>20</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=20
+		</url>
+	</category>
+	<category>
+		<campus>ALL</campus>
+		<id>21</id>
+		<name>Workshop / Seminar</name>
+		<order>21</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?_type=xml&amp;category=21
+		</url>
+	</category>
+</categorys>

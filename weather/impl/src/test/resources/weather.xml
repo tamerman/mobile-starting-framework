@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<dwml version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://graphical.weather.gov/xml/DWMLgen/schema/DWML.xsd">
+ <head>
+    <product concise-name="dwmlByDay" operational-mode="developmental" srsName="WGS 1984">
+      <creation-date refresh-frequency='PT1H'>2012-05-18T12:45:02-04:00</creation-date>
+     <category>current observations and forecast</category>
+    </product>
+    <source>
+      <production-center>Binghamton, NY</production-center>
+      <credit>http://www.erh.noaa.gov/bgm/</credit>
+      <more-information>http://www.nws.noaa.gov/forecasts/xml/</more-information>
+    </source>
+  </head>
+  <data type="forecast">
+
+  <location>
+    <location-key>point1</location-key>
+    <description>Ithaca, NY</description>
+    <point latitude="42.45" longitude="-76.51"/>
+    <city state="NY">Ithaca</city>
+    <height datum="mean sea level">394</height>
+  </location>
+<moreWeatherInformation applicable-location="point1">http://forecast.weather.gov/MapClick.php?lat=42.45&amp;lon=-76.51</moreWeatherInformation>
+  <time-layout time-coordinate="local" summarization="12hourly">
+    <layout-key>k-p12h-n13-1</layout-key>
+      <start-valid-time period-name="This Afternoon">2012-05-18T12:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Tonight">2012-05-18T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Saturday">2012-05-19T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Saturday Night">2012-05-19T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Sunday">2012-05-20T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Sunday Night">2012-05-20T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Monday">2012-05-21T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Monday Night">2012-05-21T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Tuesday">2012-05-22T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Tuesday Night">2012-05-22T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Wednesday">2012-05-23T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Wednesday Night">2012-05-23T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Thursday">2012-05-24T06:00:00-04:00</start-valid-time>
+  </time-layout>
+
+  <time-layout time-coordinate="local" summarization="12hourly">
+    <layout-key>k-p24h-n7-1</layout-key>
+      <start-valid-time period-name="This Afternoon">2012-05-18T12:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Saturday">2012-05-19T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Sunday">2012-05-20T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Monday">2012-05-21T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Tuesday">2012-05-22T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Wednesday">2012-05-23T06:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Thursday">2012-05-24T06:00:00-04:00</start-valid-time>
+  </time-layout>
+
+  <time-layout time-coordinate="local" summarization="12hourly">
+    <layout-key>k-p24h-n6-2</layout-key>
+      <start-valid-time period-name="Tonight">2012-05-18T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Saturday Night">2012-05-19T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Sunday Night">2012-05-20T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Monday Night">2012-05-21T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Tuesday Night">2012-05-22T18:00:00-04:00</start-valid-time>
+      <start-valid-time period-name="Wednesday Night">2012-05-23T18:00:00-04:00</start-valid-time>
+  </time-layout>
+
+
+  <parameters applicable-location="point1">
+
+    <temperature type="maximum" units="Fahrenheit" time-layout="k-p24h-n7-1">
+      <name>Daily Maximum Temperature</name>
+        <value>77</value>
+        <value>81</value>
+        <value>85</value>
+        <value>83</value>
+        <value>78</value>
+        <value>78</value>
+        <value>79</value>
+    </temperature>
+
+    <temperature type="minimum" units="Fahrenheit" time-layout="k-p24h-n6-2">
+      <name>Daily Minimum Temperature</name>
+        <value>47</value>
+        <value>52</value>
+        <value>58</value>
+        <value>57</value>
+        <value>55</value>
+        <value>53</value>
+    </temperature>
+
+    <probability-of-precipitation  type="12 hour" units="percent" time-layout="k-p12h-n13-1">
+      <name>12 Hourly Probability of Precipitation</name>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value>30</value>
+        <value>40</value>
+        <value>30</value>
+        <value>30</value>
+        <value xsi:nil="true"></value>
+        <value>30</value>
+    </probability-of-precipitation>
+
+    <weather time-layout="k-p12h-n13-1">
+      <name>Weather Type, Coverage, Intensity</name>
+        <weather-conditions weather-summary="Sunny"/>
+        <weather-conditions weather-summary="Mostly Clear"/>
+        <weather-conditions weather-summary="Sunny"/>
+        <weather-conditions weather-summary="Mostly Clear"/>
+        <weather-conditions weather-summary="Sunny"/>
+        <weather-conditions weather-summary="Partly Cloudy"/>
+        <weather-conditions weather-summary="Mostly Sunny"/>
+        <weather-conditions weather-summary="Chance Showers"/>
+        <weather-conditions weather-summary="Chance Tstms"/>
+        <weather-conditions weather-summary="Chance Showers"/>
+        <weather-conditions weather-summary="Chance Tstms"/>
+        <weather-conditions weather-summary="Partly Cloudy"/>
+        <weather-conditions weather-summary="Chance Tstms"/>
+    </weather>
+
+    <conditions-icon type="forecast-NWS" time-layout="k-p12h-n13-1">
+      <name>Conditions Icon</name>        <icon-link>http://forecast.weather.gov/images/wtf/few.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nfew.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/few.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nfew.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/few.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nsct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nshra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/tsra40.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nshra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/scttsra30.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/nsct.jpg</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/scttsra30.jpg</icon-link>
+    </conditions-icon>
+
+    <wordedForecast time-layout="k-p12h-n13-1" dataSource="bgmNetcdf" wordGenerator="markMitchell">
+      <name>Text Forecast</name>
+        <text>Sunny, with a high near 77. Calm wind. </text>
+        <text>Mostly clear, with a low around 47. Light east wind. </text>
+        <text>Sunny, with a high near 81. Calm wind becoming north around 6 mph. </text>
+        <text>Mostly clear, with a low around 52. Light east wind. </text>
+        <text>Sunny, with a high near 85. Calm wind becoming south between 4 and 7 mph. </text>
+        <text>Partly cloudy, with a low around 58.  </text>
+        <text>Mostly sunny, with a high near 83.  </text>
+        <text>A chance of showers.  Mostly cloudy, with a low around 57.   Chance of precipitation is 30%.</text>
+        <text>A chance of showers and thunderstorms.  Mostly cloudy, with a high near 78.   Chance of precipitation is 40%.</text>
+        <text>A chance of showers.  Mostly cloudy, with a low around 55.   Chance of precipitation is 30%.</text>
+        <text>A chance of showers and thunderstorms.  Partly sunny, with a high near 78.   Chance of precipitation is 30%.</text>
+        <text>Partly cloudy, with a low around 53.  </text>
+        <text>A chance of showers and thunderstorms.  Partly sunny, with a high near 79.   Chance of precipitation is 30%.</text>
+    </wordedForecast>
+
+</parameters>
+</data>
+<data type="current observations">
+	<location>
+		<location-key>point1</location-key>
+		<point latitude="42.48" longitude="-76.47"/>
+		<area-description>Ithaca / Tompkins County, NY</area-description>
+		<height datum="mean sea level" height-units="feet">1099</height>
+	</location>
+	<moreWeatherInformation applicable-location="point1">http://www.nws.noaa.gov/data/obhistory/KITH.html</moreWeatherInformation>	<time-layout time-coordinate="local">	<layout-key>k-p1h-n1-1</layout-key>	<start-valid-time period-name="current">2012-05-18T12:56:00-04:00</start-valid-time>	</time-layout>	<parameters applicable-location="point1">		<temperature type="apparent" units="Fahrenheit" time-layout="k-p1h-n1-1">			<value>67</value>		</temperature>		<temperature type="dew point" units="Fahrenheit" time-layout="k-p1h-n1-1">			<value>34</value>		</temperature>		<humidity type="relative" time-layout="k-p1h-n1-1">			<value>30</value>		</humidity>		<weather time-layout="k-p1h-n1-1">			<name>Weather Type, Coverage, Intensity</name>			<weather-conditions weather-summary="Fair"/>			<weather-conditions>				<value>					<visibility units="statute miles">10.00</visibility>				</value>			</weather-conditions>		</weather>		<conditions-icon type="forecast-NWS" time-layout="k-p1h-n1-1">			<name>Conditions Icon</name>			<icon-link>http://forecast.weather.gov/images/wtf/sct.jpg</icon-link>		</conditions-icon>		<direction type="wind" units="degrees true" time-layout="k-p1h-n1-1">			<value>310</value>		</direction>		<pressure type="barometer" units="inches of mercury" time-layout="k-p1h-n1-1">			<value>30.23</value>		</pressure>		<wind-speed type="gust" units="knots" time-layout="k-p1h-n1-1">			<value>0</value>		</wind-speed>		<wind-speed type="sustained" units="knots" time-layout="k-p1h-n1-1">			<value>3</value>		</wind-speed>	</parameters></data>
+</dwml>

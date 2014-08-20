@@ -1,0 +1,148 @@
+/*
+  Copyright 2011-2012 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+.ui-content {
+    overflow-x: visible;
+}
+
+ul#dropdownHeader {
+    text-align:center;
+    position:relative;
+    top:0px;
+    margin:-15px -15px 15px -15px;
+    z-index:1;
+}
+
+ul#dropdownHeader a {
+    text-align:center;
+}
+
+ul#dropdownMenu {
+    position:absolute;
+    width:100%;
+    z-index:2;
+}
+
+ul#results {
+    position:relative;
+    z-index:3;
+}
+
+span.nutrition {
+	text-indent:-9999px;
+	display:block;
+	width:30px;
+	height:30px;
+	float:right;
+	margin-left:5px;
+	background-repeat:no-repeat;
+}
+
+span.nutrition-featured { background-image:url('../images/menu-icon-featured-30x30.png'); }
+span.nutrition-glutenfree { background-image:url('../images/menu-icon-glutenfree-30x30.png'); }
+span.nutrition-halal { background-image:url('../images/menu-icon-halal-30x30.png'); }
+span.nutrition-mhealthy { background-image:url('../images/menu-icon-mhealthy-30x30.png'); }
+span.nutrition-vegan { background-image:url('../images/menu-icon-vegan-30x30.png'); }
+span.nutrition-vegetarian { background-image:url('../images/menu-icon-vegetarian-30x30.png'); }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 240dpi) {
+	
+	span.nutrition {
+		-moz-background-size: 30px 30px;
+		-o-background-size: 30px 30px;
+		-webkit-background-size: 30px 30px;
+		background-size: 30px 30px;
+	}
+	
+	span.nutrition-featured { background-image:url('../images/menu-icon-featured-60x60.png'); }
+	span.nutrition-glutenfree { background-image:url('../images/menu-icon-glutenfree-60x60.png'); }
+	span.nutrition-halal { background-image:url('../images/menu-icon-halal-60x60.png'); }
+	span.nutrition-mhealthy { background-image:url('../images/menu-icon-mhealthy-60x60.png'); }	
+	span.nutrition-vegan { background-image:url('../images/menu-icon-vegan-60x60.png'); }
+	span.nutrition-vegetarian { background-image:url('../images/menu-icon-vegetarian-60x60.png'); }
+}
+
+div.nutritionIcons {
+	white-space:nowrap;
+	position: absolute;
+    right: 10px;
+    top: 10px;
+    white-space: nowrap;
+}
+
+div#legend {
+    /* Hard-code size of popup legend
+    width:250px;
+    height:150px;*/
+    background-color:black;
+    background-color:rgba(0,0,0,0.75);
+    border:2px solid #666;
+    border-radius:20px 20px 20px 20px;
+    position:absolute;
+    left:50%;
+    margin-left:-80px;
+    top:-500px;
+    z-index:100;
+    padding:15px 25px 15px 15px;
+    color:white;
+    text-shadow:none;
+}
+
+div#legend span.legendIcon {
+    float:left;
+    clear:left;
+    margin-right:10px;
+}
+
+div#legend span.closeLegend {
+    background:url("images/icons-18-white.png") no-repeat scroll 0 0 #666666;
+    background-position:-72px 50%;
+    border:3px solid white;
+    border-radius:15px 15px 15px 15px;
+    display:block;
+    height:18px;
+    text-indent:-9999px;
+    width:18px;
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 240dpi) {
+	
+	div#legend span.closeLegend {
+	    background-image:url("images/icons-36-white.png");
+	    background-size:776px 18px;
+	}
+}
+
+ul#legendItems {
+	padding:0;
+	margin:0;
+}
+
+ul#legendItems li {
+	list-style:none;
+	height:35px;
+}
+
+ul#legendItems li span {
+	background-repeat:no-repeat;
+	padding: 7px 5px 10px 35px;
+	display: block;
+	-moz-background-size: 30px 30px;
+	-o-background-size: 30px 30px;
+	-webkit-background-size: 30px 30px;
+	background-size: 30px 30px;
+}

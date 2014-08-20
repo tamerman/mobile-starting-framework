@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+						http://www.springframework.org/schema/task
+						http://www.springframework.org/schema/task/spring-task-3.1.xsd
+						http://cxf.apache.org/jaxrs
+						http://cxf.apache.org/schemas/jaxrs.xsd">
+
+	<task:annotation-driven />
+
+	<!--
+		Rest implementation of the push service.
+		If you do not have the external push services web app running, you can disable this feature
+		by configuring NoopPushServiceImpl
+	-->
+	<bean id="pushService" class="org.kuali.mobility.push.service.rest.PushServiceRestImpl">
+		<property name="restClient" ref="pushServiceRestClient" />
+	</bean>
+
+	<!--
+		Rest implementation of the device service.
+		If you do not have the external push services web app running, you can disable this feature
+		by configuring NoopDeviceServiceImpl
+	-->
+	<bean id="deviceService" class="org.kuali.mobility.push.service.rest.DeviceServiceRestImpl">
+		<property name="restClient" ref="deviceServiceRestClient" />
+	</bean>
+
+	<!--
+		Rest implementation of the preference service.
+		If you do not have the external push services web app running, you can disable this feature
+		by configuring NoopPreferenceServiceImpl
+	-->
+	<bean id="preferenceService" class="org.kuali.mobility.push.service.rest.PreferencesServiceRestImpl">
+		<property name="restClient" ref="preferencesServiceRestClient" />
+	</bean>
+
+
+	<!--
+		Rest implementation of the sender service.
+		If you do not have the external push services web app running, you can disable this feature
+		by configuring NoopSenderServiceImpl
+	-->
+	<bean id="senderService" class="org.kuali.mobility.push.service.rest.SenderServiceRestImpl">
+		<property name="restClient" ref="senderServiceRestClient" />
+	</bean>
+
+
+ 	<bean id="cxfDeviceService" class="org.kuali.mobility.push.service.CXFDeviceService">
+		<property name="deviceService" ref="deviceService"/>
+	</bean>
+
+	<bean id="cxfPushService" class="org.kuali.mobility.push.service.CXFPushService">
+		<property name="pushService" ref="pushService" />
+	</bean>
+
+		 
+	<jaxrs:server id="pushRestEndpoint" address="/push">
+		<jaxrs:serviceBeans>
+			<ref bean="cxfPushService" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json"/>
+			<entry key="xml" value="application/xml"/>
+		</jaxrs:extensionMappings>
+	</jaxrs:server>
+
+	<jaxrs:server id="deviceRestEndpoint" address="/device">
+		<jaxrs:serviceBeans>
+			<ref bean="cxfDeviceService" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json"/>
+			<entry key="xml" value="application/xml"/>
+		</jaxrs:extensionMappings>
+	</jaxrs:server>
+
+	<jaxrs:client id="deviceServiceRestClient"
+				  serviceClass="org.kuali.mobility.push.service.rest.DeviceServiceRest"
+				  address="${push.services.url}/device-api"
+				  inheritHeaders="true">
+		<jaxrs:headers>
+			<entry key="Accept" value="application/xml"/>
+			<entry key="Content-Type" value="application/xml"/>
+		</jaxrs:headers>
+	</jaxrs:client>
+
+	<jaxrs:client id="pushServiceRestClient"
+				  serviceClass="org.kuali.mobility.push.service.rest.PushServiceRest"
+				  address="${push.services.url}/push-api"
+				  inheritHeaders="true">
+
+		<jaxrs:headers>
+			<entry key="Accept" value="application/xml"/>
+			<entry key="Content-Type" value="application/xml"/>
+		</jaxrs:headers>
+	</jaxrs:client>
+
+	<jaxrs:client id="senderServiceRestClient"
+				  serviceClass="org.kuali.mobility.push.service.rest.SenderServiceRest"
+				  address="${push.services.url}/sender-api"
+				  inheritHeaders="true">
+		<jaxrs:headers>
+			<entry key="Accept" value="application/xml"/>
+			<entry key="Content-Type" value="application/xml"/>
+		</jaxrs:headers>
+	</jaxrs:client>
+
+	<jaxrs:client id="preferencesServiceRestClient"
+				  serviceClass="org.kuali.mobility.push.service.rest.PreferenceServiceRest"
+				  address="${push.services.url}/preferences-api"
+				  inheritHeaders="true">
+		<jaxrs:headers>
+			<entry key="Accept" value="application/xml"/>
+			<entry key="Content-Type" value="application/xml"/>
+		</jaxrs:headers>
+	</jaxrs:client>
+</beans>

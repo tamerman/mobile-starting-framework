@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+
+    <tlib-version>3.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>kme3</short-name>
+    <uri>http://kuali.org/mobility/v3.0</uri>
+    <description>Kuali Mobility Enterprise tag library</description>
+
+    <tag>
+        <name>page</name>
+        <tag-class>org.kuali.mobility.tags.angular.PageTag</tag-class>
+        <body-content>scriptless</body-content>
+        <description>This tag is for a page</description>
+        <attribute>
+        	<name>hideBackButton</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>boolean</type>
+        </attribute>
+        <attribute>
+        	<name>hideMenuButton</name>
+        	<required>false</required>
+        	<rtexprvalue>true</rtexprvalue>
+        	<type>boolean</type>
+        </attribute>
+        <attribute>
+            <name>toolName</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>title</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>mapLocale</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>backFunction</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>usesGoogleMaps</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+        <attribute>
+            <name>mapCallbackFunction</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>disableGoogleAnalytics</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+        <attribute>
+            <name>cssFilename</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>institutionCss</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>jsFilename</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>ngAppName</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>ngControllerName</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>ngInitFunction</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

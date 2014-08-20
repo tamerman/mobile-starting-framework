@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<catalogNumber>
+    <description>Chem Engr Lab I</description>
+    <number>360</number>
+    <section>
+        <meeting>
+            <days>MoWe</days>
+            <number>1</number>
+            <times>12:30PM - 1:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>7</availableSeats>
+        <catalogNumber>360</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>85</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>78</enrollmentTotal>
+        <number>001</number>
+        <sectionUID>c834f6571b8a6e84948df957a88ef8ac</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LEC</type>
+        <typeDescription>Lecture</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Mo</days>
+            <number>1</number>
+            <times>1:30PM - 5:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>360</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>9</enrollmentCapacity>
+        <enrollmentStatus>Wait List</enrollmentStatus>
+        <enrollmentTotal>13</enrollmentTotal>
+        <number>002</number>
+        <sectionUID>fd38153b4cf7e510b54b21aa206592a3</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LAB</type>
+        <typeDescription>Laboratory</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Tu</days>
+            <number>1</number>
+            <times>12:30PM - 4:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>360</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>9</enrollmentCapacity>
+        <enrollmentStatus>Wait List</enrollmentStatus>
+        <enrollmentTotal>13</enrollmentTotal>
+        <number>003</number>
+        <sectionUID>f1983b2339a9ab4d1168a37afc46ccff</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LAB</type>
+        <typeDescription>Laboratory</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>We</days>
+            <number>1</number>
+            <times>1:30PM - 5:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>360</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>9</enrollmentCapacity>
+        <enrollmentStatus>Wait List</enrollmentStatus>
+        <enrollmentTotal>13</enrollmentTotal>
+        <number>004</number>
+        <sectionUID>e4883e9222dd9d3bd18bcbe9e1f011b9</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LAB</type>
+        <typeDescription>Laboratory</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Th</days>
+            <number>1</number>
+            <times>1:30PM - 5:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>360</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>9</enrollmentCapacity>
+        <enrollmentStatus>Wait List</enrollmentStatus>
+        <enrollmentTotal>13</enrollmentTotal>
+        <number>005</number>
+        <sectionUID>867e400618f06bdfc593d4388be01ae9</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LAB</type>
+        <typeDescription>Laboratory</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Fr</days>
+            <number>1</number>
+            <times>1:30PM - 5:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>360</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>9</enrollmentCapacity>
+        <enrollmentStatus>Wait List</enrollmentStatus>
+        <enrollmentTotal>13</enrollmentTotal>
+        <number>006</number>
+        <sectionUID>a54344a9fb6119e22e680b0d9b17454e</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LAB</type>
+        <typeDescription>Laboratory</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>We</days>
+            <number>1</number>
+            <times>8:30AM - 12:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>360</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>9</enrollmentCapacity>
+        <enrollmentStatus>Wait List</enrollmentStatus>
+        <enrollmentTotal>13</enrollmentTotal>
+        <number>007</number>
+        <sectionUID>2a67a1f87213e3276155af254f172343</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LAB</type>
+        <typeDescription>Laboratory</typeDescription>
+    </section>
+</catalogNumber>

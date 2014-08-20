@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<beans 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-3.1.xsd 
+						http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.1.xsd  
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-3.1.xsd      
+						http://www.springframework.org/schema/jee 
+						http://www.springframework.org/schema/jee/spring-jee-3.1.xsd 
+						http://www.springframework.org/schema/tx 
+						http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+	<bean id="campusService" class="org.kuali.mobility.campus.service.CampusServiceImpl">
+		<property name="campuses">
+			<list>
+				<ref bean="campusUA" />
+				<ref bean="campusBL" />
+				<ref bean="campusIN" />
+				<ref bean="campusCO" />
+				<ref bean="campusEA" />
+				<ref bean="campusKO" />
+				<ref bean="campusNW" />
+				<ref bean="campusSB" />
+				<ref bean="campusSE" />
+                <ref bean="testCampus"/>
+                <ref bean="testCampus2"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="campusUA" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="UA" />
+		<property name="name" value="IU All" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>news</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="campusBL" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="BL" />
+		<property name="name" value="IU Bloomington" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+				<value>computerlabs</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="campusIN" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="IN" />
+		<property name="name" value="IUPUI" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+				<value>computerlabs</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="campusCO" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="CO" />
+		<property name="name" value="IUPUC" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+				<value>computerlabs</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="campusEA" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="EA" />
+		<property name="name" value="IU East" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+				<value>computerlabs</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="campusKO" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="KO" />
+		<property name="name" value="IU Kokomo" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="campusNW" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="NW" />
+		<property name="name" value="IU Northwest" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="campusSB" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="SB" />
+		<property name="name" value="IU South Bend" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+				<value>computerlabs</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="campusSE" class="org.kuali.mobility.campus.entity.Campus">
+		<property name="code" value="SE" />
+		<property name="name" value="IU Southeast" />
+		<property name="tools">
+			<list>
+				<value>home</value>
+				<value>alerts</value>
+				<value>news</value>
+				<value>computerlabs</value>
+			</list>
+		</property>
+	</bean>
+
+    <bean id="testCampus" class="org.kuali.mobility.campus.entity.Campus">
+        <property name="code" value="TEST" />
+        <property name="name" value="Test Campus" />
+        <property name="tools">
+            <list>
+                <value>TEST_TOOL</value>
+                <value>grades</value>
+                <value>maps</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="testCampus2" class="org.kuali.mobility.campus.entity.Campus">
+        <property name="code" value="TEST2" />
+        <property name="name" value="Test Campus 2" />
+        <property name="tools">
+            <list>
+                <value>maps</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="campusController" class="org.kuali.mobility.shared.controllers.CampusController">
+        <property name="campusService" ref="campusService"/>
+    </bean>
+</beans>

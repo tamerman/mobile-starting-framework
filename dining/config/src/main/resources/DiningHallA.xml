@@ -1,0 +1,3564 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<diningHallGroup>
+<name>GroupA</name>
+<diningHall>
+    <name>McDonald's</name>
+    <campus>main</campus>
+    <building>
+        <name>Building A</name>
+        <code>BldgA</code>
+        <latitude>38.2341</latitude>
+        <longitude>92.1345</longitude>
+        <address>
+            <city>Townsville</city>
+            <id>42</id>
+            <postalCode>76532-0000</postalCode>
+            <state>MT</state>
+            <street1>356 ABC Street</street1>
+            <street2>Suite K</street2>
+        </address>
+    </building>
+    <type>hall</type>
+    <menu>
+        <name>Breakfast</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Breakfast Meals</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Egg White Delight McMuffin</name>
+                <price>2.79</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>290</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>135</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Egg White Delight McMuffin - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.99</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>300</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>111</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Egg McMuffin</name>
+                <price>2.79</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>460</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>174</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Egg McMuffin - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.99</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage McMuffin with Egg</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.99</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage McMuffin with Egg - Meal</name>
+                <price>4.19</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon, Egg, Cheese Biscuit</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.19</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon, Egg, Cheese Biscuit - Meal</name>
+                <price>1.46</price>
+                <price>4.39</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage Biscuit with Egg</name>
+                <price>2.69</price>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage Biscuit with Egg - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.67</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon, Egg, Cheese McGriddles</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.19</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon, Egg, Cheese McGriddles - Meal</name>
+                <price>4.39</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage, Egg, Cheese McGriddles</name>
+                <price>3.29</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage, Egg, Cheese McGriddles - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.39</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage McGriddles</name>
+                <price>2.69</price>
+                <price>5.62</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage McGriddles - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.29</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage Burrito</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>2 Sausage Burritos - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.79</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon, Egg and Cheese Bagel</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.29</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon, Egg  Cheese Bagel - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.49</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Steak, Egg  Cheese Bagel</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.79</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Steak, Egg  Cheese Bagel - Meal</name>
+                <price>4.99</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Morning Platters</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Big Breakfast with Hot Cakes</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>5.29</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>290</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>135</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Big Breakfast</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.39</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>300</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>111</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage Gravy and Biscuit</name>
+                <price>2.69</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>300</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>111</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Hot Cakes with Sausage</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.99</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>300</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>111</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>3 Hot Cakes</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.29</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>300</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>111</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+    </menu>
+    <menu>
+        <name>Lunch</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Large Meals</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Chicken McNuggets (10 pc)</name>
+                <price>4.49</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken McNuggets Meal (10 pc)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>6.19</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken McNuggets (20 pc)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>5</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Extra Value Meals</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Big Mac</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.99</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Big Mac - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>5.69</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>2 Cheeseburgers</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.58</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>2 Cheeseburgers - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.24</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Quarter Pounder with Cheese</name>
+                <price>3.79</price>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Quarter Pounder with Cheese - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>5.85</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Double Quarter Pounder with Cheese</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.79</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Double Quarter Pounder with Cheese - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>6.49</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon Habanero Ranch Quarter Pounder</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.09</price>
+                <attribute>vegetarian</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon Habanero Ranch Quarter Pounder - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.95</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Deluxe Quarter Punder</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.43</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Deluxe Quarter Punder - Meal</name>
+                <price>3.78</price>
+                <attribute>vegetarian</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon and Cheese Quarter Pounder</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.09</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon and Cheese Quarter Pounder - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>5.79</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Double Cheeseburger</name>
+                <price>3.81</price>
+                <price>9.8</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Double Cheeseburger - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.79</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Filet-O-Fish</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.69</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Filet-O-Fish - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>4.76</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Double Filet-O-Fish</name>
+                <price>4.69</price>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Double Filet-O-Fish - Meal</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>5</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Happy Meal</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>4 Pc. Chicken McNuggets</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.98</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Hamburger</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.23</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Cheeseburger</name>
+                <price>1.56</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Sweet Treats</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Shakes Small(Chocolate, Vanilla, or Strawberry)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.98</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Shakes Medium(Chocolate, Vanilla, or Strawberry)</name>
+                <price>2.23</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Shakes Large(Chocolate, Vanilla, or Strawberry)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.56</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Shake (Shamrock)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.56</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sundae (Hot Fudge or Caramel)</name>
+                <price>1.99</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Soft Baked Cookies</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>0.39</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Pies (Apple or Cherry)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>0.89</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Cone (Vanilla)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>McFlurry Snack</name>
+                <price>1.56</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+    </menu>
+    <menu>
+        <name>Dinner</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Extra Value Money</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Chicken Snack Wrap (Grilled) (Chipolte BBQ)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.69</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Snack Wrap (Grilled) (Honey Mustard)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.67</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Snack Wrap (Grilled) (Ranch)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.79</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Snack Wrap (Crispy) (Chipolte BBQ)</name>
+                <price>1.58</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Snack Wrap (Crispy) (Honey Mustard)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.89</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Snack Wrap (Crispy) (Ranch)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.78</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Iced Coffee</name>
+                <price>0.56</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>McFlurry</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.39</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Cookie Tote</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.44</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Steak and Egg Burrito</name>
+                <price>1.54</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Dollar Menu and More</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Grilled Onion Cheddar</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.68</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>McDouble</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.78</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>McChicken</name>
+                <price>1.77</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon Cheddar McChicken</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.88</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Buffalo Ranch McChicken</name>
+                <price>2.54</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon Buffalo Ranch McChicken</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.89</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>BBQ Ranch Burger</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>2.98</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>20 Pc. Chicken McNuggets with 2 Medium French Fries and 2 Medium Soft Drinks</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>3.32</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Daily Double</name>
+                <price>4.59</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>McCafe Drinks</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+            <menuItem>
+                <name>Smoothies Small(Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.10</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Smoothies Medium(Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.50</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Smoothies Large(Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate)</name>
+                <price>1.89</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Frappe Small(Mocha, Caramel, Chocolate Chip, or Chocolate Covered Strawberry)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.28</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Frappe Medium(Mocha, Caramel, Chocolate Chip, or Chocolate Covered Strawberry)</name>
+                <price>1.57</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Frappe Large(Mocha, Caramel, Chocolate Chip, or Chocolate Covered Strawberry)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.89</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Premium Roast Coffee (Small)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>0.89</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Premium Roast Coffee (Medium)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.25</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Premium Roast Coffee (Large)</name>
+                <price>1.52</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Iced Tea Small</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>0.50</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Iced Tea Medium</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>0.89</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Iced Tea Large</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.15</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Orange Juice Small</name>
+                <price>0.69</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Orange Juice Medium</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>0.89</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Orange Juice Large</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                <price>1.10</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+    </menu>
+</diningHall>
+ <diningHall>
+        <name>Jean Georges</name>
+        <campus>main</campus>
+        <building>
+            <name>Building A</name>
+            <code>BldgA</code>
+            <latitude>38.2341</latitude>
+            <longitude>92.1345</longitude>
+            <address>
+                <city>Townsville</city>
+                <id>42</id>
+                <postalCode>76532-0000</postalCode>
+                <state>MT</state>
+                <street1>356 ABC Street</street1>
+                <street2>Suite K</street2>
+            </address>
+        </building>
+        <type>hall</type>
+        <menu>
+            <name>Breakfast</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Breakfast Meals</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Egg White Delight McMuffin</name>
+                    <price>2.79</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>290</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>135</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Egg White Delight McMuffin - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.99</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>300</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>111</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Egg McMuffin</name>
+                    <price>2.79</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>460</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>174</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Egg McMuffin - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.99</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage McMuffin with Egg</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.99</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage McMuffin with Egg - Meal</name>
+                    <price>4.19</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon, Egg, Cheese Biscuit</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.19</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon, Egg, Cheese Biscuit - Meal</name>
+                    <price>1.46</price>
+                    <price>4.39</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage Biscuit with Egg</name>
+                    <price>2.69</price>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage Biscuit with Egg - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.67</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon, Egg, Cheese McGriddles</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.19</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon, Egg, Cheese McGriddles - Meal</name>
+                    <price>4.39</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage, Egg, Cheese McGriddles</name>
+                    <price>3.29</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage, Egg, Cheese McGriddles - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.39</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage McGriddles</name>
+                    <price>2.69</price>
+                    <price>5.62</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage McGriddles - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.29</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage Burrito</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Sausage Burritos - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.79</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon, Egg and Cheese Bagel</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.29</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon, Egg  Cheese Bagel - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.49</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Steak, Egg  Cheese Bagel</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.79</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Steak, Egg  Cheese Bagel - Meal</name>
+                    <price>4.99</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Morning Platters</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Big Breakfast with Hot Cakes</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>5.29</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>290</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>135</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Big Breakfast</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.39</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>300</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>111</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage Gravy and Biscuit</name>
+                    <price>2.69</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>300</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>111</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Hot Cakes with Sausage</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.99</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>300</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>111</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>3 Hot Cakes</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.29</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>300</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>111</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+        <menu>
+            <name>Lunch</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Large Meals</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Chicken McNuggets (10 pc)</name>
+                    <price>4.49</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken McNuggets Meal (10 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>6.19</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken McNuggets (20 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>5</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Extra Value Meals</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Big Mac</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.99</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Big Mac - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>5.69</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Cheeseburgers</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.58</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Cheeseburgers - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.24</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Quarter Pounder with Cheese</name>
+                    <price>3.79</price>
+                    <attribute>glutenfree</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Quarter Pounder with Cheese - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>5.85</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Double Quarter Pounder with Cheese</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.79</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Double Quarter Pounder with Cheese - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>6.49</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon Habanero Ranch Quarter Pounder</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.09</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon Habanero Ranch Quarter Pounder - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.95</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Deluxe Quarter Punder</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.43</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Deluxe Quarter Punder - Meal</name>
+                    <price>3.78</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon and Cheese Quarter Pounder</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.09</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon and Cheese Quarter Pounder - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>5.79</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Double Cheeseburger</name>
+                    <price>3.81</price>
+                    <price>9.8</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Double Cheeseburger - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.79</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Filet-O-Fish</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.69</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Filet-O-Fish - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>4.76</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Double Filet-O-Fish</name>
+                    <price>4.69</price>
+                    <attribute>glutenfree</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Double Filet-O-Fish - Meal</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>5</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Happy Meal</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>4 Pc. Chicken McNuggets</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.98</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Hamburger</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.23</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Cheeseburger</name>
+                    <price>1.56</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Sweet Treats</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Shakes Small(Chocolate, Vanilla, or Strawberry)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.98</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Shakes Medium(Chocolate, Vanilla, or Strawberry)</name>
+                    <price>2.23</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Shakes Large(Chocolate, Vanilla, or Strawberry)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.56</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Shake (Shamrock)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.56</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sundae (Hot Fudge or Caramel)</name>
+                    <price>1.99</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Soft Baked Cookies</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>0.39</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Pies (Apple or Cherry)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>0.89</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Cone (Vanilla)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>McFlurry Snack</name>
+                    <price>1.56</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+        <menu>
+            <name>Dinner</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Extra Value Money</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Chicken Snack Wrap (Grilled) (Chipolte BBQ)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.69</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Snack Wrap (Grilled) (Honey Mustard)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.67</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Snack Wrap (Grilled) (Ranch)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.79</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Snack Wrap (Crispy) (Chipolte BBQ)</name>
+                    <price>1.58</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Snack Wrap (Crispy) (Honey Mustard)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.89</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Snack Wrap (Crispy) (Ranch)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.78</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Iced Coffee</name>
+                    <price>0.56</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>McFlurry</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.39</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Cookie Tote</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.44</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Steak and Egg Burrito</name>
+                    <price>1.54</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Dollar Menu and More</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Grilled Onion Cheddar</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.68</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>McDouble</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.78</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>McChicken</name>
+                    <price>1.77</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon Cheddar McChicken</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.88</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Buffalo Ranch McChicken</name>
+                    <price>2.54</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon Buffalo Ranch McChicken</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.89</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>BBQ Ranch Burger</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>2.98</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>20 Pc. Chicken McNuggets with 2 Medium French Fries and 2 Medium Soft Drinks</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>3.32</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Daily Double</name>
+                    <price>4.59</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>McCafe Drinks</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor arcu id dapibus.</description>
+                <menuItem>
+                    <name>Smoothies Small(Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.10</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Smoothies Medium(Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.50</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Smoothies Large(Mango Pineapple, Strawberry Banana, or Blueberry Pomegranate)</name>
+                    <price>1.89</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Frappe Small(Mocha, Caramel, Chocolate Chip, or Chocolate Covered Strawberry)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.28</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Frappe Medium(Mocha, Caramel, Chocolate Chip, or Chocolate Covered Strawberry)</name>
+                    <price>1.57</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Frappe Large(Mocha, Caramel, Chocolate Chip, or Chocolate Covered Strawberry)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.89</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Premium Roast Coffee (Small)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>0.89</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Premium Roast Coffee (Medium)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.25</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Premium Roast Coffee (Large)</name>
+                    <price>1.52</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Iced Tea Small</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>0.50</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Iced Tea Medium</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>0.89</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Iced Tea Large</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.15</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Orange Juice Small</name>
+                    <price>0.69</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Orange Juice Medium</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>0.89</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Orange Juice Large</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus in pharetra. Nunc lacinia eleifend risus.</description>
+                    <price>1.10</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+ </diningHall>
+</diningHallGroup>

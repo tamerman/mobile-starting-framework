@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>writer</short-name>
+	<uri>http://kuali.org/mobility/tags/writer</uri>
+	<description>Writer tag library</description>
+
+	<tag>
+		<name>articleImage</name>
+		<tag-class>org.kuali.mobility.writer.tags.ArticleImageTag</tag-class>
+		<body-content>scriptless</body-content>
+		<description>Inserts an image for an article</description>
+		<attribute>
+			<name>article</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>The article to show an image of</description>
+		</attribute>
+		<attribute>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Optional image id for the inserted image</description>
+		</attribute>
+		<attribute>
+			<name>wrapLink</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Flag if this image should be wrapped with a link to the bigger image</description>
+		</attribute>
+		<attribute>
+			<name>instance</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Name of the tool instance</description>
+		</attribute>
+		<attribute>
+			<name>style</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Optional style to apply to the image</description>
+		</attribute>
+	</tag>
+
+</taglib>

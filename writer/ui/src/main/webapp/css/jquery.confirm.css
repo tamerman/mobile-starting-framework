@@ -1,0 +1,46 @@
+#confirmOverlay{
+	width:100%;
+	min-height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background: -moz-linear-gradient(rgba(11,11,11,0.1), rgba(11,11,11,0.6)) repeat-x rgba(11,11,11,0.2);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(11,11,11,0.1)), to(rgba(11,11,11,0.6))) repeat-x rgba(11,11,11,0.2);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A00B0B0B', endColorstr='#A20B0B0B');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#A00B0B0B', EndColorStr='#A20B0B0B')";
+	z-index:100;
+}
+
+#confirmBox{
+	max-width:300px;
+	margin: auto ;
+	margin-top: 20px;
+	position:relative;
+	z-index:101;
+}
+
+#confirmBox h1,
+#confirmBox p{
+	font:26px/1 'Cuprum','Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	padding: 2px 10px;
+	text-shadow: 0 -1px 1px #999999;
+	color:#666666;
+}
+
+#confirmBox h1{
+	letter-spacing:0.3px;
+	text-align: center;
+	color:#Ff2222;
+}
+
+#confirmBox p{
+	background:none;
+	font-size:16px;
+	line-height:1.4;
+}
+
+#confirmButtons{
+	padding:2px 0 2px;
+	text-align:center;
+	z-index:100001;
+}

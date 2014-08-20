@@ -1,0 +1,30 @@
+/*
+  Copyright 2014 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+
+div#menu.list-group a.list-group-item {
+    background-repeat: no-repeat;
+    background-position: 8px 12px;
+    padding: 5px 15px 5px 65px;
+    position: relative;
+    min-height: 60px;
+    color: #333;
+}
+
+/* Retina display high resolution icons for home screen */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi) {
+
+    div#menu.list-group a.list-group-item  {
+        background-position: 10px -40px;
+        -webkit-background-size: 50px 100px;
+    }
+}

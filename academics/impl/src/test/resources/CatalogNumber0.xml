@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<catalogNumber>
+    <description>Adv Res&amp;Spec Problem</description>
+    <number>490</number>
+    <section>
+        <meetings>
+            <days>TuTh</days>
+            <number>1</number>
+            <times>8:30AM - 9:30AM</times>
+            <topic>TBA</topic>
+        </meetings>
+        <availableSeats>16</availableSeats>
+        <catalogNumber>485</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1</creditHours>
+        <enrollmentCapacity>150</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>134</enrollmentTotal>
+        <number>001</number>
+        <sectionUID>20e994db20715572601860ee13149377</sectionUID>
+        <sessionDescription>First 7 Wk</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LEC</type>
+        <typeDescription>Lecture</typeDescription>
+    </section>
+</catalogNumber>

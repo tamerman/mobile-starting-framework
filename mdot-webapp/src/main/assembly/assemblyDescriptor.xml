@@ -1,0 +1,27 @@
+<assembly>
+	<id>bundled-${project.version}</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}/apache-tomcat-${tomcat.version}</directory>
+			<outputDirectory>/</outputDirectory>
+			<excludes>
+				<exclude>**/webapps/docs/**</exclude>
+				<exclude>**/webapps/examples/**</exclude>
+				<exclude>**/webapps/host-manager/**</exclude>
+				<exclude>**/webapps/manager/**</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>/webapps/mdot</outputDirectory>
+			<includes>
+				<include>${project.groupId}:${project.artifactId}</include>
+			</includes>
+			<unpack>true</unpack>
+		</dependencySet>
+	</dependencySets>
+</assembly>

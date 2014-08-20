@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>icons</short-name>
+	<uri>http://kuali.org/mobility/icons</uri>
+	<description>Kuali Mobility icons tag library</description>
+
+	<tag>
+		<name>iconCSS</name>
+		<tag-class>org.kuali.mobility.icons.tags.WebIconCSSTag</tag-class>
+		<body-content>scriptless</body-content>
+		<description>Inserts an icon css entry</description>
+		<attribute>
+			<name>icon</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>The icon to insert in CSS</description>
+		</attribute>
+		<attribute>
+			<name>size</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Size name</description>
+		</attribute>
+        <attribute>
+            <name>multiplier</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>
+            <![CDATA[
+                The multiplier to use.
+                Used for icons that need higher pixel density.
+                Setting this value higher than 1 will add the multiplier.
+                Setting this value lower than 1 will revert it back to 1.
+
+                Example:
+                If size is set to 52, and multiplier is set to 2, the css
+                will have a link to a "iconName-52@2.png" image.
+
+                If the size is set to 52, and the multiplier is set
+                to 1 (or unset, or set to lower than 1), the css will
+                have a link to a "iconName-52.png" image.
+            ]]>
+            </description>
+        </attribute>
+	</tag>
+	
+	<tag>
+		<name>icon</name>
+		<tag-class>org.kuali.mobility.icons.tags.WebIconTag</tag-class>
+		<body-content>scriptless</body-content>
+		<description>Inserts an image</description>
+		<attribute>
+			<name>icon</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>The icon to insert in CSS</description>
+		</attribute>
+		<attribute>
+			<name>theme</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>The icon to insert in CSS</description>
+		</attribute>
+	</tag>
+
+</taglib>

@@ -1,0 +1,34 @@
+div.forecastItem {
+    margin-left: 66px;
+    margin-top: -9px;
+}
+
+div.forecastItem p {
+    margin-top: -9px;
+}
+
+img.weather {
+    width:auto;
+    height:auto;
+    vertical-align: middle;
+    float: left;
+}
+
+div.forecastItem h3 {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0.6em 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.forecast-list-item {
+    background-color: #FFFFFF;
+    border-bottom: 0px solid #DDDDDD;
+    display: block;
+    padding: 17px 17px 20px;
+    position: relative;
+    padding-bottom: 32px;
+}

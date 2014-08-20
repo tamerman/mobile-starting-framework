@@ -1,0 +1,159 @@
+/*
+  Copyright 2014 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+
+.inlineDiv {
+	display:inline-block
+}
+.footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
+.col1, .col2 {
+	float:left;
+	width:50%;
+}
+
+.colHolder {
+	width:100%;
+	float:left;
+}
+
+.inset-content-10px {
+	padding: 10px;
+}
+
+/*
+.btn-kme{
+	width:33.333%;
+	background-color: #7D110C;
+    border-color: #7D1108;
+    color: #FFFFFF;
+}
+*/
+
+.hiddenSeparator {
+	display:block;
+	margin-bottom:0;
+}
+.group-item-header {
+	font-size: 16px;
+	margin-top:15px;
+}
+
+/*a.list-group-item {*/
+	/*background-repeat:no-repeat;*/
+	/*background-position:8px 8px;*/
+	/*min-height:60px;*/
+	/*padding:5px 15px 5px 80px;*/
+/*}*/
+span.academics-grade {
+    position: absolute;
+    right: 15px;
+    top: 20%;
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.soc-enrollment-status {
+    position: absolute;
+    right: 15px;
+    top: 10%;
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.soc-section-meeting {
+    display: inline-block;
+}
+
+span.soc-section-left {
+    width: 58px;
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align:top !important;
+}
+
+span.soc-section-right {
+    display: inline-block;
+    padding-left:8px;
+    /*padding-right:120px;*/
+    font-size: 12px;
+    font-weight: normal;
+    vertical-align:top !important;
+}
+
+.soc-section-header {
+    font-weight: bold;
+}
+
+.soc-section-nav {
+    padding:0px;
+    margin:0px;
+}
+
+.soc-section-header-line1 {
+    font-size: 120%;
+}
+
+.soc-section-header-line2 {}
+
+.soc-section-description {}
+
+.soc-section-description-label {
+    font-weight: bold;
+}
+
+.keyword-search-input {
+    width:100%;
+}
+
+div.tab-view {
+    padding-bottom:60px;
+}
+
+/* display error message styled in red */
+.xx-http-error-message {
+    background-color: #fbbcb1;
+    border: 1px #e92d0c solid;
+    font-size: 12px;
+    font-family: arial;
+    padding: 10px;
+    width: 702px;
+    margin-bottom: 1px;
+}
+
+.xx-http-error-validation-message {
+    background-color: #fbbcb1;
+    border: 1px #e92d0c solid;
+    font-size: 12px;
+    font-family: arial;
+    padding: 10px;
+    width: 702px;
+    margin-bottom: 1px;
+}
+
+/* display success message styled in green */
+.xx-http-success-message {
+    background-color: #adfa9e;
+    border: 1px #25ae09 solid;
+    font-size: 12px;
+    font-family: arial;
+    padding: 10px;
+    width: 702px;
+    margin-bottom: 1px;
+}

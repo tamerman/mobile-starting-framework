@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<catalogNumber>
+    <description>Res&amp;Spec Problems</description>
+    <number>290</number>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>0</enrollmentCapacity>
+        <enrollmentStatus>Closed</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>001</number>
+        <sectionUID>9d562d993de51de059939a3a96a2cbad</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>006</number>
+        <sectionUID>20ea573ba8a4bb3f8ffe70621ad6e55f</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>007</number>
+        <sectionUID>ea10dee452f3f04e48d4c4a9d0aeaf89</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>008</number>
+        <sectionUID>ae48bff240da7fb1fca62fb1ed845c00</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>010</number>
+        <sectionUID>0f7f98ffa63fdcd83e0a658451d580af</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>011</number>
+        <sectionUID>8c9272e31f1eada6b3abc7fb0d7770a1</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>012</number>
+        <sectionUID>2ca01489608d8a784229dc085c455a2e</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>014</number>
+        <sectionUID>ea4e9d4fa9497213979773a052cab009</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>015</number>
+        <sectionUID>b3b0a40629fb5f5df203e4141f7a43e3</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>019</number>
+        <sectionUID>5ece5c238221e06eae7a3a45f01b19eb</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>029</number>
+        <sectionUID>ccd92adda5a97f70e8a034f0b174cfd0</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>030</number>
+        <sectionUID>e2382fa53cf6fd7ca23b9e8282ccb969</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>031</number>
+        <sectionUID>8bfe2278055b10b2a0ee830d12439e5f</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>24</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>1</enrollmentTotal>
+        <number>032</number>
+        <sectionUID>fedff71d0520424f9f37ac5ae949e88f</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>034</number>
+        <sectionUID>f0cc73554dd0d7bd9deb139a50e08bc9</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>038</number>
+        <sectionUID>1ec046affe1dc7d9a80724760f648de6</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>039</number>
+        <sectionUID>278cd2a588cf9241419c70f966deb7e8</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>040</number>
+        <sectionUID>8858c303f0adf2e90ada44b1e9e7a9d5</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>042</number>
+        <sectionUID>413795160604f5bd2fd2aa47febf2feb</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>047</number>
+        <sectionUID>c148872a88501abd374424c56cc39b9c</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>24</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>1</enrollmentTotal>
+        <number>048</number>
+        <sectionUID>c19053a624e01c7087bf35cfe29ae08b</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>049</number>
+        <sectionUID>5811074ceff3544c2c48925409f04d3c</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>051</number>
+        <sectionUID>c063abfa551277e5e9c33beac64824a2</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>056</number>
+        <sectionUID>50b924ed08198a43db903318b6f8870c</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>057</number>
+        <sectionUID>c39e86d6be3d9caa8e755941777410b8</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>058</number>
+        <sectionUID>3e546fedc46e714b783dca8e2cfa569d</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>23</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>2</enrollmentTotal>
+        <number>059</number>
+        <sectionUID>9ce887fd2448bf7cd1887347380051a3</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>060</number>
+        <sectionUID>6b309959fab81e7c4e74a97f8bc30572</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>24</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>1</enrollmentTotal>
+        <number>062</number>
+        <sectionUID>afb777686ced8935e26c1264c9013622</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>063</number>
+        <sectionUID>7b74a423b73fb82a2b2a127576ce3296</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>091</number>
+        <sectionUID>2cf6ea925cf7d1c30ead784ac131b55e</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TBA</days>
+            <number>1</number>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>25</availableSeats>
+        <catalogNumber>290</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>1 - 16</creditHours>
+        <enrollmentCapacity>25</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>134</number>
+        <sectionUID>2cc10af42e972751596341e280af91cf</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>IND</type>
+        <typeDescription>Independent Study</typeDescription>
+    </section>
+</catalogNumber>

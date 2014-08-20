@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://cxf.apache.org/core" xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:soap="http://cxf.apache.org/bindings/soap"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/jee
+        http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+        http://cxf.apache.org/jaxws
+        http://cxf.apache.org/schemas/jaxws.xsd
+        http://cxf.apache.org/core
+        http://cxf.apache.org/schemas/core.xsd
+        http://cxf.apache.org/jaxrs
+        http://cxf.apache.org/schemas/jaxrs.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.1.xsd
+        http://cxf.apache.org/bindings/soap
+        http://cxf.apache.org/schemas/configuration/soap.xsd
+                        http://www.springframework.org/schema/task
+                        http://www.springframework.org/schema/task/spring-task-3.1.xsd">
+
+    <!--    <import resource="PeopleSoftClient.xml" />-->
+    <!--    <import resource="META-INF/cxf/cxf-extension-policy.xml" /> -->
+    <import resource="classpath:UsernamePasswordPolicy.xml" />
+
+    <util:properties id="academicsProperties" location="classpath:academics.config.properties"/>
+
+    <bean id="termBean" class="org.kuali.mobility.academics.entity.Term" scope="prototype"/>
+
+    <bean id="careerBean" class="org.kuali.mobility.academics.entity.Career" scope="prototype"/>
+
+    <bean id="subjectBean" class="org.kuali.mobility.academics.entity.Subject" scope="prototype"/>
+
+    <bean id="catalogNumberBean" class="org.kuali.mobility.academics.entity.CatalogNumber" scope="prototype"/>
+
+    <bean id="sectionBean" class="org.kuali.mobility.academics.entity.Section" scope="prototype"/>
+
+    <bean id="sectionMeetingBean" class="org.kuali.mobility.academics.entity.SectionMeeting" scope="prototype"/>
+
+    <bean id="academicsGradesPostedNoticeBean" class="org.kuali.mobility.academics.entity.GradesPostedNotice" scope="prototype"/>
+
+    <bean id="academicsSearchResult" class="org.kuali.mobility.academics.entity.SearchResult" scope="prototype"/>
+
+    <bean id="academicsDao" class="org.kuali.mobility.academics.dao.AcademicsDaoImplDemo"/>
+
+    <bean id="academicsInitBean" class="org.kuali.mobility.academics.dao.AcademicsInitBeanDemo" depends-on="academicsDao"/>
+
+    <task:scheduled-tasks>
+        <task:scheduled ref="academicsInitBean" method="loadData" fixed-rate="300000" />
+    </task:scheduled-tasks>
+
+    <bean id="academicsGradesPostedNoticeDao" class="org.kuali.mobility.academics.dao.GradesPostedNoticeDaoImpl"/>
+
+    <bean id="academicsService" class="org.kuali.mobility.academics.service.AcademicsServiceImpl">
+        <property name="dao" ref="academicsDao"/>
+    </bean>
+    
+    <bean id="cxfAcademicsService" class="org.kuali.mobility.academics.service.CXFAcademicsService">
+    	<property name="dao" ref="academicsDao"/>
+    </bean>
+
+    <bean id="academicsAuthService" class="org.kuali.mobility.academics.service.AcademicsAuthServiceImpl" scope="request">
+        <aop:scoped-proxy />
+    </bean>
+
+    <bean id="academicsJsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider">
+        <property name="serializeAsArray" value="true"/>
+        <property name="arrayKeys">
+            <list>
+                <value>term</value>
+                <value>academicCareer</value>
+                <value>subject</value>
+                <value>section</value>
+                <value>meeting</value>
+                <value>instructor</value>
+                <value>messages</value>
+            </list>
+        </property>
+    </bean>
+    
+<!--
+    <jaxrs:server id="cxfAcademicsRestEndpoint" address="/cxfacademics">
+    	<jaxrs:serviceBeans>
+    		<ref bean="cxfAcademicsService"/>
+    	</jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean="academicsJsonProvider"/>
+        </jaxrs:providers>
+    	<jaxrs:extensionMappings>
+    		<entry key="json" value="application/json"/>
+			<entry key="xml" value="application/xml"/>
+    	</jaxrs:extensionMappings>
+    </jaxrs:server> -->
+
+    <jaxrs:server id="academicsRestEndpoint" address="/academics">
+        <jaxrs:serviceBeans>
+            <ref bean="academicsService"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean="academicsJsonProvider"/>
+        </jaxrs:providers>
+        <jaxrs:extensionMappings>
+            <entry key="json" value="application/json"/>
+            <entry key="xml" value="application/xml"/>
+        </jaxrs:extensionMappings>
+    </jaxrs:server>
+
+    <jaxrs:server id="academicsAuthRestEndpoint" address="/myAcademics">
+        <jaxrs:serviceBeans>
+            <ref bean="academicsAuthService"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean="academicsJsonProvider"/>
+        </jaxrs:providers>
+        <jaxrs:extensionMappings>
+            <entry key="json" value="application/json"/>
+            <entry key="xml" value="application/xml"/>
+        </jaxrs:extensionMappings>
+    </jaxrs:server>
+
+    <!-- Grade Alert -->
+    <bean id="gradeAlertService" class="org.kuali.mobility.academics.service.GradeAlertServiceImpl">
+        <property name="dao" ref="academicsGradesPostedNoticeDao"/>
+    </bean>
+
+    <jaxws:endpoint id="gradeAlertSoapEndpoint" implementor="#gradeAlertService"
+                    address="/academics/gradeAlert">
+        <jaxws:binding>
+            <soap:soapBinding style="document" use="literal" version="1.1"/>
+        </jaxws:binding>
+        <!-- using WS-SecurityPolicy  implement your password CallbackHandler
+        <jaxws:properties>
+            <entry key="ws-security.callback-handler" value-ref="passwordCallback"/>
+        </jaxws:properties>
+        -->
+    </jaxws:endpoint>
+
+    <!-- Search Result Message -->
+    <bean id="searchResultNo" class="org.kuali.mobility.shared.entity.ToolMessage">
+        <property name="type">
+            <util:constant static-field="org.kuali.mobility.shared.entity.ToolMessageType.ERROR"/>
+        </property>
+        <property name="label" value="No results"/>
+        <property name="description" value="No search results found. Please refine your search criteria."/>
+    </bean>
+
+    <bean id="searchResultTooMany" class="org.kuali.mobility.shared.entity.ToolMessage">
+        <property name="type">
+            <util:constant static-field="org.kuali.mobility.shared.entity.ToolMessageType.ERROR"/>
+        </property>
+        <property name="label" value="Too many results"/>
+        <property name="description"
+                  value="Too many results. Only the first 500 search results are displayed. Please refine your search criteria."/>
+    </bean>
+</beans>

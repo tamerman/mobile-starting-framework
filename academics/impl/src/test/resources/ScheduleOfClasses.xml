@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<term>
+    <active>false</active>
+    <description>Winter 2014</description>
+    <id>1970</id>
+    <shortDescription>WN 2014</shortDescription>
+    <academicCareer>
+        <description>Architecture &amp; Urban Planning</description>
+        <id>AUP</id>
+        <shortDescription>Arch &amp; UP</shortDescription>
+        <subject>
+            <description>Architecture</description>
+            <id>ARCH</id>
+            <shortDescription>Arch</shortDescription>
+        </subject>
+        <subject>
+            <description>Urban Design</description>
+            <id>UD</id>
+            <shortDescription>Urb Des</shortDescription>
+        </subject>
+        <subject>
+            <description>Urban Planning</description>
+            <id>UP</id>
+            <shortDescription>Urban Pln</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Dental Hygiene</description>
+        <id>DH</id>
+        <shortDescription>Dent Hyg</shortDescription>
+        <subject>
+            <description>Dent Hyg Deg Complet E-Learn</description>
+            <id>HYGDCE</id>
+            <shortDescription>HYGDCE</shortDescription>
+        </subject>
+        <subject>
+            <description>Dental Hygiene</description>
+            <id>DENTHYG</id>
+            <shortDescription>Dent Hyg</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Dentistry</description>
+        <id>DEN</id>
+        <shortDescription>Dent</shortDescription>
+        <subject>
+            <description>Biomaterials</description>
+            <id>BIOMATLS</id>
+            <shortDescription>Biomatls</shortDescription>
+        </subject>
+        <subject>
+            <description>Dental Education</description>
+            <id>DENTED</id>
+            <shortDescription>Dent Ed</shortDescription>
+        </subject>
+        <subject>
+            <description>Dental Hygiene</description>
+            <id>DHYGRACK</id>
+            <shortDescription>Dent Hyg</shortDescription>
+        </subject>
+        <subject>
+            <description>Dentistry</description>
+            <id>DENT</id>
+            <shortDescription>Dent</shortDescription>
+        </subject>
+        <subject>
+            <description>Endodontics</description>
+            <id>ENDODONT</id>
+            <shortDescription>Endodont</shortDescription>
+        </subject>
+        <subject>
+            <description>Oral Biology</description>
+            <id>ORALBIOL</id>
+            <shortDescription>Oral Biol</shortDescription>
+        </subject>
+        <subject>
+            <description>Oral Diagnosis</description>
+            <id>ORALDIAG</id>
+            <shortDescription>Oral Diag</shortDescription>
+        </subject>
+        <subject>
+            <description>Oral Health Sciences</description>
+            <id>ORALHEAL</id>
+            <shortDescription>Oral Heal</shortDescription>
+        </subject>
+        <subject>
+            <description>Oral Pathology</description>
+            <id>ORALPATH</id>
+            <shortDescription>Oral Path</shortDescription>
+        </subject>
+        <subject>
+            <description>Oral Surgery</description>
+            <id>ORALSURG</id>
+            <shortDescription>Oral Surg</shortDescription>
+        </subject>
+        <subject>
+            <description>Orthodontics</description>
+            <id>ORTHO</id>
+            <shortDescription>Ortho</shortDescription>
+        </subject>
+        <subject>
+            <description>Pediatric Dentistry</description>
+            <id>PEDDENT</id>
+            <shortDescription>Ped Dent</shortDescription>
+        </subject>
+        <subject>
+            <description>Periodontics</description>
+            <id>PERIODON</id>
+            <shortDescription>Periodont</shortDescription>
+        </subject>
+        <subject>
+            <description>Prosthodontics</description>
+            <id>PROSTHOD</id>
+            <shortDescription>Prsthdntc</shortDescription>
+        </subject>
+        <subject>
+            <description>Restorative</description>
+            <id>RESTORA</id>
+            <shortDescription>Restora</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Education</description>
+        <id>EDU</id>
+        <shortDescription>Edu</shortDescription>
+        <subject>
+            <description>Educ C Behavior Sci In Educ</description>
+            <id>EDBEHAVR</id>
+            <shortDescription>Ed C</shortDescription>
+        </subject>
+        <subject>
+            <description>Education</description>
+            <id>EDUC</id>
+            <shortDescription>Ed</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Education D Curriculum & Instr]]></description>
+            <id>EDCURINS</id>
+            <shortDescription>Ed D</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Engineering</description>
+        <id>ENG</id>
+        <shortDescription>Eng</shortDescription>
+        <subject>
+            <description><![CDATA[Atmos, Oceanic & Space Sci]]></description>
+            <id>AOSS</id>
+            <shortDescription><![CDATA[Ao&Ss]]></shortDescription>
+        </subject>
+        <subject>
+            <description>Automotive Engineering Program</description>
+            <id>AUTO</id>
+            <shortDescription>Auto</shortDescription>
+        </subject>
+        <subject>
+            <description>Biomedical Engineering</description>
+            <id>BIOMEDE</id>
+            <shortDescription>Biomed E</shortDescription>
+        </subject>
+        <subject>
+            <description>Chemical Engineering</description>
+            <id>CHE</id>
+            <shortDescription>Ch E</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Civil & Environmental Engin]]></description>
+            <id>CEE</id>
+            <shortDescription>Cee</shortDescription>
+        </subject>
+        <subject>
+            <description>Design Science</description>
+            <id>DESCI</id>
+            <shortDescription>Des Sci</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Elec Engin & Computer Sci]]></description>
+            <id>EECS</id>
+            <shortDescription>EECS</shortDescription>
+        </subject>
+        <subject>
+            <description>Energy Systems Engineering</description>
+            <id>ESENG</id>
+            <shortDescription>En Sys Eng</shortDescription>
+        </subject>
+        <subject>
+            <description>Engineering</description>
+            <id>ENGR</id>
+            <shortDescription>Engr</shortDescription>
+        </subject>
+        <subject>
+            <description>Entrepreneurship</description>
+            <id>ENTR</id>
+            <shortDescription>Entrepren</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Environmental Sciences & Engin]]></description>
+            <id>ENSCEN</id>
+            <shortDescription>Enscen</shortDescription>
+        </subject>
+        <subject>
+            <description>Financial Engineering Program</description>
+            <id>FINENG</id>
+            <shortDescription>Fin Eng</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Industrial & Operations Engin]]></description>
+            <id>IOE</id>
+            <shortDescription><![CDATA[I&Oe]]></shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Integrative Systems & Design]]></description>
+            <id>ISD</id>
+            <shortDescription><![CDATA[Int Sys&De]]></shortDescription>
+        </subject>
+        <subject>
+            <description>Manufacturing</description>
+            <id>MFG</id>
+            <shortDescription>Mfg</shortDescription>
+        </subject>
+        <subject>
+            <description>Materials Science Engineering</description>
+            <id>MATSCIE</id>
+            <shortDescription>Mat Sci E</shortDescription>
+        </subject>
+        <subject>
+            <description>Mechanical Engineering</description>
+            <id>MECHENG</id>
+            <shortDescription>ME</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Naval Arch & Marine Engin]]></description>
+            <id>NAVARCH</id>
+            <shortDescription>Nav Arch</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Nuclear Engin & Radiolog Sci]]></description>
+            <id>NERS</id>
+            <shortDescription><![CDATA[Ne&Rs]]></shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Robotics & Auton Vehicle Engin]]></description>
+            <id>RAV</id>
+            <shortDescription>RAV</shortDescription>
+        </subject>
+        <subject>
+            <description>Technical Communication</description>
+            <id>TCHNCLCM</id>
+            <shortDescription>Tchncl Cm</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Information</description>
+        <id>INF</id>
+        <shortDescription>Info</shortDescription>
+        <subject>
+            <description>Information</description>
+            <id>SI</id>
+            <shortDescription>SI</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Kinesiology</description>
+        <id>KIN</id>
+        <shortDescription>Kin</shortDescription>
+        <subject>
+            <description>Athletic Training</description>
+            <id>AT</id>
+            <shortDescription>Athlet Tr</shortDescription>
+        </subject>
+        <subject>
+            <description>Health and Fitness</description>
+            <id>HF</id>
+            <shortDescription><![CDATA[Hlth & Fit]]></shortDescription>
+        </subject>
+        <subject>
+            <description>Kinesiology</description>
+            <id>KINESLGY</id>
+            <shortDescription>KIN</shortDescription>
+        </subject>
+        <subject>
+            <description>Movement Science</description>
+            <id>MOVESCI</id>
+            <shortDescription>MVS</shortDescription>
+        </subject>
+        <subject>
+            <description>Physical Education</description>
+            <id>PHYSED</id>
+            <shortDescription>PE</shortDescription>
+        </subject>
+        <subject>
+            <description>Sport Management</description>
+            <id>SM</id>
+            <shortDescription>Sport Mgt</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>LSA Residential College</description>
+        <id>RC</id>
+        <shortDescription>LSA RC</shortDescription>
+        <subject>
+            <description>Core Courses</description>
+            <id>RCCORE</id>
+            <shortDescription>RC Core</shortDescription>
+        </subject>
+        <subject>
+            <description>Fine Arts</description>
+            <id>RCARTS</id>
+            <shortDescription>RC Arts</shortDescription>
+        </subject>
+        <subject>
+            <description>Humanities</description>
+            <id>RCHUMS</id>
+            <shortDescription>RC Hums</shortDescription>
+        </subject>
+        <subject>
+            <description>Interdivisional</description>
+            <id>RCIDIV</id>
+            <shortDescription>RC I Div</shortDescription>
+        </subject>
+        <subject>
+            <description>Languages</description>
+            <id>RCLANG</id>
+            <shortDescription>RC Lang</shortDescription>
+        </subject>
+        <subject>
+            <description>Social Sciences</description>
+            <id>RCSSCI</id>
+            <shortDescription>RC S Sci</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Law</description>
+        <id>LAW</id>
+        <shortDescription>Law</shortDescription>
+        <subject>
+            <description>Law</description>
+            <id>LAW</id>
+            <shortDescription>Law</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description><![CDATA[Literature, Science &amp; the Arts]]></description>
+        <id>LSA</id>
+        <shortDescription><![CDATA[L S &amp; A]]></shortDescription>
+        <subject>
+            <description><![CDATA[Afroamerican & African Studie]]>s</description>
+            <id>AAS</id>
+            <shortDescription>Afroamer</shortDescription>
+        </subject>
+        <subject>
+            <description>American Culture</description>
+            <id>AMCULT</id>
+            <shortDescription>Am Cult</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Ancient Civiliz & Biblical Stu]]></description>
+            <id>ACABS</id>
+            <shortDescription>ACABS</shortDescription>
+        </subject>
+        <subject>
+            <description>Anthropological Archaeology</description>
+            <id>ANTHRARC</id>
+            <shortDescription>Anthr Arc</shortDescription>
+        </subject>
+        <subject>
+            <description>Anthropology,Biological</description>
+            <id>ANTHRBIO</id>
+            <shortDescription>Anthr Bio</shortDescription>
+        </subject>
+        <subject>
+            <description>Anthropology,Cultural</description>
+            <id>ANTHRCUL</id>
+            <shortDescription>Anthr Cul</shortDescription>
+        </subject>
+        <subject>
+            <description>Applied Physics</description>
+            <id>APPPHYS</id>
+            <shortDescription>Apphysics</shortDescription>
+        </subject>
+        <subject>
+            <description>Arab American Studies</description>
+            <id>ARABAM</id>
+            <shortDescription>Ar Am Std</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Arab, Armen, Pers, Turk& Islam]]></description>
+            <id>AAPTIS</id>
+            <shortDescription>APTIS</shortDescription>
+        </subject>
+        <subject>
+            <description>Armenian Studies</description>
+            <id>ARMENIAN</id>
+            <shortDescription>Armenian</shortDescription>
+        </subject>
+        <subject>
+            <description>Asian Languages</description>
+            <id>ASIANLAN</id>
+            <shortDescription>Asian Lang</shortDescription>
+        </subject>
+        <subject>
+            <description>Asian Studies</description>
+            <id>ASIAN</id>
+            <shortDescription>Asian</shortDescription>
+        </subject>
+        <subject>
+            <description>Asian/Pacific Island Amer Std</description>
+            <id>ASIANPAM</id>
+            <shortDescription>As Pac Am</shortDescription>
+        </subject>
+        <subject>
+            <description>Astronomy</description>
+            <id>ASTRO</id>
+            <shortDescription>Astronomy</shortDescription>
+        </subject>
+        <subject>
+            <description>Biology</description>
+            <id>BIOLOGY</id>
+            <shortDescription>Biology</shortDescription>
+        </subject>
+        <subject>
+            <description>Biophysics</description>
+            <id>BIOPHYS</id>
+            <shortDescription>Biophysic</shortDescription>
+        </subject>
+        <subject>
+            <description>Bosnian/Croatian/Serbian</description>
+            <id>BCS</id>
+            <shortDescription>BCS</shortDescription>
+        </subject>
+        <subject>
+            <description>Buddhist Studies</description>
+            <id>BUDDHST</id>
+            <shortDescription>Budht Std</shortDescription>
+        </subject>
+        <subject>
+            <description>Chemistry</description>
+            <id>CHEM</id>
+            <shortDescription>Chem</shortDescription>
+        </subject>
+        <subject>
+            <description>Chinese Studies</description>
+            <id>CCS</id>
+            <shortDescription>CCS</shortDescription>
+        </subject>
+        <subject>
+            <description>Classical Archaeology</description>
+            <id>CLARCH</id>
+            <shortDescription>Cl Arch</shortDescription>
+        </subject>
+        <subject>
+            <description>Classical Civilization</description>
+            <id>CLCIV</id>
+            <shortDescription>Cl Civilz</shortDescription>
+        </subject>
+        <subject>
+            <description>Classical Linguistics</description>
+            <id>CLLING</id>
+            <shortDescription>Cl Ling</shortDescription>
+        </subject>
+        <subject>
+            <description>Cognitive Science</description>
+            <id>COGSCI</id>
+            <shortDescription>Cog Sci</shortDescription>
+        </subject>
+        <subject>
+            <description>College Honors</description>
+            <id>HONORS</id>
+            <shortDescription>Honors</shortDescription>
+        </subject>
+        <subject>
+            <description>Communication Studies</description>
+            <id>COMM</id>
+            <shortDescription>Comunctn</shortDescription>
+        </subject>
+        <subject>
+            <description>Comparative Literature</description>
+            <id>COMPLIT</id>
+            <shortDescription>Comp Lit</shortDescription>
+        </subject>
+        <subject>
+            <description>Complex Systems</description>
+            <id>CMPLXSYS</id>
+            <shortDescription>CmplxSys</shortDescription>
+        </subject>
+        <subject>
+            <description>Comprehensive Studies Program</description>
+            <id>CSP</id>
+            <shortDescription>CSP</shortDescription>
+        </subject>
+        <subject>
+            <description>Core Courses</description>
+            <id>RCCORE</id>
+            <shortDescription>RC Core</shortDescription>
+        </subject>
+        <subject>
+            <description>Czech</description>
+            <id>CZECH</id>
+            <shortDescription>Czech</shortDescription>
+        </subject>
+        <subject>
+            <description>Dutch</description>
+            <id>DUTCH</id>
+            <shortDescription>Dutch</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Earth & Environmental Sciences]]></description>
+            <id>EARTH</id>
+            <shortDescription><![CDATA[E & ES]]></shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Ecology & Evolutionary Biology]]></description>
+            <id>EEB</id>
+            <shortDescription>EEB</shortDescription>
+        </subject>
+        <subject>
+            <description>Economics</description>
+            <id>ECON</id>
+            <shortDescription>Econ</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[English Lang & Literature]]></description>
+            <id>ENGLISH</id>
+            <shortDescription>Engl</shortDescription>
+        </subject>
+        <subject>
+            <description>English Language Institute</description>
+            <id>ELI</id>
+            <shortDescription>Eng Lng I</shortDescription>
+        </subject>
+        <subject>
+            <description>Environment</description>
+            <id>ENVIRON</id>
+            <shortDescription>Environ</shortDescription>
+        </subject>
+        <subject>
+            <description>European Studies</description>
+            <id>EURO</id>
+            <shortDescription>Eur Std</shortDescription>
+        </subject>
+        <subject>
+            <description>French</description>
+            <id>FRENCH</id>
+            <shortDescription>French</shortDescription>
+        </subject>
+        <subject>
+            <description>Geography</description>
+            <id>GEOG</id>
+            <shortDescription>Geog</shortDescription>
+        </subject>
+        <subject>
+            <description>German</description>
+            <id>GERMAN</id>
+            <shortDescription>Ger</shortDescription>
+        </subject>
+        <subject>
+            <description>Great Books</description>
+            <id>GTBOOKS</id>
+            <shortDescription>Gt Books</shortDescription>
+        </subject>
+        <subject>
+            <description>Greek</description>
+            <id>GREEK</id>
+            <shortDescription>Greek</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Hebrew & Jewish Cultural Stu]]></description>
+            <id>HJCS</id>
+            <shortDescription>HJCS</shortDescription>
+        </subject>
+        <subject>
+            <description>History</description>
+            <id>HISTORY</id>
+            <shortDescription>Hist</shortDescription>
+        </subject>
+        <subject>
+            <description>History of Art</description>
+            <id>HISTART</id>
+            <shortDescription>Hist Art</shortDescription>
+        </subject>
+        <subject>
+            <description>Humanities</description>
+            <id>RCHUMS</id>
+            <shortDescription>RC Hums</shortDescription>
+        </subject>
+        <subject>
+            <description>Institute For The Humanities</description>
+            <id>INSTHUM</id>
+            <shortDescription>Inst Hum</shortDescription>
+        </subject>
+        <subject>
+            <description>International Studies</description>
+            <id>INTLSTD</id>
+            <shortDescription>Intern Std</shortDescription>
+        </subject>
+        <subject>
+            <description>Italian</description>
+            <id>ITALIAN</id>
+            <shortDescription>Ital</shortDescription>
+        </subject>
+        <subject>
+            <description>Japanese Studies</description>
+            <id>CJS</id>
+            <shortDescription>CJS</shortDescription>
+        </subject>
+        <subject>
+            <description>Judaic Studies</description>
+            <id>JUDAIC</id>
+            <shortDescription>Judaic St</shortDescription>
+        </subject>
+        <subject>
+            <description>Latin</description>
+            <id>LATIN</id>
+            <shortDescription>Latin</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Latin Amer & Caribbean Stu]]></description>
+            <id>LACS</id>
+            <shortDescription>LatCar St</shortDescription>
+        </subject>
+        <subject>
+            <description>Latina/o American Studies</description>
+            <id>LATINOAM</id>
+            <shortDescription>Lat Am Std</shortDescription>
+        </subject>
+        <subject>
+            <description>Linguistics</description>
+            <id>LING</id>
+            <shortDescription>Ling</shortDescription>
+        </subject>
+        <subject>
+            <description>Lloyd Hall Scholars Program</description>
+            <id>LHSP</id>
+            <shortDescription>LHSP</shortDescription>
+        </subject>
+        <subject>
+            <description>Macromolecular Science</description>
+            <id>MACROMOL</id>
+            <shortDescription>Macromclr</shortDescription>
+        </subject>
+        <subject>
+            <description>Mathematics</description>
+            <id>MATH</id>
+            <shortDescription>Math</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Medieval & Early Modern Std]]></description>
+            <id>MEMS</id>
+            <shortDescription>MEMS</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Middle Eastern & N African Stu]]></description>
+            <id>MENAS</id>
+            <shortDescription>Mid N Afr</shortDescription>
+        </subject>
+        <subject>
+            <description>Modern Greek</description>
+            <id>MODGREEK</id>
+            <shortDescription>Mod Greek</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Molec, Cell & Develop Biology]]></description>
+            <id>MCDB</id>
+            <shortDescription>MCDB</shortDescription>
+        </subject>
+        <subject>
+            <description>Museum Methods</description>
+            <id>MUSMETH</id>
+            <shortDescription>Mus Meth</shortDescription>
+        </subject>
+        <subject>
+            <description>Museums</description>
+            <id>MUSEUMS</id>
+            <shortDescription>Museums</shortDescription>
+        </subject>
+        <subject>
+            <description>Native American Studies</description>
+            <id>NATIVEAM</id>
+            <shortDescription>Nat Am Std</shortDescription>
+        </subject>
+        <subject>
+            <description>Organizational Studies</description>
+            <id>ORGSTUDY</id>
+            <shortDescription>OrgStudy</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Philos, Politics & Economics]]></description>
+            <id>PPE</id>
+            <shortDescription>PPE</shortDescription>
+        </subject>
+        <subject>
+            <description>Philosophy</description>
+            <id>PHIL</id>
+            <shortDescription>Philosophy</shortDescription>
+        </subject>
+        <subject>
+            <description>Physics</description>
+            <id>PHYSICS</id>
+            <shortDescription>Phys</shortDescription>
+        </subject>
+        <subject>
+            <description>Polish</description>
+            <id>POLISH</id>
+            <shortDescription>Polish</shortDescription>
+        </subject>
+        <subject>
+            <description>Political Science</description>
+            <id>POLSCI</id>
+            <shortDescription>Pol Sci</shortDescription>
+        </subject>
+        <subject>
+            <description>Portuguese</description>
+            <id>PORTUG</id>
+            <shortDescription>Portugues</shortDescription>
+        </subject>
+        <subject>
+            <description>Psychology</description>
+            <id>PSYCH</id>
+            <shortDescription>Psych</shortDescription>
+        </subject>
+        <subject>
+            <description>Religion</description>
+            <id>RELIGION</id>
+            <shortDescription>Religion</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Romance Languages&Literatures]]></description>
+            <id>ROMLANG</id>
+            <shortDescription>Rom Lang</shortDescription>
+        </subject>
+        <subject>
+            <description>Romance Linguistics</description>
+            <id>ROMLING</id>
+            <shortDescription>Rom Ling</shortDescription>
+        </subject>
+        <subject>
+            <description>Russian</description>
+            <id>RUSSIAN</id>
+            <shortDescription>Russian</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Russian, E Europe & Euras Stu]]></description>
+            <id>REEES</id>
+            <shortDescription>REEES</shortDescription>
+        </subject>
+        <subject>
+            <description>Scandinavian</description>
+            <id>SCAND</id>
+            <shortDescription>Scand</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Screen Arts & Cultures]]></description>
+            <id>SAC</id>
+            <shortDescription><![CDATA[Sc A & Cul]]></shortDescription>
+        </subject>
+        <subject>
+            <description>Slavic</description>
+            <id>SLAVIC</id>
+            <shortDescription>Slav</shortDescription>
+        </subject>
+        <subject>
+            <description>Sociology</description>
+            <id>SOC</id>
+            <shortDescription>Soc</shortDescription>
+        </subject>
+        <subject>
+            <description>South Asian Studies</description>
+            <id>SAS</id>
+            <shortDescription>SAS</shortDescription>
+        </subject>
+        <subject>
+            <description>Southeast Asian Studies</description>
+            <id>SEAS</id>
+            <shortDescription>SEAS</shortDescription>
+        </subject>
+        <subject>
+            <description>Spanish</description>
+            <id>SPANISH</id>
+            <shortDescription>Span</shortDescription>
+        </subject>
+        <subject>
+            <description>Statistics</description>
+            <id>STATS</id>
+            <shortDescription>Stat</shortDescription>
+        </subject>
+        <subject>
+            <description>Study Abroad</description>
+            <id>STDABRD</id>
+            <shortDescription>StdAbroad</shortDescription>
+        </subject>
+        <subject>
+            <description>Survey Methodology</description>
+            <id>SURVMETH</id>
+            <shortDescription>Surv Meth</shortDescription>
+        </subject>
+        <subject>
+            <description>Sweetland Center for Writing</description>
+            <id>WRITING</id>
+            <shortDescription>Sweetland</shortDescription>
+        </subject>
+        <subject>
+            <description>Ukrainian</description>
+            <id>UKR</id>
+            <shortDescription>Ukrainian</shortDescription>
+        </subject>
+        <subject>
+            <description>University Courses</description>
+            <id>UC</id>
+            <shortDescription>Univ Crse</shortDescription>
+        </subject>
+        <subject>
+            <description>Womens Studies</description>
+            <id>WOMENSTD</id>
+            <shortDescription>Women Std</shortDescription>
+        </subject>
+        <subject>
+            <description>Yiddish</description>
+            <id>YIDDISH</id>
+            <shortDescription>YIDDISH</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Medicine</description>
+        <id>MED</id>
+        <shortDescription>Medicine</shortDescription>
+        <subject>
+            <description>Anatomy</description>
+            <id>ANATOMY</id>
+            <shortDescription>Anatomy</shortDescription>
+        </subject>
+        <subject>
+            <description>Anesthesia</description>
+            <id>ANESTH</id>
+            <shortDescription>Anesth</shortDescription>
+        </subject>
+        <subject>
+            <description>Bioinformatics</description>
+            <id>BIOINF</id>
+            <shortDescription>Bioinforma</shortDescription>
+        </subject>
+        <subject>
+            <description>Biological Chemistry</description>
+            <id>BIOLCHEM</id>
+            <shortDescription>Biol Chem</shortDescription>
+        </subject>
+        <subject>
+            <description>Biomedical Sciences</description>
+            <id>PIBS</id>
+            <shortDescription>Biomed Sci</shortDescription>
+        </subject>
+        <subject>
+            <description>Cancer Biology</description>
+            <id>CANCBIO</id>
+            <shortDescription>Canc Biol</shortDescription>
+        </subject>
+        <subject>
+            <description>Cell and Developmental Biology</description>
+            <id>CDB</id>
+            <shortDescription>CDB</shortDescription>
+        </subject>
+        <subject>
+            <description>Cellular And Molecular Biology</description>
+            <id>CMBIOL</id>
+            <shortDescription>C M Biol</shortDescription>
+        </subject>
+        <subject>
+            <description>Dermatology</description>
+            <id>DERM</id>
+            <shortDescription>Derm</shortDescription>
+        </subject>
+        <subject>
+            <description>Family Medicine</description>
+            <id>FAMMED</id>
+            <shortDescription>Family Med</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Health & Health Care Research]]></description>
+            <id>HHCR</id>
+            <shortDescription><![CDATA[Hlth & HCR]]></shortDescription>
+        </subject>
+        <subject>
+            <description>Human Genetics</description>
+            <id>HUMGEN</id>
+            <shortDescription>Hum Gen</shortDescription>
+        </subject>
+        <subject>
+            <description>Immunology</description>
+            <id>IMMUNO</id>
+            <shortDescription>Immunology</shortDescription>
+        </subject>
+        <subject>
+            <description>Inteflex Medical School</description>
+            <id>INFLXMED</id>
+            <shortDescription>Inflx Med</shortDescription>
+        </subject>
+        <subject>
+            <description>Internal Medicine</description>
+            <id>INTMED</id>
+            <shortDescription>Int Med</shortDescription>
+        </subject>
+        <subject>
+            <description>Medical Education</description>
+            <id>MEDEDUC</id>
+            <shortDescription>Med Educ</shortDescription>
+        </subject>
+        <subject>
+            <description>Medical School Administration</description>
+            <id>MEDADM</id>
+            <shortDescription>Med Admin</shortDescription>
+        </subject>
+        <subject>
+            <description>Microbiology</description>
+            <id>MICRBIOL</id>
+            <shortDescription>Microbiol</shortDescription>
+        </subject>
+        <subject>
+            <description>Neurology</description>
+            <id>NEUROL</id>
+            <shortDescription>Neurol</shortDescription>
+        </subject>
+        <subject>
+            <description>Neuroscience</description>
+            <id>NEUROSCI</id>
+            <shortDescription>Neurosci</shortDescription>
+        </subject>
+        <subject>
+            <description>Neurosurgery</description>
+            <id>NEUSURG</id>
+            <shortDescription>Neurosurg</shortDescription>
+        </subject>
+        <subject>
+            <description>Obstetrics and Gynecology</description>
+            <id>OBSTGYN</id>
+            <shortDescription>Ob/Gyn</shortDescription>
+        </subject>
+        <subject>
+            <description>Ophthalmology</description>
+            <id>OPHTH</id>
+            <shortDescription>Ophth</shortDescription>
+        </subject>
+        <subject>
+            <description>Otorhinolaryngology</description>
+            <id>OTO</id>
+            <shortDescription>Oto</shortDescription>
+        </subject>
+        <subject>
+            <description>Pathology</description>
+            <id>PATH</id>
+            <shortDescription>Path</shortDescription>
+        </subject>
+        <subject>
+            <description>Pediatrics</description>
+            <id>PEDIAT</id>
+            <shortDescription>Peds</shortDescription>
+        </subject>
+        <subject>
+            <description>Pharmacology</description>
+            <id>PHRMACOL</id>
+            <shortDescription>Pharm</shortDescription>
+        </subject>
+        <subject>
+            <description><![CDATA[Physical Medicine & Rehab]]></description>
+            <id>PMR</id>
+            <shortDescription><![CDATA[PM&R]]></shortDescription>
+        </subject>
+        <subject>
+            <description>Physiology</description>
+            <id>PHYSIOL</id>
+            <shortDescription>Physiology</shortDescription>
+        </subject>
+        <subject>
+            <description>Psychiatry</description>
+            <id>PSYCHIAT</id>
+            <shortDescription>Psych</shortDescription>
+        </subject>
+        <subject>
+            <description>Radiology</description>
+            <id>RADIOL</id>
+            <shortDescription>Radiology</shortDescription>
+        </subject>
+        <subject>
+            <description>Surgery</description>
+            <id>SURGERY</id>
+            <shortDescription>Surgery</shortDescription>
+        </subject>
+    </academicCareer>
+    <academicCareer>
+        <description>Music, Theatre &amp; Dance</description>
+        <id>MUS</id>
+        <shortDescription>Music</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Natural Resources&amp;Environment</description>
+        <id>NRE</id>
+        <shortDescription>NR &amp; E</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Nursing</description>
+        <id>NUR</id>
+        <shortDescription>Nursing</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Officer Education Programs</description>
+        <id>OEP</id>
+        <shortDescription>Officer Ed</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Pharmacy</description>
+        <id>PHR</id>
+        <shortDescription>Pharmacy</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Public Health</description>
+        <id>PH</id>
+        <shortDescription>Pub Health</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Public Policy</description>
+        <id>IPP</id>
+        <shortDescription>Public Pol</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Rackham</description>
+        <id>RAC</id>
+        <shortDescription>Rackham</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Ross School of Business</description>
+        <id>BA</id>
+        <shortDescription>Ross Sch</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Social Work</description>
+        <id>SW</id>
+        <shortDescription>SW</shortDescription>
+    </academicCareer>
+    <academicCareer>
+        <description>Stamps School of Art &amp; Design</description>
+        <id>ART</id>
+        <shortDescription>Art&amp;Des</shortDescription>
+    </academicCareer>
+</term>
+

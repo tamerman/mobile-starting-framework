@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<catalogNumber>
+    <description>Proc Sim &amp; Design</description>
+    <number>487</number>
+    <section>
+        <meetings>
+            <days>MoWe</days>
+            <number>1</number>
+            <times>10:30AM - 11:30AM</times>
+            <topic>TBA</topic>
+        </meetings>
+        <meetings>
+            <days>Fr</days>
+            <number>3</number>
+            <times>10:30AM - 1:30PM</times>
+            <topic>TBA</topic>
+        </meetings>
+        <availableSeats>55</availableSeats>
+        <catalogNumber>487</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>5</creditHours>
+        <enrollmentCapacity>120</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>65</enrollmentTotal>
+        <number>001</number>
+        <sectionUID>c8065e2e3cc3e02a217428458c8a21de</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LEC</type>
+        <typeDescription>Lecture</typeDescription>
+    </section>
+</catalogNumber>

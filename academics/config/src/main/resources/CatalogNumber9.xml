@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<catalogNumber>
+    <description>ChE Process Econ</description>
+    <number>485</number>
+    <section>
+        <meeting>
+            <days>MoWe</days>
+            <number>1</number>
+            <times>1:30PM - 3:00PM</times>
+            <topic>Eng Statistics &amp; Prob Solving</topic>
+        </meeting>
+        <availableSeats>19</availableSeats>
+        <catalogNumber>496</catalogNumber>
+        <classTopic>Eng Statistics &amp; Prob Solving</classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>3</creditHours>
+        <enrollmentCapacity>55</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>36</enrollmentTotal>
+        <number>001</number>
+        <sectionUID>a8ef02960daca52b4825784303cb9270</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LEC</type>
+        <typeDescription>Lecture</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>MoWe</days>
+            <number>1</number>
+            <times>8:30AM - 10:30AM</times>
+            <topic>Industr&amp;Therapeutic BioMolEng</topic>
+        </meeting>
+        <availableSeats>10</availableSeats>
+        <catalogNumber>496</catalogNumber>
+        <classTopic>Industr&amp;Therapeutic BioMolEng</classTopic>
+        <combinedSectionId>C</combinedSectionId>
+        <creditHours>3</creditHours>
+        <enrollmentCapacity>15</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>5</enrollmentTotal>
+        <number>005</number>
+        <sectionUID>982ad89d7cc1387acf5dd279ecda5c7d</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LEC</type>
+        <typeDescription>Lecture</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>TuFr</days>
+            <number>1</number>
+            <times>8:30AM - 10:00AM</times>
+            <topic>Fossil &amp; Renewable Fuels</topic>
+        </meeting>
+        <availableSeats>15</availableSeats>
+        <catalogNumber>496</catalogNumber>
+        <classTopic>Fossil &amp; Renewable Fuels</classTopic>
+        <combinedSectionId>C</combinedSectionId>
+        <creditHours>3</creditHours>
+        <enrollmentCapacity>15</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>0</enrollmentTotal>
+        <number>006</number>
+        <sectionUID>994b0b314e872a95d766881ce59f5d94</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LEC</type>
+        <typeDescription>Lecture</typeDescription>
+    </section>
+</catalogNumber>

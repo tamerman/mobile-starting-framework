@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+						http://cxf.apache.org/core
+ 						http://cxf.apache.org/schemas/core.xsd
+						http://www.springframework.org/schema/util 
+   						http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="/cache-manager/${CacheManager}.xml" />
+
+ 	<cxf:bus>
+		<cxf:features>
+			<cxf:logging />
+		</cxf:features>
+	</cxf:bus>
+
+	<import resource="classpath:KMESpringBeans.xml" />
+	<import resource="classpath:CampusSpringBeans.xml" />
+	<import resource="classpath:AcademicsSpringBeans.xml" />
+	<import resource="classpath:AdminSpringBeans.xml" />
+	<import resource="classpath:AlertsSpringBeans.xml" />
+    <import resource="classpath:AuthSpringBeans.xml" />
+	<import resource="classpath:BusSpringBeans.xml" />
+	<import resource="classpath:ComputerLabsSpringBeans.xml" />
+	<import resource="classpath:ConferenceSpringBeans.xml" />
+	<import resource="classpath:DiningSpringBeans.xml" />
+    <import resource="classpath:EventsSpringBeans.xml" />
+	<import resource="classpath:FeedbackSpringBeans.xml" />
+	<import resource="classpath:GradesSpringBeans.xml" />
+	<import resource="classpath:LibrarySpringBeans.xml" />
+	<import resource="classpath:NewsSpringBeans.xml" />
+	<import resource="classpath:EventsSpringBeans.xml" />
+	<import resource="classpath:DirectorySpringBeans.xml" />
+	<import resource="classpath:WeatherSpringBeans.xml" />
+	<import resource="classpath:EmergencyinfoSpringBeans.xml" />
+	<import resource="classpath:MapsSpringBeans.xml" />
+	<import resource="classpath:ReportingSpringBeans.xml" />
+	<import resource="classpath:ToursSpringBeans.xml" />
+	<import resource="classpath:PushSpringBeans.xml" />
+	<import resource="classpath:CalendarsSpringBeans.xml" />
+    <import resource="classpath:IconsSpringBeans.xml" />
+    <import resource="classpath:WriterSpringBeans.xml" />
+    <import resource="classpath:AuthSpringBeans.xml" />
+
+    <!--
+	This is where the basenames for the i18n files are defined. The files themselves
+	will be located in */webapp/src/main/resouces/ folder for each tool. Once compiled
+	they will also be in */webapp/target/classes/ folder.
+
+	They name of the i18n files will be of the following format where the language and
+	location codes are the standardize form.
+	<tool name>_<language code>_<location code>.properties.
+
+	for example;
+		"alert_en_UK.properties" for the British English version.
+		"alert_zh_CN.properties" for the Mainland China/Simplfied Chinese version.
+		"alert_es.properties" for the Spanish.
+	-->
+		
+	
+	<bean id="messageSource" class="org.kuali.mobility.util.KMEMessageSource">
+		<property name="parentMessageSource">
+		    <bean class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+			<property name="basenames">
+				<list>
+					<value>WEB-INF/i18n/academics</value>
+					<value>WEB-INF/i18n/admin</value>
+					<value>WEB-INF/i18n/alert</value>
+                    <value>WEB-INF/i18n/auth</value>
+					<value>WEB-INF/i18n/bus</value>
+					<value>WEB-INF/i18n/calendars</value>
+					<value>WEB-INF/i18n/computerlabs</value>
+					<value>WEB-INF/i18n/conference</value>
+					<value>WEB-INF/i18n/dining</value>
+					<value>WEB-INF/i18n/emergencyinfo</value>
+					<value>WEB-INF/i18n/feedback</value>
+					<value>WEB-INF/i18n/grades</value>
+					<value>WEB-INF/i18n/library</value>
+					<value>WEB-INF/i18n/maps</value>
+					<value>WEB-INF/i18n/news</value>
+					<value>WEB-INF/i18n/events</value>
+					<value>WEB-INF/i18n/shared</value>
+					<value>WEB-INF/i18n/weather</value>
+					<value>WEB-INF/i18n/reporting</value>
+					<value>WEB-INF/i18n/tours</value>
+	                <value>WEB-INF/i18n/people</value>
+	                <value>WEB-INF/i18n/push</value>
+                    <value>WEB-INF/i18n/writer</value>
+                    <value>WEB-INF/i18n/auth</value>
+				</list>
+			</property>
+		    <property name="defaultEncoding" value="UTF-8"/>
+		</bean>
+		</property>
+	</bean>
+
+	<util:list id="homeScreenToolsConfig" value-type="java.lang.String">
+		<!-- This will be the default order. -->
+        <value>AlertsHomeScreenConfig.xml</value>
+        <value>BusHomeScreenConfig.xml</value>
+        <value>NewsHomeScreenConfig.xml</value>
+		<value>DiningHomeScreenConfig.xml</value>
+        <value>ComputerLabsHomeScreenConfig.xml</value>
+        <value>AcademicsHomeScreenConfig.xml</value>
+        <value>GradesHomeScreenConfig.xml</value>
+        <value>LibraryHomeScreenConfig.xml</value>
+        <value>EmergencyHomeScreenConfig.xml</value>
+        <value>MapsHomeScreenConfig.xml</value>
+        <value>FeedbackHomeScreenConfig.xml</value>
+        <value>DirectoryHomeScreenConfig.xml</value>
+        <value>WeatherHomeScreenConfig.xml</value>
+		<!--<value>CalendarsHomeScreenConfig.xml</value>-->
+		<!--<value>ConferenceHomeScreenConfig.xml</value>-->
+		<value>EventsHomeScreenConfig.xml</value>
+		<value>IncidentReportingHomeScreenConfig.xml</value>
+		<value>ReportingAdminHomeScreenConfig.xml</value>
+        <value>WriterHomeScreenConfig.xml</value>
+		<!--<value>PushHomeScreenConfig.xml</value>-->
+		<!--<value>PublishingHomeScreenConfig.xml</value>-->
+		<!--<value>RadioHomeScreenConfig.xml</value>-->
+		<!--<value>QRCodeHomeScreenConfig.xml</value>-->
+		<!--<value>PluginsHomeScreenConfig.xml</value>-->
+		<!--<value>AuthHomeScreenConfig.xml</value>-->
+	</util:list>
+
+	<util:list id="supportedLanguages" value-type="java.lang.String" list-class="java.util.ArrayList">
+	    <value>en</value>
+        <value>af</value>
+	</util:list>
+
+	<!--
+		The following 3 beans are for setting up i18n/L10n handling.
+		the ?lang=<language code> suffix can be postpended to a URL to
+		set a cookie to the preferred locale which in turn sets the
+		language set used. Example;
+
+		/conference?lang=en sets the locale to English.
+		/conference?lang=zh_CN sets the locale to Mainland China
+
+        This will be mostly used to allow the user to set the locale in;
+        /shared/webapp/src/main/webapp/WEB-INF/services/preferences.jsp
+   	-->
+    <bean id="localeChangeInterceptor"
+          class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+        <property name="paramName" value="lang" />
+    </bean>
+
+    <bean id="localeResolver"
+          class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="defaultLocale" value="en"/>
+    </bean>
+
+    <bean id="handlerMapping"
+          class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="interceptors">
+            <ref bean="localeChangeInterceptor" />
+        </property>
+    </bean>
+
+</beans>
+

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<categorys>
+	<category>
+		<id>1</id>
+		<name>Auditions</name>
+		<order>1</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=1</url>
+	</category>
+	<category>
+		<id>2</id>
+		<name>Career Fair</name>
+		<order>2</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=2</url>
+	</category>
+	<category>
+		<id>3</id>
+		<name>Ceremony / Service</name>
+		<order>3</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=3</url>
+	</category>
+	<category>
+		<id>8</id>
+		<name>Class / Instruction</name>
+		<order>4</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=8</url>
+	</category>
+	<category>
+		<id>4</id>
+		<name>Community Service</name>
+		<order>5</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=4</url>
+	</category>
+	<category>
+		<id>5</id>
+		<name>Conference / Symposium</name>
+		<order>6</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=5</url>
+	</category>
+	<category>
+		<id>6</id>
+		<name>Exercise / Fitness</name>
+		<order>7</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=6</url>
+	</category>
+	<category>
+		<id>7</id>
+		<name>Exhibition</name>
+		<order>8</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=7</url>
+	</category>
+	<category>
+		<id>10</id>
+		<name>Fair / Festival</name>
+		<order>9</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=10</url>
+	</category>
+	<category>
+		<id>11</id>
+		<name>Film Screening</name>
+		<order>10</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=11</url>
+	</category>
+	<category>
+		<id>12</id>
+		<name>Health / Wellness Clinic</name>
+		<order>11</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=12</url>
+	</category>
+	<category>
+		<id>13</id>
+		<name>Lecture / Discussion</name>
+		<order>12</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=13</url>
+	</category>
+	<category>
+		<id>14</id>
+		<name>Meeting</name>
+		<order>13</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=14</url>
+	</category>
+	<category>
+		<id>15</id>
+		<name>Performance</name>
+		<order>14</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=15</url>
+	</category>
+	<category>
+		<id>16</id>
+		<name>Presentation</name>
+		<order>15</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=16</url>
+	</category>
+	<category>
+		<id>9</id>
+		<name>Rally / Mass Meeting</name>
+		<order>16</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=9</url>
+	</category>
+	<category>
+		<id>17</id>
+		<name>Reception / Open House</name>
+		<order>17</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=17</url>
+	</category>
+	<category>
+		<id>18</id>
+		<name>Recreational / Games</name>
+		<order>18</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=18</url>
+	</category>
+	<category>
+		<id>19</id>
+		<name>Social / Informal Gathering</name>
+		<order>19</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=19</url>
+	</category>
+	<category>
+		<id>20</id>
+		<name>Sporting Event</name>
+		<order>20</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=20</url>
+	</category>
+	<category>
+		<id>21</id>
+		<name>Workshop / Seminar</name>
+		<order>21</order>
+		<url>http://webservices.dsc.umich.edu/events/getEvents?category=21</url>
+	</category>
+</categorys>

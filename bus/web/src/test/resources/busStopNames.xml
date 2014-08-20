@@ -1,0 +1,599 @@
+
+<stopnames>
+    <stopname>
+        <name2>Cooley Lab</name2>
+        <name1>Bonisteel and Beal (Cooley) W</name1>
+    </stopname>
+    <stopname>
+        <name2>Pierpont Commons (W)</name2>
+        <name1>Murfin and Bonisteel W</name1>
+    </stopname>
+    <stopname>
+        <name2>Mitchell Field (W)</name2>
+        <name1>Mitchell Athletic Field W</name1>
+    </stopname>
+    <stopname>
+        <name2>Cancer Center</name2>
+        <name1>Cancer and Geriatrics Center E</name1>
+    </stopname>
+    <stopname>
+        <name2>Taubman Center</name2>
+        <name1>Taubman Center SE</name1>
+    </stopname>
+    <stopname>
+        <name2>M-22 Structure</name2>
+        <name1>Mary Markley W</name1>
+    </stopname>
+    <stopname>
+        <name2>Simpson Building</name2>
+        <name1>Observatory and Ann N</name1>
+    </stopname>
+    <stopname>
+        <name2>Biomedical Science Research</name2>
+        <name1>Zina Pitcher Place (at BSR)</name1>
+    </stopname>
+    <stopname>
+        <name2>Fletcher St at Rackham</name2>
+        <name1>Fletcher and Washington S</name1>
+    </stopname>
+    <stopname>
+        <name2>C.C. Little</name2>
+        <name1>C.C. Little SE</name1>
+    </stopname>
+    <stopname>
+        <name2>East Quad</name2>
+        <name1>Willard and E. University W</name1>
+    </stopname>
+    <stopname>
+        <name2>Shapiro Library</name2>
+        <name1>S. University and Tappan W</name1>
+    </stopname>
+    <stopname>
+        <name2>Michigan Union/Museum of Art</name2>
+        <name1>State and S. University W</name1>
+    </stopname>
+    <stopname>
+        <name2>IM Building (W)</name2>
+        <name1>Intramural Building W</name1>
+    </stopname>
+    <stopname>
+        <name2>ICLE</name2>
+        <name1>Administrative Services Building S</name1>
+    </stopname>
+    <stopname>
+        <name2>Crisler Arena</name2>
+        <name1>Crisler Arena S</name1>
+    </stopname>
+    <stopname>
+        <name2>Transportation Gate</name2>
+        <name1>Transportation</name1>
+    </stopname>
+    <stopname>
+        <name2>Kipke at Greene</name2>
+        <name1>Kipke and Greene N</name1>
+    </stopname>
+    <stopname>
+        <name2>Admin Services Building</name2>
+        <name1>Administrative Services Building N</name1>
+    </stopname>
+    <stopname>
+        <name2>IM Building (E)</name2>
+        <name1>Intramural Building E</name1>
+    </stopname>
+    <stopname>
+        <name2>Michigan Union</name2>
+        <name1>State and S. University N</name1>
+    </stopname>
+    <stopname>
+        <name2>North U at Fletcher</name2>
+        <name1>N. University and Fletcher E</name1>
+    </stopname>
+    <stopname>
+        <name2>Couzens Hall</name2>
+        <name1>Ann and Zina Pitcher E</name1>
+    </stopname>
+    <stopname>
+        <name2>Mary Markley</name2>
+        <name1>Mary Markley E</name1>
+    </stopname>
+    <stopname>
+        <name2>Taubman Center (NW)</name2>
+        <name1>Taubman Center NW</name1>
+    </stopname>
+    <stopname>
+        <name2>Cancer Center (W)</name2>
+        <name1>Cancer and Geriatrics Center W</name1>
+    </stopname>
+    <stopname>
+        <name2>Mitchell Field (E)</name2>
+        <name1>Mitchell Athletic Field E</name1>
+    </stopname>
+    <stopname>
+        <name2>Art and Architecture</name2>
+        <name1>Bonisteel Blvd (Art and Architecture Bldg) E</name1>
+    </stopname>
+    <stopname>
+        <name2>BIR Building</name2>
+        <name1>Bonisteel and Beal E</name1>
+    </stopname>
+    <stopname>
+        <name2>FXB</name2>
+        <name1>Beal and Hayward (FXB) N</name1>
+    </stopname>
+    <stopname>
+        <name2>Hayward at NC 53</name2>
+        <name1>Hayward near Hubbard (at NC 53) E</name1>
+    </stopname>
+    <stopname>
+        <name2>Huron at Hubbard</name2>
+        <name1>Huron and Hubbard S</name1>
+    </stopname>
+    <stopname>
+        <name2>Glazier Way West Shelter</name2>
+        <name1>Glazier Way West Shelter</name1>
+    </stopname>
+    <stopname>
+        <name2>Ruthven Museum</name2>
+        <name1>C.C. Little NW</name1>
+    </stopname>
+    <stopname>
+        <name2>Rackham</name2>
+        <name1>Fletcher and Washington N</name1>
+    </stopname>
+    <stopname>
+        <name2>Kresege Research Building</name2>
+        <name1>Zina Pitcher Pl. (Kresge Research Bldg) N</name1>
+    </stopname>
+    <stopname>
+        <name2>Victor Vaughn Building</name2>
+        <name1>Catherine and Glen (Victor Vaughn Bldg) W</name1>
+    </stopname>
+    <stopname>
+        <name2>Pierpont Commons (N)</name2>
+        <name1>Murfin and Bonisteel N</name1>
+    </stopname>
+    <stopname>
+        <name2>Hubbard/ Northwood-3</name2>
+        <name1>Hubbard and Murfin (NCRB) E</name1>
+    </stopname>
+    <stopname>
+        <name2>Hubbard at Cram Circle (E)</name2>
+        <name1>Hubbard near Cram Circle E</name1>
+    </stopname>
+    <stopname>
+        <name2>Cram Circle (N)</name2>
+        <name1>Cram Circle N</name1>
+    </stopname>
+    <stopname>
+        <name2>Bishop Street</name2>
+        <name1>Bishop and Beal E</name1>
+    </stopname>
+    <stopname>
+        <name2>Fire Station (N)</name2>
+        <name1>Beal and McIntyre (Fire Station) N</name1>
+    </stopname>
+    <stopname>
+        <name2>McIntyre at NW-44</name2>
+        <name1>McIntyre Dr. 1 SE</name1>
+    </stopname>
+    <stopname>
+        <name2>McIntyre at NW-46</name2>
+        <name1>McIntyre Dr. 2 S</name1>
+    </stopname>
+    <stopname>
+        <name2>Community Center</name2>
+        <name1>McIntyre Dr. 3 S</name1>
+    </stopname>
+    <stopname>
+        <name2>Hubbard at NC-46</name2>
+        <name1>Hayward and Hubbard E</name1>
+    </stopname>
+    <stopname>
+        <name2>NCAC Hubbard (E)</name2>
+        <name1>North Campus Administrative Complex E</name1>
+    </stopname>
+    <stopname>
+        <name2>Northwood V 2</name2>
+        <name1>Northwood V 2 E</name1>
+    </stopname>
+    <stopname>
+        <name2>NCAC Hubbard (W)</name2>
+        <name1>North Campus Administrative Complex W</name1>
+    </stopname>
+    <stopname>
+        <name2>Hubbard at Huron Pkwy</name2>
+        <name1>Hubbard and Huron W</name1>
+    </stopname>
+    <stopname>
+        <name2>Hubbard at Hayward</name2>
+        <name1>Hayward and Hubbard W</name1>
+    </stopname>
+    <stopname>
+        <name2>G.G. Brown</name2>
+        <name1>Beal and Hayward (FXB) S</name1>
+    </stopname>
+    <stopname>
+        <name2>Mosher-Jordan</name2>
+        <name1>Observatory (Mosher-Jordan) S</name1>
+    </stopname>
+    <stopname>
+        <name2>Stockwell</name2>
+        <name1>Observatory (Stockwell Hall) S</name1>
+    </stopname>
+    <stopname>
+        <name2>Arbor Lakes</name2>
+        <name1>Arbor Lakes</name1>
+    </stopname>
+    <stopname>
+        <name2>Dominos Farms Lobby A</name2>
+        <name1>Dominos Farms Lobby A</name1>
+    </stopname>
+    <stopname>
+        <name2>Dominos Farms Lobby C</name2>
+        <name1>Dominos Farms Lobby C</name1>
+    </stopname>
+    <stopname>
+        <name2>Dominos Farms Lobby M</name2>
+        <name1>Dominos Farms Lobby M</name1>
+    </stopname>
+    <stopname>
+        <name2>Dominos Farms Lobby H</name2>
+        <name1>Dominos Farms Lobby H</name1>
+    </stopname>
+    <stopname>
+        <name2>Green Rd Park &amp; Ride</name2>
+        <name1>Green Rd. Park and Ride Lot</name1>
+    </stopname>
+    <stopname>
+        <name2>Plant Services North (W)</name2>
+        <name1>North Campus Plant Services Building W</name1>
+    </stopname>
+    <stopname>
+        <name2>NCAC Baxter Rd (W)</name2>
+        <name1>North Campus Administrative Complex W (Baxter Rd.)</name1>
+    </stopname>
+    <stopname>
+        <name2>NCRC - Huron (N)</name2>
+        <name1>Huron Pkwy and Plymouth N</name1>
+    </stopname>
+    <stopname>
+        <name2>Turner Senior Center</name2>
+        <name1>Turner Senior Ctr I</name1>
+    </stopname>
+    <stopname>
+        <name2>Lot M-50</name2>
+        <name1>Wall St. (Lot M-50) SE</name1>
+    </stopname>
+    <stopname>
+        <name2>Pierpont Commons (S)</name2>
+        <name1>Murfin and Bonisteel S</name1>
+    </stopname>
+    <stopname>
+        <name2>Kellogg Eye Center</name2>
+        <name1>Kellogg Eye Center</name1>
+    </stopname>
+    <stopname>
+        <name2>Wall St</name2>
+        <name1>Wall St. and Maiden Lane</name1>
+    </stopname>
+    <stopname>
+        <name2>Cancer Center Driveway</name2>
+        <name1>Cancer Center Driveway</name1>
+    </stopname>
+    <stopname>
+        <name2>North Ingalls Building</name2>
+        <name1>North Ingalls Building N</name1>
+    </stopname>
+    <stopname>
+        <name2>Lot M-76</name2>
+        <name1>Wall St. (Lot M-76) NW</name1>
+    </stopname>
+    <stopname>
+        <name2>NCAC Baxter Rd (W)</name2>
+        <name1>North Campus Administrative Complex E (Baxter Rd.)</name1>
+    </stopname>
+    <stopname>
+        <name2>Plant Services North (E)</name2>
+        <name1>North Campus Plant Services Building E</name1>
+    </stopname>
+    <stopname>
+        <name2>East Ann Arbor Health Center</name2>
+        <name1>East Ann Arbor Health Center</name1>
+    </stopname>
+    <stopname>
+        <name2>Glazier Way East Shelter</name2>
+        <name1>Glazier Way East Shelter</name1>
+    </stopname>
+    <stopname>
+        <name2>Veterans Affairs Hospital</name2>
+        <name1>Veterans Affairs Hospital</name1>
+    </stopname>
+    <stopname>
+        <name2>Lot M-75</name2>
+        <name1>Lot M-75</name1>
+    </stopname>
+    <stopname>
+        <name2>NCRC - Huron (S)</name2>
+        <name1>Huron Pkwy and Plymouth S</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) ISR Building</name2>
+        <name1>(Art Fair) Division and Jefferson</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) IM Building (E)</name2>
+        <name1>(Art Fair) Intramural Building E</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) IM Building (W)</name2>
+        <name1>(Art Fair) Intramural Building W</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) Ross School (W)</name2>
+        <name1>(Art Fair) Ross School of Business W</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) Weill Hall (W)</name2>
+        <name1>(Art Fair) Weill Hall W</name1>
+    </stopname>
+    <stopname>
+        <name2>Commonwealth (E)</name2>
+        <name1>2101 Commonwealth Dr. E</name1>
+    </stopname>
+    <stopname>
+        <name2>Commonwealth (W)</name2>
+        <name1>2101 Commonwealth Dr. W</name1>
+    </stopname>
+    <stopname>
+        <name2>Fire Station (E)</name2>
+        <name1>Ann and Zina Pitcher W</name1>
+    </stopname>
+    <stopname>
+        <name2>Bishop Street (S)</name2>
+        <name1>Bishop and Beal S</name1>
+    </stopname>
+    <stopname>
+        <name2>Bursley Hall (E)</name2>
+        <name1>Bursley Hall E</name1>
+    </stopname>
+    <stopname>
+        <name2>Bursley Hall (W)</name2>
+        <name1>Bursley Hall W</name1>
+    </stopname>
+    <stopname>
+        <name2>Campus Safety</name2>
+        <name1>Campus W</name1>
+    </stopname>
+    <stopname>
+        <name2>Glen at Catherine (N)</name2>
+        <name1>Catherine and Glen N</name1>
+    </stopname>
+    <stopname>
+        <name2>Glen at Catherine (S)</name2>
+        <name1>Catherine and Glen S</name1>
+    </stopname>
+    <stopname>
+        <name2>East Quad (S)</name2>
+        <name1>Church and Willard S</name1>
+    </stopname>
+    <stopname>
+        <name2>Church at Geddes</name2>
+        <name1>Church at Geddes S</name1>
+    </stopname>
+    <stopname>
+        <name2>East Hall (N)</name2>
+        <name1>Church at N. University N</name1>
+    </stopname>
+    <stopname>
+        <name2>East Hall (S)</name2>
+        <name1>Church at S.University S</name1>
+    </stopname>
+    <stopname>
+        <name2>Cram Circle (S)</name2>
+        <name1>Cram Circle S</name1>
+    </stopname>
+    <stopname>
+        <name2>Delhi Metro Park</name2>
+        <name1>Delhi Metro Park</name1>
+    </stopname>
+    <stopname>
+        <name2>KDTW</name2>
+        <name1>Detroit Metropolitan Airport</name1>
+    </stopname>
+    <stopname>
+        <name2>Dexter High School</name2>
+        <name1>Dexter High School</name1>
+    </stopname>
+    <stopname>
+        <name2>Dexter-AA Run</name2>
+        <name1>Dexter-AA Run Loading</name1>
+    </stopname>
+    <stopname>
+        <name2>Dexter-AA Run Staging</name2>
+        <name1>Dexter-AA Run Staging</name1>
+    </stopname>
+    <stopname>
+        <name2>Mott Employee Entrance</name2>
+        <name1>E Hospital Dr W</name1>
+    </stopname>
+    <stopname>
+        <name2>Veterans Affairs (on Fuller)</name2>
+        <name1>Fuller and Beal W</name1>
+    </stopname>
+    <stopname>
+        <name2>Glazier Way Drop Off</name2>
+        <name1>Glazier Way Drop Off</name1>
+    </stopname>
+    <stopname>
+        <name2>Glazier Way North Shelter</name2>
+        <name1>Glazier Way North Shelter</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) G. G. Brown</name2>
+        <name1>Hayward and Beal E</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) Space Research</name2>
+        <name1>Hayward and Beal W</name1>
+    </stopname>
+    <stopname>
+        <name2>Hill at Church</name2>
+        <name1>Hill St at Church St W</name1>
+    </stopname>
+    <stopname>
+        <name2>Henderson House</name2>
+        <name1>Hill St at Olivia E</name1>
+    </stopname>
+    <stopname>
+        <name2>Hill at Packard</name2>
+        <name1>Hill St at Packard St W</name1>
+    </stopname>
+    <stopname>
+        <name2>Hill St at Tappan</name2>
+        <name1>Hill St at Tappan W</name1>
+    </stopname>
+    <stopname>
+        <name2>Hubbard at Murfin</name2>
+        <name1>Hubbard and Murfin (NCRB) W</name1>
+    </stopname>
+    <stopname>
+        <name2>Hubbard at Cram Circle (W)</name2>
+        <name1>Hubbard near Cram Circle W</name1>
+    </stopname>
+    <stopname>
+        <name2>Kresge Buildings Inbound</name2>
+        <name1>Kresge Buildings Inbound</name1>
+    </stopname>
+    <stopname>
+        <name2>McIntyre 1 at NW-44</name2>
+        <name1>McIntyre 1 NW</name1>
+    </stopname>
+    <stopname>
+        <name2>McIntyre 2 at NW-46</name2>
+        <name1>McIntyre 2 N</name1>
+    </stopname>
+    <stopname>
+        <name2>Northwood Community Center</name2>
+        <name1>McIntyre 3 N</name1>
+    </stopname>
+    <stopname>
+        <name2>Mitchell Field Lot M75 NB (E)</name2>
+        <name1>Mitchell Field NB E</name1>
+    </stopname>
+    <stopname>
+        <name2>Mitchell Field Lot M75 NB (W)</name2>
+        <name1>Mitchell Field NB W</name1>
+    </stopname>
+    <stopname>
+        <name2>Mitchell Field Lot M75  SB (E)</name2>
+        <name1>Mitchell Field SB E</name1>
+    </stopname>
+    <stopname>
+        <name2>Mitchell Field Lot M75 SB (W)</name2>
+        <name1>Mitchell Field SB W</name1>
+    </stopname>
+    <stopname>
+        <name2>Murfin at NW 3</name2>
+        <name1>Murfin between Plymouth and Hubbard N</name1>
+    </stopname>
+    <stopname>
+        <name2>Hill Auditorium</name2>
+        <name1>N. University and Fletcher W</name1>
+    </stopname>
+    <stopname>
+        <name2>North U at Thayer</name2>
+        <name1>N. University and S. Thayer E</name1>
+    </stopname>
+    <stopname>
+        <name2>Northwood V 1 (N)</name2>
+        <name1>Northwood V 1 N</name1>
+    </stopname>
+    <stopname>
+        <name2>Northwood V 1 (S)</name2>
+        <name1>Northwood V 1 S</name1>
+    </stopname>
+    <stopname>
+        <name2>Northwood V 2</name2>
+        <name1>Northwood V 2 E</name1>
+    </stopname>
+    <stopname>
+        <name2>Northwood V 3</name2>
+        <name1>Northwood V 3 NW</name1>
+    </stopname>
+    <stopname>
+        <name2>Stockwell (N)</name2>
+        <name1>Observatory (Stockwell Hall) N</name1>
+    </stopname>
+    <stopname>
+        <name2>Oxford Housing</name2>
+        <name1>Oxford at South University N</name1>
+    </stopname>
+    <stopname>
+        <name2>Revelli Hall</name2>
+        <name1>Revelli Hall E</name1>
+    </stopname>
+    <stopname>
+        <name2>Steiner School</name2>
+        <name1>Rudolph Steiner Elementary School</name1>
+    </stopname>
+    <stopname>
+        <name2>S Division at Hoover</name2>
+        <name1>S. Division at Hoover St S</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) South University at E University</name2>
+        <name1>S. University and E. University E</name1>
+    </stopname>
+    <stopname>
+        <name2>Trotter House</name2>
+        <name1>S. University and Linden W</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) Crisler Lot SC6</name2>
+        <name1>SC6 and Kipke</name1>
+    </stopname>
+    <stopname>
+        <name2>Crisler Lot SC7</name2>
+        <name1>SC7 and Kipke</name1>
+    </stopname>
+    <stopname>
+        <name2>Michigan Union (E)</name2>
+        <name1>State and S. University E</name1>
+    </stopname>
+    <stopname>
+        <name2>Michigan Union (S)</name2>
+        <name1>State and S. University S</name1>
+    </stopname>
+    <stopname>
+        <name2>Baits I</name2>
+        <name1>Vera Baits I Housing S</name1>
+    </stopname>
+    <stopname>
+        <name2>Baits I Inbound</name2>
+        <name1>Vera Baits I S Inbound</name1>
+    </stopname>
+    <stopname>
+        <name2>Baits II</name2>
+        <name1>Vera Baits II Housing N</name1>
+    </stopname>
+    <stopname>
+        <name2>Baits II (Ziwet)</name2>
+        <name1>Vera Baits II Housing S</name1>
+    </stopname>
+    <stopname>
+        <name2>Baits II (Coman) Inbound</name2>
+        <name1>Vera Baits II N Inbound</name1>
+    </stopname>
+    <stopname>
+        <name2>Baits II (Ziwet) Inbound</name2>
+        <name1>Vera Baits II S Inbound</name1>
+    </stopname>
+    <stopname>
+        <name2>(temp) Life Sciences Institute</name2>
+        <name1>Washtenaw and Palmer S</name1>
+    </stopname>
+    <stopname>
+        <name2>East Quad (N)</name2>
+        <name1>Willard and E. University N</name1>
+    </stopname>
+</stopnames>

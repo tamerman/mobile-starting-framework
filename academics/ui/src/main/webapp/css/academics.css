@@ -1,0 +1,363 @@
+/*
+  Copyright 2011-2013 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+
+/*.ui-li-desc { margin:0; }*/
+
+.ui-li-desc-academics-override { margin:0 !important; }
+.paddingBottom15px {padding-bottom: 15px}
+
+div#academics {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+div#academics ul li a {
+    background-repeat: no-repeat;
+    background-position: 8px 15px;
+    padding: 5px 15px 5px 80px;
+    position: relative;
+    min-height: 60px;
+    color: #333;
+}
+
+/* Retina display high resolution icons for home screen */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi) {
+
+    div#academics ul li a {
+        background-position: 12px -35px;
+        -webkit-background-size: 50px 100px;
+    }
+}
+
+div#academics span.academics-FormLabel {
+    width: 35%;
+    display: inline-block;
+    text-align: right;
+    font-weight:bold;
+    padding-right:8px;
+}
+
+div#academics span.academics-FormInput {
+    width: 60%;
+    display: inline-block;
+    font-size: 80%;
+}
+
+div#academics .ui-select .ui-btn-corner-all {
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    background:#fff;
+    color:#000;
+    text-shadow: 0 -1px 1px #fff;
+}
+
+div#academics .ui-btn-up-b {border:1px solid #000;}
+
+div#academics .ui-input-text {
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    margin-left:5px;
+    background:#fff;
+    border:1px solid #000;
+    width:96%;
+}
+
+div#academics form .ui-btn-up-a {min-height:120px;margin-top:20px;}
+div#academics form .ui-btn-down-a {min-height:120px;margin-top:20px;}
+div#academics form .ui-btn-hover-a {min-height:120px;margin-top:20px;}
+form .ui-btn-up-a .ui-btn-inner {padding-top: 20px;}
+form .ui-btn-down-a .ui-btn-inner {padding-top: 20px;}
+form .ui-btn-hover-a .ui-btn-inner {padding-top: 20px;}
+
+div#academics span.academicsFormTableB {
+    width: 40%;
+    display: inline-block;
+}
+
+li.redNotification {
+    background-color: #FFB5B5 !important;
+    background-image: url('/michigan/images/academics/error.png') !important;
+    background-repeat: no-repeat;
+    background-position: 8px 50%;
+    padding: 5px 5px 5px 50px !important;
+}
+
+li.yellowNotifaction {
+    background-color: yellow !important;
+    background-image: url('/michigan/images/academics/alert.png') !important;
+    background-repeat: no-repeat;
+    background-position: 8px 50%;
+    padding: 5px 5px 5px 50px !important;
+}
+
+form#search {
+    padding: 0px 0px 20px 0px;
+    min-height: 42px;
+    position: relative;
+    top: -5px;
+}
+
+/* Below css used by sections page */
+
+/* schleif edit: moved top: from 50% to 40% and right: from 75px to 25px*/
+span.academics-sectionSeats {
+    position: absolute;
+    right: 15px;
+    top: 20%;
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+/* For narrow raw as BrowseClass*/
+span.academics-sectionSeats-browseClass {
+    position: absolute;
+    right: 15px;
+    top: 10%;
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+span.academics-grade {
+    position: absolute;
+    right: 15px;
+    top: 20%;
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+span.academics-sectionLeft {
+    width: 58px;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    vertical-align:top !important;
+}
+
+span.academics-sectionLeftWider {
+    width: 66px;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    vertical-align:top !important;
+}
+
+span.academics-sectionRight {
+    display: inline-block;
+    padding-left:8px;
+    padding-right:120px;
+    vertical-align:top !important;
+    font-weight: normal;
+}
+
+p.academics-courseTitle {
+    font-weight: bold !important;
+    font-size: 12px !important;
+    padding-bottom: 3px;
+    margin-top: -8px !important;
+}
+
+p.academics-courseDescription {
+    font-size: 12px !important;
+    padding-bottom: 3px;
+    margin-top: -8px !important;
+}
+
+p.academics-courseDetailLabel {
+    font-weight: bold !important;
+    font-size: 14px !important;
+    padding: .4em 0;
+}
+
+p.smallSpace {
+    height: 7px;
+    margin: 0 !important;
+}
+
+span.font-green { color: green; }
+span.font-red   { color: red; }
+span.font-orange { color: #cc6600; }
+
+li.classSection a { padding-right:40px; }
+
+.academics-sectionCourseDescr p {
+    white-space:normal;
+}
+
+#sectionTabs .ui-btn-inner {
+    height: 50px;
+}
+
+#sectionTabs .ui-btn-text {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+div#academics div.singleColumnGroup {
+    width: 95%;
+    float: left;
+}
+
+div#academics div.singleColumnGroup span.academicsFormLabel {
+    display: block;
+    text-align: left;
+    margin-bottom:0px;
+}
+
+
+div#academics #form1  span.academicsFormLabel {
+    font-size: 14px !important;
+}
+
+
+div#academics select {
+    width: 200px;
+    font-size: 80%;
+}
+
+div#academics input[type="text"] {
+    width: 200px;
+    font-size: 80%;
+}
+
+.formContainer {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.inputContainer .col1 {
+    float: left;
+    width: 50%;
+}
+
+.inputContainer .col2 {
+    float: left;
+    width: 50%;
+}
+
+.inputContainer ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+}
+
+.inputContainer li {
+    margin-bottom: 2px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-size: 70%;
+    font-weight: bold;
+}
+
+
+.topmargin0 {
+    margin-top: 0px !important;
+}
+
+
+
+div#footerSearch {
+    display: inline-block;
+    width: 160px;
+    margin-left: 30px;
+}
+
+div#academics input[type="submit"] {
+    font-weight: 200;
+}
+
+/*
+div#academics input[type="checkbox"] {
+    margin:0;
+}
+
+div#academics label.checkbox {
+    line-height: 20px;
+    display: block;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+*/
+
+/* Begin customizing checkbox */
+div#academics input[type="checkbox"] {
+    display:none;
+}
+
+div#academics input[type="checkbox"] + label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div#academics input[type="checkbox"] + label span {
+    display:inline-block;
+    width:29px;
+    height:29px;
+    vertical-align:middle;
+    background:url(/michigan/images/academics/unchecked.jpg) left top no-repeat;
+    cursor:pointer;
+}
+
+div#academics input[type="checkbox"]:checked + label span {
+    background:url(/michigan/images/academics/checked.jpg) 0px top no-repeat;
+}
+
+div#academics input[type="checkbox"]:disabled + label span {
+    background:url(/michigan/images/academics/unchecked_disabled.jpg) 0px top no-repeat;
+}
+
+div#academics input[type="checkbox"]:checked :disabled + label span {
+    background:url(/michigan/images/academics/checked_disabled.jpg) 0px top no-repeat;
+}
+/* End of customize checkbox */
+
+div#academics span.textLabel {
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+#footerSearch .ui-btn {
+    /*font-size: 8px;*/
+}
+
+#footerSearch .ui-btn-corner-all {
+    border-radius: .4em .4em .4em .4em;
+}
+
+#sectionTabs .ui-state-persist {
+    background-image: -moz-linear-gradient(top, #000D28, #00295C);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000D28), color-stop(1, #00295C));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#000D28', EndColorStr='#00295C')";
+}
+
+/* select button text for /michigan/academics/search */
+.academics-FormInput .ui-btn-text {font-size: 12px;}
+
+.ui-body-c .ui-btn-text .ui-li-heading {padding-right:60px;}
+
+.sectionRight {overflow:auto !important;white-space:normal !important;}
+
+.oldParagraph {	display:block !important;font-weight:normal !important;font-size:12px !important;}
+.oldListItem {padding-left:30px;display:block;font-weight:normal !important;font-size:12px !important;}
+.oldListItem:before  {content: "\2022\00A0\00A0";}
+
+.ui-slider-handle {min-height:0 !important;padding:0 !important;text-align:left !important;} 

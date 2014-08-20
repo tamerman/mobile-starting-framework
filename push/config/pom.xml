@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.kuali.mobility</groupId>
+        <artifactId>kme-push</artifactId>
+        <version>3.3.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>kme-push-config</artifactId>
+    <name>Push Configuration</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.kuali.mobility</groupId>
+            <artifactId>kme-push-impl</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.kuali.mobility</groupId>
+            <artifactId>kme-push-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

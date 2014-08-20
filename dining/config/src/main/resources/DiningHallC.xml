@@ -1,0 +1,2099 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<diningHallGroup>
+<name>GroupC</name>
+<diningHall>
+    <name>Arby's</name>
+    <campus>north</campus>
+    <building>
+        <name>Building N</name>
+        <code>BldgN</code>
+        <latitude>39.2351</latitude>
+        <longitude>92.9462</longitude>
+        <address>
+            <city>Metropolis</city>
+            <id>276</id>
+            <postalCode>12554-0000</postalCode>
+            <state>NY</state>
+            <street1>2745 3rd Ave</street1>
+        </address>
+    </building>
+    <type>hall</type>
+    <menu>
+        <name>Breakfast</name>
+        <description>Test Hall C is not serving breakfast this morning.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+    </menu>
+    <menu>
+        <name>Lunch</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Deal Of The Day</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Classic Roast Beef</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.98</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Classic Roast Beef - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.13</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mid Roast Beef</name>
+                <price>1.56</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mid Roast Beef - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.89</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Max Roast Beef</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.66</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Max Roast Beef - Combo</name>
+                <price>1.31</price>
+                <price>4.08</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Classic Beef 'n Cheddar</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.24</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Classic Beef 'n Cheddar - Combo</name>
+                <price>5.65</price>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mid Beef 'n Cheddar</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.85</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mid Beef 'n Cheddar - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.07</price>
+                <price>9.89</price>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>French Dip and Swiss</name>
+                <price>1.57</price>
+                <price>9.2</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>French Dip and Swiss - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.45</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Roast Turkey Ranch and Bacon</name>
+                <price>4.95</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Roast Turkey Ranch and Bacon - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.43</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Cravin' Chicken</name>
+                <price>3.78</price>
+                <attribute>halal</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Cravin' Chicken - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.64</price>
+                <price>9.44</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Sides and Snacks</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Waffle Fries (Small)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.53</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Waffle Fries (Medium)</name>
+                <price>1.76</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Waffle Fries (Large)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.84</price>
+                <price>3.51</price>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Curly Fries (Small)</name>
+                <price>1.05</price>
+                <price>2.75</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Curly Fries (Medium)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.21</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Curly Fries (Large)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.85</price>
+                <price>9.75</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mozzarella Sticks (4 pc)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.21</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mozzarella Sticks (6 pc)</name>
+                <price>2.85</price>
+                <price>4.75</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+        <name>Salads</name>
+        <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+            arcu id dapibus.
+        </description>
+        <menuItem>
+            <name>Farmhouse Chicken Salad</name>
+            <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                in pharetra. Nunc lacinia eleifend risus.
+            </description>
+            <price>1.53</price>
+            <attribute>glutenfree</attribute>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <nutritionalInfo>
+                <name>Calories</name>
+                <value>381</value>
+                <units>Cal</units>
+            </nutritionalInfo>
+            <nutritionalInfo>
+                <name>Serving Size</name>
+                <value>180</value>
+                <units>g</units>
+            </nutritionalInfo>
+        </menuItem>
+        <menuItem>
+            <name>Side Salad</name>
+            <price>4.76</price>
+            <attribute>vegetarian</attribute>
+            <attribute>glutenfree</attribute>
+            <ratingCount>1</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <nutritionalInfo>
+                <name>Calories</name>
+                <value>170</value>
+                <units>Cal</units>
+            </nutritionalInfo>
+            <nutritionalInfo>
+                <name>Serving Size</name>
+                <value>1</value>
+                <units>each</units>
+            </nutritionalInfo>
+        </menuItem>
+    </category>
+    </menu>
+    <menu>
+        <name>Dinner</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Value Menu</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Jr. Roast Beef</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.38</price>
+                <price>5.01</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Ham Melt</name>
+                <price>2.28</price>
+                <price>3.9</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jr. Cheddar Melt</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.54</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jr. Bacon Cheddar</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.91</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jr. Chicken</name>
+                <price>1.94</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jr. Deluxe</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.78</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Value French Fries</name>
+                <price>2.56</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chips</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.42</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Apple Slices</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.39</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Value Drink</name>
+                <price>1.54</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Desserts</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Jamocha Shake (Small)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.23</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jamocha Shake (Medium)</name>
+                <price>1.04</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jamocha Shake (Large)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.7</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Turnovers (Apple, Cherry, or Chocolate)</name>
+                <price>2.34</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Drinks</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Soft Drink (Small)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.69</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Soft Drink (Medium)</name>
+                <price>1.95</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Soft Drink (Large)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.32</price>
+                <price>6.73</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bottled Water</name>
+                <price>0.35</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Iced Tea</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.57</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Specials</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Mighty Minis - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.82</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+
+        </category>
+        <category>
+            <name>Kids Menu</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Jr. Roast Beef</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.44</price>
+                <price>3.28</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Ham Melt</name>
+                <price>3.6</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Prime-Cut Chicken Tenders</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.68</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+    </menu>
+</diningHall>
+<diningHall>
+        <name>Del Posto</name>
+        <campus>main</campus>
+        <building>
+            <name>Building B</name>
+            <code>BldgB</code>
+            <latitude>38.2351</latitude>
+            <longitude>92.1346</longitude>
+        </building>
+        <type>hall</type>
+        <menu>
+            <name>Breakfast</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Snacks</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>3 Hot Wings</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.28</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>1 Chicken Little</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.16</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Biscuits</name>
+                    <price>0.39</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Go Cup - 1 Pc. Extra Crispy Boneless and Wedges</name>
+                    <price>2.47</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Go Cup - 4 Bites and Wedges</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.73</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Homestyle Sides</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Mashed Potatoes (Individual)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.09</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Mashed Potatoes (Large)</name>
+                    <price>1.79</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Potato Wedges (Individual)</name>
+                    <price>1.46</price>
+                    <price>2.51</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Potato Wedges (Large)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.89</price>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Baked Beans (Individual)</name>
+                    <price>1.67</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Baked Beans (Large)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.98</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+        <menu>
+            <name>Lunch</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Classic Meals</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>1 Pc. Breast Meal</name>
+                    <price>2.98</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Pc. Meal (White Meat)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.23</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Pc. Meal (Dark Meat)</name>
+                    <price>3.56</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>3 Pc. Meal (White Meat)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.89</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>3 Pc. Meal (Dark Meat)</name>
+                    <price>5.66</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>4 Pc. Meal (Dark Meat)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.66</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Specials</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Family Feast - 9 Pc. Original or Grilled Chicken with 3 Large Sides and 6 Biscuits</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.31</price>
+                    <price>4.08</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>KFC Famous Bowl with Medium Drink</name>
+                    <price>4.24</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>6 Original Bites with Individual Side and Medium Drink</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.55</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Chicken Little with individual Side and Medium Drink</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.85</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Pot Pie with Medium Drink</name>
+                    <price>4.07</price>
+                    <price>9.89</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Sweet Treats</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Lemon Cake</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.57</price>
+                    <price>9.2</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Dbl. Chocolate Chip Cake</name>
+                    <price>4.45</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>3 Cookies</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.95</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+        <menu>
+            <name>Dinner</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Family Meals</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>8 Pc. Meal with 2 Large Sides and 4 Biscuits</name>
+                    <price>5.38</price>
+                    <price>7.01</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>8 Pc. Chicken Only</name>
+                    <price>5.28</price>
+                    <price>4.9</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>12 Pc. Meal with 3 Large Sides and 6 Biscuits</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.54</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>12 Pc. Chicken Only</name>
+                    <price>5.91</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>16 Pc. Meal with 4 Large Sides and 8 Biscuits</name>
+                    <price>4.94</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>16 Pc. Chicken Only</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.94</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>20 Pc. Meal with 5 Large Sides and 10 Biscuits</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.94</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>20 Pc. Chicken Only</name>
+                    <price>4.94</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Signature Combos</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>2 Pc. Chicken</name>
+                    <price>1.78</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Doublicious Sandwich</name>
+                    <price>2.56</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Colonel's Original</name>
+                    <price>4.42</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>2 Chicken Littles</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.39</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>KFC Famous Bowls</name>
+                    <price>1.54</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Hot Wings, Tenders and Bites Combos</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Hot Wings (5 pc)</name>
+                    <price>3.23</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Hot Wings (10 pc)</name>
+                    <price>2.04</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Hot Wings (20 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.7</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Hot Wings - Combo(5 pc)</name>
+                    <price>4.34</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Tenders (3 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.75</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Tenders (6 pc)</name>
+                    <price>3.75</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Tenders (12 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.75</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Tenders - Combo (3 pc)</name>
+                    <price>3.75</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Bites (6 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.75</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Bites (10 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.75</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Bites - Combo (10 pc)</name>
+                    <price>3.75</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Drinks</name>
+                <menuItem>
+                    <name>Soft Drink (Medium)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.69</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Soft Drink (Large)</name>
+                    <price>1.55</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Soft Drink (Mega Jug)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.32</price>
+                    <price>9.73</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Tea (1/2 gallon)</name>
+                    <price>2.95</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+</diningHall>
+</diningHallGroup>

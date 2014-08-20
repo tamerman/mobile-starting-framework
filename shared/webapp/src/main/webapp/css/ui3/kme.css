@@ -1,0 +1,242 @@
+/*
+  Copyright 2011-2014 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+/* A
+-----------------------------------------------------------------------------------------------------------*/
+
+.main-view {
+    height:100%;
+}
+
+body {
+    padding-top: 50px;
+    height:100%;
+}
+
+.base-color { color: #7D110C; }
+
+.white { color: #ffffff !important; }
+.yellow { color: #ffff00 !important; }
+.black { color: #000000 !important; }
+.green { color: green !important; }
+.red   { color: red !important; }
+.orange { color: #cc6600 !important; }
+
+.kme-top-nav { background-color: #7D110C; }
+
+.kme-alt-nav { background-color: #7D110C; }
+
+.kme-alt-nav> .btn-group> .btn {
+    /*background-color: #7D110C;*/
+    /*color: #ffffff;*/
+    height:50px !important;
+    font-size:16px !important;
+}
+
+/*a.btn.btn-default.navbar-btn {*/
+    /*background-color: #ffffff !important;*/
+    /*height:50px !important;*/
+    /*color:#7D110C !important;*/
+    /*font-size:16px !important;*/
+/*}*/
+
+.navbar-text {
+    color:#ffffff !important;
+    font-size:16px !important;
+}
+
+.kme-nav-menu { margin:15px;}
+
+.kme-nav-back { margin:15px;}
+
+.btn-kme {
+    color: #fff;
+    background-color: #7D110C;
+    border-color: #7D1108
+}
+
+.ur-small-element {
+    position:relative;
+}
+.ur-small-element:after {
+    content:'';
+    position:absolute;
+    top:-10px; bottom:-10px;
+    left:-10px; right:-10px;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+p {
+    margin: 0 0 2px;
+    font-size: 90%;
+}
+
+a, a:link, a:hover, a:active, a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+span.home-tool-icon {
+    background-repeat: no-repeat;
+    background-position: 8px 1px;
+    padding: 5px 15px 5px 60px !important;
+    position: relative;
+    min-height: 60px;
+    color: #333;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) ,
+only screen and (min--moz-device-pixel-ratio: 1.5) ,
+only screen and (min-resolution: 240dppx) {
+    span.home-tool-icon {
+        background-position: 12px -50px;
+        background-size: 50px 100px;
+        -webkit-background-size: 50px 100px;
+    }
+}
+
+.home-tool-item {
+    padding: 10px 5px !important;
+    min-height: 60px;
+}
+
+.home-tile-container {
+    display: block;
+    margin: auto;
+    text-align: left;
+    padding: 0;
+}
+
+.home-tool-tile {
+    display: block;
+    /*font-size: 0.7em;*/
+    overflow: visible;
+    text-align: center;
+    vertical-align: top;
+    width: 70px;
+    height: 80px;
+    cursor: pointer;
+    float: left;
+    border: none;
+    text-decoration: none;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+
+a.home-tool-tile img {
+    display: block;
+    height: 50px;
+    margin: auto;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: relative;
+    min-height: 50px;
+    color: #333;
+}
+
+a.home-tool-tile p {
+    color: #000000;
+    text-shadow: none;
+    width: 70px;
+    font-weight: normal;
+}
+
+.list-header {
+    background-color: #cccccc;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+div.right-decoration {
+    margin-left:5px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+span.right-decoration {
+    margin-left:5px;
+}
+
+#lockbadge .ui-icon-custom {
+	background-image: url('css/images/icon-disclosure-lock-18.png');
+	background-position: 0px 0px;
+	background-size: 100%;
+	background-color: transparent;
+    border-radius: 0em 0em 0em 0em;
+}
+/* Localisation box
+-----------------------------------------------------------------------------------------------------------*/
+div[data-role="l10nBox"] a {
+	font-weight: bold;
+	font-size: 0.7em;
+}
+
+div[data-role="l10nBox"] > label {
+	display: inline;
+	font-weight: normal;
+}
+
+div[data-role="l10nBox"] a.l10n-active{
+	color: #000000;
+	text-decoration: none;
+}
+
+/*
+ * Fix webkit breaking time inputs
+ */
+input[type=time]{
+    -webkit-appearance: none;
+}
+
+.alert {
+    margin-bottom: 0px !important;
+}
+
+.about {
+    text-align: center;
+}
+
+
+span.column-left {
+    width: 85px;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    vertical-align:top !important;
+}
+
+span.column-right {
+    display: inline-block;
+    padding-left:8px;
+    padding-right:120px;
+    vertical-align:top !important;
+    font-weight: normal;
+}
+
+.navbar-header{
+	text-overflow: ellipsis;
+	overflow: hidden;  white-space: nowrap;
+	width: 60%;
+}
+
+.right_aligned_arrow{
+	position:absolute;
+	top:50%;
+	right:1em;
+	margin-top: -7px;
+}

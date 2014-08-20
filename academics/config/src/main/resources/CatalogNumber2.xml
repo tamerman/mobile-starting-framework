@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The MIT License (MIT)
+  
+  Copyright (C) 2014 by Kuali Foundation
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in
+
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+
+<catalogNumber>
+    <description>Chem&amp;Eng Thermo</description>
+    <number>330</number>
+    <section>
+        <meeting>
+            <days>MoWeFr</days>
+            <number>1</number>
+            <times>4:00PM - 5:00PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>21</availableSeats>
+        <catalogNumber>330</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>200</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>179</enrollmentTotal>
+        <number>001</number>
+        <sectionUID>c494e67cbe558969413b0ba58f79d780</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>LEC</type>
+        <typeDescription>Lecture</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Th</days>
+            <number>1</number>
+            <times>10:30AM - 11:30AM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>330</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>33</enrollmentCapacity>
+        <enrollmentStatus>Closed</enrollmentStatus>
+        <enrollmentTotal>33</enrollmentTotal>
+        <number>002</number>
+        <sectionUID>94a37d907c3b25821cabfdd1b61ae3af</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>DIS</type>
+        <typeDescription>Discussion</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Th</days>
+            <number>1</number>
+            <times>9:30AM - 10:30AM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>2</availableSeats>
+        <catalogNumber>330</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>33</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>31</enrollmentTotal>
+        <number>003</number>
+        <sectionUID>0255e788ac0655a962d5f5309d49caaa</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>DIS</type>
+        <typeDescription>Discussion</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Th</days>
+            <number>1</number>
+            <times>1:30PM - 2:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>3</availableSeats>
+        <catalogNumber>330</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>33</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>30</enrollmentTotal>
+        <number>004</number>
+        <sectionUID>29f0fccfc538d5a9d9074cba29f0318c</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>DIS</type>
+        <typeDescription>Discussion</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Th</days>
+            <number>1</number>
+            <times>2:30PM - 3:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>3</availableSeats>
+        <catalogNumber>330</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>33</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>30</enrollmentTotal>
+        <number>005</number>
+        <sectionUID>a923e1f80eda2bf7e36da3b50571b540</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>DIS</type>
+        <typeDescription>Discussion</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Th</days>
+            <number>1</number>
+            <times>11:30AM - 12:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>0</availableSeats>
+        <catalogNumber>330</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>33</enrollmentCapacity>
+        <enrollmentStatus>Closed</enrollmentStatus>
+        <enrollmentTotal>33</enrollmentTotal>
+        <number>006</number>
+        <sectionUID>3aa3f067f022a98724e8acc9822f0f9e</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>DIS</type>
+        <typeDescription>Discussion</typeDescription>
+    </section>
+    <section>
+        <meeting>
+            <days>Th</days>
+            <number>1</number>
+            <times>1:30PM - 2:30PM</times>
+            <topic>TBA</topic>
+        </meeting>
+        <availableSeats>11</availableSeats>
+        <catalogNumber>330</catalogNumber>
+        <classTopic></classTopic>
+        <combinedSectionId></combinedSectionId>
+        <creditHours>4</creditHours>
+        <enrollmentCapacity>33</enrollmentCapacity>
+        <enrollmentStatus>Open</enrollmentStatus>
+        <enrollmentTotal>22</enrollmentTotal>
+        <number>007</number>
+        <sectionUID>64625a3254e90de22409154924f5662a</sectionUID>
+        <sessionDescription>Regular</sessionDescription>
+        <subjectId>CHE</subjectId>
+        <termId>1970</termId>
+        <type>DIS</type>
+        <typeDescription>Discussion</typeDescription>
+    </section>
+</catalogNumber>

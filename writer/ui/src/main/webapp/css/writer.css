@@ -1,0 +1,73 @@
+/*
+  Copyright 2011-2012 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+
+form label {
+	font-weight: bold !important;
+}
+span.countBadge {
+	font-size: 14px;
+	padding: 2px 8px 3px 8px;
+	background-color: #7d110c;
+	background: -moz-linear-gradient(center top, #FF8888, #992222) repeat scroll 0 0 #992222;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FF8888), color-stop(1, #992222));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF8888', endColorstr='#992222');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF8888', EndColorStr='#992222')";
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #333333;
+	-moz-box-shadow: 1px 1px 3px #AAA;
+	-webkit-box-shadow: 1px 1px 3px #AAA;
+	box-shadow: 1px 1px 3px #AAA;
+	margin-left: 8px;
+}
+
+.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+    padding: 0.7em 0.7em 0.7em 0.74em;
+}
+
+.ui-li-divider, .ui-li-static {
+    font-weight: normal;
+}
+
+.leftArticle {
+	float: left;
+	padding-right: 5px;
+	width: 100px;
+	min-width: 100px;
+	min-height: 80px; /* Avoid line corruption if image fails to load*/
+}
+
+div.leftArticle img{
+	max-width : 80px;
+	max-height : 80px;
+}
+
+.rightArticle {
+	position: relative;
+	display: inline;
+}
+.rightArticle > h3{
+	margin-top: 0;
+	font-weight: bold;
+}
+
+li.formField {
+	padding: 0.7em 25px 0.7em 15px !important;
+}
+
+li.formField input, li.formField textarea, li.formField div.ui-select{
+	width: 100% !important;
+}
+.linkUrl_ele{
+	word-wrap: break-word;
+	overflow: hidden;	
+}

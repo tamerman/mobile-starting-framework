@@ -1,0 +1,2807 @@
+<diningHallGroup>
+    <name>GroupD</name>
+<diningHall>
+    <name>Jack In The Box</name>
+    <campus>north</campus>
+    <building>
+        <name>Building Q</name>
+        <code>BldgQ</code>
+        <address>
+            <city>Brooklyn</city>
+            <id>82</id>
+            <postalCode>11219-0000</postalCode>
+            <state>NY</state>
+            <street1>935 53rd Street</street1>
+            <street2>Suite W</street2>
+        </address>
+    </building>
+    <type>hall</type>
+    <menu>
+        <name>Breakfast</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Breakfast Served All Day</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Waffle Breakfast Sandwich</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>5.28</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Waffle Breakfast Sandwich - Combo</name>
+                <price>2.16</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jumbo Platter</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.39</price>
+                <price>6.48</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jumbo Platter with Regular Coffee</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.47</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Grilled Breakfast Sandwich</name>
+                <price>2.73</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Grilled Breakfast Sandwich - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.34</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Supreme Croissant</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.79</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Supreme Croissant - Combo</name>
+                <price>1.46</price>
+                <price>4.51</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage Croissant</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.68</price>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sausage Croissant - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.67</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Ultimate Breakfast</name>
+                <price>4.52</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Ultimate Breakfast - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.31</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Snacks and Sides</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>French Fries (Small)</name>
+                <price>1.59</price>
+                <price>9.84</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>French Fries (Medium)</name>
+                <price>3.23</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>French Fries (Large)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>5.12</price>
+                <price>4.64</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Seasoned Curly Fries (Small)</name>
+                <price>5.16</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Seasoned Curly Fries (Medium)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.72</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Seasoned Curly Fries (Large)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.78</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Egg Rolls (1 pc)</name>
+                <price>1.78</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Egg Rolls (3 pc)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.78</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Stuffed Jalapeños (3 pc)</name>
+                <price>1.78</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Stuffed Jalapeños (7 pc)</name>
+                <price>1.78</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+    </menu>
+    <menu>
+        <name>Lunch</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Chicken and More</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Homestyle Ranch Chicken Club</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.98</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Homestyle Ranch Chicken Club - Combo</name>
+                <price>1.23</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sourdough Grilled Chicken Club</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.56</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sourdough Grilled Chicken Club - Combo</name>
+                <price>5.89</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jack's Spicy Chicken</name>
+                <price>5.66</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jack's Spicy Chicken - Combo</name>
+                <price>1.31</price>
+                <price>4.08</price>
+                <attribute>halal</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>(Crispy or Grilled) Chicken Strips</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.24</price>
+                <attribute>halal</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>(Crispy or Grilled) Chicken Strips - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.55</price>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Nuggets</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>5.85</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Nuggets - Combo</name>
+                <price>4.07</price>
+                <price>9.89</price>
+                <attribute>halal</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Fajita Pita</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.57</price>
+                <price>9.2</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Fajita Pita - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.45</price>
+                <attribute>halal</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Teriyaki Bowl</name>
+                <price>4.95</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Teriyaki Bowl - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.43</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Jack's Value</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>2 Tacos</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.64</price>
+                <price>9.44</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jr. Jack</name>
+                <price>2.51</price>
+                <price>9.21</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jumbo Jack</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>5.28</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Nuggets (5 pc)</name>
+                <price>3.81</price>
+                <price>9.8</price>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Nuggets (10 pc)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.56</price>
+                <attribute>halal</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Nuggets (20 pc)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.53</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Sandwich</name>
+                <price>4.76</price>
+                <attribute>halal</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jr. Bacon Cheeseburger</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.84</price>
+                <price>6.51</price>
+                <attribute>glutenfree</attribute>
+                <attribute>halal</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Big Cheeseburger</name>
+                <price>2.85</price>
+                <price>9.75</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+    </menu>
+    <menu>
+        <name>Dinner</name>
+        <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+        <ratingCount>0</ratingCount>
+        <ratingScore>0.0</ratingScore>
+        <category>
+            <name>Burgers and More</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Sirloin Cheeseburger</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>5.38</price>
+                <price>7.01</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sirloin Cheeseburger - Combo</name>
+                <price>5.28</price>
+                <price>4.9</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sirloin Swiss and Grilled Onion Burger</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.54</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sirloin Swiss and Grilled Onion Burger - Combo</name>
+                <price>5.91</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sourdough Jack</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.94</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Sourdough Jack - Combo</name>
+                <price>1.78</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Ultimate Cheeseburger</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.56</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Ultimate Cheeseburger - Combo</name>
+                <price>4.42</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon Ultimate Cheeseburger</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.39</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Bacon Ultimate Cheeseburger - Combo</name>
+                <price>1.54</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jumbo Jack with Cheese</name>
+                <price>3.23</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Jumbo Jack with Cheese - Combo</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.04</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Something Different</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Turkey, Bacon and Cheddar Grilled Sandwich</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>5.69</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Turkey, Bacon and Cheddar Grilled Sandwich - Combo</name>
+                <price>1.55</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Deli Trio Grilled Sandwich</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>3.32</price>
+                <price>9.73</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Deli Trio Grilled Sandwich - Combo</name>
+                <price>2.95</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chicken Club Salad</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.57</price>
+                <attribute>halal</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Grilled Chicken Salad</name>
+                <price>1.82</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Southwest Chicken Salad</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.87</price>
+                <attribute>vegetarian</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Fish Fillet Sandwich - Combo</name>
+                <price>1.68</price>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+        <category>
+            <name>Desserts</name>
+            <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                arcu id dapibus.
+            </description>
+            <menuItem>
+                <name>Mini Churros (5 pc)</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>4.44</price>
+                <price>4.28</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mini Churros (10 pc)</name>
+                <price>3.6</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>1</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Mini Cookies (5 pc)</name>
+                <price>2.68</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>2</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Cheesecake</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>2.0</price>
+                <price>4.68</price>
+                <attribute>glutenfree</attribute>
+                <ratingCount>3</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>170</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>210</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Chocolate Overload Cake</name>
+                <price>3.74</price>
+                <attribute>vegetarian</attribute>
+                <attribute>glutenfree</attribute>
+                <ratingCount>4</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>1</value>
+                    <units>each</units>
+                </nutritionalInfo>
+            </menuItem>
+            <menuItem>
+                <name>Peanut Butter Cup Pie</name>
+                <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                    in pharetra. Nunc lacinia eleifend risus.
+                </description>
+                <price>1.55</price>
+                <price>5.38</price>
+                <ratingCount>0</ratingCount>
+                <ratingScore>0.0</ratingScore>
+                <nutritionalInfo>
+                    <name>Calories</name>
+                    <value>381</value>
+                    <units>Cal</units>
+                </nutritionalInfo>
+                <nutritionalInfo>
+                    <name>Serving Size</name>
+                    <value>180</value>
+                    <units>g</units>
+                </nutritionalInfo>
+            </menuItem>
+        </category>
+    </menu>
+</diningHall>
+<diningHall>
+        <name>Blue Hill</name>
+        <campus>north</campus>
+        <building>
+            <name>Building Q</name>
+            <code>BldgQ</code>
+            <address>
+                <city>Brooklyn</city>
+                <id>82</id>
+                <postalCode>11219-0000</postalCode>
+                <state>NY</state>
+                <street1>935 53rd Street</street1>
+                <street2>Suite W</street2>
+            </address>
+        </building>
+        <type>hall</type>
+        <menu>
+            <name>Breakfast</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Breakfast Served All Day</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Waffle Breakfast Sandwich</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.28</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Waffle Breakfast Sandwich - Combo</name>
+                    <price>2.16</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jumbo Platter</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.39</price>
+                    <price>6.48</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jumbo Platter with Regular Coffee</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.47</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Grilled Breakfast Sandwich</name>
+                    <price>2.73</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Grilled Breakfast Sandwich - Combo</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.34</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Supreme Croissant</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.79</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Supreme Croissant - Combo</name>
+                    <price>1.46</price>
+                    <price>4.51</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage Croissant</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.68</price>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sausage Croissant - Combo</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.67</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Ultimate Breakfast</name>
+                    <price>4.52</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Ultimate Breakfast - Combo</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.31</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Snacks and Sides</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>French Fries (Small)</name>
+                    <price>1.59</price>
+                    <price>9.84</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>French Fries (Medium)</name>
+                    <price>3.23</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>French Fries (Large)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.12</price>
+                    <price>4.64</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Seasoned Curly Fries (Small)</name>
+                    <price>5.16</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Seasoned Curly Fries (Medium)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.72</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Seasoned Curly Fries (Large)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.78</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Egg Rolls (1 pc)</name>
+                    <price>1.78</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Egg Rolls (3 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.78</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Stuffed Jalapeños (3 pc)</name>
+                    <price>1.78</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Stuffed Jalapeños (7 pc)</name>
+                    <price>1.78</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+        <menu>
+            <name>Lunch</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Chicken and More</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Homestyle Ranch Chicken Club</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.98</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Homestyle Ranch Chicken Club - Combo</name>
+                    <price>1.23</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sourdough Grilled Chicken Club</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.56</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sourdough Grilled Chicken Club - Combo</name>
+                    <price>5.89</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jack's Spicy Chicken</name>
+                    <price>5.66</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jack's Spicy Chicken - Combo</name>
+                    <price>1.31</price>
+                    <price>4.08</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>(Crispy or Grilled) Chicken Strips</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.24</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>(Crispy or Grilled) Chicken Strips - Combo</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.55</price>
+                    <attribute>glutenfree</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Nuggets</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.85</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Nuggets - Combo</name>
+                    <price>4.07</price>
+                    <price>9.89</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Fajita Pita</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.57</price>
+                    <price>9.2</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Fajita Pita - Combo</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.45</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Teriyaki Bowl</name>
+                    <price>4.95</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Teriyaki Bowl - Combo</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.43</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Jack's Value</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>2 Tacos</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.64</price>
+                    <price>9.44</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jr. Jack</name>
+                    <price>2.51</price>
+                    <price>9.21</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jumbo Jack</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.28</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Nuggets (5 pc)</name>
+                    <price>3.81</price>
+                    <price>9.8</price>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Nuggets (10 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.56</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Nuggets (20 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.53</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Sandwich</name>
+                    <price>4.76</price>
+                    <attribute>halal</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jr. Bacon Cheeseburger</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.84</price>
+                    <price>6.51</price>
+                    <attribute>glutenfree</attribute>
+                    <attribute>halal</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Big Cheeseburger</name>
+                    <price>2.85</price>
+                    <price>9.75</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+        <menu>
+            <name>Dinner</name>
+            <description>Phasellus mauris sem, ornare quis adipiscing non, vehicula in orci.</description>
+            <ratingCount>0</ratingCount>
+            <ratingScore>0.0</ratingScore>
+            <category>
+                <name>Burgers and More</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Sirloin Cheeseburger</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.38</price>
+                    <price>7.01</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sirloin Cheeseburger - Combo</name>
+                    <price>5.28</price>
+                    <price>4.9</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sirloin Swiss and Grilled Onion Burger</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.54</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sirloin Swiss and Grilled Onion Burger - Combo</name>
+                    <price>5.91</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sourdough Jack</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.94</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Sourdough Jack - Combo</name>
+                    <price>1.78</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Ultimate Cheeseburger</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.56</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Ultimate Cheeseburger - Combo</name>
+                    <price>4.42</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon Ultimate Cheeseburger</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.39</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Bacon Ultimate Cheeseburger - Combo</name>
+                    <price>1.54</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jumbo Jack with Cheese</name>
+                    <price>3.23</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Jumbo Jack with Cheese - Combo</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.04</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Something Different</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Turkey, Bacon and Cheddar Grilled Sandwich</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>5.69</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Turkey, Bacon and Cheddar Grilled Sandwich - Combo</name>
+                    <price>1.55</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Deli Trio Grilled Sandwich</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>3.32</price>
+                    <price>9.73</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Deli Trio Grilled Sandwich - Combo</name>
+                    <price>2.95</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chicken Club Salad</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.57</price>
+                    <attribute>halal</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Grilled Chicken Salad</name>
+                    <price>1.82</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Southwest Chicken Salad</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.87</price>
+                    <attribute>vegetarian</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Fish Fillet Sandwich - Combo</name>
+                    <price>1.68</price>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+            <category>
+                <name>Desserts</name>
+                <description>Proin id lorem vitae erat tristique mattis. Nullam sed pellentesque lorem. Sed auctor porttitor
+                    arcu id dapibus.
+                </description>
+                <menuItem>
+                    <name>Mini Churros (5 pc)</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>4.44</price>
+                    <price>4.28</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Mini Churros (10 pc)</name>
+                    <price>3.6</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>1</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Mini Cookies (5 pc)</name>
+                    <price>2.68</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>2</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Cheesecake</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>2.0</price>
+                    <price>4.68</price>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>3</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>170</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>210</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Chocolate Overload Cake</name>
+                    <price>3.74</price>
+                    <attribute>vegetarian</attribute>
+                    <attribute>glutenfree</attribute>
+                    <ratingCount>4</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>1</value>
+                        <units>each</units>
+                    </nutritionalInfo>
+                </menuItem>
+                <menuItem>
+                    <name>Peanut Butter Cup Pie</name>
+                    <description>Cras eleifend risus sit amet neque tincidunt placerat. Vestibulum tincidunt sagittis risus
+                        in pharetra. Nunc lacinia eleifend risus.
+                    </description>
+                    <price>1.55</price>
+                    <price>5.38</price>
+                    <ratingCount>0</ratingCount>
+                    <ratingScore>0.0</ratingScore>
+                    <nutritionalInfo>
+                        <name>Calories</name>
+                        <value>381</value>
+                        <units>Cal</units>
+                    </nutritionalInfo>
+                    <nutritionalInfo>
+                        <name>Serving Size</name>
+                        <value>180</value>
+                        <units>g</units>
+                    </nutritionalInfo>
+                </menuItem>
+            </category>
+        </menu>
+</diningHall>
+</diningHallGroup>

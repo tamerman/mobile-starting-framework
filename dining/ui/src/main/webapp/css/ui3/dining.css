@@ -1,0 +1,50 @@
+/*
+  Copyright 2014 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+.menu-item-attribute {
+    margin-right: 2pt;
+}
+
+.menu-item-price {
+    margin-right: 2pt;
+}
+
+.menu-category-list {
+    padding: 0px 0px;
+}
+
+span.nutrition {
+    text-indent:-9999px;
+    display:block;
+    width:30px;
+    height:30px;
+    float:right;
+    margin-left:5px;
+    background-repeat:no-repeat;
+}
+
+span.nutrition-legend {
+    text-indent:-9999px;
+    display:block;
+    width:30px;
+    height:30px;
+    float:right;
+    margin-left:5px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    background-repeat:no-repeat;
+}
+
+span.nutrition-featured { background-image:url('../../images/menu-icon-featured-30x30.png'); }
+span.nutrition-glutenfree { background-image:url('../../images/menu-icon-glutenfree-30x30.png'); }
+span.nutrition-halal { background-image:url('../../images/menu-icon-halal-30x30.png'); }
+span.nutrition-mhealthy { background-image:url('../../images/menu-icon-mhealthy-30x30.png'); }
+span.nutrition-vegan { background-image:url('../../images/menu-icon-vegan-30x30.png'); }
+span.nutrition-vegetarian { background-image:url('../../images/menu-icon-vegetarian-30x30.png'); }

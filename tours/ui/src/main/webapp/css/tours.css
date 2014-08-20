@@ -1,0 +1,123 @@
+/*
+  Copyright 2011 The Kuali Foundation Licensed under the Educational Community
+  License, Version 2.0 (the "License"); you may not use this file except in
+  compliance with the License. You may obtain a copy of the License at
+  http://www.osedu.org/licenses/ECL-2.0 Unless required by applicable law or
+  agreed to in writing, software distributed under the License is distributed
+  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+  express or implied. See the License for the specific language governing
+  permissions and limitations under the License.
+*/
+
+.tightPadding {
+	padding:15px !important;
+}
+
+#mediaContainer img {
+	margin-right:3px;
+	height:75px;
+}
+
+div#selectedPOIs li:first-child .upButton {
+	display:none;
+}
+
+div#selectedPOIs li:last-child .downButton {
+	display:none;
+}
+
+div#selectedPOIs li {
+	background-color: #fff;
+}
+
+div#selectedPOIs li:hover {
+	background-color: #aae;
+}
+
+.ui-li-static p {
+	font-weight: normal;
+}
+
+p.descriptionText {
+	font-size: 110%;
+	margin-bottom: 0;
+}
+
+ul#tourList li a {
+	padding-right: 35px;
+}
+
+/* Prev Next Buttons */
+
+div#prevNext {
+	margin-top: -15px;
+	margin-bottom: 15px;
+}
+
+/* POI Distances */
+.extraTightPadding {
+	padding: 3px 7px 3px 7px !important;
+	margin: 0;
+	background-image: none;
+	border-top-color: #bbb; 
+}
+
+.poiDistance p {
+	margin: 0;
+	padding: 0;
+	color: #666;
+}
+
+.toursList .ui-controlgroup {
+	margin:0;
+}
+
+/* Foursquare */
+a.checkIn {
+	background-image: url('../images/foursquareIcon.png');
+	background-repeat: no-repeat;
+	background-position: 15px 21px;
+	padding-left: 45px !important;
+}
+
+.tip {
+	position: relative;
+}
+
+.tip p {
+	margin: 0;
+	padding: 0;
+}
+
+.tip h3 {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.tip h3, .tip p {
+	margin-left: 76px;
+}
+
+.tip img {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    width: 50px;
+    height: 50px;
+}
+
+.tip .actions {
+	margin-top: 3px;	
+}
+
+.tip .actions .doneCount {
+	background-image: url('https://4sqstatic.s3.amazonaws.com/img/doneCheck-ddd87025f948982a912b7c5bdbd64c0f.png');
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 1px dotted #AAA;
+}

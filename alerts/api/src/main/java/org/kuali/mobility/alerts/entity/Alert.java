@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.alerts.entity;
 
@@ -37,20 +36,20 @@ import java.util.Date;
 /**
  * An object representing an alert. Alerts include events such as a crisis,
  * emergency, or warning on campus.
- * 
+ *
  * @author Kuali Mobility Team
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="alert")
+@XmlRootElement(name = "alert")
 public class Alert implements Serializable, Comparable<Alert> {
 
 	private static final long serialVersionUID = 3298337944905192830L;
 
 	private static final String NORMAL_TYPE = "Normal";
-	private static final String INFO_TYPE = "Information";	
+	private static final String INFO_TYPE = "Information";
 	private static final String WARNING_TYPE = "Caution";
 	private static final String DANGER_TYPE = "Emergency";
-	
+
 	private String campus;
 	private String type;
 	private String title;
@@ -59,10 +58,10 @@ public class Alert implements Serializable, Comparable<Alert> {
 	private String url;
 	private int key;
 
-	@XmlElement(name="timeIssued", required=true)
+	@XmlElement(name = "timeIssued", required = true)
 	@XmlJavaTypeAdapter(DateAdapter.class)
 	private Date timeIssued;
-	@XmlElement(name="timeExpires", required=false)
+	@XmlElement(name = "timeExpires", required = false)
 	@XmlJavaTypeAdapter(DateAdapter.class)
 	private Date timeExpires;
 
@@ -126,12 +125,12 @@ public class Alert implements Serializable, Comparable<Alert> {
 	public boolean equals(Object object) {
 		if (object != null) {
 			Alert alert = (Alert) object;
-			if ((((this.getCampus() == null || this.getCampus().equals("")) && (alert.getCampus() == null || alert.getCampus().equals(""))) || (this.getCampus() != null && this.getCampus().equals(alert.getCampus()))) && 
-				(((this.getMobileText() == null || this.getMobileText().equals("")) && (alert.getMobileText() == null || alert.getMobileText().equals(""))) || ( this.getMobileText() != null && this.getMobileText().equals(alert.getMobileText()))) && 
-				(((this.getPriority() == null || this.getPriority().equals("")) && (alert.getPriority() == null || alert.getPriority().equals(""))) || (this.getPriority() != null && this.getPriority().equals(alert.getPriority()))) && 
-				(((this.getTitle() == null || this.getTitle().equals("")) && (alert.getTitle() == null || alert.getTitle().equals(""))) || (this.getTitle() != null && this.getTitle().equals(alert.getTitle()))) && 
-				(((this.getType() == null || this.getType().equals("")) && (alert.getType() == null || alert.getType().equals(""))) || (this.getType() != null && this.getType().equals(alert.getType()))) && 
-				(((this.getUrl() == null || this.getUrl().equals("")) && (alert.getUrl() == null || alert.getUrl().equals(""))) || (this.getUrl() != null && this.getUrl().equals(alert.getUrl())))) {
+			if ((((this.getCampus() == null || this.getCampus().equals("")) && (alert.getCampus() == null || alert.getCampus().equals(""))) || (this.getCampus() != null && this.getCampus().equals(alert.getCampus()))) &&
+					(((this.getMobileText() == null || this.getMobileText().equals("")) && (alert.getMobileText() == null || alert.getMobileText().equals(""))) || (this.getMobileText() != null && this.getMobileText().equals(alert.getMobileText()))) &&
+					(((this.getPriority() == null || this.getPriority().equals("")) && (alert.getPriority() == null || alert.getPriority().equals(""))) || (this.getPriority() != null && this.getPriority().equals(alert.getPriority()))) &&
+					(((this.getTitle() == null || this.getTitle().equals("")) && (alert.getTitle() == null || alert.getTitle().equals(""))) || (this.getTitle() != null && this.getTitle().equals(alert.getTitle()))) &&
+					(((this.getType() == null || this.getType().equals("")) && (alert.getType() == null || alert.getType().equals(""))) || (this.getType() != null && this.getType().equals(alert.getType()))) &&
+					(((this.getUrl() == null || this.getUrl().equals("")) && (alert.getUrl() == null || alert.getUrl().equals(""))) || (this.getUrl() != null && this.getUrl().equals(alert.getUrl())))) {
 				return true;
 			}
 		}

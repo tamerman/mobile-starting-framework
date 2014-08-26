@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.conference.service;
 
@@ -62,7 +61,7 @@ public class ConferenceServiceImpl implements ConferenceService {
 	private String welcomeFeedUrl;
 	private String toEmailAddress;
 	private String fromEmailAddress;
-	
+
 	@GET
 	@Path("/contents")
 	@Override
@@ -72,11 +71,11 @@ public class ConferenceServiceImpl implements ConferenceService {
 			String json = retrieveJSON(welcomeFeedUrl);
 
 			JSONArray simpleContentArray = (JSONArray) JSONSerializer.toJSON(json);
-			
-			for (Iterator<JSONObject> iter = simpleContentArray.iterator(); iter.hasNext();) {
+
+			for (Iterator<JSONObject> iter = simpleContentArray.iterator(); iter.hasNext(); ) {
 				try {
 					JSONObject contentBlockObject = iter.next();
-					
+
 					ContentBlock contentBlock = new ContentBlock();
 					contentBlock.setContentBlock(contentBlockObject.getString("welcome"));
 
@@ -91,7 +90,7 @@ public class ConferenceServiceImpl implements ConferenceService {
 
 		return contentBlocks;
 	}
-	
+
 	@GET
 	@Path("/speakers")
 	@Override
@@ -101,11 +100,11 @@ public class ConferenceServiceImpl implements ConferenceService {
 			String json = retrieveJSON(featuredSpeakersFeedUrl);
 
 			JSONArray simpleContentArray = (JSONArray) JSONSerializer.toJSON(json);
-			
-			for (Iterator<JSONObject> iter = simpleContentArray.iterator(); iter.hasNext();) {
+
+			for (Iterator<JSONObject> iter = simpleContentArray.iterator(); iter.hasNext(); ) {
 				try {
 					JSONObject contentBlockObject = iter.next();
-					
+
 					ContentBlock contentBlock = new ContentBlock();
 					contentBlock.setContentBlock(contentBlockObject.getString("welcome"));
 
@@ -120,21 +119,21 @@ public class ConferenceServiceImpl implements ConferenceService {
 
 		return contentBlocks;
 	}
-	
+
 	@GET
 	@Path("/menu")
 	@Override
-	public List<MenuItem> findAllMenuItems(@QueryParam (value = "lang") String lang) {
+	public List<MenuItem> findAllMenuItems(@QueryParam(value = "lang") String lang) {
 		List<MenuItem> menuItems = new ArrayList<MenuItem>();
 		try {
 			String json = null;
-			if (lang.equals("zh_CN")){
+			if (lang.equals("zh_CN")) {
 				json = retrieveJSON("http://www.indiana.edu/~iumobile/SWITC-2011/home_zh_cn.json");
 				System.out.println(json);
 			} else {
 				json = retrieveJSON("http://www.indiana.edu/~iumobile/SWITC-2011/home_en.json");
 			}
-			
+
 			// test
 			String test1 = "[{\"title\":\"欢迎\"}]";
 			System.out.println(test1);
@@ -152,14 +151,14 @@ public class ConferenceServiceImpl implements ConferenceService {
 				}
 			}*/
 			//JSONArray menuItemArray2 = (JSONArray) JSONSerializer.toJSON(test2);
-			
+
 			// end of test
-			
+
 			JSONArray menuItemArray = (JSONArray) JSONSerializer.toJSON(json);
-			for (Iterator<JSONObject> iter = menuItemArray.iterator(); iter.hasNext();) {
+			for (Iterator<JSONObject> iter = menuItemArray.iterator(); iter.hasNext(); ) {
 				try {
 					JSONObject menuItemObject = iter.next();
-					
+
 					MenuItem menuItem = new MenuItem();
 					menuItem.setTitle(menuItemObject.getString("title"));
 					menuItem.setDescription(menuItemObject.getString("description"));
@@ -169,29 +168,29 @@ public class ConferenceServiceImpl implements ConferenceService {
 				} catch (Exception e) {
 					LOG.error(e.getMessage(), e);
 				}
-				
+
 			}
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 		}
 		return menuItems;
 	}
-	
+
 	@GET
 	@Path("/attendees/search")
 	@Override
-	public List<Attendee> findAllAttendees(@QueryParam (value = "start") char start, @QueryParam (value = "end") char end) {
-		
+	public List<Attendee> findAllAttendees(@QueryParam(value = "start") char start, @QueryParam(value = "end") char end) {
+
 		List<Attendee> attendees = new ArrayList<Attendee>();
 		try {
 			String json = retrieveJSON(attendeesFeedUrl);
 
 			JSONArray attendeeArray = (JSONArray) JSONSerializer.toJSON(json);
-			
-			for (Iterator<JSONObject> iter = attendeeArray.iterator(); iter.hasNext();) {
+
+			for (Iterator<JSONObject> iter = attendeeArray.iterator(); iter.hasNext(); ) {
 				try {
 					JSONObject attendeeObject = iter.next();
-					
+
 					Attendee attendee = new Attendee();
 					attendee.setId(attendeeObject.getString("id"));
 					attendee.setEmail(attendeeObject.getString("email"));
@@ -200,9 +199,9 @@ public class ConferenceServiceImpl implements ConferenceService {
 					attendee.setInstitution(attendeeObject.getString("institution"));
 					attendee.setCampus(attendeeObject.getString("campus"));
 					attendee.setTitle(attendeeObject.getString("title"));
-					
+
 					char c = attendee.getLastName().toUpperCase().charAt(0);
-					if (c >= start && c <= end) {						
+					if (c >= start && c <= end) {
 						attendees.add(attendee);
 					}
 				} catch (Exception e) {
@@ -220,19 +219,19 @@ public class ConferenceServiceImpl implements ConferenceService {
 	@Path("/sessions/search")
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Session> findAllSessions(@QueryParam (value = "mmddyy") String date) {
-	
+	public List<Session> findAllSessions(@QueryParam(value = "mmddyy") String date) {
+
 		List<Session> sessions = new ArrayList<Session>();
 		try {
 			String dateString = (null == date ? "" : date);
 			String json = retrieveJSON(sessionsFeedUrl + "?d=" + dateString);
 
 			JSONArray sessionArray = (JSONArray) JSONSerializer.toJSON(json);
-			
-			for (Iterator<JSONObject> iter = sessionArray.iterator(); iter.hasNext();) {
+
+			for (Iterator<JSONObject> iter = sessionArray.iterator(); iter.hasNext(); ) {
 				try {
 					JSONObject sessionObject = iter.next();
-					
+
 					Session session = new Session();
 					/*
 					 * IU SWITC fields
@@ -289,7 +288,7 @@ public class ConferenceServiceImpl implements ConferenceService {
 			*/
 					// take out non alpha-numberic chars to get a tidy new id for linking
 					session.setId(URLEncoder.encode(sessionObject.getString("title").replaceAll("[^A-Za-z0-9 ]", ""), "UTF-8"));
-					session.setTitle(sessionObject.getString("title").replace("\\",""));
+					session.setTitle(sessionObject.getString("title").replace("\\", ""));
 					session.setDescription(sessionObject.getString("details"));
 					session.setLocation(sessionObject.getString("room"));
 					session.setTrack(sessionObject.getString("track"));
@@ -303,20 +302,20 @@ public class ConferenceServiceImpl implements ConferenceService {
 					session.setLongitude(sessionObject.getString("longitude"));
 					session.setLink(sessionObject.getString("link"));
 					*/
-					
+
 					try {
 						String str_startDate = sessionObject.getString("date") + " " + sessionObject.getString("time");
 						String str_endDate = sessionObject.getString("date") + " " + sessionObject.getString("time");
-						
+
 						DateFormat parser = new SimpleDateFormat("dd-MMM-yyyy hh:mm a");
 						//DateFormat parser = new SimpleDateFormat("HH:mm a");
 
-						Date startDate = (Date)parser.parse(str_startDate);
-						Date endDate = (Date)parser.parse(str_endDate);
+						Date startDate = (Date) parser.parse(str_startDate);
+						Date endDate = (Date) parser.parse(str_endDate);
 
 						session.setdStartTime(startDate);
 						session.setdEndTime(endDate);
-						
+
 						//DateFormat formatter = new SimpleDateFormat("E hh:mm a");
 						DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 						//DateFormat formatter = new SimpleDateFormat("HH:mm");
@@ -324,12 +323,12 @@ public class ConferenceServiceImpl implements ConferenceService {
 						String formattedStartDate, formattedEndDate;
 						formattedStartDate = formatter.format(startDate);
 						formattedEndDate = formatter.format(endDate);
-						
+
 						//System.out.println("startdate:" + formattedStartDate);
 						//System.out.println("enddate:" + formattedEndDate);
 						session.setStartTime(formattedStartDate);
 						session.setEndTime(formattedEndDate);
-						
+
 						//session.setStartTime("TEST");
 						//session.setEndTime("TEST");
 						//session.setStartTime(str_startDate);
@@ -339,43 +338,42 @@ public class ConferenceServiceImpl implements ConferenceService {
 					}
 
 					JSONArray tempSpeakers = sessionObject.getJSONArray("presenters");
-					
+
 					List<Attendee> speakers = new ArrayList<Attendee>();
-					
+
 					//JSONArray sessionArray = (JSONArray) JSONSerializer.toJSON(json);
 					//for (Iterator<JSONObject> iter2 = tempSpeakers.iterator(); iter2.hasNext();) {
-					
+
 					//JSONObject speakersObject = iter2.next();
-				
+
 					for (int i = 0; i < tempSpeakers.size(); i++) {
-		            	//JSONObject speakersObject = tempSpeakers.getJSONObject(i);
+						//JSONObject speakersObject = tempSpeakers.getJSONObject(i);
 
 						//System.out.println("tempSpeakers:" + tempSpeakers.getString(i));
-						
-		            	Attendee speaker = new Attendee();
-		            	//speaker.setFirstName(speakersObject);
-		            	
-		            	// flip the order of the person's name and skip the comma
-		            	String speakerName = tempSpeakers.getString(i);
-		            	int commaBetweenFirstAndLastName = speakerName.indexOf(",");
-		            	String lastName = speakerName.substring(0, commaBetweenFirstAndLastName);
-		            	String firstName = speakerName.substring(commaBetweenFirstAndLastName+1);
-		            	speaker.setFirstName(firstName + " " + lastName);
-		            	
-		            	
-		            	
-		            	//speaker.setFirstName(tempSpeakers.getString(i));
-		            	//System.out.println("Object:" + speakersObject);
+
+						Attendee speaker = new Attendee();
+						//speaker.setFirstName(speakersObject);
+
+						// flip the order of the person's name and skip the comma
+						String speakerName = tempSpeakers.getString(i);
+						int commaBetweenFirstAndLastName = speakerName.indexOf(",");
+						String lastName = speakerName.substring(0, commaBetweenFirstAndLastName);
+						String firstName = speakerName.substring(commaBetweenFirstAndLastName + 1);
+						speaker.setFirstName(firstName + " " + lastName);
+
+
+						//speaker.setFirstName(tempSpeakers.getString(i));
+						//System.out.println("Object:" + speakersObject);
 		            	/*speaker.setLastName(speakersObject.getString("lastName"));
 		            	speaker.setEmail(speakersObject.getString("email"));
 		            	speaker.setTitle(speakersObject.getString("title"));
 		            	speaker.setInstitution(speakersObject.getString("organization"));*/
-		            	speakers.add(speaker);
-		            }
-					
+						speakers.add(speaker);
+					}
+
 					session.setSpeakers(speakers);
-		
-				sessions.add(session);
+
+					sessions.add(session);
 				} catch (Exception e) {
 					LOG.error(e.getMessage(), e);
 				}
@@ -386,51 +384,51 @@ public class ConferenceServiceImpl implements ConferenceService {
 		return sessions;
 	}
 
-	
-	private String retrieveJSON(String feedUrl) throws MalformedURLException, IOException {
-	    URL url = new URL(feedUrl);
-	    URLConnection conn = url.openConnection();
-	    String encoding = conn.getContentEncoding();
-	    if (encoding == null) {
-	    	encoding = "UTF-8";
-	    }
 
-	    BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), encoding));
-	    StringBuffer sb = new StringBuffer();
-	    String line;
-	    while ((line = rd.readLine()) != null) {
-	    	sb.append(line);
-	    }
-	    rd.close();
-	    String json = sb.toString();
-	    return json;
-    }
+	private String retrieveJSON(String feedUrl) throws MalformedURLException, IOException {
+		URL url = new URL(feedUrl);
+		URLConnection conn = url.openConnection();
+		String encoding = conn.getContentEncoding();
+		if (encoding == null) {
+			encoding = "UTF-8";
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), encoding));
+		StringBuffer sb = new StringBuffer();
+		String line;
+		while ((line = rd.readLine()) != null) {
+			sb.append(line);
+		}
+		rd.close();
+		String json = sb.toString();
+		return json;
+	}
 
 	@GET
 	@Path("/attendee/search")
 	@Override
-    public Attendee findAttendeeById(@QueryParam (value = "id") String id) {
-	    List<Attendee> attendees = findAllAttendees('A', 'Z');
-	    for (Attendee attendee : attendees) {
-	    	if (attendee.getId() != null && attendee.getId().equals(id)) {
-	    		return attendee;
-	    	}
-        }
-	    return null;
-    }
+	public Attendee findAttendeeById(@QueryParam(value = "id") String id) {
+		List<Attendee> attendees = findAllAttendees('A', 'Z');
+		for (Attendee attendee : attendees) {
+			if (attendee.getId() != null && attendee.getId().equals(id)) {
+				return attendee;
+			}
+		}
+		return null;
+	}
 
 	@GET
 	@Path("/session/search")
 	@Override
-    public Session findSessionById(@QueryParam (value = "id") String id) {
+	public Session findSessionById(@QueryParam(value = "id") String id) {
 		List<Session> sessions = findAllSessions("");
-	    for (Session session : sessions) {
-	     	if (session.getId() != null && session.getId().equals(id)) {
-	    		return session;
-	    	}
-        }
-	    return null;
-    }
+		for (Session session : sessions) {
+			if (session.getId() != null && session.getId().equals(id)) {
+				return session;
+			}
+		}
+		return null;
+	}
 
 	public String getAttendeesFeedUrl() {
 		return attendeesFeedUrl;
@@ -479,5 +477,5 @@ public class ConferenceServiceImpl implements ConferenceService {
 	public void setFromEmailAddress(String fromEmailAddress) {
 		this.fromEmailAddress = fromEmailAddress;
 	}
-	
+
 }

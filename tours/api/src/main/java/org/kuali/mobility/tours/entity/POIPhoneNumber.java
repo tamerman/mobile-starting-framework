@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.tours.entity;
 
@@ -37,34 +36,34 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement( name = "phoneNumber")
-@Entity(name="POIPhoneNumber")
-@Table(name="TOUR_POI_PHN_NUM_T")
+@XmlRootElement(name = "phoneNumber")
+@Entity(name = "POIPhoneNumber")
+@Table(name = "TOUR_POI_PHN_NUM_T")
 public class POIPhoneNumber {
 
 	@Id
-    //@SequenceGenerator(name="tour_poi_phn_sequence", sequenceName="SEQ_TOUR_POI_PHN_NUM_T", initialValue=1000, allocationSize=1)
-    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="tour_poi_phn_sequence")
+	//@SequenceGenerator(name="tour_poi_phn_sequence", sequenceName="SEQ_TOUR_POI_PHN_NUM_T", initialValue=1000, allocationSize=1)
+	//@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="tour_poi_phn_sequence")
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	@Column(name="PHN_NUM_ID")
+	@Column(name = "PHN_NUM_ID")
 	private Long id;
-	
+
 	@Basic
-    @Column(name="POI_ID", insertable=false, updatable=false)
+	@Column(name = "POI_ID", insertable = false, updatable = false)
 	private Long poiId;
 
 	@ManyToOne
-	@JoinColumn(name="POI_ID", nullable=false)
+	@JoinColumn(name = "POI_ID", nullable = false)
 	private POI poi;
-    
-    @Column(name="NM")
+
+	@Column(name = "NM")
 	private String name;
-    
-    @Column(name="NMBR")
+
+	@Column(name = "NMBR")
 	private String number;
-    
-    @Transient
-    private String formattedNumber;
+
+	@Transient
+	private String formattedNumber;
 
 	public POIPhoneNumber copy(boolean includeIds) {
 		POIPhoneNumber copy = new POIPhoneNumber();

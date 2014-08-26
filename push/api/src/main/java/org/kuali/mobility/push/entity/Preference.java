@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.push.entity;
 
@@ -29,7 +28,7 @@ import java.io.Serializable;
 
 /**
  * A class representing a Push Notification Opt-out Preference.
- * 
+ *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
  * @since 2.0.0
  */
@@ -37,38 +36,40 @@ import java.io.Serializable;
 public class Preference implements Serializable {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -8566828971044365068L;
 
 	/**
 	 * ID for this <code>Preference</code> instance.
 	 */
-    private Long id;
-	
-	/**
-	 * Username of the person 
-	 */
-    private String username;
+	private Long id;
 
 	/**
-	 * Enabled denotes whether the whether the user wants to receive Push from a given sender, only in table if false. (opt-out) If true, removed from table.  
+	 * Username of the person
 	 */
-    private boolean enabled;
-    
+	private String username;
+
 	/**
-	 * Id of the sender.  
+	 * Enabled denotes whether the whether the user wants to receive Push from a given sender, only in table if false. (opt-out) If true, removed from table.
 	 */
-    private Long pushSenderID;
+	private boolean enabled;
+
+	/**
+	 * Id of the sender.
+	 */
+	private Long pushSenderID;
 
 
 	/**
 	 * Creates a new instance of a <code>Preference</code>
 	 */
-    public Preference(){}
-    
+	public Preference() {
+	}
+
 	/**
 	 * Gets the ID for this <code>Preference</code>
+	 *
 	 * @return ID for this <code>Preference</code>
 	 */
 	public Long getId() {
@@ -77,6 +78,7 @@ public class Preference implements Serializable {
 
 	/**
 	 * Sets the id
+	 *
 	 * @param id The ID
 	 */
 	public void setId(Long id) {
@@ -85,14 +87,16 @@ public class Preference implements Serializable {
 
 	/**
 	 * Gets the username for this <code>Sender</code>
+	 *
 	 * @return username for this <code>Sender</code>
-	 */	
+	 */
 	public String getUsername() {
 		return username;
 	}
 
 	/**
 	 * Sets the Username
+	 *
 	 * @param username The Username
 	 */
 	public void setUsername(String username) {
@@ -101,6 +105,7 @@ public class Preference implements Serializable {
 
 	/**
 	 * Gets the boolean for enabled for this <code>Preference</code>
+	 *
 	 * @return hidden for this <code>Preference</code>
 	 */
 	public boolean isEnabled() {
@@ -109,14 +114,16 @@ public class Preference implements Serializable {
 
 	/**
 	 * Gets the boolean for enabled for this <code>Preference</code>
+	 *
 	 * @return whether the sender for this <code>Preference</code> is blocked.
 	 */
 	public boolean isSenderBlocked() {
 		return !enabled;
 	}
-	
+
 	/**
 	 * Sets the hidden
+	 *
 	 * @param enabled The Hidden
 	 */
 	public void setEnabled(boolean enabled) {
@@ -125,6 +132,7 @@ public class Preference implements Serializable {
 
 	/**
 	 * Gets the pushSenderId for this <code>Preference</code>
+	 *
 	 * @return pushSenderId for this <code>Preference</code>
 	 */
 	public Long getPushSenderID() {
@@ -133,6 +141,7 @@ public class Preference implements Serializable {
 
 	/**
 	 * Sets the PushSenderId
+	 *
 	 * @param pushSenderID The PushSenderID
 	 */
 	public void setPushSenderID(Long pushSenderID) {
@@ -150,12 +159,11 @@ public class Preference implements Serializable {
 	 */
 	@Override
 	public String toString() {
-		return    "\nPreference   id = " + id 
-				+ "\nusername        = " + username  
+		return "\nPreference   id = " + id
+				+ "\nusername        = " + username
 				+ "\nenabled         = " + enabled
 				+ "\npushSenderID    = " + pushSenderID + "\n";
 	}
 
-    
-    
+
 }

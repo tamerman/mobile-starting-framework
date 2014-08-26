@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.library.entity;
 
@@ -45,18 +44,18 @@ import javax.persistence.Table;
  * A class representing an hourset.
  * An hour set is a grouping of hours when the library is open.
  * Hours sets are grouped by an <code>LibraryHourPeriod</code> which defined the period for the hour set.
- * 
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  * @since 2.3.0
  */
 @NamedQueries({
-	@NamedQuery(
-		name="LibraryHourSet.getHourSets",
-		query="SELECT hs FROM LibraryHourSet hs WHERE libraryId = :libraryId ORDER BY hs.period.order")
-	
+		@NamedQuery(
+				name = "LibraryHourSet.getHourSets",
+				query = "SELECT hs FROM LibraryHourSet hs WHERE libraryId = :libraryId ORDER BY hs.period.order")
+
 })
 @Entity
-@Table(name="LIBRARY_HOUR_SET")
+@Table(name = "LIBRARY_HOUR_SET")
 public class LibraryHourSet {
 
 	/**
@@ -64,32 +63,33 @@ public class LibraryHourSet {
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	@Column(name="ID")
+	@Column(name = "ID")
 	private Long id;
-	
+
 	/**
 	 * Library to which this hour set belongs
 	 */
-	@Column(name="LIBRARY_ID")
+	@Column(name = "LIBRARY_ID")
 	private long libraryId;
-	
+
 	/**
 	 * Period this set is for
 	 */
-	@ManyToOne(optional=false) 
-    @JoinColumn(name="PERIOD_ID", nullable=false, updatable=false)
-	@OrderBy(value="id DESC")
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "PERIOD_ID", nullable = false, updatable = false)
+	@OrderBy(value = "id DESC")
 	private LibraryHourPeriod period;
-	
+
 	/**
 	 * List of hours in this set
 	 */
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="libraryHourSet", fetch=FetchType.EAGER)
-	@OrderBy(value="dayOfWeek ASC")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "libraryHourSet", fetch = FetchType.EAGER)
+	@OrderBy(value = "dayOfWeek ASC")
 	private List<LibraryHour> hours;
 
 	/**
 	 * Gets the id for this <code>LibraryHourSet</code>.
+	 *
 	 * @return the id
 	 */
 	public Long getId() {
@@ -98,6 +98,7 @@ public class LibraryHourSet {
 
 	/**
 	 * Sets the id for this <code>LibraryHourSet</code>.
+	 *
 	 * @param id the id to set
 	 */
 	public void setId(Long id) {
@@ -106,6 +107,7 @@ public class LibraryHourSet {
 
 	/**
 	 * Gets the libraryId for this <code>LibraryHourSet</code>.
+	 *
 	 * @return the libraryId
 	 */
 	public long getLibraryId() {
@@ -114,6 +116,7 @@ public class LibraryHourSet {
 
 	/**
 	 * Sets the libraryId for this <code>LibraryHourSet</code>.
+	 *
 	 * @param libraryId the libraryId to set
 	 */
 	public void setLibraryId(long libraryId) {
@@ -122,6 +125,7 @@ public class LibraryHourSet {
 
 	/**
 	 * Gets the period for this <code>LibraryHourSet</code>.
+	 *
 	 * @return the period
 	 */
 	public LibraryHourPeriod getPeriod() {
@@ -130,6 +134,7 @@ public class LibraryHourSet {
 
 	/**
 	 * Sets the period for this <code>LibraryHourSet</code>.
+	 *
 	 * @param period the period to set
 	 */
 	public void setPeriod(LibraryHourPeriod period) {
@@ -138,6 +143,7 @@ public class LibraryHourSet {
 
 	/**
 	 * Gets the hours for this <code>LibraryHourSet</code>.
+	 *
 	 * @return the hours
 	 */
 	public List<LibraryHour> getHours() {
@@ -146,6 +152,7 @@ public class LibraryHourSet {
 
 	/**
 	 * Sets the hours for this <code>LibraryHourSet</code>.
+	 *
 	 * @param hours the hours to set
 	 */
 	public void setHours(List<LibraryHour> hours) {
@@ -153,6 +160,4 @@ public class LibraryHourSet {
 	}
 
 
-	
-	
 }

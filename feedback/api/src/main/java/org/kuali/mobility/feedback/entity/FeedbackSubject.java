@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.feedback.entity;
 
@@ -36,29 +35,30 @@ import javax.persistence.Table;
 import javax.persistence.Version;
 
 @Entity
-@Table(name="KME_FDBCK_SBJCT_T")
+@Table(name = "KME_FDBCK_SBJCT_T")
 public class FeedbackSubject implements Serializable {
 
 	private static final long serialVersionUID = 7273789153652061369L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
-    @Column(name="ID")
-    private Long feedbackSubjectId;
+	@Column(name = "ID")
+	private Long feedbackSubjectId;
 
-    @Column(name="SUB_KEY")
-    private String subjectKey;
-    
-    @Column(name="SUB_VAL")
-    private String subjectValue;
+	@Column(name = "SUB_KEY")
+	private String subjectKey;
 
-    @Version
-    @Column(name="VER_NBR")
-    protected Long versionNumber;
-    
-    public FeedbackSubject() {}
+	@Column(name = "SUB_VAL")
+	private String subjectValue;
 
-    	
+	@Version
+	@Column(name = "VER_NBR")
+	protected Long versionNumber;
+
+	public FeedbackSubject() {
+	}
+
+
 	/**
 	 * @return the feedbackSubjectId
 	 */
@@ -132,16 +132,16 @@ public class FeedbackSubject implements Serializable {
 
 	@Override
 	public String toString() {
-        String newline = "\r\n";
+		String newline = "\r\n";
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("Subject Key: ");
-        sb.append(this.getSubjectKey());
-        sb.append(newline);
-        sb.append("Subject Value: ");
-        sb.append(this.getSubjectValue());
-        sb.append(newline);
-        sb.append(newline);
-                return sb.toString();
-    }
+		StringBuilder sb = new StringBuilder();
+		sb.append("Subject Key: ");
+		sb.append(this.getSubjectKey());
+		sb.append(newline);
+		sb.append("Subject Value: ");
+		sb.append(this.getSubjectValue());
+		sb.append(newline);
+		sb.append(newline);
+		return sb.toString();
+	}
 }

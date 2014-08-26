@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.security.authz.entity;
 
@@ -42,25 +41,25 @@ import org.kuali.mobility.security.authz.util.XstreamUtility;
 
 /**
  * A class representing a ACL Expression
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
- * @since
  */
 @Entity(name = "AclExpression")
 @Table(name = "KME_ACL_EXP_T")
-@XmlRootElement(name="aclExpression")
+@XmlRootElement(name = "aclExpression")
 public class AclExpression implements Serializable {
 
 	private static final long serialVersionUID = -6549847275619160154L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    @Column(name = "ID")
+	@Id
+	@GeneratedValue(strategy = GenerationType.TABLE)
+	@Column(name = "ID")
 	private Long id;
 
-    @Column(name = "HM_SCRN_ID")
-    private Long homeScreenId;
+	@Column(name = "HM_SCRN_ID")
+	private Long homeScreenId;
 
-    @Column(name = "TOOL_ID")
+	@Column(name = "TOOL_ID")
 	private Long toolId;
 
 	@Column(name = "PRMSSN_MODE")
@@ -72,9 +71,9 @@ public class AclExpression implements Serializable {
 	@Column(name = "ACL_EXP")
 	private String expression;
 
-    @Version
-    @Column(name="VER_NBR")
-    protected Long versionNumber;
+	@Version
+	@Column(name = "VER_NBR")
+	protected Long versionNumber;
 
 	@Transient
 	@XmlTransient
@@ -91,9 +90,9 @@ public class AclExpression implements Serializable {
 				copy.setVersionNumber(new Long(versionNumber));
 			}
 		}
-        if (homeScreenId != null) {
-            copy.setHomeScreenId(new Long(homeScreenId));
-        }
+		if (homeScreenId != null) {
+			copy.setHomeScreenId(new Long(homeScreenId));
+		}
 		if (toolId != null) {
 			copy.setToolId(new Long(toolId));
 		}
@@ -118,14 +117,14 @@ public class AclExpression implements Serializable {
 	}
 
 	public Long getHomeScreenId() {
-        return homeScreenId;
-    }
+		return homeScreenId;
+	}
 
-    public void setHomeScreenId(Long homeScreenId) {
-        this.homeScreenId = homeScreenId;
-    }
+	public void setHomeScreenId(Long homeScreenId) {
+		this.homeScreenId = homeScreenId;
+	}
 
-    public Long getToolId() {
+	public Long getToolId() {
 		return toolId;
 	}
 
@@ -157,21 +156,22 @@ public class AclExpression implements Serializable {
 		this.expression = expression;
 	}
 
-    public Long getVersionNumber() {
-        return versionNumber;
-    }
-    public void setVersionNumber(Long versionNumber) {
-        this.versionNumber = versionNumber;
-    }
+	public Long getVersionNumber() {
+		return versionNumber;
+	}
+
+	public void setVersionNumber(Long versionNumber) {
+		this.versionNumber = versionNumber;
+	}
 
 	@XmlTransient
 	public Expression getParsedExpression() {
 		if (parsedExpression != null) {
-		    return parsedExpression;
+			return parsedExpression;
 		}
 
 		if (expression != null) {
-		    parsedExpression = XstreamUtility.xmlToExpression(expression);
+			parsedExpression = XstreamUtility.xmlToExpression(expression);
 		}
 
 		return parsedExpression;

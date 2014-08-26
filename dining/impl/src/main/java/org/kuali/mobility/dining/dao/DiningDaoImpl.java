@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.dining.dao;
 
@@ -37,62 +36,62 @@ import java.util.List;
  */
 @Repository
 public class DiningDaoImpl implements DiningDao {
-    private static final Logger LOG = LoggerFactory.getLogger(DiningDaoImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(DiningDaoImpl.class);
 
-    private List<DiningHall> diningHalls;
-    private List<DiningHallGroup> diningHallGroups;
+	private List<DiningHall> diningHalls;
+	private List<DiningHallGroup> diningHallGroups;
 
-    public List<DiningHallGroup> getDiningHallGroups() {
-        return diningHallGroups;
-    }
+	public List<DiningHallGroup> getDiningHallGroups() {
+		return diningHallGroups;
+	}
 
-    public void setDiningHallGroups(List<DiningHallGroup> diningHallGroups) {
-        this.diningHallGroups = diningHallGroups;
-    }
+	public void setDiningHallGroups(List<DiningHallGroup> diningHallGroups) {
+		this.diningHallGroups = diningHallGroups;
+	}
 
-    public List<DiningHall> getDiningHalls() {
-        return diningHalls;
-    }
+	public List<DiningHall> getDiningHalls() {
+		return diningHalls;
+	}
 
-    public List<Menu> getMenus() {
-        List<DiningHall> diningHallList = new ArrayList<DiningHall>();
-        List<Menu> menus = new ArrayList<Menu>();
-        for( DiningHallGroup diningHallGroup : getDiningHallGroups() ) {
-              diningHallList = diningHallGroup.getDiningHalls();
-              for(DiningHall diningHall : diningHallList) {
-                    menus.addAll(diningHall.getMenus());
-              }
-        }
-        return menus;
-    }
+	public List<Menu> getMenus() {
+		List<DiningHall> diningHallList = new ArrayList<DiningHall>();
+		List<Menu> menus = new ArrayList<Menu>();
+		for (DiningHallGroup diningHallGroup : getDiningHallGroups()) {
+			diningHallList = diningHallGroup.getDiningHalls();
+			for (DiningHall diningHall : diningHallList) {
+				menus.addAll(diningHall.getMenus());
+			}
+		}
+		return menus;
+	}
 
-    public List<MenuItem> getMenuItems() {
-        List<MenuItem> menuItems = new ArrayList<MenuItem>();
-        List<DiningHall> diningHallList = new ArrayList<DiningHall>();
-        for( DiningHallGroup diningHallGroup : getDiningHallGroups() ) {
-            diningHallList = diningHallGroup.getDiningHalls();
-            for(DiningHall diningHall : diningHallList) {
-                for(Menu menu : diningHall.getMenus()) {
-                    for(MenuItemGroup group : menu.getItemGroups()) {
-                        menuItems.addAll(group.getMenuItems());
-                    }
-                }
-            }
-        }
-        return menuItems;
-    }
+	public List<MenuItem> getMenuItems() {
+		List<MenuItem> menuItems = new ArrayList<MenuItem>();
+		List<DiningHall> diningHallList = new ArrayList<DiningHall>();
+		for (DiningHallGroup diningHallGroup : getDiningHallGroups()) {
+			diningHallList = diningHallGroup.getDiningHalls();
+			for (DiningHall diningHall : diningHallList) {
+				for (Menu menu : diningHall.getMenus()) {
+					for (MenuItemGroup group : menu.getItemGroups()) {
+						menuItems.addAll(group.getMenuItems());
+					}
+				}
+			}
+		}
+		return menuItems;
+	}
 
-    public void setDiningHalls(List<DiningHall> diningHalls) {
-        this.diningHalls = diningHalls;
-    }
+	public void setDiningHalls(List<DiningHall> diningHalls) {
+		this.diningHalls = diningHalls;
+	}
 
-    public void setMenus(List<Menu> menus) {
-        // do nothing
-    }
+	public void setMenus(List<Menu> menus) {
+		// do nothing
+	}
 
-    public void setMenuItems(List<MenuItem> menuItems) {
-        // do nothing
-    }
+	public void setMenuItems(List<MenuItem> menuItems) {
+		// do nothing
+	}
 
     /*
     private String getXmlUrl(String campusCode) {

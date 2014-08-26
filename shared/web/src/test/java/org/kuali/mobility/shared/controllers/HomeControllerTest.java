@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.shared.controllers;
 
@@ -122,7 +121,7 @@ public class HomeControllerTest {
 	private static final String APP_TITLE = "App Title";
 	private static final Long APP_ID = Long.getLong("42");
 
-	private static final String[] CAMPUS = {"ALL","C1","C2"};
+	private static final String[] CAMPUS = {"ALL", "C1", "C2"};
 
 	private static final String PREFERENCES = "preferences";
 	private static final String INDEX = "index";
@@ -152,9 +151,9 @@ public class HomeControllerTest {
 		this.setController(new HomeController());
 
 		setKmeProperties(new Properties());
-		getKmeProperties().setProperty("campus.default",CAMPUS[0]);
-		getKmeProperties().setProperty("home.about.enabled",FALSE);
-		getKmeProperties().setProperty("appcache.display.update",FALSE);
+		getKmeProperties().setProperty("campus.default", CAMPUS[0]);
+		getKmeProperties().setProperty("home.about.enabled", FALSE);
+		getKmeProperties().setProperty("appcache.display.update", FALSE);
 
 		getController().setCampusService(getCampusService());
 		getController().setKmeProperties(getKmeProperties());
@@ -172,12 +171,12 @@ public class HomeControllerTest {
 
 	@Test
 	public void testInjectionSucceeded() {
-		assertTrue("Failed to find a campus service",getController().getCampusService()==getCampusService());
-		assertTrue("Failed to find a admin service",getController().getAdminService()==getAdminService());
-		assertTrue("Failed to find a alerts service",getController().getAlertsService()==getAlertsService());
-		assertTrue("Failed to find a config param service",getController().getConfigParamService()==getConfigParamService());
-		assertTrue("Failed to find a core service",getController().getCoreService()==getCoreService());
-		assertTrue("Failed to get home screen from admin service",null!=getAdminService().getHomeScreenByAlias(CAMPUS[0]));
+		assertTrue("Failed to find a campus service", getController().getCampusService() == getCampusService());
+		assertTrue("Failed to find a admin service", getController().getAdminService() == getAdminService());
+		assertTrue("Failed to find a alerts service", getController().getAlertsService() == getAlertsService());
+		assertTrue("Failed to find a config param service", getController().getConfigParamService() == getConfigParamService());
+		assertTrue("Failed to find a core service", getController().getCoreService() == getCoreService());
+		assertTrue("Failed to get home screen from admin service", null != getAdminService().getHomeScreenByAlias(CAMPUS[0]));
 	}
 
 	@Test
@@ -190,7 +189,7 @@ public class HomeControllerTest {
 		user.setViewCampus(CAMPUS[0]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
@@ -198,11 +197,11 @@ public class HomeControllerTest {
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -216,7 +215,7 @@ public class HomeControllerTest {
 		user.setViewCampus(null);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
@@ -226,11 +225,11 @@ public class HomeControllerTest {
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected when user's viewCampus is null.", INDEX.equals(viewName));
 	}
@@ -245,7 +244,7 @@ public class HomeControllerTest {
 		user.setViewCampus(CAMPUS[0]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
@@ -255,11 +254,11 @@ public class HomeControllerTest {
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected when kme properties is null.", null == viewName);
 	}
@@ -282,7 +281,7 @@ public class HomeControllerTest {
 		user.setGroups(groups);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
@@ -290,11 +289,11 @@ public class HomeControllerTest {
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -317,7 +316,7 @@ public class HomeControllerTest {
 		user.setGroups(groups);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 		request.setContextPath(CONTEXT_PATH);
 
 		request.setSession(session);
@@ -325,11 +324,11 @@ public class HomeControllerTest {
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -376,24 +375,24 @@ public class HomeControllerTest {
 		user.setGroups(groups);
 
 		Cookie[] cookieMonster = new Cookie[2];
-		cookieMonster[0] = new Cookie(COOKIE_NATIVE,NO);
-		cookieMonster[1] = new Cookie(COOKIE_PLATFORM,NO);
+		cookieMonster[0] = new Cookie(COOKIE_NATIVE, NO);
+		cookieMonster[1] = new Cookie(COOKIE_PLATFORM, NO);
 
 		request.setCookies(cookieMonster);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -418,24 +417,24 @@ public class HomeControllerTest {
 		user.setGroups(groups);
 
 		Cookie[] cookieMonster = new Cookie[2];
-		cookieMonster[0] = new Cookie(COOKIE_NATIVE,YES);
-		cookieMonster[1] = new Cookie(COOKIE_PLATFORM,APPLE);
+		cookieMonster[0] = new Cookie(COOKIE_NATIVE, YES);
+		cookieMonster[1] = new Cookie(COOKIE_PLATFORM, APPLE);
 
 		request.setCookies(cookieMonster);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -459,24 +458,24 @@ public class HomeControllerTest {
 		user.setGroups(groups);
 
 		Cookie[] cookieMonster = new Cookie[2];
-		cookieMonster[0] = new Cookie(COOKIE_NATIVE,YES);
-		cookieMonster[1] = new Cookie(COOKIE_PLATFORM,ANDROID);
+		cookieMonster[0] = new Cookie(COOKIE_NATIVE, YES);
+		cookieMonster[1] = new Cookie(COOKIE_PLATFORM, ANDROID);
 
 		request.setCookies(cookieMonster);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -500,24 +499,24 @@ public class HomeControllerTest {
 		user.setGroups(groups);
 
 		Cookie[] cookieMonster = new Cookie[2];
-		cookieMonster[0] = new Cookie(COOKIE_NATIVE,YES);
-		cookieMonster[1] = new Cookie(COOKIE_PLATFORM,WINDOWS);
+		cookieMonster[0] = new Cookie(COOKIE_NATIVE, YES);
+		cookieMonster[1] = new Cookie(COOKIE_PLATFORM, WINDOWS);
 
 		request.setCookies(cookieMonster);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -541,24 +540,24 @@ public class HomeControllerTest {
 		user.setGroups(groups);
 
 		Cookie[] cookieMonster = new Cookie[2];
-		cookieMonster[0] = new Cookie(COOKIE_NATIVE,YES);
-		cookieMonster[1] = new Cookie(COOKIE_PLATFORM,BLACKBERRY);
+		cookieMonster[0] = new Cookie(COOKIE_NATIVE, YES);
+		cookieMonster[1] = new Cookie(COOKIE_PLATFORM, BLACKBERRY);
 
 		request.setCookies(cookieMonster);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -581,24 +580,24 @@ public class HomeControllerTest {
 		groups.add(group);
 		user.setGroups(groups);
 
-		request.addParameter(ALIAS,CAMPUS[1]);
+		request.addParameter(ALIAS, CAMPUS[1]);
 
 		MockHttpSession session = new MockHttpSession();
 		session.setAttribute(Constants.KME_USER_KEY, user);
 		Backdoor backdoor = new Backdoor();
 		backdoor.setUserId(user.getLoginName());
-		session.setAttribute(Constants.KME_BACKDOOR_USER_KEY,backdoor);
+		session.setAttribute(Constants.KME_BACKDOOR_USER_KEY, backdoor);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -621,7 +620,7 @@ public class HomeControllerTest {
 		groups.add(group);
 		user.setGroups(groups);
 
-		request.addParameter(ALIAS,CAMPUS[1]);
+		request.addParameter(ALIAS, CAMPUS[1]);
 
 		MockHttpSession session = new MockHttpSession();
 		session.setAttribute(Constants.KME_USER_KEY, user);
@@ -633,11 +632,11 @@ public class HomeControllerTest {
 		String viewName;
 		try {
 			viewName = getController().home(null, request, uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		LOG.debug("Found view "+viewName);
+		LOG.debug("Found view " + viewName);
 
 		assertTrue("View not what was expected.", INDEX.equals(viewName));
 	}
@@ -653,15 +652,15 @@ public class HomeControllerTest {
 		user.setLoginName(TEST_USER);
 		user.setViewCampus(CAMPUS[0]);
 
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
 
 		String viewName;
 		try {
-			viewName = getController().preferences(null,null,request,response,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().preferences(null, null, request, response, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected.", PREFERENCES.equals(viewName));
@@ -678,17 +677,17 @@ public class HomeControllerTest {
 		user.setLoginName(TEST_USER);
 		user.setViewCampus(CAMPUS[0]);
 
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
 
-		getKmeProperties().setProperty("home.layout.userEditable",FALSE);
+		getKmeProperties().setProperty("home.layout.userEditable", FALSE);
 
 		String viewName;
 		try {
-			viewName = getController().preferences(null,null,request,response,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().preferences(null, null, request, response, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for preferences with editable layout.", PREFERENCES.equals(viewName));
@@ -705,7 +704,7 @@ public class HomeControllerTest {
 		user.setLoginName(TEST_USER);
 		user.setViewCampus(CAMPUS[0]);
 
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
 
@@ -713,12 +712,12 @@ public class HomeControllerTest {
 
 		String viewName;
 		try {
-			viewName = getController().preferences(null,null,request,response,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().preferences(null, null, request, response, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
-		assertTrue("View should be null and was not.",null==viewName);
+		assertTrue("View should be null and was not.", null == viewName);
 	}
 
 	@Test
@@ -732,15 +731,15 @@ public class HomeControllerTest {
 		user.setLoginName(TEST_USER);
 		user.setViewCampus(CAMPUS[0]);
 
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
 
 		String viewName;
 		try {
-			viewName = getController().preferences(null,EMPTY,request,response,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().preferences(null, EMPTY, request, response, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for preferences with empty request param.", PREFERENCES.equals(viewName));
@@ -757,15 +756,15 @@ public class HomeControllerTest {
 		user.setLoginName(TEST_USER);
 		user.setViewCampus(CAMPUS[0]);
 
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 		request.setSession(session);
 		request.setContextPath(CONTEXT_PATH);
 
 		String viewName;
 		try {
-			viewName = getController().preferences(null,LAYOUT_TILES,request,response,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().preferences(null, LAYOUT_TILES, request, response, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for preferences with empty request param.", PREFERENCES.equals(viewName));
@@ -779,9 +778,9 @@ public class HomeControllerTest {
 
 		String viewName;
 		try {
-			viewName = getController().cachemanifest(request,response,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().cachemanifest(request, response, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for cachemanifest.", CACHE_MANIFEST.equals(viewName));
@@ -797,9 +796,9 @@ public class HomeControllerTest {
 
 		String viewName;
 		try {
-			viewName = getController().cachemanifest(request,response,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().cachemanifest(request, response, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for cachemanifest with null properties.", CACHE_MANIFEST.equals(viewName));
@@ -812,9 +811,9 @@ public class HomeControllerTest {
 
 		String viewName;
 		try {
-			viewName = getController().logout(request,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().logout(request, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for logout.", LOGOUT.equals(viewName));
@@ -827,9 +826,9 @@ public class HomeControllerTest {
 
 		String viewName;
 		try {
-			viewName = getController().logoutYes(request,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().logoutYes(request, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for logout.", HOME_REDIRECT.equals(viewName));
@@ -842,9 +841,9 @@ public class HomeControllerTest {
 
 		String viewName;
 		try {
-			viewName = getController().about(request,uiModel);
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+			viewName = getController().about(request, uiModel);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			viewName = null;
 		}
 		assertTrue("View not what was expected for logout.", ABOUT.equals(viewName));
@@ -862,6 +861,7 @@ public class HomeControllerTest {
 		public Object answer(InvocationOnMock invocationOnMock) throws Throwable {
 			return getTestHomeScreen();
 		}
+
 		private HomeScreen getTestHomeScreen() {
 			HomeScreen home = new HomeScreen();
 			home.setTitle(APP_TITLE);

@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.admin.dao;
 
@@ -38,6 +37,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * The DAO for actually performing administrative tasks on the data store.
+ *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
  * @since 1.0.0
  */
@@ -55,11 +55,11 @@ public class AdminDaoImpl implements AdminDao {
 	 * @see org.kuali.mobility.admin.dao.AdminDao#getAllHomeScreens()
 	 */
 	@SuppressWarnings("unchecked")
-	public List<HomeScreen> getAllHomeScreens(){
+	public List<HomeScreen> getAllHomeScreens() {
 		Query query = entityManager.createNamedQuery("HomeScreen.getAllHomeScreens");
-		try { 
+		try {
 			return query.getResultList();
-		} catch (Exception e) {        	
+		} catch (Exception e) {
 			return null;
 		}
 	}
@@ -124,6 +124,7 @@ public class AdminDaoImpl implements AdminDao {
 
 	/**
 	 * Deletes all the HomeTool objects associated with the given HomeScreen.  This effectively removes all Tool associations from a HomeScreen.
+	 *
 	 * @param homeScreenId
 	 */
 	private void deleteHomeToolsByHomeScreenId(long homeScreenId) {
@@ -148,11 +149,11 @@ public class AdminDaoImpl implements AdminDao {
 	 * @see org.kuali.mobility.admin.dao.AdminDao#getAllTools()
 	 */
 	@SuppressWarnings("unchecked")
-	public List<Tool> getAllTools(){
+	public List<Tool> getAllTools() {
 		Query query = entityManager.createNamedQuery("Tool.getAllTools");
-		try { 
+		try {
 			return query.getResultList();
-		} catch (Exception e) {        	
+		} catch (Exception e) {
 			return null;
 		}
 	}
@@ -221,10 +222,11 @@ public class AdminDaoImpl implements AdminDao {
 		query.setParameter("toolId", toolId);
 		query.executeUpdate();
 	}
-	
+
 
 	/**
 	 * Gets the reference to the <code>EntityManager</code>.
+	 *
 	 * @return The reference to the <code>EntityManager</code>.
 	 */
 	public EntityManager getEntityManager() {
@@ -233,6 +235,7 @@ public class AdminDaoImpl implements AdminDao {
 
 	/**
 	 * Sets the reference to the <code>EntityManager</code>.
+	 *
 	 * @param entityManager The reference to the <code>EntityManager</code>.
 	 */
 	public void setEntityManager(EntityManager entityManager) {

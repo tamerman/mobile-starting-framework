@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.tags;
 
@@ -100,7 +99,7 @@ public class ChildPageTagTest {
 
 		JspFragment jspBodyFragment = mock(JspFragment.class);
 		doAnswer(new FakeJspBodyAnswerer()).when(jspBodyFragment)
-			.invoke((Writer) anyObject());
+				.invoke((Writer) anyObject());
 		tag.setJspBody(jspBodyFragment);
 	}
 
@@ -196,7 +195,7 @@ public class ChildPageTagTest {
 		try {
 			User user = new UserImpl();
 			user.setLoginName(TEST_ATTRIBUTE);
-			mockPageContext.getSession().setAttribute(AuthenticationConstants.KME_USER_KEY,user);
+			mockPageContext.getSession().setAttribute(AuthenticationConstants.KME_USER_KEY, user);
 			tag.setLoginButton(true);
 			tag.setLogoutButtonURL(TEST_ATTRIBUTE);
 			tag.doTag();
@@ -330,85 +329,85 @@ public class ChildPageTagTest {
 	}
 
 	private static final String CHILD_PAGE_TAG_WITH_DEFAULTS =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_JQM_HEADER_HIDE =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\" style=\"display:none\">" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\" style=\"display:none\">" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_JQM_HEADER_FIXED =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\" data-position=\"fixed\">" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\" data-position=\"fixed\">" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_LOGIN =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<a href=\"/login\" data-role=\"button\" data-icon=\"lock\">Login</a>" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<a href=\"/login\" data-role=\"button\" data-icon=\"lock\">Login</a>" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_LOGOUT =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<a href=\"BOGUS_TEXT\" data-role=\"button\" data-icon=\"unlock\">Logout</a>" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<a href=\"BOGUS_TEXT\" data-role=\"button\" data-icon=\"unlock\">Logout</a>" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_BACK_BUTTON =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<a href=\"javascript:history.back()\" class=\"ui-btn-left\" data-icon=\"back\" data-iconpos=\"notext\" data-transition=\"pop\">Back</a>" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<a href=\"javascript:history.back()\" class=\"ui-btn-left\" data-icon=\"back\" data-iconpos=\"notext\" data-transition=\"pop\">Back</a>" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_BACK_BUTTON2 =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<a href=\"BOGUS_TEXT\" class=\"ui-btn-left\" data-icon=\"back\" data-iconpos=\"notext\" data-transition=\"pop\">Back</a>" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<a href=\"BOGUS_TEXT\" class=\"ui-btn-left\" data-icon=\"back\" data-iconpos=\"notext\" data-transition=\"pop\">Back</a>" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_PREFERENCES_BUTTON =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"<a href=\"BOGUS_TEXT\" class=\"ui-btn-right\" data-icon=\"gear\" data-iconpos=\"notext\">Preferences</a>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"<a href=\"BOGUS_TEXT\" class=\"ui-btn-right\" data-icon=\"gear\" data-iconpos=\"notext\">Preferences</a>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_PREFERENCES_BUTTON2 =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"<a href=\"/preferences\" class=\"ui-btn-right\" data-icon=\"gear\" data-iconpos=\"notext\">Preferences</a>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"<a href=\"/preferences\" class=\"ui-btn-right\" data-icon=\"gear\" data-iconpos=\"notext\">Preferences</a>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static final String CHILD_PAGE_TAG_WITH_HOME_BUTTON =
-		"<div data-role=\"page\" id=\"TEST_ID\">" + NL + 
-			"<div data-role=\"header\">" + NL + 
-			"<h1>TEST_TITLE</h1>" + NL + 
-			"<a href=\"/home\" class=\"ui-btn-right\" data-icon=\"home\" data-iconpos=\"notext\">Home</a>" + NL + 
-			"</div>" + NL + 
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
+			"<div data-role=\"page\" id=\"TEST_ID\">" + NL +
+					"<div data-role=\"header\">" + NL +
+					"<h1>TEST_TITLE</h1>" + NL +
+					"<a href=\"/home\" class=\"ui-btn-right\" data-icon=\"home\" data-iconpos=\"notext\">Home</a>" + NL +
+					"</div>" + NL +
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>" + NL;
 
 	private static class FakeJspBodyAnswerer implements Answer {
 		public Object answer(InvocationOnMock invocationOnMock) throws Throwable {
-			MockJspWriter writer = (MockJspWriter)invocationOnMock.getArguments()[0];
+			MockJspWriter writer = (MockJspWriter) invocationOnMock.getArguments()[0];
 			writer.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
 			return null;
 		}

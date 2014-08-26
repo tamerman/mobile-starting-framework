@@ -1,38 +1,39 @@
 /*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
 
 var cordovaRef = window.PhoneGap || window.Cordova || window.cordova; // old to new fallbacks
 
 /** @deprecated Use the W3C standard window.Notification API instead. */
-var NotificationMessenger = function() { }
+var NotificationMessenger = function () {
+}
 
 /**
  * @param title Title of the notification
  * @param body Body of the notification
  * @deprecated Use the W3C standard window.Notification API instead.
  */
-NotificationMessenger.prototype.notify = function(title, body) {
+NotificationMessenger.prototype.notify = function (title, body) {
     if (window.Notification) {
         this.activeNotification = new window.Notification(title, {
             body: body
@@ -44,7 +45,7 @@ NotificationMessenger.prototype.notify = function(title, body) {
  * Clears the Notificaiton Bar
  * @deprecated Use the W3C standard window.Notification API instead.
  */
-NotificationMessenger.prototype.clear = function() {
+NotificationMessenger.prototype.clear = function () {
     if (this.activeNotification) {
         this.activeNotification.close();
         this.activeNotification = undefined;
@@ -66,7 +67,7 @@ if (typeof window.Notification == 'undefined') {
      * @param title
      * @param options
      */
-    window.Notification = function(title, options) {
+    window.Notification = function (title, options) {
         options = options || {};
         this.tag = options.tag || 'defaultTag';
 
@@ -81,11 +82,11 @@ if (typeof window.Notification == 'undefined') {
 
         var content = options.body || '';
 
-        cordova.exec(function() {
+        cordova.exec(function () {
             if (this.onshow) {
                 this.onshow();
             }
-        }, function(error) {
+        }, function (error) {
             if (this.onerror) {
                 this.onerror(error);
             }
@@ -95,12 +96,12 @@ if (typeof window.Notification == 'undefined') {
     // Permission is always granted on Android.
     window.Notification.permission = 'granted';
 
-    window.Notification.requestPermission = function(callback) {
+    window.Notification.requestPermission = function (callback) {
         callback('granted');
     };
 
     // Not part of the W3C API. Used by the native side to call onclick handlers.
-    window.Notification.callOnclickByTag = function(tag) {
+    window.Notification.callOnclickByTag = function (tag) {
         console.log('callOnclickByTag');
         var notification = window.Notification.active[tag];
         if (notification && notification.onclick && typeof notification.onclick == 'function') {
@@ -116,12 +117,12 @@ if (typeof window.Notification == 'undefined') {
     /**
      * Cancels a notification that has already been created and shown to the user.
      */
-    window.Notification.prototype.close = function() {
-        cordova.exec(function() {
+    window.Notification.prototype.close = function () {
+        cordova.exec(function () {
             if (this.onclose) {
                 this.onclose();
             }
-        }, function(error) {
+        }, function (error) {
             if (this.onerror) {
                 this.onerror(error);
             }

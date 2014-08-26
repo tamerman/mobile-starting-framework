@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.tours.entity;
 
@@ -47,82 +46,82 @@ import javax.xml.bind.annotation.XmlElement;
 
 import org.kuali.mobility.tours.service.ToursService;
 
-@Entity(name="POI")
-@Table(name="TOUR_POI_T")
+@Entity(name = "POI")
+@Table(name = "TOUR_POI_T")
 public class POI implements Comparable<POI> {
 
 	@Id
-    //@SequenceGenerator(name="poi_sequence", sequenceName="SEQ_TOUR_POI_T", initialValue=1000, allocationSize=1)
-    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="poi_sequence")
+	//@SequenceGenerator(name="poi_sequence", sequenceName="SEQ_TOUR_POI_T", initialValue=1000, allocationSize=1)
+	//@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="poi_sequence")
 	@GeneratedValue(strategy = GenerationType.TABLE)
-    @Column(name="POI_ID")
+	@Column(name = "POI_ID")
 	private Long poiId;
 
 	@Basic
-    @Column(name="TOUR_ID", insertable=false, updatable=false)
+	@Column(name = "TOUR_ID", insertable = false, updatable = false)
 	private Long tourId;
 
-    @OneToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="TOUR_ID", nullable=true)
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "TOUR_ID", nullable = true)
 	protected Tour tour;
 
-    @OneToMany(fetch=FetchType.EAGER, cascade={CascadeType.ALL}, mappedBy="poiId")
+	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, mappedBy = "poiId")
 	private Set<POIPermission> permissions;
 
-    @OneToMany(fetch=FetchType.EAGER, cascade={CascadeType.ALL}, mappedBy="poi")
+	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, mappedBy = "poi")
 	private Set<POIPhoneNumber> phoneNumbers = new HashSet<POIPhoneNumber>();
 
-    @OneToMany(fetch=FetchType.EAGER, cascade={CascadeType.ALL}, mappedBy="poi")
+	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, mappedBy = "poi")
 	private Set<POIEmailAddress> emailAddresses = new HashSet<POIEmailAddress>();
 
-	@Column(name="NAME")
+	@Column(name = "NAME")
 	private String name;
 
-	@Column(name="OFF_NAME")
+	@Column(name = "OFF_NAME")
 	private String officialName;
 
-	@Column(name="POI_TYPE")
+	@Column(name = "POI_TYPE")
 	private String type;
 
-	@Column(name="LOCATION_ID")
+	@Column(name = "LOCATION_ID")
 	private String locationId;
 
-	@Column(name="LAT")
+	@Column(name = "LAT")
 	private float latitude;
 
-	@Column(name="LNG")
+	@Column(name = "LNG")
 	private float longitude;
 
-	@Column(name="MEDIA")
+	@Column(name = "MEDIA")
 	private String media;
 
-	@Column(name="DESCRIPTION")
+	@Column(name = "DESCRIPTION")
 	private String description;
 
-	@Column(name="ST_DESCRIPTION")
+	@Column(name = "ST_DESCRIPTION")
 	private String shortDescription;
 
-	@Column(name="ORDR")
+	@Column(name = "ORDR")
 	private Integer order;
 
-	@Column(name="DIST_TO_NXT")
+	@Column(name = "DIST_TO_NXT")
 	private Long distanceToNextPoi;
 
-	@Column(name="URL")
+	@Column(name = "URL")
 	private String url;
 
-	@Column(name="IMG_URL")
+	@Column(name = "IMG_URL")
 	private String thumbnailUrl;
 
-	@Column(name="FB_LIKE_URL")
+	@Column(name = "FB_LIKE_URL")
 	private String fbLikeUrl;
 
-	@Column(name="FB_LIKE_EN")
+	@Column(name = "FB_LIKE_EN")
 	private String fbLikeButtonEnabled;
 
 	@Version
-    @Column(name="VER_NBR")
-    protected Long versionNumber;
+	@Column(name = "VER_NBR")
+	protected Long versionNumber;
 
 	public POI copy(boolean includeIds) {
 		POI copy = new POI();
@@ -174,7 +173,7 @@ public class POI implements Comparable<POI> {
 		if (fbLikeButtonEnabled != null) {
 			copy.setFbLikeButtonEnabled(new String(fbLikeButtonEnabled));
 		}
-		if (permissions != null && !permissions.isEmpty()){
+		if (permissions != null && !permissions.isEmpty()) {
 			Set<POIPermission> permissionListCopy = new HashSet<POIPermission>();
 			for (POIPermission permission : permissions) {
 				POIPermission permissionCopy = permission.copy(includeIds);
@@ -186,7 +185,7 @@ public class POI implements Comparable<POI> {
 			copy.setPermissions(new HashSet<POIPermission>());
 		}
 
-		if (phoneNumbers != null && !phoneNumbers.isEmpty()){
+		if (phoneNumbers != null && !phoneNumbers.isEmpty()) {
 			Set<POIPhoneNumber> phoneNumberListCopy = new HashSet<POIPhoneNumber>();
 			for (POIPhoneNumber phoneNumber : phoneNumbers) {
 				POIPhoneNumber phoneNumberCopy = phoneNumber.copy(includeIds);
@@ -203,7 +202,7 @@ public class POI implements Comparable<POI> {
 	public List<String> getViewGroups() {
 		List<String> groups = new ArrayList<String>();
 		for (POIPermission tp : permissions) {
-			if (ToursService.PERMISSION_TYPE_VIEW.equals(tp.getType())){
+			if (ToursService.PERMISSION_TYPE_VIEW.equals(tp.getType())) {
 				groups.add(tp.getGroupName());
 			}
 		}
@@ -213,7 +212,7 @@ public class POI implements Comparable<POI> {
 	public List<String> getEditGroups() {
 		List<String> groups = new ArrayList<String>();
 		for (POIPermission tp : permissions) {
-			if (ToursService.PERMISSION_TYPE_EDIT.equals(tp.getType())){
+			if (ToursService.PERMISSION_TYPE_EDIT.equals(tp.getType())) {
 				groups.add(tp.getGroupName());
 			}
 		}

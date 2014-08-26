@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.admin.service;
 
@@ -59,92 +58,96 @@ import org.springframework.stereotype.Service;
 
 /**
  * Implementation of the CXF Device Service
- * 
+ *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
  * @since 3.0
  */
 @Service
 public class CXFHomeScreenService {
-	/** A reference to a logger for this service */
+	/**
+	 * A reference to a logger for this service
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(CXFHomeScreenService.class);
-	
+
 	@Resource(name = "messageSource")
 	private MessageSource messageSource;
-	
-    @Context
-    private MessageContext messageContext;
-	
+
+	@Context
+	private MessageContext messageContext;
+
 	@Autowired
 	private AdminService adminService;
-	
-    /**
-     * A reference to the <code>LocalisationUtil</code>
-     */
-    @Autowired
-    @Qualifier("localisationUtil")
-    private LocalisationUtil localisationUtil;
-	
+
+	/**
+	 * A reference to the <code>LocalisationUtil</code>
+	 */
+	@Autowired
+	@Qualifier("localisationUtil")
+	private LocalisationUtil localisationUtil;
+
 	@Autowired
 	private AlertsService alertsService;
 
 	@GET
 	@Path("/ping/get")
-	public String pingGet(){
+	public String pingGet() {
 		return "{\"status\":\"OK\"}";
 	}
 
 	@POST
 	@Path("/ping/post")
-	public String pingPost(){
+	public String pingPost() {
 		return "{\"status\":\"OK\"}";
 	}
-	
+
 	/**
 	 * Return HomeScreen as Json.
+	 *
 	 * @return
 	 */
 	@GET
 	@Path("/json")
-	public String getHomeScreenAsJson(){
+	public String getHomeScreenAsJson() {
 		String alias = "PUBLIC";
 //		List<HomeTool> hometools = getAllHomeTools(alias);		
-		List<HomeTool> hometools = getHomeTools();		
-		
+		List<HomeTool> hometools = getHomeTools();
+
 		Iterator<HomeTool> it = hometools.iterator();
 		String json = "";
-		while(it.hasNext()){
+		while (it.hasNext()) {
 			HomeTool ht = it.next();
-			json += "{\"homeToolId\":" + 	ht.getHomeToolId() + ",";
-			json += "\"homeScreenId\":" + 	ht.getHomeScreenId() +  ","; 
-			json += "\"toolId\":" + 		ht.getToolId() +  ",";
-			json += "\"order\":" + 		ht.getOrder() + ",";
+			json += "{\"homeToolId\":" + ht.getHomeToolId() + ",";
+			json += "\"homeScreenId\":" + ht.getHomeScreenId() + ",";
+			json += "\"toolId\":" + ht.getToolId() + ",";
+			json += "\"order\":" + ht.getOrder() + ",";
 			json += "\"versionNumber\":" + ht.getVersionNumber() + ",";
 			json += "\"tool\":" + localizeTool(ht.getTool()).toJson() + "},";
 		}
-		json = json.substring(0, json.length() - 1);		
+		json = json.substring(0, json.length() - 1);
 		return "{\"tools\":[" + json + "]}";
 	}
-	
+
 	/**
 	 * Return badge text and count with tool id for showing on homesreen temporary static values as Json.
+	 *
 	 * @return
 	 */
 	@GET
 	@Path("/badges")
-	public String getBadgeDetails(){
-		String returnJson="{\"tools\":[{\"homeToolId\":1,\"badgeText\":\"Beta\",\"badgeCount\":1},{\"homeToolId\":2,\"badgeText\":\"\",\"badgeCount\":2},{\"homeToolId\":3,\"badgeText\":\"Beta\",\"badgeCount\":3},{\"homeToolId\":4,\"badgeText\":\"\",\"badgeCount\":4},{\"homeToolId\":6,\"badgeText\":\"\",\"badgeCount\":6},{\"homeToolId\":7,\"badgeText\":\"Beta\",\"badgeCount\":7}]}";
+	public String getBadgeDetails() {
+		String returnJson = "{\"tools\":[{\"homeToolId\":1,\"badgeText\":\"Beta\",\"badgeCount\":1},{\"homeToolId\":2,\"badgeText\":\"\",\"badgeCount\":2},{\"homeToolId\":3,\"badgeText\":\"Beta\",\"badgeCount\":3},{\"homeToolId\":4,\"badgeText\":\"\",\"badgeCount\":4},{\"homeToolId\":6,\"badgeText\":\"\",\"badgeCount\":6},{\"homeToolId\":7,\"badgeText\":\"Beta\",\"badgeCount\":7}]}";
 		return returnJson;
 	}
-	
-	private String decode(String code){
-		if(code != null){
+
+	private String decode(String code) {
+		if (code != null) {
 			return messageSource.getMessage(code, null, null);
-		}else{
+		} else {
 			return code;
 		}
 	}
-	
-	private Tool localizeTool(Tool tool){
+
+	private Tool localizeTool(Tool tool) {
 		Tool result = new Tool();
 		result.setAclPublishingId(tool.getAclPublishingId());
 		result.setAclViewingId(tool.getAclViewingId());
@@ -158,16 +161,16 @@ public class CXFHomeScreenService {
 		result.setKeywords(tool.getKeywords());
 		result.setPublishingPermission(tool.getPublishingPermission());
 		result.setRequisites(tool.getRequisites());
-		
+
 		//Localised Fields
 		result.setSubtitle(decode(tool.getSubtitle()));
 		result.setTitle(decode(tool.getTitle()));
 		result.setDescription(decode(tool.getDescription()));
 		return result;
 	}
-	
-	
-	private List<HomeTool> getAllHomeTools(String alias){
+
+
+	private List<HomeTool> getAllHomeTools(String alias) {
 		HomeScreen home = getAdminService().getHomeScreenByAlias(alias);
 		List<HomeTool> copy;
 		if (home == null) {
@@ -184,8 +187,8 @@ public class CXFHomeScreenService {
 		}
 		return userTools;
 	}
-	
-	private List<HomeTool> getHomeTools(){		
+
+	private List<HomeTool> getHomeTools() {
 //		HttpServletRequest request = (HttpServletRequest)PhaseInterceptorChain.getCurrentMessage().get("HTTP.REQUEST");		
 		HttpServletRequest request = (HttpServletRequest) this.getMessageContext().getHttpServletRequest();
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
@@ -225,7 +228,7 @@ public class CXFHomeScreenService {
 		if (user != null && user.getViewCampus() != null) {
 			alias = user.getViewCampus();
 		}
-		
+
 		home = getAdminService().getHomeScreenByAlias(alias);
 		if (home == null) {
 			LOG.debug("Home screen was null, getting PUBLIC screen.");
@@ -281,10 +284,8 @@ public class CXFHomeScreenService {
 		}
 		return userTools;
 	}
-	
-	
-	
-	
+
+
 	/**
 	 * @return the messageSource
 	 */
@@ -328,7 +329,6 @@ public class CXFHomeScreenService {
 	}
 
 
-
 	/**
 	 * @return the localisationUtil
 	 */
@@ -356,5 +356,5 @@ public class CXFHomeScreenService {
 	public void setAlertsService(AlertsService alertsService) {
 		this.alertsService = alertsService;
 	}
-		
+
 }

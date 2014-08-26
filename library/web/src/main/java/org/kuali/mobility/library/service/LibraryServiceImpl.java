@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.library.service;
 
@@ -42,12 +41,15 @@ import org.springframework.stereotype.Service;
 
 /**
  * Implementation of the <code>LibraryService</code>
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  * @since 2.3.0
  */
 public class LibraryServiceImpl implements LibraryService {
 
-	/** A reference to a logger */
+	/**
+	 * A reference to a logger
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(LibraryServiceImpl.class);
 
 	/**
@@ -108,7 +110,7 @@ public class LibraryServiceImpl implements LibraryService {
 		LibraryHour lh;
 		int weekSpan = dayOfWeekSpan(hours);
 		int index = 0;
-		if (weekSpan >= 4){ // At least till Thursday
+		if (weekSpan >= 4) { // At least till Thursday
 			lh = new LibraryHour();
 			lh.setDisplayLabel("library.hoursSpan." + weekSpan);
 			lh.setFromTime(hours.get(0).getFromTime());
@@ -116,12 +118,12 @@ public class LibraryServiceImpl implements LibraryService {
 			lh.setDayOfWeek(hours.get(0).getDayOfWeek());
 			returnHours.add(lh);
 			index = weekSpan;
-		}else {
+		} else {
 			index = 0;
 		}
-		for ( ; index < hours.size() ; index ++){
+		for (; index < hours.size(); index++) {
 			lh = new LibraryHour();
-			lh.setDisplayLabel("library.hours." + (index+1));
+			lh.setDisplayLabel("library.hours." + (index + 1));
 			lh.setFromTime(hours.get(index).getFromTime());
 			lh.setToTime(hours.get(index).getToTime());
 			lh.setDayOfWeek(hours.get(index).getDayOfWeek());
@@ -138,20 +140,21 @@ public class LibraryServiceImpl implements LibraryService {
 	 * few days so it does not have to happen in the jsp
 	 * Just check Monday (0) to Friday (4) if the from and to are the same
 	 * returning the range of how many it share the same times.
+	 *
 	 * @param libraryHour
 	 * @return The index of the last day in the week - 6 = Sunday
 	 */
 	private final int dayOfWeekSpan(List<LibraryHour> libraryHours) {
 		int count = 0;
 		LibraryHour lh = new LibraryHour();
-		if(libraryHours != null) {
+		if (libraryHours != null) {
 			for (LibraryHour libHour : libraryHours) {
 				if (count > 0) {
-					if ((libHour.getFromTime() == null || libHour.getToTime() == null)){
+					if ((libHour.getFromTime() == null || libHour.getToTime() == null)) {
 						return count;
 					}
-					if ((libHour.getFromTime() != null && libHour.getToTime() != null)){
-						if(lh.getFromTime() == null || lh.getToTime() == null){
+					if ((libHour.getFromTime() != null && libHour.getToTime() != null)) {
+						if (lh.getFromTime() == null || lh.getToTime() == null) {
 							return count;
 						}
 						if (lh.getFromTime().compareTo(libHour.getFromTime()) != 0
@@ -162,7 +165,7 @@ public class LibraryServiceImpl implements LibraryService {
 				}
 				count++;
 				lh = libHour;
-				if(count == 7){
+				if (count == 7) {
 					break; // Don't go past Sunday
 				}
 			}
@@ -176,18 +179,18 @@ public class LibraryServiceImpl implements LibraryService {
 	 */
 	@Override
 	//@Cacheable(value="libraryCache", key="#campusCode")
-	public Map<String,List<Library>> getLibrariesByCampus(){
+	public Map<String, List<Library>> getLibrariesByCampus() {
 
-		Map<String,List<Library>> libraryMap = new HashMap<String, List<Library>>();
+		Map<String, List<Library>> libraryMap = new HashMap<String, List<Library>>();
 
 		// Get campuses with libraries
 		List<String> campuses = this.dao.getCampusWithLibraries();
-		if (campuses == null){
+		if (campuses == null) {
 			return libraryMap; // Map is still empty
 		}
 
 		// Loop through each campus and add their libraries to a map
-		for(String campus : campuses){
+		for (String campus : campuses) {
 			// The list should not be null, since we queried for campuses with libraries
 			List<Library> libraries = this.dao.getLibariesForCampus(campus);
 			libraryMap.put(campus, libraries);
@@ -197,7 +200,7 @@ public class LibraryServiceImpl implements LibraryService {
 
 	// evicts the cache is called from the save method.
 	//@CacheEvict(value = "libraryCache", allEntries=true)
-	public boolean clearLibraryCache(){
+	public boolean clearLibraryCache() {
 		return true;
 	}
 
@@ -222,6 +225,7 @@ public class LibraryServiceImpl implements LibraryService {
 
 	/**
 	 * Sets the reference to the <code>LibraryDao</code>.
+	 *
 	 * @param dao The reference to the <code>LibraryDao</code>.
 	 */
 	public void setDao(LibraryDao dao) {
@@ -230,6 +234,7 @@ public class LibraryServiceImpl implements LibraryService {
 
 	/**
 	 * Gets the reference to the <code>LibraryDao</code>.
+	 *
 	 * @returns The reference to the <code>LibraryDao</code>.
 	 */
 	public LibraryDao getDao() {

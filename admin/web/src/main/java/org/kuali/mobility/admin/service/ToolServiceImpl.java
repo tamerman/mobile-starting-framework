@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.admin.service;
 
@@ -55,6 +54,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * Service for actually performing administrative tasks
+ *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
  */
 @Service(value = "ToolService")
@@ -69,53 +69,53 @@ public class ToolServiceImpl implements ToolService, ApplicationContextAware {
 	 * A reference to the <code>adminDao</code>.
 	 */
 	@Autowired
-    private AdminDao adminDao;
-	
+	private AdminDao adminDao;
+
 	// TODO why do we need this??
 	private ApplicationContext context;
-	
+
 	@Context
-    private MessageContext messageContext;
-	
+	private MessageContext messageContext;
+
 	@Resource(name = "messageSource")
 	private MessageSource messageSource;
-	
-	
+
+
 	@GET
 	@Path("/ping/get")
-	public String pingGet(){
+	public String pingGet() {
 		return "{\"status\":\"OK\"}";
 	}
 
 	@POST
 	@Path("/ping/post")
-	public String pingPost(){
+	public String pingPost() {
 		return "{\"status\":\"OK\"}";
 	}
-	
-	private String decode(String code){
-		if(code != null){
+
+	private String decode(String code) {
+		if (code != null) {
 			return messageSource.getMessage(code, null, null);
-		}else{
+		} else {
 			return code;
 		}
 	}
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see org.kuali.mobility.admin.service.AdminService#getAllTools()
 	 */
 	@GET
-    @Path("/tools")
+	@Path("/tools")
 	@Override
 	public List<Tool> getAllTools() {
 		List<Tool> tools = getAdminDao().getAllTools();
-		
-		for(Tool tool : tools){
+
+		for (Tool tool : tools) {
 			tool.setTitle(decode(tool.getTitle()));
 			tool.setDescription(decode(tool.getDescription()));
 		}
-		
+
 		Collections.sort(tools);
 		return tools;
 	}
@@ -125,9 +125,9 @@ public class ToolServiceImpl implements ToolService, ApplicationContextAware {
 	 * @see org.kuali.mobility.admin.service.AdminService#getToolById(long)
 	 */
 	@GET
-    @Path("/toolById/{toolId}")
+	@Path("/toolById/{toolId}")
 	@Override
-	public Tool getToolById(@PathParam(value="toolId") Long toolId) {
+	public Tool getToolById(@PathParam(value = "toolId") Long toolId) {
 		return getAdminDao().getToolById(toolId);
 	}
 
@@ -136,7 +136,7 @@ public class ToolServiceImpl implements ToolService, ApplicationContextAware {
 	 * @see org.kuali.mobility.admin.service.AdminService#saveTool(org.kuali.mobility.admin.entity.Tool)
 	 */
 	@POST
-    @Path("/saveTool")
+	@Path("/saveTool")
 	@Transactional
 	@Override
 	public Long saveTool(@RequestBody String data) {
@@ -149,24 +149,24 @@ public class ToolServiceImpl implements ToolService, ApplicationContextAware {
 	 * @see org.kuali.mobility.admin.service.AdminService#deleteToolById(long)
 	 */
 	@GET
-    @Path("/deleteToolById/{toolId}")
+	@Path("/deleteToolById/{toolId}")
 	@Transactional
 	@Override
-	public void deleteToolById(@PathParam(value="toolId") Long toolId) {
+	public void deleteToolById(@PathParam(value = "toolId") Long toolId) {
 		HttpServletRequest request;
-		if( getMessageContext() != null ) {
-            request = (HttpServletRequest) getMessageContext().getHttpServletRequest();
-        } else {
-            request = (HttpServletRequest)PhaseInterceptorChain.getCurrentMessage().get("HTTP.REQUEST");
-        }
+		if (getMessageContext() != null) {
+			request = (HttpServletRequest) getMessageContext().getHttpServletRequest();
+		} else {
+			request = (HttpServletRequest) PhaseInterceptorChain.getCurrentMessage().get("HTTP.REQUEST");
+		}
 		if (null == request || null == request.getSession()) {
 			LOG.error("request==null, quit!");
 		} else {
-            HttpSession session = request.getSession();
-            User user = (User)session.getAttribute(AuthenticationConstants.KME_USER_KEY);
-            if (user.isMember("KME-ADMINISTRATORS")) {
-            	getAdminDao().deleteToolById(toolId);
-            }
+			HttpSession session = request.getSession();
+			User user = (User) session.getAttribute(AuthenticationConstants.KME_USER_KEY);
+			if (user.isMember("KME-ADMINISTRATORS")) {
+				getAdminDao().deleteToolById(toolId);
+			}
 		}
 	}
 
@@ -190,7 +190,7 @@ public class ToolServiceImpl implements ToolService, ApplicationContextAware {
 	public void setApplicationContext(ApplicationContext context) {
 		this.context = context;
 	}
-	
+
 	/**
 	 * @return the messageSource
 	 */

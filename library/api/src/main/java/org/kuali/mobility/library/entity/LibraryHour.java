@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.library.entity;
 
@@ -38,26 +37,29 @@ import javax.persistence.Transient;
 
 /**
  * A class representing an hour range which the library is open
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  * @since 2.3.0
  */
 @Entity
-@Table(name="LIBRARY_HOUR")
+@Table(name = "LIBRARY_HOUR")
 public class LibraryHour {
-	
-	public static final int DAY_MONDAY 			= 1;
-	public static final int DAY_TUESDAY 		= 2;
-	public static final int DAY_WEDNESDAY		= 3;
-	public static final int DAY_THURSDAY 		= 4;
-	public static final int DAY_FRIDAY 			= 5;
-	public static final int DAY_SATURDAY		= 6;
-	public static final int DAY_SUNDAY			= 7;
-	public static final int DAY_PUBLIC_HOLIDAY	= 8;
 
-	/** Id of the Library */
+	public static final int DAY_MONDAY = 1;
+	public static final int DAY_TUESDAY = 2;
+	public static final int DAY_WEDNESDAY = 3;
+	public static final int DAY_THURSDAY = 4;
+	public static final int DAY_FRIDAY = 5;
+	public static final int DAY_SATURDAY = 6;
+	public static final int DAY_SUNDAY = 7;
+	public static final int DAY_PUBLIC_HOLIDAY = 8;
+
+	/**
+	 * Id of the Library
+	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	@Column(name="ID")
+	@Column(name = "ID")
 	private long id;
 
 	/**
@@ -65,28 +67,28 @@ public class LibraryHour {
 	 * 1 - 7 = Monday to Sunday
 	 * 8 = Public holiday
 	 */
-	@Column(name="DAY_OF_WEEK")
-	private int dayOfWeek ;
+	@Column(name = "DAY_OF_WEEK")
+	private int dayOfWeek;
 
 	/**
 	 * Starting time
 	 */
-	@Column(name="FROM_TIME")
+	@Column(name = "FROM_TIME")
 	private Date fromTime;
 
 	/**
 	 * Ending time
 	 */
-	@Column(name="TO_TIME")
+	@Column(name = "TO_TIME")
 	private Date toTime;
 
 	/**
 	 * Hour set this hour is placed in
 	 */
-	@ManyToOne(optional=false) 
-	@JoinColumn(name="HOUR_SET_ID", nullable=false, updatable=false)
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "HOUR_SET_ID", nullable = false, updatable = false)
 	private LibraryHourSet libraryHourSet;
-	
+
 	/**
 	 * Label to display on the hours page
 	 * This field is not persisted
@@ -94,10 +96,10 @@ public class LibraryHour {
 	@Transient
 	private transient String displayLabel;
 
-	
-	
+
 	/**
 	 * Gets the id for this <code>LibraryHour</code>.
+	 *
 	 * @return the id
 	 */
 	public long getId() {
@@ -106,6 +108,7 @@ public class LibraryHour {
 
 	/**
 	 * Sets the id for this <code>LibraryHour</code>.
+	 *
 	 * @param id the id to set
 	 */
 	public void setId(long id) {
@@ -114,6 +117,7 @@ public class LibraryHour {
 
 	/**
 	 * Gets the dayOfWeek for this <code>LibraryHour</code>.
+	 *
 	 * @return the dayOfWeek
 	 */
 	public int getDayOfWeek() {
@@ -122,6 +126,7 @@ public class LibraryHour {
 
 	/**
 	 * Sets the dayOfWeek for this <code>LibraryHour</code>.
+	 *
 	 * @param dayOfWeek the dayOfWeek to set
 	 */
 	public void setDayOfWeek(int dayOfWeek) {
@@ -130,6 +135,7 @@ public class LibraryHour {
 
 	/**
 	 * Gets the fromTime for this <code>LibraryHour</code>.
+	 *
 	 * @return the fromTime
 	 */
 	public Date getFromTime() {
@@ -138,6 +144,7 @@ public class LibraryHour {
 
 	/**
 	 * Sets the fromTime for this <code>LibraryHour</code>.
+	 *
 	 * @param fromTime the fromTime to set
 	 */
 	public void setFromTime(Date fromTime) {
@@ -146,6 +153,7 @@ public class LibraryHour {
 
 	/**
 	 * Gets the toTime for this <code>LibraryHour</code>.
+	 *
 	 * @return the toTime
 	 */
 	public Date getToTime() {
@@ -154,6 +162,7 @@ public class LibraryHour {
 
 	/**
 	 * Sets the toTime for this <code>LibraryHour</code>.
+	 *
 	 * @param toTime the toTime to set
 	 */
 	public void setToTime(Date toTime) {
@@ -162,6 +171,7 @@ public class LibraryHour {
 
 	/**
 	 * Gets the libraryHourSet for this <code>LibraryHour</code>.
+	 *
 	 * @return the libraryHourSet
 	 */
 	public LibraryHourSet getLibraryHourSet() {
@@ -170,6 +180,7 @@ public class LibraryHour {
 
 	/**
 	 * Sets the libraryHourSet for this <code>LibraryHour</code>.
+	 *
 	 * @param libraryHourSet the libraryHourSet to set
 	 */
 	public void setLibraryHourSet(LibraryHourSet libraryHourSet) {
@@ -178,6 +189,7 @@ public class LibraryHour {
 
 	/**
 	 * Gets the displayLabel for this <code>LibraryHour</code>.
+	 *
 	 * @return the displayLabel
 	 */
 	public String getDisplayLabel() {
@@ -186,6 +198,7 @@ public class LibraryHour {
 
 	/**
 	 * Sets the displayLabel for this <code>LibraryHour</code>.
+	 *
 	 * @param displayLabel the displayLabel to set
 	 */
 	public void setDisplayLabel(String displayLabel) {
@@ -194,11 +207,12 @@ public class LibraryHour {
 
 	/**
 	 * Returns true if the library is closed for this hour range
+	 *
 	 * @return True if the library is closed.
 	 */
-	public boolean isClosed(){
+	public boolean isClosed() {
 		return this.toTime == null || this.fromTime == null;
 	}
 
-	
+
 }

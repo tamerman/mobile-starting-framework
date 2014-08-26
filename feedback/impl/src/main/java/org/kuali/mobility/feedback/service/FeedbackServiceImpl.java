@@ -1,32 +1,32 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.feedback.service;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.kuali.mobility.email.service.EmailService;
@@ -58,32 +58,32 @@ public class FeedbackServiceImpl implements FeedbackService {
 
 	private String fromEmailAddress;
 
-    private String emailSubject;
+	private String emailSubject;
 
-    /**
-     * A reference to the Spring Message source
-     */
-    @Resource(name="messageSource")
-    private MessageSource messageSource;
+	/**
+	 * A reference to the Spring Message source
+	 */
+	@Resource(name = "messageSource")
+	private MessageSource messageSource;
 
-    @Override
-    public void saveFeedback(Feedback feedback, Locale userLocale) {
-        if (feedback!=null) {
-            //// reset device type to localized value
-            String deviceTypeVal = getLocalisedMessage(feedback.getDeviceType(), userLocale);
-            feedback.setDeviceType(deviceTypeVal);
+	@Override
+	public void saveFeedback(Feedback feedback, Locale userLocale) {
+		if (feedback != null) {
+			//// reset device type to localized value
+			String deviceTypeVal = getLocalisedMessage(feedback.getDeviceType(), userLocale);
+			feedback.setDeviceType(deviceTypeVal);
 
-            saveFeedback(feedback);
-        }
+			saveFeedback(feedback);
+		}
 
-    }
+	}
 
-    @Override
+	@Override
 	@Transactional
 	public void saveFeedback(Feedback feedback) {
-        if (feedback.getPostedTimestamp()==null) {
-            feedback.setPostedTimestamp(new Timestamp(System.currentTimeMillis()));
-        }
+		if (feedback.getPostedTimestamp() == null) {
+			feedback.setPostedTimestamp(new Timestamp(System.currentTimeMillis()));
+		}
 		feedbackDao.saveFeedback(feedback);
 		sendEmail(feedback);
 	}
@@ -101,19 +101,20 @@ public class FeedbackServiceImpl implements FeedbackService {
 	}
 
 
-    /**
-     * Gets a localised message
-     * @param key Key of the message to get
-     * @param locale
-     * @param args Arguments for the message
-     * @return A localised string
-     */
-    private String getLocalisedMessage(String key, Locale locale, String...args){
-        if (locale==null) {
-            locale = Locale.ENGLISH;
-        }
-        return messageSource.getMessage(key, args, locale);
-    }
+	/**
+	 * Gets a localised message
+	 *
+	 * @param key    Key of the message to get
+	 * @param locale
+	 * @param args   Arguments for the message
+	 * @return A localised string
+	 */
+	private String getLocalisedMessage(String key, Locale locale, String... args) {
+		if (locale == null) {
+			locale = Locale.ENGLISH;
+		}
+		return messageSource.getMessage(key, args, locale);
+	}
 
 	public EntityManagerFactory getEntityManagerFactory() {
 		return entityManagerFactory;
@@ -155,12 +156,12 @@ public class FeedbackServiceImpl implements FeedbackService {
 		this.fromEmailAddress = fromEmailAddress;
 	}
 
-    public String getEmailSubject() {
-        return emailSubject;
-    }
+	public String getEmailSubject() {
+		return emailSubject;
+	}
 
-    public void setEmailSubject(String emailSubject) {
-        this.emailSubject = emailSubject;
-    }
+	public void setEmailSubject(String emailSubject) {
+		this.emailSubject = emailSubject;
+	}
 
 }

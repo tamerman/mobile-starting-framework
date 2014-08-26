@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.people.service;
 
@@ -42,8 +41,8 @@ import java.util.List;
 
 /**
  * Implementation of the <code>DirectoryService</code>
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
- * @since
  */
 @WebService(endpointInterface = "org.kuali.mobility.people.service.DirectoryService")
 public class DirectoryServiceImpl implements DirectoryService, ApplicationContextAware {
@@ -62,7 +61,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 	 * A reference to the <code>PersonTransform</code>.
 	 */
 	private PersonTransform personTransform;
-	
+
 	/**
 	 * A reference to the <code>GroupTransform</code>.
 	 */
@@ -71,7 +70,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 	/**
 	 * Performs a search
 	 */
-	
+
 	@POST
 	@Path("/search")
 	public SearchResultImpl search(
@@ -97,7 +96,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Finds entries for a search criteria
 	 */
@@ -109,7 +108,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 	/**
 	 * Searches for a person
 	 */
-	
+
 	@POST
 	@Path("/person/search")
 	public List<PersonImpl> personSearch(
@@ -134,12 +133,12 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 		CollectionUtils.collect(
 				(getDirectoryDao().findEntries(searchCriteria)).getPeople(),
-				 getPersonTransform(),
-				 people);
+				getPersonTransform(),
+				people);
 
 		return people;
 	}
-	 
+
 	/**
 	 * Looks up a person
 	 */
@@ -174,6 +173,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Gets the reference to the <code>DirectoryDao</code>.
+	 *
 	 * @return Reference to the <code>DirectoryDao</code>.
 	 */
 	public DirectoryDao getDirectoryDao() {
@@ -182,6 +182,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Sets the reference to the <code>DirectoryDao</code>.
+	 *
 	 * @param directoryDao Reference to the <code>DirectoryDao</code>.
 	 */
 	public void setDirectoryDao(DirectoryDao directoryDao) {
@@ -190,6 +191,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Gets the reference to the <code>PersonTransform</code>.
+	 *
 	 * @return Reference to the <code>PersonTransform</code>.
 	 */
 	public PersonTransform getPersonTransform() {
@@ -198,6 +200,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Sets the reference to the <code>PersonTransform</code>.
+	 *
 	 * @param personTransform Reference to the <code>PersonTransform</code>.
 	 */
 	public void setPersonTransform(PersonTransform personTransform) {
@@ -206,6 +209,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Gets the reference to the <code>GroupTransform</code>.
+	 *
 	 * @return Reference to the <code>GroupTransform</code>.
 	 */
 	public GroupTransform getGroupTransform() {
@@ -214,6 +218,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Sets the reference to the <code>GroupTransform</code>.
+	 *
 	 * @param groupTransform Reference to the <code>GroupTransform</code>.
 	 */
 	public void setGroupTransform(GroupTransform groupTransform) {
@@ -222,6 +227,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Gets the reference to the <code>ApplicationContext</code>.
+	 *
 	 * @return Reference to the <code>ApplicationContext</code>.
 	 */
 	public ApplicationContext getApplicationContext() {
@@ -230,6 +236,7 @@ public class DirectoryServiceImpl implements DirectoryService, ApplicationContex
 
 	/**
 	 * Sets the reference to the <code>ApplicationContext</code>.
+	 *
 	 * @param applicationContext Reference to the <code>ApplicationContext</code>.
 	 */
 	public void setApplicationContext(ApplicationContext applicationContext) {

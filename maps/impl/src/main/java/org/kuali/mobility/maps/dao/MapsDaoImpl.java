@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.maps.dao;
 
@@ -52,7 +51,6 @@ import java.net.URL;
 import java.util.*;
 
 /**
- * 
  * @author Kuali Mobility Team <mobility.collab@kuali.org>
  */
 public class MapsDaoImpl implements MapsDao {
@@ -87,7 +85,7 @@ public class MapsDaoImpl implements MapsDao {
 			try {
 				if (null == searchGroupId
 						|| MapsConstants.ALL_GROUPS
-								.equalsIgnoreCase(searchGroupId)) {
+						.equalsIgnoreCase(searchGroupId)) {
 					LOG.debug("Searching all maps for a match to ["
 							+ searchText + "]");
 					Collection<MapsGroup> groups = getMapsGroups().values();
@@ -125,9 +123,9 @@ public class MapsDaoImpl implements MapsDao {
 							+ " has no lat/lon and should.");
 				} else if (location.getId().equalsIgnoreCase(searchText)
 						|| location.getName().toLowerCase()
-								.indexOf(searchText.toLowerCase()) > -1
+						.indexOf(searchText.toLowerCase()) > -1
 						|| location.getDescription().toLowerCase()
-								.indexOf(searchText.toLowerCase()) > -1) {
+						.indexOf(searchText.toLowerCase()) > -1) {
 					LOG.debug("Found a match for group id [" + group.getId()
 							+ "] location id [" + location.getId() + "]");
 					locations.add(location);
@@ -316,8 +314,7 @@ public class MapsDaoImpl implements MapsDao {
 	}
 
 	/**
-	 * @param baseUrl
-	 *            the baseUrl to set
+	 * @param baseUrl the baseUrl to set
 	 */
 	public void setBaseUrl(String baseUrl) {
 		this.baseUrl = baseUrl;

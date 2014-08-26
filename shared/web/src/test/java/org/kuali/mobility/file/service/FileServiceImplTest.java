@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.file.service;
 
@@ -54,7 +53,7 @@ import static org.junit.Assert.assertTrue;
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  */
 @RunWith(UnitilsJUnit4TestClassRunner.class)
-@JpaEntityManagerFactory(persistenceUnit="mdot")
+@JpaEntityManagerFactory(persistenceUnit = "mdot")
 public class FileServiceImplTest {
 	private static final Logger LOG = LoggerFactory.getLogger(FileServiceImplTest.class);
 	private static final String FILE_NAME = "file.test.properties";
@@ -91,18 +90,18 @@ public class FileServiceImplTest {
 			byte[] inputFile = IOUtils.toByteArray(in);
 			file.setBytes(inputFile);
 			file.setFileSize(inputFile.length);
-		} catch( IOException ioe ) {
-			LOG.error( ioe.getLocalizedMessage(), ioe );
+		} catch (IOException ioe) {
+			LOG.error(ioe.getLocalizedMessage(), ioe);
 		}
 		file.setFileName(FILE_NAME);
 		file.setContentType(CONTENT_TYPE);
-		file.setPostedTimestamp(new Timestamp( Calendar.getInstance().getTimeInMillis() ) );
+		file.setPostedTimestamp(new Timestamp(Calendar.getInstance().getTimeInMillis()));
 
-		assertTrue("File has an ID and should not have.",file.getId()==null);
+		assertTrue("File has an ID and should not have.", file.getId() == null);
 
 		Long fileId = getService().saveFile(file);
 
-		LOG.debug("New file id is: "+fileId);
+		LOG.debug("New file id is: " + fileId);
 
 		assertTrue("Could not save file.", fileId != null && fileId.intValue() > 0);
 
@@ -112,20 +111,20 @@ public class FileServiceImplTest {
 
 		List<File> listOfFiles = getService().findFilesByName(FILE_NAME);
 
-		assertTrue("Failed to find files for name "+FILE_NAME, listOfFiles != null && listOfFiles.size() == 1 );
+		assertTrue("Failed to find files for name " + FILE_NAME, listOfFiles != null && listOfFiles.size() == 1);
 
 		List<File> allFiles = getService().findAllFiles();
 
-		assertTrue("Failed to find all files.", allFiles != null && allFiles.size() == 1 );
+		assertTrue("Failed to find all files.", allFiles != null && allFiles.size() == 1);
 
 		File fileToRemove = allFiles.get(0);
 		boolean didRemove = getService().removeFile(fileToRemove);
 
-		assertTrue("Failed to remove file ID "+fileToRemove.getId(),didRemove);
+		assertTrue("Failed to remove file ID " + fileToRemove.getId(), didRemove);
 
 		allFiles = getService().findAllFiles();
 
-		assertTrue("Found files and should not have.", allFiles == null || allFiles.size() == 0 );
+		assertTrue("Found files and should not have.", allFiles == null || allFiles.size() == 0);
 	}
 
 	public EntityManagerFactory getEntityManagerFactory() {

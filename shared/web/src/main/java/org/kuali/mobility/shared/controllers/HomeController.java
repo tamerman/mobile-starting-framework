@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.shared.controllers;
 
@@ -115,9 +114,9 @@ public class HomeController implements ApplicationContextAware {
 	 */
 	@RequestMapping(value = "home", method = RequestMethod.GET)
 	public String home(
-		@CookieValue(value = "homeLayout", required = false) String homeLayout,
-		HttpServletRequest request,
-		Model uiModel) {
+			@CookieValue(value = "homeLayout", required = false) String homeLayout,
+			HttpServletRequest request,
+			Model uiModel) {
 
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
 		String ipAddress = "";
@@ -148,33 +147,33 @@ public class HomeController implements ApplicationContextAware {
 		uiModel.addAttribute("currentLayout", currentLayout);
 		buildHomeScreen(request, uiModel);
 
-        String viewName = "index";
+		String viewName = "index";
 
-        if( "3".equalsIgnoreCase( getKmeProperties().getProperty("kme.uiVersion","classic") ) ) {
-            viewName = "ui3/home/index";
-        }
-        return viewName;
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
+			viewName = "ui3/home/index";
+		}
+		return viewName;
 
 	}
 
-    @RequestMapping(value = "/home/js/{key}.js")
-    public String getJavaScript(@PathVariable("key") String key,
-            Model uiModel, HttpServletRequest request) {
-	    User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
-	    uiModel.addAttribute("campus", user.getViewCampus());
-        return "ui3/home/js/"+key;
-    }
+	@RequestMapping(value = "/home/js/{key}.js")
+	public String getJavaScript(@PathVariable("key") String key,
+								Model uiModel, HttpServletRequest request) {
+		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
+		uiModel.addAttribute("campus", user.getViewCampus());
+		return "ui3/home/js/" + key;
+	}
 
 	/**
 	 * Controller method for the preference screen
 	 */
 	@RequestMapping(value = "preferences", method = RequestMethod.GET)
 	public String preferences(
-		@CookieValue(value = "homeLayout", required = false) String homeLayoutCookie,
-		@RequestParam(value = "homeLayout", required = false) String homeLayoutParam,
-		HttpServletRequest request,
-		HttpServletResponse response,
-		Model uiModel) {
+			@CookieValue(value = "homeLayout", required = false) String homeLayoutCookie,
+			@RequestParam(value = "homeLayout", required = false) String homeLayoutParam,
+			HttpServletRequest request,
+			HttpServletResponse response,
+			Model uiModel) {
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
 		String homeToolName = "home";
 		List<Campus> campuses = getCampusService().findCampusesByTool(homeToolName);
@@ -187,7 +186,7 @@ public class HomeController implements ApplicationContextAware {
 		if (!StringUtils.isEmpty(homeLayoutParam)) {
 			currentLayout = LayoutUtil.getValidLayout(homeLayoutParam, kmeProperties);
 			Cookie layoutCookie = new Cookie("homeLayout", currentLayout);
-			int cookieMaxAge = Integer.parseInt(getKmeProperties().getProperty("cookie.max.age", "3600"));	
+			int cookieMaxAge = Integer.parseInt(getKmeProperties().getProperty("cookie.max.age", "3600"));
 			layoutCookie.setMaxAge(cookieMaxAge); // default one hour, should implement in kme.config.properties.
 			layoutCookie.setPath(request.getContextPath());
 			layoutCookie.setSecure(useSecureCookie);
@@ -216,9 +215,9 @@ public class HomeController implements ApplicationContextAware {
 		uiModel.addAttribute("user", user);
 		uiModel.addAttribute("supportedLanguages", getSupportedLanguages());
 		uiModel.addAttribute("allowLayoutChange", allowLayoutChange);
-		if( "3".equalsIgnoreCase( getKmeProperties().getProperty("kme.uiVersion","classic") ) ) {
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
 			return "ui3/home/preferences";
-    	}
+		}
 		return "preferences";
 	}
 
@@ -261,12 +260,12 @@ public class HomeController implements ApplicationContextAware {
 	 */
 	@RequestMapping(value = "about", method = RequestMethod.GET)
 	public String about(HttpServletRequest request, Model uiModel) {
-        String viewName = "about";
+		String viewName = "about";
 		uiModel.addAttribute("kmeVersion", kmeProperties.getProperty("kme.version"));
 		uiModel.addAttribute("institutionVersion", kmeProperties.getProperty("institution.version", null));
-        if( "3".equalsIgnoreCase( getKmeProperties().getProperty("kme.uiVersion","classic") ) ) {
-            viewName = "ui3/home/about";
-        }
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
+			viewName = "ui3/home/about";
+		}
 		return viewName;
 	}
 
@@ -509,5 +508,5 @@ public class HomeController implements ApplicationContextAware {
 	public void setSupportedLanguages(List<String> supportedLanguages) {
 		this.supportedLanguages = supportedLanguages;
 	}
-	
+
 }

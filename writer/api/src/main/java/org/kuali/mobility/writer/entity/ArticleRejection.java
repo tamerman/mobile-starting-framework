@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.writer.entity;
 
@@ -34,11 +33,12 @@ import javax.persistence.Version;
 
 /**
  * A class representing an article's rejection
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  * @since 3.0.0
  */
 @Entity
-@Table(name="WRITER_ARTICLE_REJECTION")
+@Table(name = "WRITER_ARTICLE_REJECTION")
 public class ArticleRejection {
 
 	/**
@@ -47,37 +47,37 @@ public class ArticleRejection {
 	@Id
 //	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	@Column(name="ID")
+	@Column(name = "ID")
 	private Long id;
-	
+
 	/**
 	 * Reason for rejecting the article
 	 */
-	@Column(name="REASON", nullable=false)
+	@Column(name = "REASON", nullable = false)
 	private String reason;
-	
+
 	/**
 	 * ID of the user that rejected the article
 	 */
-	@Column(name="USER_ID", nullable=false)
+	@Column(name = "USER_ID", nullable = false)
 	private String userId;
-	
+
 	/**
 	 * Display name of the user that rejected the article.
 	 */
-	@Column(name="USER_DISPLAY_NAME", nullable=false)
+	@Column(name = "USER_DISPLAY_NAME", nullable = false)
 	private String userDisplayName;
-	
+
 	/**
 	 * Id of the article to which this rejection belongs
 	 */
-	@Column(name="ARTICLE_ID", nullable=false)
+	@Column(name = "ARTICLE_ID", nullable = false)
 	private long articleId;
-	
+
 	@Version
-	@Column(name="VER_NBR")
+	@Column(name = "VER_NBR")
 	protected long versionNumber;
-	
+
 	/**
 	 * @return the id
 	 */
@@ -150,18 +150,20 @@ public class ArticleRejection {
 
 	/**
 	 * Sets the version number of the ArticleRejection
+	 *
 	 * @return
 	 */
 	public long getVersionNumber() {
 		return versionNumber;
 	}
-	
+
 
 	/**
 	 * Gets the version number of the ArticleRejection
+	 *
 	 * @return
 	 */
 	public void setVersionNumber(long versionNumber) {
 		this.versionNumber = versionNumber;
-	}    
+	}
 }

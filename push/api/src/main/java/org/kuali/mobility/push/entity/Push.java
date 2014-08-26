@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.push.entity;
 
@@ -86,6 +85,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Returns true if it is an emergency.
+	 *
 	 * @return true if it is an emergency.
 	 */
 	public boolean getEmergency() {
@@ -94,6 +94,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Sets if it is an emergency
+	 *
 	 * @param emergency Flag if it is an emergency
 	 */
 	public void setEmergency(boolean emergency) {
@@ -102,6 +103,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Returns the ID.
+	 *
 	 * @return The ID
 	 */
 	public Long getPushId() {
@@ -110,6 +112,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Sets the ID.
+	 *
 	 * @param pushId The ID
 	 */
 	public void setPushId(Long pushId) {
@@ -118,6 +121,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Gets the number of recipients
+	 *
 	 * @return number of recipients
 	 */
 	public int getRecipients() {
@@ -126,6 +130,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Sets the number of recipients
+	 *
 	 * @param recipients number of recipients
 	 */
 	public void setRecipients(int recipients) {
@@ -134,6 +139,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Gets the sender
+	 *
 	 * @return The sender
 	 */
 	public String getSender() {
@@ -142,14 +148,16 @@ public class Push implements Serializable {
 
 	/**
 	 * Sets the sender
+	 *
 	 * @param sender The sender
 	 */
 	public void setSender(String sender) {
 		this.sender = sender;
-	}    
+	}
 
 	/**
 	 * Gets the URL
+	 *
 	 * @return The URL
 	 */
 	public String getUrl() {
@@ -158,6 +166,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Sets the URL
+	 *
 	 * @param url The URL
 	 */
 	public void setUrl(String url) {
@@ -166,6 +175,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Gets the title.
+	 *
 	 * @return The title.
 	 */
 	public String getTitle() {
@@ -174,6 +184,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Sets the title.
+	 *
 	 * @param title The title.
 	 */
 	public void setTitle(String title) {
@@ -182,6 +193,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Gets the message.
+	 *
 	 * @return The message
 	 */
 	public String getMessage() {
@@ -190,6 +202,7 @@ public class Push implements Serializable {
 
 	/**
 	 * Sets the message.
+	 *
 	 * @param message The message.
 	 */
 	public void setMessage(String message) {
@@ -204,12 +217,12 @@ public class Push implements Serializable {
 	@Override
 	public String toString() {
 		String newline = "\r\n";
-		String str = newline +"PushID:     " + this.getPushId();
+		String str = newline + "PushID:     " + this.getPushId();
 		str = str + newline + "Title:      " + this.getTitle();
-		str = str + newline + "Message:    " + this.getMessage(); 
-		str = str + newline + "Emergency:  " + this.getEmergency(); 
-		str = str + newline + "URL:        " + this.getUrl();  
-		str = str + newline + "Sender:     " + this.getSender();  
+		str = str + newline + "Message:    " + this.getMessage();
+		str = str + newline + "Emergency:  " + this.getEmergency();
+		str = str + newline + "URL:        " + this.getUrl();
+		str = str + newline + "Sender:     " + this.getSender();
 		str = str + newline + "Recipients: " + this.getRecipients();
 		return str;
 	}
@@ -217,14 +230,14 @@ public class Push implements Serializable {
 	public String toJson() {
 
 		String str = "{";
-		str += "\"id\":\"" 				+ this.getPushId() + "\",";
-		str += "\"title\":\"" 			+ this.getTitle() + "\",";
-		str += "\"message\":\"" 		+ this.getMessage() + "\","; 
-		str += "\"emergency\":\"" 		+ this.getEmergency() + "\","; 
-		str += "\"url\":\"" 			+ this.getUrl() + "\",";  
-		str += "\"sender\":\"" 			+ this.getSender() + "\",";  
-		str += "\"recipients\":\"" 		+ this.getRecipients() + "}";
+		str += "\"id\":\"" + this.getPushId() + "\",";
+		str += "\"title\":\"" + this.getTitle() + "\",";
+		str += "\"message\":\"" + this.getMessage() + "\",";
+		str += "\"emergency\":\"" + this.getEmergency() + "\",";
+		str += "\"url\":\"" + this.getUrl() + "\",";
+		str += "\"sender\":\"" + this.getSender() + "\",";
+		str += "\"recipients\":\"" + this.getRecipients() + "}";
 		return str;
 	}
-	
+
 }

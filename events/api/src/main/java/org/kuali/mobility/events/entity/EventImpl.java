@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.events.entity;
 
@@ -35,313 +34,309 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "event")
 public class EventImpl implements Serializable, Event {
 
-    private static final long serialVersionUID = -2196031917411001051L;
-    private String eventId;
-    private boolean allDay;
-    private String title;
-    private Date startDate;
-    private Date endDate;
-    private String displayStartDate;
-    private String displayEndDate;
-    private String displayStartTime;
-    private String displayEndTime;
-    private String location;
-    private List<String> description;
-    private String link;
-    private List<EventContactImpl> contact;
-    private String cost;
-    private List<ArrayList<String>> otherInfo;
-    private CategoryImpl category;
-    private String type;
+	private static final long serialVersionUID = -2196031917411001051L;
+	private String eventId;
+	private boolean allDay;
+	private String title;
+	private Date startDate;
+	private Date endDate;
+	private String displayStartDate;
+	private String displayEndDate;
+	private String displayStartTime;
+	private String displayEndTime;
+	private String location;
+	private List<String> description;
+	private String link;
+	private List<EventContactImpl> contact;
+	private String cost;
+	private List<ArrayList<String>> otherInfo;
+	private CategoryImpl category;
+	private String type;
 
- 
-    /* (non-Javadoc)
+
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getOtherInfo()
 	 */
-    @XmlElement(name = "otherInfo")
-    @Override
+	@XmlElement(name = "otherInfo")
+	@Override
 	public List<ArrayList<String>> getOtherInfo() {
-        return otherInfo;
-    }
+		return otherInfo;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setOtherInfo(java.util.List)
 	 */
-    @Override
+	@Override
 	public void setOtherInfo(List<? extends List<String>> otherInfo) {
-        this.otherInfo = (List<ArrayList<String>>) otherInfo;
-    }
+		this.otherInfo = (List<ArrayList<String>>) otherInfo;
+	}
 
- 
-    /* (non-Javadoc)
+
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getCost()
 	 */
-    @Override
-	public String getCost() { 
-        return cost;
-    }
+	@Override
+	public String getCost() {
+		return cost;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setCost(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setCost(String cost) {
-        this.cost = cost;
-    }
+		this.cost = cost;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getEndDate()
 	 */
-    @Override
+	@Override
 	public Date getEndDate() {
-        return endDate;
-    }
+		return endDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setEndDate(java.util.Date)
 	 */
-    @Override
+	@Override
 	public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
+		this.endDate = endDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getDisplayStartTime()
 	 */
-    @Override
+	@Override
 	public String getDisplayStartTime() {
-        return displayStartTime;
-    }
+		return displayStartTime;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setDisplayStartTime(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setDisplayStartTime(String displayStartTime) {
-        this.displayStartTime = displayStartTime;
-    }
+		this.displayStartTime = displayStartTime;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getDisplayEndTime()
 	 */
-    @Override
+	@Override
 	public String getDisplayEndTime() {
-        return displayEndTime;
-    }
+		return displayEndTime;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setDisplayEndTime(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setDisplayEndTime(String displayEndTime) {
-        this.displayEndTime = displayEndTime;
-    }
+		this.displayEndTime = displayEndTime;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getDescription()
 	 */
-    @XmlElement(name = "description")
-    @Override
+	@XmlElement(name = "description")
+	@Override
 	public List<String> getDescription() {
-        return description;
-    }
+		return description;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setDescription(java.util.List)
 	 */
-    @Override
+	@Override
 	public void setDescription(List<String> description) {
-        this.description = description;
-    }
+		this.description = description;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getDisplayEndDate()
 	 */
-    @Override
+	@Override
 	public String getDisplayEndDate() {
-        return displayEndDate;
-    }
+		return displayEndDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setDisplayEndDate(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setDisplayEndDate(String displayEndDate) {
-        this.displayEndDate = displayEndDate;
-    }
+		this.displayEndDate = displayEndDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getLocation()
 	 */
-    @Override
+	@Override
 	public String getLocation() {
-        return location;
-    }
+		return location;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setLocation(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setLocation(String location) {
-        this.location = location;
-    }
+		this.location = location;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getLink()
 	 */
-    @Override
+	@Override
 	public String getLink() {
-        return link;
-    }
+		return link;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setLink(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setLink(String link) {
-        this.link = link;
-    }
+		this.link = link;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getDisplayStartDate()
 	 */
-    @Override
+	@Override
 	public String getDisplayStartDate() {
-        return displayStartDate;
-    }
+		return displayStartDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setDisplayStartDate(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setDisplayStartDate(String displayStartDate) {
-        this.displayStartDate = displayStartDate;
-    }
+		this.displayStartDate = displayStartDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#isAllDay()
 	 */
-    @Override
+	@Override
 	public boolean isAllDay() {
-        return allDay;
-    }
+		return allDay;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setAllDay(boolean)
 	 */
-    @Override
+	@Override
 	public void setAllDay(boolean allDay) {
-        this.allDay = allDay;
-    }
+		this.allDay = allDay;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getEventId()
 	 */
-    @Override
+	@Override
 	public String getEventId() {
-        return eventId;
-    }
+		return eventId;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setEventId(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setEventId(String eventId) {
-        this.eventId = eventId;
-    }
+		this.eventId = eventId;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getTitle()
 	 */
-    @Override
+	@Override
 	public String getTitle() {
-        return title;
-    }
+		return title;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setTitle(java.lang.String)
 	 */
-    @Override
+	@Override
 	public void setTitle(String title) {
-        this.title = title;
-    }
+		this.title = title;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getStartDate()
 	 */
-    @Override
+	@Override
 	public Date getStartDate() {
-        return startDate;
-    }
+		return startDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setStartDate(java.util.Date)
 	 */
-    @Override
+	@Override
 	public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
+		this.startDate = startDate;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#setCategory(org.kuali.mobility.events.entity.Category)
 	 */
-    @Override
+	@Override
 	public void setCategory(Category category) {
-        this.category = (CategoryImpl)category;
-    }
+		this.category = (CategoryImpl) category;
+	}
 
-    /* (non-Javadoc)
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#getCategory()
 	 */
-    @Override
+	@Override
 	public CategoryImpl getCategory() {
-        return category;
-    }
-    
-    /* (non-Javadoc)
+		return category;
+	}
+
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#equals(java.lang.Object)
 	 */
-    @Override
-	public boolean equals( Object o )
-    {
-        boolean isEqual = false;
-        
-        if( o != null && o instanceof Event )
-        {
-            if( getEventId() != null && getEventId().equalsIgnoreCase( ((Event)o).getEventId() ) )
-            {
-                isEqual = true;
-            }
-        }
-        
-        return isEqual;
-    }
-    
-    /* (non-Javadoc)
+	@Override
+	public boolean equals(Object o) {
+		boolean isEqual = false;
+
+		if (o != null && o instanceof Event) {
+			if (getEventId() != null && getEventId().equalsIgnoreCase(((Event) o).getEventId())) {
+				isEqual = true;
+			}
+		}
+
+		return isEqual;
+	}
+
+	/* (non-Javadoc)
 	 * @see org.kuali.mobility.events.entity.Event#hashCode()
 	 */
-    @Override
-	public int hashCode()
-        {
-            return (41 + Integer.parseInt( getEventId().substring(5) ) );
-        }
+	@Override
+	public int hashCode() {
+		return (41 + Integer.parseInt(getEventId().substring(5)));
+	}
 
-    @XmlElement(name = "contact")
+	@XmlElement(name = "contact")
 	public List<EventContactImpl> getContact() {
 		return contact;
 	}
 
 	public void setContact(List<? extends EventContact> contact) {
-		this.contact = (List<EventContactImpl>)(List<?>) contact;
+		this.contact = (List<EventContactImpl>) (List<?>) contact;
 	}
 
-    @Override
-    public String getType() {
-        return type;
-    }
+	@Override
+	public String getType() {
+		return type;
+	}
 
-    @Override
-    public void setType(String eType) {
-        this.type = eType;
-    }
+	@Override
+	public void setType(String eType) {
+		this.type = eType;
+	}
 }

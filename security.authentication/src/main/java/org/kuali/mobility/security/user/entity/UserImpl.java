@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.security.user.entity;
 
@@ -46,55 +45,55 @@ import org.kuali.mobility.security.user.api.User;
 import org.kuali.mobility.security.user.api.UserAttribute;
 
 @NamedQueries({
-	@NamedQuery(
-		name = "User.lookupById",
-		query = "select u from User u where u.id = :id"
-	),
-	@NamedQuery(
-		name = "User.lookupByLoginName",
-		query = "select u from User u where u.loginName = :loginName"
-	),
-	@NamedQuery(
-		name = "User.lookupAllUsers",
-		query = "select u from User u"
-	)
+		@NamedQuery(
+				name = "User.lookupById",
+				query = "select u from User u where u.id = :id"
+		),
+		@NamedQuery(
+				name = "User.lookupByLoginName",
+				query = "select u from User u where u.loginName = :loginName"
+		),
+		@NamedQuery(
+				name = "User.lookupAllUsers",
+				query = "select u from User u"
+		)
 })
 /**
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  */
-@Entity(name="User")
-@Table(name="KME_USER_T")
+@Entity(name = "User")
+@Table(name = "KME_USER_T")
 public class UserImpl implements User {
 
 	public static final String EMPTY = "";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	@Column(name="ID")
+	@Column(name = "ID")
 	private Long id;
 
-	@Column(name="LOGIN_NM",unique = true)
+	@Column(name = "LOGIN_NM", unique = true)
 	private String loginName;
 
-	@Column(name="PASSWORD_X")
+	@Column(name = "PASSWORD_X")
 	private String password;
 
-	@Column(name="DISPLAY_NM")
+	@Column(name = "DISPLAY_NM")
 	private String displayName;
 
-	@Column(name="FIRST_NM")
+	@Column(name = "FIRST_NM")
 	private String firstName;
 
-	@Column(name="LAST_NM")
+	@Column(name = "LAST_NM")
 	private String lastName;
 
-	@Column(name="URL")
+	@Column(name = "URL")
 	private String requestURL;
 
-	@Column(name="CAMPUS_ID")
+	@Column(name = "CAMPUS_ID")
 	private String viewCampus;
 
-	@Column(name="EMAIL_ADDR_X")
+	@Column(name = "EMAIL_ADDR_X")
 	private String email;
 
 	/**
@@ -102,14 +101,14 @@ public class UserImpl implements User {
 	 * is the language the user wishes to use for external communication,
 	 * for example, emails, and push notifications.
 	 */
-	@Column(name="PREF_LANG", length = 10)
+	@Column(name = "PREF_LANG", length = 10)
 	private String preferredLanguage;
 
 	// Currently managing this manually in the dao.
 	@Transient
 	private List<Group> groups;
-	
-	@OneToMany(mappedBy="user", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
 	private List<UserAttribute> attributes;
 
 	public UserImpl() {
@@ -188,14 +187,11 @@ public class UserImpl implements User {
 
 	@Override
 	public boolean isPublicUser() {
-		if( this.getLoginName() == null
-			|| EMPTY.equalsIgnoreCase(this.getLoginName())
-			|| this.getLoginName().startsWith(AuthenticationConstants.PUBLIC_USER) )
-		{
+		if (this.getLoginName() == null
+				|| EMPTY.equalsIgnoreCase(this.getLoginName())
+				|| this.getLoginName().startsWith(AuthenticationConstants.PUBLIC_USER)) {
 			return true;
-		}
-		else
-		{
+		} else {
 			return false;
 		}
 	}
@@ -203,9 +199,9 @@ public class UserImpl implements User {
 	@Override
 	public boolean isMember(String groupName) {
 		boolean isMember = false;
-		if( getGroups() != null ) {
-			for( Group g : getGroups() ) {
-				if( groupName.equalsIgnoreCase(g.getName()) ) {
+		if (getGroups() != null) {
+			for (Group g : getGroups()) {
+				if (groupName.equalsIgnoreCase(g.getName())) {
 					isMember = true;
 					break;
 				}
@@ -222,7 +218,7 @@ public class UserImpl implements User {
 	@Override
 	public boolean removeGroup(Group group) {
 		boolean didRemove = false;
-		if(getGroups().contains(group)) {
+		if (getGroups().contains(group)) {
 			getGroups().remove(group);
 		}
 		return didRemove;
@@ -234,10 +230,10 @@ public class UserImpl implements User {
 	@Override
 	public boolean attributeExists(String key, String value) {
 		boolean attributeExists = false;
-		if( !getAttributes().isEmpty() ) {
-			for( UserAttribute ua : getAttributes() ) {
-				if( key.equals(ua.getAttributeName())
-					&& value.equals(ua.getAttributeValue())) {
+		if (!getAttributes().isEmpty()) {
+			for (UserAttribute ua : getAttributes()) {
+				if (key.equals(ua.getAttributeName())
+						&& value.equals(ua.getAttributeValue())) {
 					attributeExists = true;
 				}
 			}
@@ -249,7 +245,7 @@ public class UserImpl implements User {
 	public void addAttribute(String key, String value) {
 		key = key.toUpperCase();
 
-		if( !attributeExists(key,value) ) {
+		if (!attributeExists(key, value)) {
 			UserAttribute attribute = new UserAttribute();
 			attribute.setAttributeName(key);
 			attribute.setAttributeValue(value);
@@ -261,8 +257,8 @@ public class UserImpl implements User {
 	@Override
 	public void clearAttribute(String key) {
 		key = key.toUpperCase();
-		for( UserAttribute ua : getAttributes() ) {
-			if( key.equals(ua.getAttributeName()) ) {
+		for (UserAttribute ua : getAttributes()) {
+			if (key.equals(ua.getAttributeName())) {
 				ua.setAttributeValue(null);
 			}
 		}
@@ -272,8 +268,8 @@ public class UserImpl implements User {
 	public List<UserAttribute> getAttribute(String name) {
 		name = name.toUpperCase();
 		List<UserAttribute> attributesForName = new ArrayList<UserAttribute>();
-		for( UserAttribute ua : getAttributes() ) {
-			if( name.equals(ua.getAttributeName()) ) {
+		for (UserAttribute ua : getAttributes()) {
+			if (name.equals(ua.getAttributeName())) {
 				attributesForName.add(ua);
 			}
 		}
@@ -283,8 +279,8 @@ public class UserImpl implements User {
 	@Override
 	public List<String> getAttributeNames() {
 		List<String> attributeNames = new ArrayList<String>();
-		for( UserAttribute ua : getAttributes() ) {
-			if( attributeNames.contains(ua.getAttributeName()) ) {
+		for (UserAttribute ua : getAttributes()) {
+			if (attributeNames.contains(ua.getAttributeName())) {
 				continue;
 			} else {
 				attributeNames.add(ua.getAttributeName());
@@ -321,19 +317,19 @@ public class UserImpl implements User {
 	@Override
 	public boolean removeAttribute(String name, String value) {
 		boolean success = false;
-		if( name != null ) {
+		if (name != null) {
 			name = name.toUpperCase();
 			List<UserAttribute> attributesToRemove = new ArrayList<UserAttribute>();
-			for(UserAttribute ua : getAttributes()) {
-				if(name.equalsIgnoreCase(ua.getAttributeName())) {
-					if(null==value) {
+			for (UserAttribute ua : getAttributes()) {
+				if (name.equalsIgnoreCase(ua.getAttributeName())) {
+					if (null == value) {
 						attributesToRemove.add(ua);
 					} else if (value.equalsIgnoreCase(ua.getAttributeValue())) {
 						attributesToRemove.add(ua);
 					}
 				}
 			}
-			if(!attributesToRemove.isEmpty()) {
+			if (!attributesToRemove.isEmpty()) {
 				success = attributes.removeAll(attributesToRemove);
 			}
 		}
@@ -342,7 +338,7 @@ public class UserImpl implements User {
 
 	@Override
 	public boolean removeAttribute(String name) {
-		return removeAttribute(name,null);
+		return removeAttribute(name, null);
 	}
 
 //	@Override

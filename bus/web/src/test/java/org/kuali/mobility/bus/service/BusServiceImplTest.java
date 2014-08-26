@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.bus.service;
 
@@ -51,8 +50,8 @@ import static org.junit.Assert.assertTrue;
 @ContextConfiguration(value = "classpath:BusSpringBeans.xml")
 public class BusServiceImplTest {
 	private static final Logger LOG = LoggerFactory.getLogger(BusServiceImplTest.class);
-	
-    @Resource(name="busService")
+
+	@Resource(name = "busService")
 	private BusService service;
 
 	public BusServiceImplTest() {
@@ -65,57 +64,57 @@ public class BusServiceImplTest {
 	@AfterClass
 	public static void tearDownClass() throws Exception {
 	}
-	
-	@Test 
+
+	@Test
 	public void testGetRoutes() {
 		List<BusRoute> routes = getService().getRoutes(null);
-        assertFalse("Bus routes is null and should not be.",routes==null);
-        assertFalse("Bus routes is empty and should not be.",routes.isEmpty());
-        assertTrue("Expected 10 routes and found only "+routes.size(),routes.size()==10);
+		assertFalse("Bus routes is null and should not be.", routes == null);
+		assertFalse("Bus routes is empty and should not be.", routes.isEmpty());
+		assertTrue("Expected 10 routes and found only " + routes.size(), routes.size() == 10);
 	}
-	
+
 	@Test
 	public void testGetRoute() {
 		BusRoute foundRoute = getService().getRoute(null, 0);
 		assertTrue("Route id 0 not found", "Commuter Southbound".equalsIgnoreCase(foundRoute.getName()));
 		//this will also test the routes being empty at the start
 		BusRoute foundRoute2 = getService().getRoute(null, 1);
-        assertTrue("Route id 1 not found", "Commuter Northbound".equalsIgnoreCase(foundRoute2.getName()));
+		assertTrue("Route id 1 not found", "Commuter Northbound".equalsIgnoreCase(foundRoute2.getName()));
 
 		BusRoute foundRoute3 = getService().getRoute(null, 9999);
-        assertTrue("Route id 9999 found and should not have been.", foundRoute3 == null);
+		assertTrue("Route id 9999 found and should not have been.", foundRoute3 == null);
 	}
-	
+
 	@Test
 	public void testGetStops() {
 		List<BusStop> stops = getService().getStops(null);
-        assertFalse("Stops is null and shouldn't be.",stops==null);
-        assertFalse("Stops is empty and shouldn't be.",stops.isEmpty());
-        assertTrue("Expected 94 stops and found only "+stops.size(),94 == stops.size());
+		assertFalse("Stops is null and shouldn't be.", stops == null);
+		assertFalse("Stops is empty and shouldn't be.", stops.isEmpty());
+		assertTrue("Expected 94 stops and found only " + stops.size(), 94 == stops.size());
 	}
-	
+
 	@Test
 	public void testGetRoutesWithDistance() {
 		double lat1 = 42.2693773;
 		double lon1 = -83.7460591;
 		double radius = 0.25; //in km or 500 meters
 		List<? extends BusRoute> routes = getService().getRoutesWithDistance(lat1, lon1, radius);
-        assertFalse("Routes is null and shouldn't be.",routes==null);
-        assertFalse("Routes is empty and shouldn't be.",routes.isEmpty());
-        assertTrue("Expected 10 routes and got "+routes.size(),10==routes.size());
+		assertFalse("Routes is null and shouldn't be.", routes == null);
+		assertFalse("Routes is empty and shouldn't be.", routes.isEmpty());
+		assertTrue("Expected 10 routes and got " + routes.size(), 10 == routes.size());
 	}
-	
+
 	@Test
 	public void testGetNearbyStops() {
 		double lat1 = 42.269239;
 		double lon1 = -83.747079;
 		double radius = 500.0; //in meters
 		List<BusStop> stops = getService().getNearbyStops(lat1, lon1, radius);
-        assertFalse("Stops is null and shouldn't be.",stops==null);
-        assertFalse("Stops is empty and shouldn't be.",stops.isEmpty());
-        assertTrue("Expected 6 stops and found "+stops.size(),stops.size()==6);
+		assertFalse("Stops is null and shouldn't be.", stops == null);
+		assertFalse("Stops is empty and shouldn't be.", stops.isEmpty());
+		assertTrue("Expected 6 stops and found " + stops.size(), stops.size() == 6);
 	}
-	
+
 //	@Test
 //	public void testGetStop() {
 //		BusStop stop = getService().getStop(null, 1);
@@ -123,13 +122,13 @@ public class BusServiceImplTest {
 //		BusStop stop2 = getService().getStop(null, 0);
 //		assertTrue("Found a stop when it should not have", stop2 == null);
 //	}
-	
+
 	@Test
 	public void testGetStopByName() {
 		BusStop stop = getService().getStopByName("IM Building (E)", null);
-        assertFalse("Failed to find stop for IM Building (E)",stop==null);
+		assertFalse("Failed to find stop for IM Building (E)", stop == null);
 	}
-	
+
 //	@Test
 //	public void testBusStopDistanceUtil() {
 //		BusStop stop = new BusStop();
@@ -148,16 +147,16 @@ public class BusServiceImplTest {
 //		}
 //		assertTrue("Failed to calculate bus distance.", stop.getDistance() > 0);
 //	}
-	
+
 	@Test
 	public void testGetArrivalData() {
 		List<ScheduledStop> nullRoutesArrivals = getService().getArrivalData("3", "1", "ALL");
 		assertTrue("found scheduled stops when it should not have", nullRoutesArrivals.size() == 0);
 		List<ScheduledStop> noStopsArrivals = getService().getArrivalData("0", "-1624422455", "ALL");
 		assertFalse("Did not find scheduled stops and should have for route 0.", noStopsArrivals.isEmpty());
-        assertTrue("Expected 24 scheduled stops and found "+noStopsArrivals.size(),noStopsArrivals.size()==24);
+		assertTrue("Expected 24 scheduled stops and found " + noStopsArrivals.size(), noStopsArrivals.size() == 24);
 	}
-	
+
 	public BusService getService() {
 		return service;
 	}

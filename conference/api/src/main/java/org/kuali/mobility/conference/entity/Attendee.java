@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.conference.entity;
 
@@ -28,7 +27,7 @@ import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement( name = "attendee")
+@XmlRootElement(name = "attendee")
 public class Attendee implements Serializable, Comparable<Attendee> {
 
 	private static final long serialVersionUID = -2826816981140315473L;
@@ -50,12 +49,12 @@ public class Attendee implements Serializable, Comparable<Attendee> {
 	private String country;
 
 	public String getId() {
-    	return id;
-    }
+		return id;
+	}
 
 	public void setId(String id) {
-    	this.id = id;
-    }
+		this.id = id;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -104,22 +103,22 @@ public class Attendee implements Serializable, Comparable<Attendee> {
 	public void setInstitution(String institution) {
 		this.institution = institution;
 	}
-	
+
 	public String getCampus() {
-    	return campus;
-    }
-	
+		return campus;
+	}
+
 	public String getTitle() {
-    	return title;
-    }
+		return title;
+	}
 
 	public void setTitle(String title) {
-    	this.title = title;
-    }
+		this.title = title;
+	}
 
 	public void setCampus(String campus) {
-    	this.campus = campus;
-    }
+		this.campus = campus;
+	}
 
 	public String getWorkAddress1() {
 		return workAddress1;
@@ -174,37 +173,37 @@ public class Attendee implements Serializable, Comparable<Attendee> {
 		if (that == null) {
 			return -1;
 		}
-		
+
 		if (this.getLastName() == null && that.getLastName() == null) {
 			return -1;
 		}
-		
+
 		if (this.getLastName() != null && that.getLastName() == null) {
 			return -1;
 		}
-		
+
 		if (this.getLastName() == null && that.getLastName() != null) {
 			return 1;
 		}
-		
+
 		int lastNameCompare = this.getLastName().compareTo(that.getLastName());
 		if (lastNameCompare == 0) {
-			
+
 			if (this.getFirstName() == null && that.getFirstName() == null) {
 				return -1;
 			}
-			
+
 			if (this.getFirstName() != null && that.getFirstName() == null) {
 				return -1;
 			}
-			
+
 			if (this.getFirstName() == null && that.getFirstName() != null) {
 				return 1;
 			}
-			
-			return this.getFirstName().compareTo(that.getFirstName());	
+
+			return this.getFirstName().compareTo(that.getFirstName());
 		}
-		
+
 		return lastNameCompare;
 	}
 

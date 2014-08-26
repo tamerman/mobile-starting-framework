@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.tags;
 
@@ -55,11 +54,12 @@ import java.util.Properties;
  * page excluding the actual content.
  *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
- *
  */
 public class PageTag extends SimpleTagSupport {
 
-	/** A reference to a logger */ 
+	/**
+	 * A reference to a logger
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(PageTag.class);
 
 	/**
@@ -68,127 +68,128 @@ public class PageTag extends SimpleTagSupport {
 	public static String getAppcacheEnabled() {
 		return appcacheEnabled;
 	}
+
 	private AuthenticationMapper authMapper;
 
-    /**+
-     * ID to give to the page
-     */
+	/**
+	 * +
+	 * ID to give to the page
+	 */
 	private String id;
 
-    /**
-     * Title of the page
-     */
+	/**
+	 * Title of the page
+	 */
 	private String title;
 
-    /**
-     * Flag if the home button should be displayed
-     */
+	/**
+	 * Flag if the home button should be displayed
+	 */
 	private boolean homeButton;
 
-    /**
-     * Flag if the back button should be displayed
-     */
+	/**
+	 * Flag if the back button should be displayed
+	 */
 	private boolean backButton;
 
-    /**
-     * Link that should be used for the back url.
-     * If no link is specified, the last page in history
-     * will be used
-     */
+	/**
+	 * Link that should be used for the back url.
+	 * If no link is specified, the last page in history
+	 * will be used
+	 */
 	private String backButtonURL;
 
-    /**
-     * Flag if the preference button should be displayed.
-     */
+	/**
+	 * Flag if the preference button should be displayed.
+	 */
 	private boolean preferencesButton;
 
-    /**
-     * Link that should be used for prefernces.
-     */
+	/**
+	 * Link that should be used for prefernces.
+	 */
 	private String preferencesButtonURL;
 
-    /**
-     * Flag if the current page makes use of maps
-     */
+	/**
+	 * Flag if the current page makes use of maps
+	 */
 	private boolean usesGoogleMaps;
 
-    /**
-     * Name of the appcache file to use.
-     * If no file name is specified, appcache will be disabled for
-     * this page
-     */
+	/**
+	 * Name of the appcache file to use.
+	 * If no file name is specified, appcache will be disabled for
+	 * this page
+	 */
 	private String appcacheFilename;
 
-    /**
-     * Comma separated list of style sheets to attach.
-     * File names will have {contextPath}/css/ prepended as well
-     * as the .css extension
-     */
+	/**
+	 * Comma separated list of style sheets to attach.
+	 * File names will have {contextPath}/css/ prepended as well
+	 * as the .css extension
+	 */
 	private String cssFilename;
 
-    /**
-     * Javascript function to call onBodyLoad.
-     */
+	/**
+	 * Javascript function to call onBodyLoad.
+	 */
 	private String onBodyLoad;
 
-    /**
-     * Force a specific platform for this page.
-     * This is not normally necessary, the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
-     * will be used by the tag to detect the platform.
-     */
+	/**
+	 * Force a specific platform for this page.
+	 * This is not normally necessary, the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
+	 * will be used by the tag to detect the platform.
+	 */
 	private String platform;
 
-    /**
-     * Force a specific phonegap version on this page.
-     * This is not normally necessary, the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
-     * will be used by the tag to detect the phonegap version.
-     */
+	/**
+	 * Force a specific phonegap version on this page.
+	 * This is not normally necessary, the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
+	 * will be used by the tag to detect the phonegap version.
+	 */
 	private String phonegap;
 
-    /**
-     * Comma separated list of javascript files to additionally include with this page.
-     * The file names will have {contextpath}/js prepended as well as the
-     * .js extension
-     */
+	/**
+	 * Comma separated list of javascript files to additionally include with this page.
+	 * The file names will have {contextpath}/js prepended as well as the
+	 * .js extension
+	 */
 	private String jsFilename;
 
-    /**
-     * Optional setting on the jquery mobile header
-     * fixed - Display heading fixed at the top
-     * hidden - Hide the heading completely
-     */
+	/**
+	 * Optional setting on the jquery mobile header
+	 * fixed - Display heading fixed at the top
+	 * hidden - Hide the heading completely
+	 */
 	private String jqmHeader;
 
-    /**
-     * Locale to use with the maps
-     */
+	/**
+	 * Locale to use with the maps
+	 */
 	private String mapLocale;
 
-    /**
-     * Flag if the login/logout button should be displayed
-     */
+	/**
+	 * Flag if the login/logout button should be displayed
+	 */
 	private boolean loginButton;
 
-    /**
-     * URL to link to the login button
-     */
+	/**
+	 * URL to link to the login button
+	 */
 	private String loginButtonURL;
 
-    /**
-     * URL to link to the logout button
-     */
+	/**
+	 * URL to link to the logout button
+	 */
 	private String logoutButtonURL;
 
-    /**
-     * Flag if google analytics should be disabled
-     */
+	/**
+	 * Flag if google analytics should be disabled
+	 */
 	private boolean disableGoogleAnalytics;
 
-    /**
-     * Optional theme to apply to this page.
-     */
+	/**
+	 * Optional theme to apply to this page.
+	 */
 	private String theme;
-
 
 
 	private static String appcacheEnabled;
@@ -375,7 +376,7 @@ public class PageTag extends SimpleTagSupport {
 		try {
 			out.println("<!DOCTYPE html>");
 
-			if( getAppcacheEnabled().isEmpty() ) {
+			if (getAppcacheEnabled().isEmpty()) {
 				setAppcacheEnabled(kmeProperties.getProperty("appcache.enabled", "true"));
 			}
 
@@ -383,7 +384,7 @@ public class PageTag extends SimpleTagSupport {
 
 			if (!appcacheEnabled.equals("false")) {
 				LOG.debug("Appcache Enabled");
-				out.println("<html manifest=\"" + contextPath + "/" + (StringUtils.isEmpty(getAppcacheFilename()) ? "kme.appcache" : getAppcacheFilename().trim())+ "\">");
+				out.println("<html manifest=\"" + contextPath + "/" + (StringUtils.isEmpty(getAppcacheFilename()) ? "kme.appcache" : getAppcacheFilename().trim()) + "\">");
 			} else {
 				LOG.debug("Appcache Disabled");
 				out.println("<html>");
@@ -404,7 +405,7 @@ public class PageTag extends SimpleTagSupport {
 			out.println("<link href=\"" + contextPath + "/css/kme.css\" rel=\"stylesheet\" type=\"text/css\" />");
 			out.println("<link href=\"" + contextPath + "/css/institution.css\" rel=\"stylesheet\" type=\"text/css\" />");
 
-            addTheme();
+			addTheme();
 
 			// Attach all CSS files
 			for (String cssFile : getCssFilenames()) {
@@ -422,9 +423,9 @@ public class PageTag extends SimpleTagSupport {
 			out.println("<script type=\"text/javascript\" src=\"" + contextPath + "/js/jquery.templates.js\"></script>");
 			out.println("<script type=\"text/javascript\" src=\"" + contextPath + "/js/jquery.transit.min.js\"></script>");
 			out.println("<script type=\"text/javascript\" src=\"" + contextPath + "/js/BrowserDetect.js\"></script>");
-		
-			
-			if (this.isNative()){
+
+
+			if (this.isNative()) {
 				out.println("<script type=\"text/javascript\" src=\"" + contextPath + "/js/PushConfig.js\"></script>");
 			}
 
@@ -504,32 +505,31 @@ public class PageTag extends SimpleTagSupport {
 			}
 
 			/* Google Analytics */
-            String profileId = coreService.findGoogleAnalyticsProfileId().trim();
-            if (!disableGoogleAnalytics && profileId.length() > 0 ) {
-                String profileDomain = coreService.getGoogleAnalyticsProfileDomain().trim();
-                if ( coreService.isGoogleUniversalAnalytics() && !profileDomain.isEmpty()) {
-				    out.println("<script type=\"text/javascript\">");
-				    out.println("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){");
-				    out.println("(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),");
-				    out.println("m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)");
-				    out.println("})(window,document,'script','//www.google-analytics.com/analytics.js','ga');");
+			String profileId = coreService.findGoogleAnalyticsProfileId().trim();
+			if (!disableGoogleAnalytics && profileId.length() > 0) {
+				String profileDomain = coreService.getGoogleAnalyticsProfileDomain().trim();
+				if (coreService.isGoogleUniversalAnalytics() && !profileDomain.isEmpty()) {
+					out.println("<script type=\"text/javascript\">");
+					out.println("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){");
+					out.println("(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),");
+					out.println("m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)");
+					out.println("})(window,document,'script','//www.google-analytics.com/analytics.js','ga');");
 
-				    out.println("ga('create', '" + profileId + "', '" + profileDomain +"'); ");
-				    out.println("ga('send', 'pageview');");
-				    out.println("</script>");
-                }
-                else {
-                    out.println("<script type=\"text/javascript\">");
-                    out.println("var _gaq = _gaq || [];");
-                    out.println("_gaq.push(['_setAccount', '" + profileId + "']);");
-                    out.println("_gaq.push(['_trackPageview']);");
-                    out.println("(function() {");
-                    out.println("var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;");
-                    out.println("ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';");
-                    out.println("var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);");
-                    out.println("})();");
-                    out.println("</script>");
-                }
+					out.println("ga('create', '" + profileId + "', '" + profileDomain + "'); ");
+					out.println("ga('send', 'pageview');");
+					out.println("</script>");
+				} else {
+					out.println("<script type=\"text/javascript\">");
+					out.println("var _gaq = _gaq || [];");
+					out.println("_gaq.push(['_setAccount', '" + profileId + "']);");
+					out.println("_gaq.push(['_trackPageview']);");
+					out.println("(function() {");
+					out.println("var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;");
+					out.println("ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';");
+					out.println("var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);");
+					out.println("})();");
+					out.println("</script>");
+				}
 			}
 
 			if (isUsesGoogleMaps()) {
@@ -598,7 +598,7 @@ public class PageTag extends SimpleTagSupport {
 					}
 				}
 				if (showButton) {
-					out.println("<a href=\"" + ( (getBackButtonURL() != null && StringUtils.isNotBlank(getBackButtonURL())) ? getBackButtonURL() : "javascript: history.go(-1)") + "\" class=\"ui-btn-left\" data-icon=\"back\" data-iconpos=\"notext\">" + msgCatString + "</a>");
+					out.println("<a href=\"" + ((getBackButtonURL() != null && StringUtils.isNotBlank(getBackButtonURL())) ? getBackButtonURL() : "javascript: history.go(-1)") + "\" class=\"ui-btn-left\" data-icon=\"back\" data-iconpos=\"notext\">" + msgCatString + "</a>");
 				}
 			}
 			out.println("<h1>" + getTitle() + "</h1>");
@@ -642,76 +642,80 @@ public class PageTag extends SimpleTagSupport {
 
 	/**
 	 * Returns true if the specified platform is the current platform
-     * @param platform The platform to test for.
-     * @return True if the platforms match, false if they don't
+	 *
+	 * @param platform The platform to test for.
+	 * @return True if the platforms match, false if they don't
 	 */
-	boolean isPlatform(String platform){
+	boolean isPlatform(String platform) {
 		if (platform == null) return false;
 		String _platform = getPlatform();
 		return !StringUtils.isEmpty(_platform) && platform.equalsIgnoreCase(_platform);
 	}
-	
+
 	/**
 	 * Returns true if the page is being created for a native platform
+	 *
 	 * @return True if the platform is native
 	 */
-	boolean isNative(){
-        // If there is phonegap, it must be native
-        if(!StringUtils.isEmpty(getPhonegap())){
-            return true;
-        }
+	boolean isNative() {
+		// If there is phonegap, it must be native
+		if (!StringUtils.isEmpty(getPhonegap())) {
+			return true;
+		}
 
-        PageContext pageContext = (PageContext) getJspContext();
-        HttpServletRequest hsr = (HttpServletRequest) pageContext.getRequest();
-        Boolean isNative = (Boolean)hsr.getSession(true).getAttribute(NativeCookieInterceptor.SESSION_NATIVE);
-        return (isNative == null ? false : isNative.booleanValue());
+		PageContext pageContext = (PageContext) getJspContext();
+		HttpServletRequest hsr = (HttpServletRequest) pageContext.getRequest();
+		Boolean isNative = (Boolean) hsr.getSession(true).getAttribute(NativeCookieInterceptor.SESSION_NATIVE);
+		return (isNative == null ? false : isNative.booleanValue());
 	}
 
-    /**
-     * Returns true if the given PhoneGap version, is the current PhoneGap version of the device.
-     * @param phonegap The PhoneGap version to test.
-     * @return True if the PhoneGap versions match, false if the don't
-     */
-    boolean isPhoneGap(String phonegap){
-        if(StringUtils.isEmpty(phonegap)) return false;
-        return !StringUtils.isEmpty(getPhonegap()) && phonegap.equalsIgnoreCase(getPhonegap());
-    }
+	/**
+	 * Returns true if the given PhoneGap version, is the current PhoneGap version of the device.
+	 *
+	 * @param phonegap The PhoneGap version to test.
+	 * @return True if the PhoneGap versions match, false if the don't
+	 */
+	boolean isPhoneGap(String phonegap) {
+		if (StringUtils.isEmpty(phonegap)) return false;
+		return !StringUtils.isEmpty(getPhonegap()) && phonegap.equalsIgnoreCase(getPhonegap());
+	}
 
-    /**
-     * Adds the theme to the page if there is one available
-     * @throws IOException
-     */
-    void addTheme() throws IOException {
-        PageContext pageContext = (PageContext) getJspContext();
-        HttpServletRequest request = (HttpServletRequest)pageContext.getRequest();
-        ServletContext servletContext = pageContext.getServletContext();
-        WebApplicationContext ac = WebApplicationContextUtils.getWebApplicationContext(servletContext);
-        Properties kmeProperties = (Properties) ac.getBean("kmeProperties");
-        User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
+	/**
+	 * Adds the theme to the page if there is one available
+	 *
+	 * @throws IOException
+	 */
+	void addTheme() throws IOException {
+		PageContext pageContext = (PageContext) getJspContext();
+		HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
+		ServletContext servletContext = pageContext.getServletContext();
+		WebApplicationContext ac = WebApplicationContextUtils.getWebApplicationContext(servletContext);
+		Properties kmeProperties = (Properties) ac.getBean("kmeProperties");
+		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
 
 
-        boolean useCampusTheme = kmeProperties!= null && "true".equals(kmeProperties.getProperty("theme.perCampus", "false"));
-        String viewingCampus = user == null ? null : user.getViewCampus();
-        String defaultTheme = kmeProperties == null ? null :  kmeProperties.getProperty("theme.default");
-        String themeToAdd = null;
+		boolean useCampusTheme = kmeProperties != null && "true".equals(kmeProperties.getProperty("theme.perCampus", "false"));
+		String viewingCampus = user == null ? null : user.getViewCampus();
+		String defaultTheme = kmeProperties == null ? null : kmeProperties.getProperty("theme.default");
+		String themeToAdd = null;
 
-        // 1 - if this tag requests a theme, we attempt to use it
-        if (!StringUtils.isEmpty(this.theme) && ac.getResource("/css/theme-"+this.theme + ".css").exists()){
-               themeToAdd = this.theme;
-        }
-        // 2 - Try and use campus theme if configured to use it
-        if (themeToAdd == null && useCampusTheme && !StringUtils.isEmpty(viewingCampus) && ac.getResource("/css/theme-"+viewingCampus + ".css").exists()){
-            themeToAdd = viewingCampus;
-        }
-        // 3 - Use default theme
-        if (themeToAdd == null && !StringUtils.isEmpty(defaultTheme) && ac.getResource("/css/theme-"+defaultTheme + ".css").exists()){
-            themeToAdd = defaultTheme;
-        }
+		// 1 - if this tag requests a theme, we attempt to use it
+		if (!StringUtils.isEmpty(this.theme) && ac.getResource("/css/theme-" + this.theme + ".css").exists()) {
+			themeToAdd = this.theme;
+		}
+		// 2 - Try and use campus theme if configured to use it
+		if (themeToAdd == null && useCampusTheme && !StringUtils.isEmpty(viewingCampus) && ac.getResource("/css/theme-" + viewingCampus + ".css").exists()) {
+			themeToAdd = viewingCampus;
+		}
+		// 3 - Use default theme
+		if (themeToAdd == null && !StringUtils.isEmpty(defaultTheme) && ac.getResource("/css/theme-" + defaultTheme + ".css").exists()) {
+			themeToAdd = defaultTheme;
+		}
 
-        if (themeToAdd != null){
-            pageContext.getOut().println("<link href=\"" + request.getContextPath() + "/css/theme-"+themeToAdd+".css\" rel=\"stylesheet\" type=\"text/css\" />");
-        }
-    }
+		if (themeToAdd != null) {
+			pageContext.getOut().println("<link href=\"" + request.getContextPath() + "/css/theme-" + themeToAdd + ".css\" rel=\"stylesheet\" type=\"text/css\" />");
+		}
+	}
 
 	/**
 	 * @return the disableGoogleAnalytics
@@ -735,10 +739,11 @@ public class PageTag extends SimpleTagSupport {
 		this.authMapper = authMapper;
 	}
 
-    /**
-     * Sets the theme to apply to this page
-     * @param theme Theme to set
-     */
+	/**
+	 * Sets the theme to apply to this page
+	 *
+	 * @param theme Theme to set
+	 */
 	public void setTheme(String theme) {
 		this.theme = theme;
 	}
@@ -812,31 +817,33 @@ public class PageTag extends SimpleTagSupport {
 	}
 
 	/**
-     * Returns the current platform.
-     * If the platform was set on the tag, that platform will be used, else
-     * the platform detected by the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
-     * will be used
+	 * Returns the current platform.
+	 * If the platform was set on the tag, that platform will be used, else
+	 * the platform detected by the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
+	 * will be used
+	 *
 	 * @return the platform
 	 */
 	public String getPlatform() {
-        PageContext pageContext = (PageContext) getJspContext();
-        HttpServletRequest hsr = (HttpServletRequest) pageContext.getRequest();
-        String plat = (String)hsr.getSession(true).getAttribute(NativeCookieInterceptor.SESSION_PLATFORM);
-        return StringUtils.isEmpty(this.platform) ? plat : this.platform ;
+		PageContext pageContext = (PageContext) getJspContext();
+		HttpServletRequest hsr = (HttpServletRequest) pageContext.getRequest();
+		String plat = (String) hsr.getSession(true).getAttribute(NativeCookieInterceptor.SESSION_PLATFORM);
+		return StringUtils.isEmpty(this.platform) ? plat : this.platform;
 	}
 
-    /**
-     * Returns the current phonegap version.
-     * If the phonegap version was set on the tag, that version will be used, else
-     * the version detected by the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
-     * will be used.
-     * @return The phonegap version
-     */
+	/**
+	 * Returns the current phonegap version.
+	 * If the phonegap version was set on the tag, that version will be used, else
+	 * the version detected by the {@link org.kuali.mobility.shared.interceptors.NativeCookieInterceptor}
+	 * will be used.
+	 *
+	 * @return The phonegap version
+	 */
 	public String getPhonegap() {
-        PageContext pageContext = (PageContext) getJspContext();
-        HttpServletRequest hsr = (HttpServletRequest) pageContext.getRequest();
-        String cor = (String)hsr.getSession(true).getAttribute(NativeCookieInterceptor.SESSION_PHONEGAP);
-        return StringUtils.isEmpty(this.phonegap) ? cor : this.phonegap ;
+		PageContext pageContext = (PageContext) getJspContext();
+		HttpServletRequest hsr = (HttpServletRequest) pageContext.getRequest();
+		String cor = (String) hsr.getSession(true).getAttribute(NativeCookieInterceptor.SESSION_PHONEGAP);
+		return StringUtils.isEmpty(this.phonegap) ? cor : this.phonegap;
 	}
 
 	/**

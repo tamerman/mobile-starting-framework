@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.tours.entity;
 
@@ -46,89 +45,89 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.kuali.mobility.tours.service.ToursService;
 
 @XmlRootElement(name = "tour")
-@Entity(name="Tour")
-@Table(name="TOUR_T")
+@Entity(name = "Tour")
+@Table(name = "TOUR_T")
 public class Tour {
-	
+
 	@Id
-    //@SequenceGenerator(name="tour_sequence", sequenceName="SEQ_TOUR_T", initialValue=1000, allocationSize=1)
-    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="tour_sequence")
+	//@SequenceGenerator(name="tour_sequence", sequenceName="SEQ_TOUR_T", initialValue=1000, allocationSize=1)
+	//@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="tour_sequence")
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	@Column(name="TOUR_ID")
+	@Column(name = "TOUR_ID")
 	private Long tourId;
-	
-	@Column(name="NAME")
+
+	@Column(name = "NAME")
 	private String name;
-	
-	@Column(name="DESCRIPTION")
+
+	@Column(name = "DESCRIPTION")
 	private String description;
-	
-	@Column(name="PATH")
+
+	@Column(name = "PATH")
 	private String path;
-	
-	@Column(name="DIST") // in meters
+
+	@Column(name = "DIST") // in meters
 	private Long distance;
-	
-	@OneToMany(fetch=FetchType.EAGER, cascade={CascadeType.ALL}, mappedBy="tourId")
+
+	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, mappedBy = "tourId")
 	private List<POI> pointsOfInterest;
-	
-	@OneToMany(fetch=FetchType.EAGER, cascade={CascadeType.ALL}, mappedBy="tourId")
+
+	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, mappedBy = "tourId")
 	private Set<TourPermission> permissions;
-	
-	@Column(name="TWT_TXT_1")
+
+	@Column(name = "TWT_TXT_1")
 	private String tweetText1;
-	
-	@Column(name="TWT_TXT_2")
+
+	@Column(name = "TWT_TXT_2")
 	private String tweetText2;
-	
-	@Column(name="FB_TXT_1")
+
+	@Column(name = "FB_TXT_1")
 	private String fbText1;
-	
-	@Column(name="FB_TXT_2")
+
+	@Column(name = "FB_TXT_2")
 	private String fbText2;
-	
-	@Column(name="TWT_TXT_1_EN")
+
+	@Column(name = "TWT_TXT_1_EN")
 	private String tweetText1Enabled;
-	
-	@Column(name="TWT_TXT_2_EN")
+
+	@Column(name = "TWT_TXT_2_EN")
 	private String tweetText2Enabled;
-	
-	@Column(name="FB_TXT_1_EN")
+
+	@Column(name = "FB_TXT_1_EN")
 	private String fbText1Enabled;
-	
-	@Column(name="FB_TXT_2_EN")
+
+	@Column(name = "FB_TXT_2_EN")
 	private String fbText2Enabled;
-	
-	@Column(name="IMG_URL")
+
+	@Column(name = "IMG_URL")
 	private String imageUrl;
-	
+
 	@Version
-    @Column(name="VER_NBR")
-    protected Long versionNumber;
-	
+	@Column(name = "VER_NBR")
+	protected Long versionNumber;
+
 	public List<String> getViewGroups() {
 		List<String> groups = new ArrayList<String>();
 		for (TourPermission tp : permissions) {
-			if (ToursService.PERMISSION_TYPE_VIEW.equals(tp.getType())){
+			if (ToursService.PERMISSION_TYPE_VIEW.equals(tp.getType())) {
 				groups.add(tp.getGroupName());
 			}
 		}
 		return groups;
 	}
-	
+
 	public List<String> getEditGroups() {
 		List<String> groups = new ArrayList<String>();
 		for (TourPermission tp : permissions) {
-			if (ToursService.PERMISSION_TYPE_EDIT.equals(tp.getType())){
+			if (ToursService.PERMISSION_TYPE_EDIT.equals(tp.getType())) {
 				groups.add(tp.getGroupName());
 			}
 		}
 		return groups;
 	}
-	
+
 	public Tour copy(boolean includeIds) {
 		Tour copy = new Tour();
-		if (includeIds){
+		if (includeIds) {
 			copy.setTourId(new Long(tourId));
 			copy.setVersionNumber(new Long(versionNumber));
 		}
@@ -168,8 +167,8 @@ public class Tour {
 		if (fbText2Enabled != null) {
 			copy.setFbText2Enabled(new String(fbText2Enabled));
 		}
-		
-		if (pointsOfInterest != null && !pointsOfInterest.isEmpty()){
+
+		if (pointsOfInterest != null && !pointsOfInterest.isEmpty()) {
 			List<POI> poiListCopy = new ArrayList<POI>();
 			for (POI poi : pointsOfInterest) {
 				POI poiCopy = poi.copy(includeIds);
@@ -180,8 +179,8 @@ public class Tour {
 		} else {
 			copy.setPointsOfInterest(new ArrayList<POI>());
 		}
-		
-		if (permissions != null && !permissions.isEmpty()){
+
+		if (permissions != null && !permissions.isEmpty()) {
 			Set<TourPermission> permissionListCopy = new HashSet<TourPermission>();
 			for (TourPermission permission : permissions) {
 				TourPermission permissionCopy = permission.copy(includeIds);
@@ -192,7 +191,7 @@ public class Tour {
 		} else {
 			copy.setPermissions(new HashSet<TourPermission>());
 		}
-		
+
 		return copy;
 	}
 

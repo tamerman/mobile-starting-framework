@@ -1,95 +1,95 @@
 /*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
 
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
-
-$(document).ready(function() {
+$(document).ready(function () {
     var $calendar = $('#calendar');
     var id = 10;
 
     $calendar.weekCalendar({
-        timeslotsPerHour : 4,
-        allowCalEventOverlap : true,
+        timeslotsPerHour: 4,
+        allowCalEventOverlap: true,
         overlapEventsSeparate: true,
-        firstDayOfWeek : 7,
-        useShortDayNames : true,       
-        businessHours :{
-            start: 8, 
-            end: 23, 
+        firstDayOfWeek: 7,
+        useShortDayNames: true,
+        businessHours: {
+            start: 8,
+            end: 23,
             limitDisplay: true
         },
-        daysToShow : 7,
-        height : function($calendar) {
+        daysToShow: 7,
+        height: function ($calendar) {
             return $(window).height() - $("h1").outerHeight() - 1;
         },
-        eventRender : function(calEvent, $event) {
-            if (calEvent.end.getTime() < new Date().getTime() ) {
+        eventRender: function (calEvent, $event) {
+            if (calEvent.end.getTime() < new Date().getTime()) {
                 $event.css("backgroundColor", "#aaa");
                 $event.find(".wc-time").css({
-                    "backgroundColor" : "#999",
-                    "border" : "1px solid #888"
+                    "backgroundColor": "#999",
+                    "border": "1px solid #888"
                 });
             }
-            if (calEvent.source=="google" && calEvent.end.getTime() > new Date().getTime()) {
+            if (calEvent.source == "google" && calEvent.end.getTime() > new Date().getTime()) {
                 $event.css("backgroundColor", "#9933FF");
                 $event.find(".wc-time").css({
-                    "backgroundColor" : "#9933FF",
-                    "border" : "1px solid ##FFB4FF"
+                    "backgroundColor": "#9933FF",
+                    "border": "1px solid ##FFB4FF"
                 });
             }
-            
-           
+
+
         },
-        draggable : function(calEvent, $event) {
+        draggable: function (calEvent, $event) {
             return calEvent.readOnly != true;
         },
-        resizable : function(calEvent, $event) {
+        resizable: function (calEvent, $event) {
             return calEvent.readOnly != true;
         },
-        eventNew : function(calEvent, $event) {
+        eventNew: function (calEvent, $event) {
             var $dialogContent = $("#event_edit_container");
             resetForm($dialogContent);
             var startField = $dialogContent.find("select[name='start']").val(calEvent.start);
             var endField = $dialogContent.find("select[name='end']").val(calEvent.end);
             var titleField = $dialogContent.find("input[name='title']");
             var bodyField = $dialogContent.find("textarea[name='body']");
-          
+
 
             $dialogContent.dialog({
                 modal: true,
                 title: "New Calendar Event",
-                close: function() {
+                close: function () {
                     $dialogContent.dialog("destroy");
                     $dialogContent.hide();
                     $('#calendar').weekCalendar("removeUnsavedEvents");
                 },
                 buttons: {
-                    save : function() {
+                    save: function () {
                         calEvent.id = id;
                         id++;
                         calEvent.start = new Date(startField.val());
                         calEvent.end = new Date(endField.val());
                         calEvent.title = titleField.val();
-                        calEvent.body = bodyField.val();            
+                        calEvent.body = bodyField.val();
                         $dialogContent.dialog("close");
                         var startTime = startField.val();
                         var endTime = endField.val();
@@ -103,7 +103,7 @@ $(document).ready(function() {
                             type: "POST",
                             url: "http://localhost:9999/mdot/calendar/addEvent",
                             data: {
-                                startTime: startTime, 
+                                startTime: startTime,
                                 endTime: endTime,
                                 title: eventTitle,
                                 eventBody: eventBody,
@@ -111,7 +111,7 @@ $(document).ready(function() {
                             }
                         });
                     },
-                    cancel : function() {
+                    cancel: function () {
                         $dialogContent.dialog("close");
                     }
                 }
@@ -121,12 +121,12 @@ $(document).ready(function() {
             setupStartAndEndTimeFields(startField, endField, calEvent, $calendar.weekCalendar("getTimeslotTimes", calEvent.start));
 
         },
-        eventDrop : function(calEvent, $event) {
-        
+        eventDrop: function (calEvent, $event) {
+
         },
-        eventResize : function(calEvent, $event) {
+        eventResize: function (calEvent, $event) {
         },
-        eventClick : function(calEvent, $event) {
+        eventClick: function (calEvent, $event) {
 
             if (calEvent.readOnly) {
                 return;
@@ -138,54 +138,54 @@ $(document).ready(function() {
             var endField = $dialogContent.find("select[name='end']").val(calEvent.end);
             var titleField = $dialogContent.find("input[name='title']").val(calEvent.title);
             var bodyField = $dialogContent.find("textarea[name='body']");
-            var idField=$dialogContent.find("input[name='id']").val(calEvent.id);
+            var idField = $dialogContent.find("input[name='id']").val(calEvent.id);
             bodyField.val(calEvent.body);
 
             $dialogContent.dialog({
                 modal: true,
                 title: "Edit - " + calEvent.title,
-                close: function() {
+                close: function () {
                     $dialogContent.dialog("destroy");
                     $dialogContent.hide();
                     $('#calendar').weekCalendar("removeUnsavedEvents");
                 },
                 buttons: {
-                    save : function() {
-                        
-                        
+                    save: function () {
+
+
                         calEvent.start = new Date(startField.val());
                         calEvent.end = new Date(endField.val());
                         calEvent.title = titleField.val();
                         calEvent.body = bodyField.val();
 
                         $calendar.weekCalendar("updateEvent", calEvent);
-                       
+
                         $dialogContent.dialog("close");
                         var startTime = startField.val();
                         var endTime = endField.val();
                         var eventTitle = titleField.val();
                         var eventBody = bodyField.val();
                         var eventDate = $dialogContent.find(".date_holder").text();
-                        var eventid =idField.val();
-           
+                        var eventid = idField.val();
+
                         $.ajax({
                             url: 'http://localhost:9999/mdot/calendar/updateEvent',
                             type: 'POST',
                             data: {
                                 eventId: eventid,
-                                startTime: startTime, 
+                                startTime: startTime,
                                 endTime: endTime,
                                 title: eventTitle,
                                 eventBody: eventBody,
                                 eventDate: eventDate
                             }
                         });
-               
+
                     },
-                    "delete" : function() {
+                    "delete": function () {
                         $calendar.weekCalendar("removeEvent", calEvent.id);
                         $dialogContent.dialog("close");
-                        var eventid =idField.val();
+                        var eventid = idField.val();
                         $.ajax({
                             url: 'http://localhost:9999/mdot/calendar/deleteEvent',
                             type: 'POST',
@@ -193,9 +193,9 @@ $(document).ready(function() {
                                 eventId: eventid
                             }
                         });
-                        
+
                     },
-                    cancel : function() {
+                    cancel: function () {
                         $dialogContent.dialog("close");
                     }
                 }
@@ -208,15 +208,15 @@ $(document).ready(function() {
             $(window).resize().resize(); //fixes a bug in modal overlay size ??
 
         },
-        eventMouseover : function(calEvent, $event) {
+        eventMouseover: function (calEvent, $event) {
         },
-        eventMouseout : function(calEvent, $event) {
+        eventMouseout: function (calEvent, $event) {
         },
-        noEvents : function() {
+        noEvents: function () {
 
         },
-        data : function(start, end, callback) {
-            callback(getEventData(start,end));
+        data: function (start, end, callback) {
+            callback(getEventData(start, end));
         }
     });
 
@@ -224,33 +224,30 @@ $(document).ready(function() {
         $dialogContent.find("input").val("");
         $dialogContent.find("textarea").val("");
     }
-    
-    
-    
+
+
     function convert(str) {
         var date = new Date(str),
-        mnth = ("0" + (date.getMonth()+1)).slice(-2),
-        day  = ("0" + date.getDate()).slice(-2);
+            mnth = ("0" + (date.getMonth() + 1)).slice(-2),
+            day = ("0" + date.getDate()).slice(-2);
         return [ date.getFullYear(), mnth, day ].join("-");
     }
-    
 
-    
 
-    function getEventData(start,end) {
+    function getEventData(start, end) {
         var startDate = convert(start);
-        var endDate = convert(end-1);
+        var endDate = convert(end - 1);
         var year = new Date().getFullYear();
         var month = new Date().getMonth();
         var day = new Date().getDate();
         var eventData;
         var eventData1;
-        var returnEventData="{events:[";
+        var returnEventData = "{events:[";
         var myObj = new Object();
         var entireEvents = {
-            events:[]
+            events: []
         };
-        
+
         $.ajax({
             url: 'http://localhost:9999/mdot/calendar/getEvents',
             type: 'POST',
@@ -262,17 +259,17 @@ $(document).ready(function() {
             success: function (data) {
                 eventData = data;
                 eventData1 = eval(eventData);
-                for(var i = 0; i<eventData1.length; i++ ) {
+                for (var i = 0; i < eventData1.length; i++) {
                     var id = eventData1[i]["id"];
                     var start = eventData1[i]["start"];
                     var end = eventData1[i]["end"];
                     var title = eventData1[i]["title"];
                     var eventBody = eventData1[i]["eventBody"];
-                    var eventSource=eventData1[i]["source"];
+                    var eventSource = eventData1[i]["source"];
                     var startfullDate = new Date(start);
                     var endfullDate = new Date(end);
                     var startYear = startfullDate.getFullYear();
-                    var startMonth= startfullDate.getMonth();
+                    var startMonth = startfullDate.getMonth();
                     var startDay = startfullDate.getDate();
                     var endYear = endfullDate.getFullYear();
                     var endMonth = endfullDate.getMonth();
@@ -281,29 +278,28 @@ $(document).ready(function() {
                     var endTimeHour = endfullDate.getHours();
                     var startTimeMins = startfullDate.getMinutes();
                     var endTimeMins = endfullDate.getMinutes();
-                    var item={
-                        "id":id,
-                        "start":new Date(startYear, startMonth, startDay, startTimeHour, startTimeMins),
-                        "end":
-                        new Date(endYear, endMonth, endDay, endTimeHour, endTimeMins),
-                        "title":title,
-                        "body":eventBody,
-                        "source":eventSource
+                    var item = {
+                        "id": id,
+                        "start": new Date(startYear, startMonth, startDay, startTimeHour, startTimeMins),
+                        "end": new Date(endYear, endMonth, endDay, endTimeHour, endTimeMins),
+                        "title": title,
+                        "body": eventBody,
+                        "source": eventSource
                     };
                     entireEvents.events.push(item);
                 }
             }
         });
-        $("#caltitle").val(startDate+"  to  "+endDate);
-        return entireEvents;           
-        
+        $("#caltitle").val(startDate + "  to  " + endDate);
+        return entireEvents;
+
     }
 
 
     /*
-    * Sets up the start and end time fields in the calendar event
-    * form for editing based on the calendar event being edited
-    */
+     * Sets up the start and end time fields in the calendar event
+     * form for editing based on the calendar event being edited
+     */
     function setupStartAndEndTimeFields($startTimeField, $endTimeField, calEvent, timeslotTimes) {
 
         for (var i = 0; i < timeslotTimes.length; i++) {
@@ -329,17 +325,17 @@ $(document).ready(function() {
     var $endTimeOptions = $endTimeField.find("option");
 
     //reduces the end time options to be only after the start time options.
-    $("select[name='start']").change(function() {
+    $("select[name='start']").change(function () {
         var startTime = $(this).find(":selected").val();
         var currentEndTime = $endTimeField.find("option:selected").val();
         $endTimeField.html(
-            $endTimeOptions.filter(function() {
+            $endTimeOptions.filter(function () {
                 return startTime < $(this).val();
             })
-            );
+        );
 
         var endTimeSelected = false;
-        $endTimeField.find("option").each(function() {
+        $endTimeField.find("option").each(function () {
             if ($(this).val() === currentEndTime) {
                 $(this).attr("selected", "selected");
                 endTimeSelected = true;
@@ -357,16 +353,16 @@ $(document).ready(function() {
 
     var $about = $("#about");
 
-    $("#about_button").click(function() {
+    $("#about_button").click(function () {
         $about.dialog({
             title: "About this calendar demo",
             width: 600,
-            close: function() {
+            close: function () {
                 $about.dialog("destroy");
                 $about.hide();
             },
             buttons: {
-                close : function() {
+                close: function () {
                     $about.dialog("close");
                 }
             }

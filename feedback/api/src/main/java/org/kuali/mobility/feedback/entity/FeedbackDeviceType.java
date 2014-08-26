@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.feedback.entity;
 
@@ -67,8 +66,7 @@ public class FeedbackDeviceType implements Serializable {
 	}
 
 	/**
-	 * @param feedbackDeviceId
-	 *            the feedbackDeviceId to set
+	 * @param feedbackDeviceId the feedbackDeviceId to set
 	 */
 	public void setFeedbackDeviceId(Long feedbackDeviceId) {
 		this.feedbackDeviceId = feedbackDeviceId;
@@ -82,8 +80,7 @@ public class FeedbackDeviceType implements Serializable {
 	}
 
 	/**
-	 * @param subjectDeviceKey
-	 *            the subjectDeviceKey to set
+	 * @param subjectDeviceKey the subjectDeviceKey to set
 	 */
 	public void setSubjectDeviceKey(String subjectDeviceKey) {
 		this.subjectDeviceKey = subjectDeviceKey;
@@ -97,8 +94,7 @@ public class FeedbackDeviceType implements Serializable {
 	}
 
 	/**
-	 * @param subjectDeviceValue
-	 *            the subjectDeviceValue to set
+	 * @param subjectDeviceValue the subjectDeviceValue to set
 	 */
 	public void setSubjectDeviceValue(String subjectDeviceValue) {
 		this.subjectDeviceValue = subjectDeviceValue;
@@ -112,8 +108,7 @@ public class FeedbackDeviceType implements Serializable {
 	}
 
 	/**
-	 * @param versionNumber
-	 *            the versionNumber to set
+	 * @param versionNumber the versionNumber to set
 	 */
 	public void setVersionNumber(Long versionNumber) {
 		this.versionNumber = versionNumber;

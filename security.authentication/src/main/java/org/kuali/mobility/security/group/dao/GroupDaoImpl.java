@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.security.group.dao;
 
@@ -52,12 +51,12 @@ public class GroupDaoImpl implements GroupDao {
 
 	@PersistenceContext
 	private EntityManager entityManager;
-	
+
 	@Autowired
 	@Qualifier("kmeUserDao")
 	private UserDao userDao;
 
-	private Map<String,Group> groupMap;
+	private Map<String, Group> groupMap;
 
 	public void init() {
 		getGroups();
@@ -68,10 +67,10 @@ public class GroupDaoImpl implements GroupDao {
 	public List<Group> getGroups() {
 		Query query = getEntityManager().createNamedQuery("Group.loadAllGroups");
 		List<Group> groups = query.getResultList();
-		if( groups != null && !groups.isEmpty() ) {
-			Map<String,Group> newGroupMap = new HashMap<String,Group>();
-			for( Group g : groups ) {
-				newGroupMap.put(g.getName(),g);
+		if (groups != null && !groups.isEmpty()) {
+			Map<String, Group> newGroupMap = new HashMap<String, Group>();
+			for (Group g : groups) {
+				newGroupMap.put(g.getName(), g);
 			}
 			setGroupMap(newGroupMap);
 		}
@@ -81,10 +80,10 @@ public class GroupDaoImpl implements GroupDao {
 	@Override
 	public Group getGroup(Long id) {
 		Query query = getEntityManager().createNamedQuery("Group.loadGroupById");
-		query.setParameter("id",id);
-		Group group = (Group)query.getSingleResult();
-		if( getGroupMap() != null ) {
-			getGroupMap().put(group.getName(),group);
+		query.setParameter("id", id);
+		Group group = (Group) query.getSingleResult();
+		if (getGroupMap() != null) {
+			getGroupMap().put(group.getName(), group);
 		} else {
 			getGroups();
 		}
@@ -94,7 +93,7 @@ public class GroupDaoImpl implements GroupDao {
 	@Override
 	public Group getGroup(String name) {
 		Group group = null;
-		if( getGroupMap() != null && getGroupMap().containsKey(name) ) {
+		if (getGroupMap() != null && getGroupMap().containsKey(name)) {
 			group = getGroupMap().get(name);
 		}
 		return group;
@@ -104,11 +103,11 @@ public class GroupDaoImpl implements GroupDao {
 	@Transactional
 	public Long saveGroup(Group group) {
 		Long id;
-		if( null == group ) {
+		if (null == group) {
 			LOG.error("Attempting to save null group. Why is this happening?");
 			id = null;
 		} else {
-			if( null == group.getId() ) {
+			if (null == group.getId()) {
 				getEntityManager().persist(group);
 			} else {
 				getEntityManager().merge(group);
@@ -117,17 +116,17 @@ public class GroupDaoImpl implements GroupDao {
 		}
 		return id;
 	}
-	
+
 	@Override
 	@Transactional
-	public void removeGroup(Group group){
-		if( null == group || group.getId() == null) {
+	public void removeGroup(Group group) {
+		if (null == group || group.getId() == null) {
 			LOG.error("Attempting to remove null group.");
 		} else {
 			Query query = getEntityManager().createNamedQuery("GroupMembership.loadMembershipByGroupId");
 			query.setParameter("groupId", group.getId());
 			List<GroupMembership> groupMemberships = query.getResultList();
-			if(groupMemberships != null && groupMemberships.size() !=0){
+			if (groupMemberships != null && groupMemberships.size() != 0) {
 				Query updateQuery = getEntityManager().createNamedQuery("GroupMembership.deleteMembershipByGroupId");
 				updateQuery.setParameter("groupId", group.getId());
 				updateQuery.executeUpdate();
@@ -135,13 +134,13 @@ public class GroupDaoImpl implements GroupDao {
 			getEntityManager().remove(getGroup(group.getId()));
 		}
 	}
-	
+
 	@Override
 	public void removeFromGroup(List<User> users, Long groupId) {
-		if( null == users || users.size() == 0) {
+		if (null == users || users.size() == 0) {
 			LOG.error("Attempting to remove null users.");
 		} else {
-			for(User user : users){
+			for (User user : users) {
 				Query query = getEntityManager().createNamedQuery("GroupMembership.deleteMembershipByUserId");
 				query.setParameter("userId", user.getId());
 				query.executeUpdate();
@@ -151,17 +150,17 @@ public class GroupDaoImpl implements GroupDao {
 
 	@Override
 	public void addToGroup(List<User> users, Long groupId) {
-		if( null == users || users.size() == 0) {
+		if (null == users || users.size() == 0) {
 			LOG.error("Attempting to add null users.");
 		} else {
-			for(User user : users){
+			for (User user : users) {
 				GroupMembership groupMembership = new GroupMembership();
 				groupMembership.setGroupId(groupId);
 				groupMembership.setUserId(user.getId());
 				getEntityManager().persist(groupMembership);
 			}
 		}
-		
+
 	}
 
 	public EntityManager getEntityManager() {
@@ -182,7 +181,7 @@ public class GroupDaoImpl implements GroupDao {
 
 	@Override
 	public Map<String, Group> getGroupMap() {
-		if( groupMap == null ) {
+		if (groupMap == null) {
 			getGroups();
 		}
 		return groupMap;

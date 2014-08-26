@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.tours.controllers;
 
@@ -46,8 +45,10 @@ import org.kuali.mobility.tours.entity.Tour;
 import org.kuali.mobility.tours.entity.TourPermission;
 import org.kuali.mobility.tours.service.ToursService;
 import org.mockito.Mock;
+
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
+
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.mock.web.MockHttpSession;
@@ -70,10 +71,10 @@ public class ToursControllerTest {
 	private Model uiModel;
 
 	@BeforeClass
-    public static void setUpClass() throws Exception {
-    	servletContext = new MockServletContext();
-    }
-	
+	public static void setUpClass() throws Exception {
+		servletContext = new MockServletContext();
+	}
+
 	@Before
 	public void preTest() {
 		this.setController(new ToursController());
@@ -83,58 +84,58 @@ public class ToursControllerTest {
 		this.setUiModel(new ExtendedModelMap());
 		this.getRequest().setSession(new MockHttpSession());
 		User user = new UserImpl();
-    	user.setLoginName(USER);
-    	this.getRequest().getSession().setAttribute(Constants.KME_USER_KEY,user);
+		user.setLoginName(USER);
+		this.getRequest().getSession().setAttribute(Constants.KME_USER_KEY, user);
 	}
-	
+
 	@Test
 	public void testIndex() {
-    	Tour testTour1 = new Tour();
-    	testTour1.setName("Tour1");
-    	Tour testTour2 = new Tour();
-    	testTour2.setName("Tour2");
-    	List<Tour> tours = new ArrayList<Tour>();
-    	tours.add(testTour1);
-    	tours.add(testTour2);
-    	
-    	when(toursService.findAllTours()).thenReturn(tours);
-    	when(toursService.hasAccessToViewTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
-    	
-    	String viewName = getController().index(getRequest(), getUiModel());
-    	assertTrue("did not return \"tours/home\" but instead" + viewName, "tours/home".equalsIgnoreCase(viewName));
+		Tour testTour1 = new Tour();
+		testTour1.setName("Tour1");
+		Tour testTour2 = new Tour();
+		testTour2.setName("Tour2");
+		List<Tour> tours = new ArrayList<Tour>();
+		tours.add(testTour1);
+		tours.add(testTour2);
+
+		when(toursService.findAllTours()).thenReturn(tours);
+		when(toursService.hasAccessToViewTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
+
+		String viewName = getController().index(getRequest(), getUiModel());
+		assertTrue("did not return \"tours/home\" but instead" + viewName, "tours/home".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testPublish() {
-    	Tour testTour1 = new Tour();
-    	testTour1.setName("Tour1");
-    	Tour testTour2 = new Tour();
-    	testTour2.setName("Tour2");
-    	List<Tour> tours = new ArrayList<Tour>();
-    	tours.add(testTour1);
-    	tours.add(testTour2);
-    	POI testPOI1 = new POI();
-    	testPOI1.setName("POI1");
-    	POI testPOI2 = new POI();
-    	testPOI2.setName("POI2");
-    	List<POI> POIs = new ArrayList<POI>();
-    	POIs.add(testPOI1);
-    	POIs.add(testPOI2);
-    	
-    	when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
-    	
-    	String viewName = getController().publish(getRequest(), getUiModel());
-    	assertTrue("did not return \"tours/message\" but instead" + viewName, "tours/message".equalsIgnoreCase(viewName));
-    	
-    	when(toursService.findAllTours()).thenReturn(tours);
-    	when(toursService.findAllCommonPOI()).thenReturn(POIs);
-    	when(toursService.hasAccessToEditTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
-    	when(toursService.hasAccessToEditPOI(any(User.class), any(POI.class))).thenReturn(false).thenReturn(true);
-    	
-    	viewName = getController().publish(getRequest(), getUiModel());
-    	assertTrue("did not return \"tours/index\" but instead" + viewName, "tours/index".equalsIgnoreCase(viewName));
+		Tour testTour1 = new Tour();
+		testTour1.setName("Tour1");
+		Tour testTour2 = new Tour();
+		testTour2.setName("Tour2");
+		List<Tour> tours = new ArrayList<Tour>();
+		tours.add(testTour1);
+		tours.add(testTour2);
+		POI testPOI1 = new POI();
+		testPOI1.setName("POI1");
+		POI testPOI2 = new POI();
+		testPOI2.setName("POI2");
+		List<POI> POIs = new ArrayList<POI>();
+		POIs.add(testPOI1);
+		POIs.add(testPOI2);
+
+		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
+
+		String viewName = getController().publish(getRequest(), getUiModel());
+		assertTrue("did not return \"tours/message\" but instead" + viewName, "tours/message".equalsIgnoreCase(viewName));
+
+		when(toursService.findAllTours()).thenReturn(tours);
+		when(toursService.findAllCommonPOI()).thenReturn(POIs);
+		when(toursService.hasAccessToEditTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
+		when(toursService.hasAccessToEditPOI(any(User.class), any(POI.class))).thenReturn(false).thenReturn(true);
+
+		viewName = getController().publish(getRequest(), getUiModel());
+		assertTrue("did not return \"tours/index\" but instead" + viewName, "tours/index".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testViewTour() {
 		Tour tour = new Tour();
@@ -149,10 +150,10 @@ public class ToursControllerTest {
 		Tour tourWithFbText = new Tour();
 		tourWithFbText.setFbText1("test1");
 		tourWithFbText.setFbText2("test2");
-		
+
 		when(toursService.findTourById(any(Long.class))).thenReturn(tour).thenReturn(null).thenReturn(tour).thenReturn(tourWithFbText);
 		when(toursService.hasAccessToViewTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().viewTour(getRequest(), getUiModel(), 0);
 		assertTrue("did not return \"tours/message\" but instead " + viewName, "tours/message".equalsIgnoreCase(viewName));
 		viewName = getController().viewTour(getRequest(), getUiModel(), 0);
@@ -162,7 +163,7 @@ public class ToursControllerTest {
 		assertTrue("did not return \"tours/tour\" but instead " + viewName, "tours/tour".equalsIgnoreCase(viewName));
 		assertTrue("tour attribute should not be null", getUiModel().asMap().get("tour") != null);
 	}
-	
+
 	@Test
 	public void testViewPoiDetails() {
 		POI poiAllNull = new POI();
@@ -188,7 +189,7 @@ public class ToursControllerTest {
 		viewName = getController().viewPoiDetails(getRequest(), getUiModel(), 1L);
 		assertTrue("did not return \"tours/details\" but instead " + viewName, "tours/details".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testViewTourMap() {
 		Tour tour = new Tour();
@@ -200,14 +201,14 @@ public class ToursControllerTest {
 		poi1.setVersionNumber(0L);
 		poi1.setTourId(0L);
 		poi1.setPermissions(poiPermissions);
-		
+
 		POI poi2 = new POI();
 		poi2.setMedia("testMedia");
 		poi2.setTour(tour);
 		poi2.setVersionNumber(0L);
 		poi2.setTourId(0L);
 		poi2.setPermissions(poiPermissions);
-		
+
 		POIPhoneNumber number1 = new POIPhoneNumber();
 		number1.setNumber("8125555007");
 		Set<POIPhoneNumber> numbers = new HashSet<POIPhoneNumber>();
@@ -217,23 +218,23 @@ public class ToursControllerTest {
 		List<POI> pois = new ArrayList<POI>();
 		pois.add(poi1);
 		pois.add(poi2);
-		
+
 		tour.setPointsOfInterest(pois);
 		TourPermission permission = new TourPermission();
 		Set<TourPermission> permissions = new HashSet<TourPermission>();
 		permissions.add(permission);
 		tour.setPermissions(permissions);
-		
+
 		when(toursService.findTourById(any(Long.class))).thenReturn(tour);
 		when(toursService.hasAccessToViewTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().viewTourMap(getRequest(), getUiModel(), 0);
 		assertTrue("did not return \"tours/message\" but instead " + viewName, "tours/message".equalsIgnoreCase(viewName));
 		viewName = getController().viewTourMap(getRequest(), getUiModel(), 0);
 		assertTrue("tourJson attribute should not be null", getUiModel().asMap().get("tourJson") != null);
 		assertTrue("did not return \"tours/map\" but instead " + viewName, "tours/map".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testEdit() {
 		Tour tour = new Tour();
@@ -245,18 +246,18 @@ public class ToursControllerTest {
 		Set<TourPermission> permissions = new HashSet<TourPermission>();
 		permissions.add(permission);
 		tour.setPermissions(permissions);
-		
+
 		POIPhoneNumber number1 = new POIPhoneNumber();
 		number1.setPoi(new POI());
 		number1.setPoiId(0L);
 		number1.setNumber("8125555007");
 		Set<POIPhoneNumber> numbers = new HashSet<POIPhoneNumber>();
 		numbers.add(number1);
-		
+
 		POIPermission poiPermission = new POIPermission();
 		Set<POIPermission> poiPermissions = new HashSet<POIPermission>();
 		poiPermissions.add(poiPermission);
-		
+
 		POI poi1 = new POI();
 		poi1.setTour(tour);
 		poi1.setVersionNumber(0L);
@@ -277,18 +278,18 @@ public class ToursControllerTest {
 		pois.add(poi1);
 		pois.add(poi2);
 		pois.add(poi3);
-		
+
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findAllCommonPOI()).thenReturn(pois);
 		when(toursService.hasAccessToViewPOI(any(User.class), any(POI.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().edit(getRequest(), getUiModel());
 		assertTrue("did not return \"tours/message\" but instead " + viewName, "tours/message".equalsIgnoreCase(viewName));
 		viewName = getController().edit(getRequest(), getUiModel());
 		assertTrue("did not return \"tours/edit\" but instead " + viewName, "tours/edit".equalsIgnoreCase(viewName));
 		assertTrue("pois attribute should not be null", getUiModel().asMap().get("pois") != null);
 	}
-	
+
 	@Test
 	public void testEditTour() {
 		Tour emptyTour = new Tour();
@@ -300,18 +301,18 @@ public class ToursControllerTest {
 		Set<TourPermission> permissions = new HashSet<TourPermission>();
 		permissions.add(permission);
 		tour.setPermissions(permissions);
-		
+
 		POIPhoneNumber number1 = new POIPhoneNumber();
 		number1.setPoi(new POI());
 		number1.setPoiId(0L);
 		number1.setNumber("8125555007");
 		Set<POIPhoneNumber> numbers = new HashSet<POIPhoneNumber>();
 		numbers.add(number1);
-		
+
 		POIPermission poiPermission = new POIPermission();
 		Set<POIPermission> poiPermissions = new HashSet<POIPermission>();
 		poiPermissions.add(poiPermission);
-		
+
 		POI poi1 = new POI();
 		poi1.setTour(tour);
 		poi1.setVersionNumber(0L);
@@ -333,13 +334,13 @@ public class ToursControllerTest {
 		pois.add(poi2);
 		pois.add(poi3);
 		tour.setPointsOfInterest(pois);
-		
+
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findTourById(any(Long.class))).thenReturn(emptyTour).thenReturn(emptyTour).thenReturn(tour);
 		when(toursService.hasAccessToEditTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findAllCommonPOI()).thenReturn(pois);
 		when(toursService.hasAccessToViewPOI(any(User.class), any(POI.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().editTour(getUiModel(), getRequest(), 0);
 		assertTrue("did not return \"tours/message\" but instead " + viewName, "tours/message".equalsIgnoreCase(viewName));
 		viewName = getController().editTour(getUiModel(), getRequest(), 0);
@@ -350,11 +351,11 @@ public class ToursControllerTest {
 		assertTrue("pois attribute should not be null", getUiModel().asMap().get("pois") != null);
 		assertTrue("did not return \"tours/edit\" but instead " + viewName, "tours/edit".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testSave() {
 		Tour tour = new Tour();
-		
+
 		String stringTour = "{\"id\":\"1L\"," +
 				"\"name\":\"testName\"," +
 				"\"description\":\"test description\"," +
@@ -370,7 +371,7 @@ public class ToursControllerTest {
 				"\"fbText2Enabled\":\"true\"," +
 				"\"permissions\":[{\"group\":\"testGroup\",\"type\":\"testType\"}]," +
 				"\"POIs\":[]}";
-		
+
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findTourById(any(Long.class))).thenReturn(null).thenReturn(tour);
 		String viewName = getController().save(getRequest(), stringTour, getUiModel());
@@ -378,7 +379,7 @@ public class ToursControllerTest {
 		viewName = getController().save(getRequest(), stringTour, getUiModel());
 		assertTrue("did not return \"redirect:/tours/publish\" but instead " + viewName, "redirect:/tours/publish".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testDelete() {
 		Tour tour = new Tour();
@@ -386,7 +387,7 @@ public class ToursControllerTest {
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findTourById(any(Long.class))).thenReturn(tour);
 		when(toursService.hasAccessToEditTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().delete(getUiModel(), getRequest(), 0L);
 		assertTrue("did not return \"tours/message\" but instead " + viewName, "tours/message".equalsIgnoreCase(viewName));
 		viewName = getController().delete(getUiModel(), getRequest(), 0L);
@@ -394,15 +395,15 @@ public class ToursControllerTest {
 		viewName = getController().delete(getUiModel(), getRequest(), 0L);
 		assertTrue("did not return \"redirect:/tours/publish\" but instead " + viewName, "redirect:/tours/publish".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testCopy() {
 		Tour tour = new Tour();
-		
+
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findTourById(any(Long.class))).thenReturn(tour);
 		when(toursService.hasAccessToEditTour(any(User.class), any(Tour.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().copy(getUiModel(), getRequest(), 0L);
 		assertTrue("did not return \"tours/message\" but instead " + viewName, "tours/message".equalsIgnoreCase(viewName));
 		viewName = getController().copy(getUiModel(), getRequest(), 0L);
@@ -410,18 +411,18 @@ public class ToursControllerTest {
 		viewName = getController().copy(getUiModel(), getRequest(), 0L);
 		assertTrue("did not return \"redirect:/tours/publish\" but instead " + viewName, "redirect:/tours/publish".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testEditPoi() {
-		
+
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().editPoi(getUiModel(), getRequest());
 		assertTrue("did not return \"tours/message\" but instead " + viewName, "tours/message".equalsIgnoreCase(viewName));
 		viewName = getController().editPoi(getUiModel(), getRequest());
 		assertTrue("should have entered the has access to edit tour if statement", "You do not have access to create or edit tours.".equalsIgnoreCase(getUiModel().asMap().get("message").toString()));
 	}
-	
+
 	@Test
 	public void testEditPoi2() {
 		POIPhoneNumber number1 = new POIPhoneNumber();
@@ -430,16 +431,16 @@ public class ToursControllerTest {
 		number1.setNumber("8125555007");
 		Set<POIPhoneNumber> numbers = new HashSet<POIPhoneNumber>();
 		numbers.add(number1);
-		
+
 		POIPermission poiPermission = new POIPermission();
 		poiPermission.setPoi(new POI());
 		poiPermission.setPoiId(0L);
 		Set<POIPermission> poiPermissions = new HashSet<POIPermission>();
 		poiPermissions.add(poiPermission);
-		
+
 		Tour tour = new Tour();
 		tour.setTourId(1L);
-		
+
 		POI poi = new POI();
 		poi.setTour(tour);
 		poi.setTourId(tour.getTourId());
@@ -455,7 +456,7 @@ public class ToursControllerTest {
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findPoiById(any(Long.class))).thenReturn(null).thenReturn(poiNoMedia).thenReturn(poi);
 		when(toursService.hasAccessToEditPOI(any(User.class), any(POI.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().editPoi(getRequest(), getUiModel(), 0L);
 		assertTrue("should have entered the has access to publish", "You do not have access to create or edit tours.".equalsIgnoreCase(getUiModel().asMap().get("message").toString()));
 		viewName = getController().editPoi(getRequest(), getUiModel(), 0L);
@@ -464,7 +465,7 @@ public class ToursControllerTest {
 		viewName = getController().editPoi(getRequest(), getUiModel(), 0L);
 		assertTrue("should have returned tours/editPoi", "tours/editPoi".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testSavePoi() {
 		POI poi = new POI();
@@ -476,11 +477,11 @@ public class ToursControllerTest {
 				"\"emailAddresses\":[]," +
 				"\"location\":{\"latitude\":\"0\",\"longitude\":\"0\"}," +
 				"\"media\":\"testMedia\"}";
-		
+
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.findPoiById(any(Long.class))).thenReturn(poi);
 		when(toursService.hasAccessToEditPOI(any(User.class), any(POI.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().savePoi(getRequest(), jsonString, getUiModel());
 		assertTrue("should have entered the has access to publish", "You do not have access to create or edit tours.".equalsIgnoreCase(getUiModel().asMap().get("message").toString()));
 		viewName = getController().savePoi(getRequest(), jsonString, getUiModel());
@@ -488,12 +489,12 @@ public class ToursControllerTest {
 		viewName = getController().savePoi(getRequest(), jsonString, getUiModel());
 		assertTrue("did not return redirect:/tours/publish but instead " + viewName, "redirect:/tours/publish".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testDeletePoi() {
 		when(toursService.hasAccessToPublish(any(User.class))).thenReturn(false).thenReturn(true);
 		when(toursService.hasAccessToEditPOI(any(User.class), any(POI.class))).thenReturn(false).thenReturn(true);
-		
+
 		String viewName = getController().deletePoi(getRequest(), 0L, getUiModel());
 		assertTrue("should have been false for hasAccessToPublish", "You do not have access to create or edit tours.".equalsIgnoreCase(getUiModel().asMap().get("message").toString()));
 		viewName = getController().deletePoi(getRequest(), 0L, getUiModel());
@@ -501,7 +502,7 @@ public class ToursControllerTest {
 		viewName = getController().deletePoi(getRequest(), 0L, getUiModel());
 		assertTrue("did not return redirect:/tours/publish but instead " + viewName, "redirect:/tours/publish".equalsIgnoreCase(viewName));
 	}
-	
+
 	public ToursService getToursService() {
 		return toursService;
 	}

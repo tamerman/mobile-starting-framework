@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.alerts.service;
 
@@ -65,9 +64,9 @@ public class AlertsServiceImplTest {
 	@Test
 	public void testFindAlertsByCampus() {
 		List<Alert> alerts = getService().findAlertsByCampus("IU");
-		assertFalse("Alert list is null and should not be.",alerts==null);
-		assertFalse("Alert list is empty and should not be.",alerts.isEmpty());
-		assertTrue("Alert list should contain 3 items for campus IU and does not ("+alerts.size()+").",alerts.size()==3);
+		assertFalse("Alert list is null and should not be.", alerts == null);
+		assertFalse("Alert list is empty and should not be.", alerts.isEmpty());
+		assertTrue("Alert list should contain 3 items for campus IU and does not (" + alerts.size() + ").", alerts.size() == 3);
 		List<Alert> BLAlerts = getService().findAlertsByCampus("BL");
 		assertTrue("Should have found 3 alerts and did not.", BLAlerts.size() == 3);
 		List<Alert> ZZAlerts = getService().findAlertsByCampus("ZZ");
@@ -80,8 +79,8 @@ public class AlertsServiceImplTest {
 	public void testDoesFilterNormalAlerts() {
 		List<Alert> alerts = getService().findAlertsByCampus("BL");
 		boolean foundNormal = false;
-		for( Alert a : alerts ) {
-			if( "normal".equalsIgnoreCase(a.getType()) ) {
+		for (Alert a : alerts) {
+			if ("normal".equalsIgnoreCase(a.getType())) {
 				foundNormal = true;
 			}
 		}
@@ -92,8 +91,8 @@ public class AlertsServiceImplTest {
 	public void testNoAlerts() {
 		List<Alert> alerts = getService().findAlertsByCampus("ABCD");
 		boolean foundNormal = false;
-		for( Alert a : alerts ) {
-			if( "normal".equalsIgnoreCase(a.getType()) ) {
+		for (Alert a : alerts) {
+			if ("normal".equalsIgnoreCase(a.getType())) {
 				foundNormal = true;
 			}
 		}

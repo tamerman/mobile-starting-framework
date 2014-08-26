@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.people.dao;
 
@@ -63,13 +62,13 @@ public class DirectoryDaoUMImpl implements DirectoryDao,
 	public SearchResultImpl findEntries(SearchCriteria search) {
 		SearchResultImpl results = null;
 		String searchText = search.getSearchText();
-        if( searchText != null && searchText.contains("<script>")) {
-        // Do not perform any search
-        }
-        if (searchText != null && searchText.contains(";")) {
-            // Do not perform any search
-        } else if (searchText != null && searchText.contains("eval")) {
-            // Do not perform any search
+		if (searchText != null && searchText.contains("<script>")) {
+			// Do not perform any search
+		}
+		if (searchText != null && searchText.contains(";")) {
+			// Do not perform any search
+		} else if (searchText != null && searchText.contains("eval")) {
+			// Do not perform any search
 		} else {
 			results = (SearchResultImpl) getApplicationContext().getBean(
 					"searchResult");
@@ -77,29 +76,29 @@ public class DirectoryDaoUMImpl implements DirectoryDao,
 			StringBuilder queryString = new StringBuilder();
 
 			if (search.getSearchText() != null && !search.getSearchText().trim().isEmpty()) {
-                searchText = searchText.replaceAll("[^\\w\\s]", ""); 	//Removes all special character
+				searchText = searchText.replaceAll("[^\\w\\s]", "");    //Removes all special character
 				queryString.append("searchCriteria=");
 				queryString.append(searchText.trim());
-			} else if( search.getUserName() != null && !search.getUserName().isEmpty() ) {
-                queryString.append("uniqname=");
-                queryString.append(search.getUserName().trim());
-            } else {
-                if( "starts".equalsIgnoreCase(search.getExactness()) ) {
-                    search.setExactness("starts with");
-                }
+			} else if (search.getUserName() != null && !search.getUserName().isEmpty()) {
+				queryString.append("uniqname=");
+				queryString.append(search.getUserName().trim());
+			} else {
+				if ("starts".equalsIgnoreCase(search.getExactness())) {
+					search.setExactness("starts with");
+				}
 				if (search.getFirstName() != null
 						&& !search.getFirstName().trim().isEmpty()) {
 					queryString.append("givenName=");
 					queryString.append(search.getFirstName().trim());
 					queryString.append("&givenNameSearchType=");
-                    queryString.append(search.getExactness());
-                    queryString.append("&");
+					queryString.append(search.getExactness());
+					queryString.append("&");
 				}
 				if (search.getLastName() != null && !search.getLastName().trim().isEmpty()) {
 					queryString.append("sn=");
 					queryString.append(search.getLastName().trim());
 					queryString.append("&snSearchType=");
-                    queryString.append(search.getExactness());
+					queryString.append(search.getExactness());
 				}
 			}
 
@@ -110,7 +109,7 @@ public class DirectoryDaoUMImpl implements DirectoryDao,
 
 				connection.setDoOutput(true); // Triggers POST.
 				connection.setRequestProperty("Accept-Charset", DEFAULT_CHARACTER_SET);
-				connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset="+ DEFAULT_CHARACTER_SET);
+				connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + DEFAULT_CHARACTER_SET);
 				OutputStream output = null;
 
 				output = connection.getOutputStream();
@@ -168,7 +167,7 @@ public class DirectoryDaoUMImpl implements DirectoryDao,
 			} catch (IOException ioe) {
 				LOG.error(ioe.getLocalizedMessage());
 			}
-            LOG.debug("Searching for groups.");
+			LOG.debug("Searching for groups.");
 			results.setGroups(searchForGroup(search));
 		}
 		return results;
@@ -478,21 +477,21 @@ public class DirectoryDaoUMImpl implements DirectoryDao,
 		return searchResults;
 	}
 
-    public List<Group> searchForGroup(SearchCriteria searchCriteria) {
-        List<Group> groups = new ArrayList<Group>();
+	public List<Group> searchForGroup(SearchCriteria searchCriteria) {
+		List<Group> groups = new ArrayList<Group>();
 
-        if( null!= searchCriteria.getSearchText() && !searchCriteria.getSearchText().isEmpty() ) {
-            groups.addAll(findSimpleGroup(searchCriteria.getSearchText()));
-        }
-        if( null!=searchCriteria.getFirstName()&&!searchCriteria.getFirstName().isEmpty()) {
-            groups.addAll(findSimpleGroup(searchCriteria.getFirstName()));
-        }
-        if( null!=searchCriteria.getLastName()&&!searchCriteria.getLastName().isEmpty()) {
-            groups.addAll(findSimpleGroup(searchCriteria.getLastName()));
-        }
+		if (null != searchCriteria.getSearchText() && !searchCriteria.getSearchText().isEmpty()) {
+			groups.addAll(findSimpleGroup(searchCriteria.getSearchText()));
+		}
+		if (null != searchCriteria.getFirstName() && !searchCriteria.getFirstName().isEmpty()) {
+			groups.addAll(findSimpleGroup(searchCriteria.getFirstName()));
+		}
+		if (null != searchCriteria.getLastName() && !searchCriteria.getLastName().isEmpty()) {
+			groups.addAll(findSimpleGroup(searchCriteria.getLastName()));
+		}
 
-        return groups;
-    }
+		return groups;
+	}
 
 	private Person parsePerson(final JSONObject jsonData) {
 		Person person = null;
@@ -628,8 +627,7 @@ public class DirectoryDaoUMImpl implements DirectoryDao,
 	}
 
 	/**
-	 * @param applicationContext
-	 *            the applicationContext to set
+	 * @param applicationContext the applicationContext to set
 	 */
 	public void setApplicationContext(ApplicationContext applicationContext) {
 		this.applicationContext = applicationContext;

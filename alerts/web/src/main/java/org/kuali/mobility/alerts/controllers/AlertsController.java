@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.alerts.controllers;
 
@@ -52,12 +51,12 @@ public class AlertsController {
 	@Autowired
 	private CampusService campusService;
 
-    @Resource(name="kmeProperties")
-    private Properties kmeProperties;	
-	
+	@Resource(name = "kmeProperties")
+	private Properties kmeProperties;
+
 	@RequestMapping(method = RequestMethod.GET)
 	public String getList(HttpServletRequest request, Model uiModel) {
-    	String viewName = "alerts/list";
+		String viewName = "alerts/list";
 		String campusCode = "ALL";
 
 		User user = (User) request.getSession().getAttribute(AuthenticationConstants.KME_USER_KEY);
@@ -69,26 +68,26 @@ public class AlertsController {
 			campusCode = user.getViewCampus();
 		}
 
-    	if( "3".equalsIgnoreCase( getKmeProperties().getProperty("kme.uiVersion","classic") ) ) {
-            viewName = "ui3/alerts/index";
-    	}
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
+			viewName = "ui3/alerts/index";
+		}
 
-		uiModel.addAttribute("campus",campusCode);
+		uiModel.addAttribute("campus", campusCode);
 		return viewName;
 	}
 
-    @RequestMapping(value = "/js/alerts.js")
-    public String getJavaScript(HttpServletRequest request, Model uiModel) {
-        User user = (User) request.getSession().getAttribute(AuthenticationConstants.KME_USER_KEY);
-        String campusCode = "ALL";
-        if( user != null && user.getViewCampus() != null ) {
-            campusCode = user.getViewCampus();
-        }
-        uiModel.addAttribute("campus",campusCode);
+	@RequestMapping(value = "/js/alerts.js")
+	public String getJavaScript(HttpServletRequest request, Model uiModel) {
+		User user = (User) request.getSession().getAttribute(AuthenticationConstants.KME_USER_KEY);
+		String campusCode = "ALL";
+		if (user != null && user.getViewCampus() != null) {
+			campusCode = user.getViewCampus();
+		}
+		uiModel.addAttribute("campus", campusCode);
 
-        return "ui3/alerts/js/alerts";
-    }
-	
+		return "ui3/alerts/js/alerts";
+	}
+
 	@Deprecated
 	@RequestMapping(method = RequestMethod.GET, headers = "Accept=application/json")
 	@ResponseBody
@@ -114,12 +113,12 @@ public class AlertsController {
 	public void setCampusService(CampusService campusService) {
 		this.campusService = campusService;
 	}
-	
-    public Properties getKmeProperties() {
-        return kmeProperties;
-    }
 
-    public void setKmeProperties(Properties kmeProperties) {
-        this.kmeProperties = kmeProperties;
-    }
+	public Properties getKmeProperties() {
+		return kmeProperties;
+	}
+
+	public void setKmeProperties(Properties kmeProperties) {
+		this.kmeProperties = kmeProperties;
+	}
 }

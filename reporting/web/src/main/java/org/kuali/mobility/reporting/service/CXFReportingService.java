@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.reporting.service;
 
@@ -50,9 +49,11 @@ import java.util.List;
 
 @Service
 public class CXFReportingService {
-	/** A reference to a logger for this service */
+	/**
+	 * A reference to a logger for this service
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(CXFReportingService.class);
-	
+
 	public static final String INCIDENT_TYPE = "INCIDENT";
 	public static final String INCIDENT_GROUP = "INCIDENT_GROUP";
 	public static final String SUMMARY = "SUMMARY";
@@ -64,15 +65,15 @@ public class CXFReportingService {
 	public static final String CONTACT_ME = "CONTACT_ME";
 	public static final String ATTACHMENT = "ATTACHMENT";
 	public static final String COMMENT = "COMMENT";
-	
+
 	private ReportingDao dao;
-	
+
 	/**
 	 * A reference to the {@code MessageContext}
 	 */
 	@Context
 	private MessageContext messageContext;
-	
+
 	@POST
 	@Path("editSubmission")
 	public void editSubmission(@RequestBody String data) {
@@ -88,67 +89,67 @@ public class CXFReportingService {
 				submission.setPostDate(new Timestamp(queryParams.getLong("postDate")));
 				submission.setRevisionNumber(queryParams.getLong("revisionNumber") + 1L);
 				submission.setUserId(queryParams.getString("userId"));
-				
+
 				SubmissionAttribute submissionAttributeSummary = new SubmissionAttribute();
 				submissionAttributeSummary.setKey(SUMMARY);
 				submissionAttributeSummary.setValueLargeText(queryParams.getString("summary"));
 				submissionAttributeSummary.setSubmissionId(submission.getId());
 				submissionAttributeSummary.setSubmission(submission);
-				
+
 				SubmissionAttribute submissionAttributeContactMe = new SubmissionAttribute();
 				submissionAttributeContactMe.setKey(CONTACT_ME);
 				submissionAttributeContactMe.setValueNumber(queryParams.getString("contactMe").equalsIgnoreCase("true") ? 1L : 0L);
 				submissionAttributeContactMe.setSubmissionId(submission.getId());
 				submissionAttributeContactMe.setSubmission(submission);
-				
+
 				SubmissionAttribute submissionAttributeEmail = new SubmissionAttribute();
 				submissionAttributeEmail.setKey(EMAIL);
 				submissionAttributeEmail.setValueText(queryParams.getString("email"));
 				submissionAttributeEmail.setSubmissionId(submission.getId());
-	        	submissionAttributeEmail.setSubmission(submission);
-	        	
-	        	SubmissionAttribute submissionAttributeAffiliationStudent = new SubmissionAttribute();
-	        	submissionAttributeAffiliationStudent.setKey(AFFILIATION_STUDENT);
-	        	submissionAttributeAffiliationStudent.setValueText(queryParams.getString("studentAffiliation"));
-	        	submissionAttributeAffiliationStudent.setSubmissionId(submission.getId());
-	        	submissionAttributeAffiliationStudent.setSubmission(submission);
-	        	
-	        	SubmissionAttribute submissionAttributeAffiliationFaculty = new SubmissionAttribute();
-	        	submissionAttributeAffiliationFaculty.setKey(AFFILIATION_FACULTY);
-	        	submissionAttributeAffiliationFaculty.setValueText(queryParams.getString("facultyAffiliation"));
-	        	submissionAttributeAffiliationFaculty.setSubmissionId(submission.getId());
-	        	submissionAttributeAffiliationFaculty.setSubmission(submission);
-	        	
-	        	SubmissionAttribute submissionAttributeAffiliationStaff = new SubmissionAttribute();
-	        	submissionAttributeAffiliationStaff.setKey(AFFILIATION_STAFF);
-	        	submissionAttributeAffiliationStaff.setValueText(queryParams.getString("staffAffiliation"));
-	        	submissionAttributeAffiliationStaff.setSubmissionId(submission.getId());
-	        	submissionAttributeAffiliationStaff.setSubmission(submission);
-	        	
-	        	SubmissionAttribute submissionAttributeAffiliationOther = new SubmissionAttribute();
-	        	submissionAttributeAffiliationOther.setKey(AFFILIATION_OTHER);
-	        	submissionAttributeAffiliationOther.setValueText(queryParams.getString("otherAffiliation"));
-	        	submissionAttributeAffiliationOther.setSubmissionId(submission.getId());
-	        	submissionAttributeAffiliationOther.setSubmission(submission);
-	        	
-	        	ArrayList<SubmissionAttribute> attributes = new ArrayList<SubmissionAttribute>();
-	        	attributes.add(submissionAttributeSummary);
-	        	attributes.add(submissionAttributeEmail);
-	        	attributes.add(submissionAttributeContactMe);
-	        	attributes.add(submissionAttributeAffiliationStudent);
-	        	attributes.add(submissionAttributeAffiliationFaculty);
-	        	attributes.add(submissionAttributeAffiliationStaff);
-	        	attributes.add(submissionAttributeAffiliationOther);
-	        	
-	        	submission.setAttributes(attributes);
-	        	
-	        	getDao().saveSubmission(submission);
+				submissionAttributeEmail.setSubmission(submission);
+
+				SubmissionAttribute submissionAttributeAffiliationStudent = new SubmissionAttribute();
+				submissionAttributeAffiliationStudent.setKey(AFFILIATION_STUDENT);
+				submissionAttributeAffiliationStudent.setValueText(queryParams.getString("studentAffiliation"));
+				submissionAttributeAffiliationStudent.setSubmissionId(submission.getId());
+				submissionAttributeAffiliationStudent.setSubmission(submission);
+
+				SubmissionAttribute submissionAttributeAffiliationFaculty = new SubmissionAttribute();
+				submissionAttributeAffiliationFaculty.setKey(AFFILIATION_FACULTY);
+				submissionAttributeAffiliationFaculty.setValueText(queryParams.getString("facultyAffiliation"));
+				submissionAttributeAffiliationFaculty.setSubmissionId(submission.getId());
+				submissionAttributeAffiliationFaculty.setSubmission(submission);
+
+				SubmissionAttribute submissionAttributeAffiliationStaff = new SubmissionAttribute();
+				submissionAttributeAffiliationStaff.setKey(AFFILIATION_STAFF);
+				submissionAttributeAffiliationStaff.setValueText(queryParams.getString("staffAffiliation"));
+				submissionAttributeAffiliationStaff.setSubmissionId(submission.getId());
+				submissionAttributeAffiliationStaff.setSubmission(submission);
+
+				SubmissionAttribute submissionAttributeAffiliationOther = new SubmissionAttribute();
+				submissionAttributeAffiliationOther.setKey(AFFILIATION_OTHER);
+				submissionAttributeAffiliationOther.setValueText(queryParams.getString("otherAffiliation"));
+				submissionAttributeAffiliationOther.setSubmissionId(submission.getId());
+				submissionAttributeAffiliationOther.setSubmission(submission);
+
+				ArrayList<SubmissionAttribute> attributes = new ArrayList<SubmissionAttribute>();
+				attributes.add(submissionAttributeSummary);
+				attributes.add(submissionAttributeEmail);
+				attributes.add(submissionAttributeContactMe);
+				attributes.add(submissionAttributeAffiliationStudent);
+				attributes.add(submissionAttributeAffiliationFaculty);
+				attributes.add(submissionAttributeAffiliationStaff);
+				attributes.add(submissionAttributeAffiliationOther);
+
+				submission.setAttributes(attributes);
+
+				getDao().saveSubmission(submission);
 			}
-		} catch(JSONException je) {
+		} catch (JSONException je) {
 			LOG.error("JSONException in :" + data + " : " + je.getMessage());
 		}
 	}
-	
+
 	@POST
 	@Path("submitIncident")
 	public Boolean submitIncident(@RequestBody String data) {
@@ -167,70 +168,70 @@ public class CXFReportingService {
 			submission.setPostDate(new Timestamp(new Date().getTime()));
 			submission.setRevisionNumber(0L);
 			submission.setUserId(user.getLoginName());
-			
+
 			Long pk = getDao().saveSubmission(submission);
-			
+
 			SubmissionAttribute submissionAttributeSummary = new SubmissionAttribute();
 			submissionAttributeSummary.setKey(SUMMARY);
 			submissionAttributeSummary.setValueLargeText(queryParams.getString("summary"));
 			submissionAttributeSummary.setSubmissionId(pk);
 			submissionAttributeSummary.setSubmission(submission);
-			
+
 			SubmissionAttribute submissionAttributeContactMe = new SubmissionAttribute();
 			submissionAttributeContactMe.setKey(CONTACT_ME);
 			submissionAttributeContactMe.setValueNumber(queryParams.getString("contactMe").equalsIgnoreCase("true") ? 1L : 0L);
 			submissionAttributeContactMe.setSubmissionId(pk);
 			submissionAttributeContactMe.setSubmission(submission);
-			
+
 			SubmissionAttribute submissionAttributeEmail = new SubmissionAttribute();
 			submissionAttributeEmail.setKey(EMAIL);
 			submissionAttributeEmail.setValueText(queryParams.getString("email"));
 			submissionAttributeEmail.setSubmissionId(pk);
-        	submissionAttributeEmail.setSubmission(submission);
-        	
-        	SubmissionAttribute submissionAttributeAffiliationStudent = new SubmissionAttribute();
-        	submissionAttributeAffiliationStudent.setKey(AFFILIATION_STUDENT);
-        	submissionAttributeAffiliationStudent.setValueText(queryParams.getString("studentAffiliation"));
-        	submissionAttributeAffiliationStudent.setSubmissionId(pk);
-        	submissionAttributeAffiliationStudent.setSubmission(submission);
-        	
-        	SubmissionAttribute submissionAttributeAffiliationFaculty = new SubmissionAttribute();
-        	submissionAttributeAffiliationFaculty.setKey(AFFILIATION_FACULTY);
-        	submissionAttributeAffiliationFaculty.setValueText(queryParams.getString("facultyAffiliation"));
-        	submissionAttributeAffiliationFaculty.setSubmissionId(pk);
-        	submissionAttributeAffiliationFaculty.setSubmission(submission);
-        	
-        	SubmissionAttribute submissionAttributeAffiliationStaff = new SubmissionAttribute();
-        	submissionAttributeAffiliationStaff.setKey(AFFILIATION_STAFF);
-        	submissionAttributeAffiliationStaff.setValueText(queryParams.getString("staffAffiliation"));
-        	submissionAttributeAffiliationStaff.setSubmissionId(pk);
-        	submissionAttributeAffiliationStaff.setSubmission(submission);
-        	
-        	SubmissionAttribute submissionAttributeAffiliationOther = new SubmissionAttribute();
-        	submissionAttributeAffiliationOther.setKey(AFFILIATION_OTHER);
-        	submissionAttributeAffiliationOther.setValueText(queryParams.getString("otherAffiliation"));
-        	submissionAttributeAffiliationOther.setSubmissionId(pk);
-        	submissionAttributeAffiliationOther.setSubmission(submission);
-        	
-        	ArrayList<SubmissionAttribute> attributes = new ArrayList<SubmissionAttribute>();
-        	attributes.add(submissionAttributeSummary);
-        	attributes.add(submissionAttributeEmail);
-        	attributes.add(submissionAttributeContactMe);
-        	attributes.add(submissionAttributeAffiliationStudent);
-        	attributes.add(submissionAttributeAffiliationFaculty);
-        	attributes.add(submissionAttributeAffiliationStaff);
-        	attributes.add(submissionAttributeAffiliationOther);
-        	
-        	submission.setAttributes(attributes);
-        	
-        	getDao().saveSubmission(submission);
-        	return true;
-		} catch(JSONException je) {
+			submissionAttributeEmail.setSubmission(submission);
+
+			SubmissionAttribute submissionAttributeAffiliationStudent = new SubmissionAttribute();
+			submissionAttributeAffiliationStudent.setKey(AFFILIATION_STUDENT);
+			submissionAttributeAffiliationStudent.setValueText(queryParams.getString("studentAffiliation"));
+			submissionAttributeAffiliationStudent.setSubmissionId(pk);
+			submissionAttributeAffiliationStudent.setSubmission(submission);
+
+			SubmissionAttribute submissionAttributeAffiliationFaculty = new SubmissionAttribute();
+			submissionAttributeAffiliationFaculty.setKey(AFFILIATION_FACULTY);
+			submissionAttributeAffiliationFaculty.setValueText(queryParams.getString("facultyAffiliation"));
+			submissionAttributeAffiliationFaculty.setSubmissionId(pk);
+			submissionAttributeAffiliationFaculty.setSubmission(submission);
+
+			SubmissionAttribute submissionAttributeAffiliationStaff = new SubmissionAttribute();
+			submissionAttributeAffiliationStaff.setKey(AFFILIATION_STAFF);
+			submissionAttributeAffiliationStaff.setValueText(queryParams.getString("staffAffiliation"));
+			submissionAttributeAffiliationStaff.setSubmissionId(pk);
+			submissionAttributeAffiliationStaff.setSubmission(submission);
+
+			SubmissionAttribute submissionAttributeAffiliationOther = new SubmissionAttribute();
+			submissionAttributeAffiliationOther.setKey(AFFILIATION_OTHER);
+			submissionAttributeAffiliationOther.setValueText(queryParams.getString("otherAffiliation"));
+			submissionAttributeAffiliationOther.setSubmissionId(pk);
+			submissionAttributeAffiliationOther.setSubmission(submission);
+
+			ArrayList<SubmissionAttribute> attributes = new ArrayList<SubmissionAttribute>();
+			attributes.add(submissionAttributeSummary);
+			attributes.add(submissionAttributeEmail);
+			attributes.add(submissionAttributeContactMe);
+			attributes.add(submissionAttributeAffiliationStudent);
+			attributes.add(submissionAttributeAffiliationFaculty);
+			attributes.add(submissionAttributeAffiliationStaff);
+			attributes.add(submissionAttributeAffiliationOther);
+
+			submission.setAttributes(attributes);
+
+			getDao().saveSubmission(submission);
+			return true;
+		} catch (JSONException je) {
 			LOG.error("JSONException in :" + data + " : " + je.getMessage());
 			return false; //and more sadness
 		}
 	}
-	
+
 	@POST
 	@Path("getRevisionsById")
 	public List<Submission> getRevisionsById(@RequestBody String data) {
@@ -244,12 +245,12 @@ public class CXFReportingService {
 			return testSubmissions();
 			//end test
 			//return getDao().findAllSubmissionsByParentId(queryParams.getLong("id"));
-		} catch(JSONException je) {
+		} catch (JSONException je) {
 			LOG.error("JSONException in :" + data + " : " + je.getMessage());
 			return null; //and more sadness
 		}
 	}
-	
+
 	@POST
 	@Path("getSubmissionById")
 	public Submission getSubmissionById(@RequestBody String data) {
@@ -265,67 +266,67 @@ public class CXFReportingService {
 			Submission testSubmission = new Submission();
 			testSubmission.setId(0L);
 			testSubmission.setUserId(user.getLoginName());
-			java.util.Date date= new java.util.Date();
+			java.util.Date date = new java.util.Date();
 			testSubmission.setRevisionNumber(0L);
 			Timestamp timestamp = new Timestamp(date.getTime());
 			testSubmission.setPostDate(timestamp);
 			testSubmission.setType("test");
-			
+
 			SubmissionAttribute submissionAttributeSummary = new SubmissionAttribute();
 			submissionAttributeSummary.setKey(SUMMARY);
 			submissionAttributeSummary.setValueLargeText("test summary");
 			submissionAttributeSummary.setSubmissionId(0L);
-			
+
 			SubmissionAttribute submissionAttributeContactMe = new SubmissionAttribute();
 			submissionAttributeContactMe.setKey(CONTACT_ME);
 			submissionAttributeContactMe.setValueNumber(1L);
 			submissionAttributeContactMe.setSubmissionId(0L);
-			
+
 			SubmissionAttribute submissionAttributeEmail = new SubmissionAttribute();
 			submissionAttributeEmail.setKey(EMAIL);
 			submissionAttributeEmail.setValueText("test@test.com");
 			submissionAttributeEmail.setSubmissionId(0L);
-	    	
-	    	SubmissionAttribute submissionAttributeAffiliationStudent = new SubmissionAttribute();
-	    	submissionAttributeAffiliationStudent.setKey(AFFILIATION_STUDENT);
-	    	submissionAttributeAffiliationStudent.setValueText("true");
-	    	submissionAttributeAffiliationStudent.setSubmissionId(0L);
-	    	
-	    	SubmissionAttribute submissionAttributeAffiliationFaculty = new SubmissionAttribute();
-	    	submissionAttributeAffiliationFaculty.setKey(AFFILIATION_FACULTY);
-	    	submissionAttributeAffiliationFaculty.setValueText("false");
-	    	submissionAttributeAffiliationFaculty.setSubmissionId(0L);
-	    	
-	    	SubmissionAttribute submissionAttributeAffiliationStaff = new SubmissionAttribute();
-	    	submissionAttributeAffiliationStaff.setKey(AFFILIATION_STAFF);
-	    	submissionAttributeAffiliationStaff.setValueText("false");
-	    	submissionAttributeAffiliationStaff.setSubmissionId(0L);
-	    	
-	    	SubmissionAttribute submissionAttributeAffiliationOther = new SubmissionAttribute();
-	    	submissionAttributeAffiliationOther.setKey(AFFILIATION_OTHER);
-	    	submissionAttributeAffiliationOther.setValueText("true");
-	    	submissionAttributeAffiliationOther.setSubmissionId(0L);
-	    	
-	    	ArrayList<SubmissionAttribute> attributes = new ArrayList<SubmissionAttribute>();
-	    	attributes.add(submissionAttributeSummary);
-	    	attributes.add(submissionAttributeEmail);
-	    	attributes.add(submissionAttributeContactMe);
-	    	attributes.add(submissionAttributeAffiliationStudent);
-	    	attributes.add(submissionAttributeAffiliationFaculty);
-	    	attributes.add(submissionAttributeAffiliationStaff);
-	    	attributes.add(submissionAttributeAffiliationOther);
-	    	
-	    	testSubmission.setAttributes(attributes);
 
-	    	return testSubmission;
-	    	//end test
+			SubmissionAttribute submissionAttributeAffiliationStudent = new SubmissionAttribute();
+			submissionAttributeAffiliationStudent.setKey(AFFILIATION_STUDENT);
+			submissionAttributeAffiliationStudent.setValueText("true");
+			submissionAttributeAffiliationStudent.setSubmissionId(0L);
+
+			SubmissionAttribute submissionAttributeAffiliationFaculty = new SubmissionAttribute();
+			submissionAttributeAffiliationFaculty.setKey(AFFILIATION_FACULTY);
+			submissionAttributeAffiliationFaculty.setValueText("false");
+			submissionAttributeAffiliationFaculty.setSubmissionId(0L);
+
+			SubmissionAttribute submissionAttributeAffiliationStaff = new SubmissionAttribute();
+			submissionAttributeAffiliationStaff.setKey(AFFILIATION_STAFF);
+			submissionAttributeAffiliationStaff.setValueText("false");
+			submissionAttributeAffiliationStaff.setSubmissionId(0L);
+
+			SubmissionAttribute submissionAttributeAffiliationOther = new SubmissionAttribute();
+			submissionAttributeAffiliationOther.setKey(AFFILIATION_OTHER);
+			submissionAttributeAffiliationOther.setValueText("true");
+			submissionAttributeAffiliationOther.setSubmissionId(0L);
+
+			ArrayList<SubmissionAttribute> attributes = new ArrayList<SubmissionAttribute>();
+			attributes.add(submissionAttributeSummary);
+			attributes.add(submissionAttributeEmail);
+			attributes.add(submissionAttributeContactMe);
+			attributes.add(submissionAttributeAffiliationStudent);
+			attributes.add(submissionAttributeAffiliationFaculty);
+			attributes.add(submissionAttributeAffiliationStaff);
+			attributes.add(submissionAttributeAffiliationOther);
+
+			testSubmission.setAttributes(attributes);
+
+			return testSubmission;
+			//end test
 			//return getDao().findSubmissionById(queryParams.getLong("id"));
-		} catch(JSONException je) {
+		} catch (JSONException je) {
 			LOG.error("JSONException in :" + data + " : " + je.getMessage());
 			return null; //and more sadness
 		}
 	}
-	
+
 	@GET
 	@Path("/getAllSubmissions")
 	public List<Submission> getAllSubmissions() {
@@ -334,18 +335,18 @@ public class CXFReportingService {
 		//end test
 		//return getDao().findAllSubmissions();
 	}
-	
+
 	//test
 	private List<Submission> testSubmissions() {
 		Submission testSubmission = new Submission();
-		java.util.Date date= new java.util.Date();
+		java.util.Date date = new java.util.Date();
 		Timestamp timestamp = new Timestamp(date.getTime());
 		testSubmission.setId(0L);
 		testSubmission.setPostDate(timestamp);
 		testSubmission.setType("test");
-		testSubmission.setArchivedDate(timestamp);		
+		testSubmission.setArchivedDate(timestamp);
 		testSubmission.setRevisionNumber(0L);
-    	
+
 		Submission testSubmission2 = new Submission();
 		testSubmission2.setId(1L);
 		Timestamp timestamp2 = new Timestamp(date.getTime());

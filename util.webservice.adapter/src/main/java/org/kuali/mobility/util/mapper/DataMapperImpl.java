@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.util.mapper;
 
@@ -45,7 +44,8 @@ public class DataMapperImpl implements DataMapper {
 
 	private Integer connectionTimeoutMs = new Integer(5000);
 
-	private Integer readTimeoutMs = new Integer(10000);;
+	private Integer readTimeoutMs = new Integer(10000);
+	;
 
 	@Override
 	public <B extends Object> B mapData(B responseObject, final URL source, final String mappingFile) throws ClassNotFoundException, IOException {
@@ -98,9 +98,8 @@ public class DataMapperImpl implements DataMapper {
 		if (xstream != null) {
 			try {
 				responseObject = (B) xstream.fromXML(this.getClass().getClassLoader().getResourceAsStream(dataFile));
-			}
-			catch( NullPointerException npe ) {
-				LOG.error( npe.getLocalizedMessage(), npe );
+			} catch (NullPointerException npe) {
+				LOG.error(npe.getLocalizedMessage(), npe);
 			}
 		}
 		return responseObject;
@@ -137,9 +136,8 @@ public class DataMapperImpl implements DataMapper {
 			final String objectClass = mapping.getClassName();
 
 			XStream xstream;
-			if( mapping.getMimeType() != null && "application/json".equalsIgnoreCase(mapping.getMimeType()) )
-			{
-				LOG.debug( "Loading xstream jettison mapped xml driver.");
+			if (mapping.getMimeType() != null && "application/json".equalsIgnoreCase(mapping.getMimeType())) {
+				LOG.debug("Loading xstream jettison mapped xml driver.");
 				xstream = new XStream(new JettisonMappedXmlDriver()) {
 					@Override
 					protected MapperWrapper wrapMapper(MapperWrapper next) {
@@ -158,9 +156,7 @@ public class DataMapperImpl implements DataMapper {
 						};
 					}
 				};
-			}
-			else
-			{
+			} else {
 				xstream = new XStream() {
 					@Override
 					protected MapperWrapper wrapMapper(MapperWrapper next) {

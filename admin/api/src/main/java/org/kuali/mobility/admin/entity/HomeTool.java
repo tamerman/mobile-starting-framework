@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.admin.entity;
 
@@ -41,12 +40,13 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * Defines an object to link HomeScreen objects with Tool objects
+ *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
  * @since 1.0.0
  */
 @Entity
-@Table(name="KME_HM_TL_T")
-@XmlRootElement(name="homeTool")
+@Table(name = "KME_HM_TL_T")
+@XmlRootElement(name = "homeTool")
 public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	private static final long serialVersionUID = -8942674782383943102L;
@@ -56,58 +56,60 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
-	@Column(name="ID")
+	@Column(name = "ID")
 	private Long homeToolId;
 
 	/**
 	 * Home Screen ID for this <code>HomeTool</code>.
 	 */
-	@Column(name="HM_SCRN_ID", insertable=false, updatable=false)
+	@Column(name = "HM_SCRN_ID", insertable = false, updatable = false)
 	private Long homeScreenId;
 
 	/**
 	 * Tool ID for this <code>HomeTool</code>.
 	 */
-	@Column(name="TL_ID", insertable=false, updatable=false)
+	@Column(name = "TL_ID", insertable = false, updatable = false)
 	private Long toolId;
 
 	/**
 	 * Order index for this <code>HomeTool</code>.
 	 */
-	@Column(name="ORDR")
+	@Column(name = "ORDR")
 	private int order;
 
 	/**
 	 * Home screen this <code>HomeTool</code> is linked too.
 	 */
 	@ManyToOne
-	@JoinColumn(name="HM_SCRN_ID")
+	@JoinColumn(name = "HM_SCRN_ID")
 	private HomeScreen homeScreen;
 
 	/**
 	 * Tool <code>HomeTool</code> is linked too.
 	 */
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="TL_ID")
+	@JoinColumn(name = "TL_ID")
 	private Tool tool;
 
 	/**
 	 * Version of this <code>HomeTool</code>.
 	 */
 	@Version
-	@Column(name="VER_NBR")
+	@Column(name = "VER_NBR")
 	private Long versionNumber;
 
 	/**
 	 * Creates a new instance of a <code>HomeTool</code>
 	 */
-	public HomeTool() {}
+	public HomeTool() {
+	}
 
 	/**
 	 * Creates a new instance of a <code>HomeTool</code>.
+	 *
 	 * @param homeScreen <code>Homescreen</code> this <code>HomeTool</code> is linked to.
-	 * @param tool <code>Tool</code> this <code>HomeTool</code> is linked to.
-	 * @param order Order for this <code>HomeTool</code>.
+	 * @param tool       <code>Tool</code> this <code>HomeTool</code> is linked to.
+	 * @param order      Order for this <code>HomeTool</code>.
 	 */
 	public HomeTool(HomeScreen homeScreen, Tool tool, int order) {
 		this.homeScreen = homeScreen;
@@ -118,9 +120,9 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 	}
 
 
-
 	/**
 	 * Gets the homeToolId for this <code>HomeTool</code>.
+	 *
 	 * @return the homeToolId
 	 */
 	public Long getHomeToolId() {
@@ -129,6 +131,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Sets the homeToolId for this <code>HomeTool</code>.
+	 *
 	 * @param homeToolId the homeToolId to set
 	 */
 	public void setHomeToolId(Long homeToolId) {
@@ -137,6 +140,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Gets the homeScreenId for this <code>HomeTool</code>.
+	 *
 	 * @return the homeScreenId
 	 */
 	public Long getHomeScreenId() {
@@ -145,6 +149,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Sets the homeScreenId for this <code>HomeTool</code>.
+	 *
 	 * @param homeScreenId the homeScreenId to set
 	 */
 	public void setHomeScreenId(Long homeScreenId) {
@@ -153,6 +158,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Gets the toolId for this <code>HomeTool</code>.
+	 *
 	 * @return the toolId
 	 */
 	public Long getToolId() {
@@ -161,6 +167,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Sets the toolId for this <code>HomeTool</code>.
+	 *
 	 * @param toolId the toolId to set
 	 */
 	public void setToolId(Long toolId) {
@@ -169,6 +176,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Gets the order for this <code>HomeTool</code>.
+	 *
 	 * @return the order
 	 */
 	public int getOrder() {
@@ -177,6 +185,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Sets the order for this <code>HomeTool</code>.
+	 *
 	 * @param order the order to set
 	 */
 	public void setOrder(int order) {
@@ -185,6 +194,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Gets the versionNumber for this <code>HomeTool</code>.
+	 *
 	 * @return the versionNumber
 	 */
 	public Long getVersionNumber() {
@@ -193,6 +203,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Sets the versionNumber for this <code>HomeTool</code>.
+	 *
 	 * @param versionNumber the versionNumber to set
 	 */
 	public void setVersionNumber(Long versionNumber) {
@@ -201,6 +212,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Gets the homeScreen for this <code>HomeTool</code>.
+	 *
 	 * @return the homeScreen
 	 */
 	@XmlTransient
@@ -210,6 +222,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Sets the homeScreen for this <code>HomeTool</code>.
+	 *
 	 * @param homeScreen the homeScreen to set
 	 */
 	public void setHomeScreen(HomeScreen homeScreen) {
@@ -218,6 +231,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Gets the tool for this <code>HomeTool</code>.
+	 *
 	 * @return the tool
 	 */
 	public Tool getTool() {
@@ -226,6 +240,7 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 	/**
 	 * Sets the tool for this <code>HomeTool</code>.
+	 *
 	 * @param tool the tool to set
 	 */
 	public void setTool(Tool tool) {
@@ -249,14 +264,13 @@ public class HomeTool implements Serializable, Comparable<HomeTool> {
 
 
 	public String toJson() {
-		return  "{\"homeToolId\":" + 	homeToolId + "," + 
-				 "\"homeScreenId\":" + 	homeScreenId +  "," + 
-				 "\"toolId\":" + 		toolId +  "," +
-				 "\"order\":" + 		order + "," +
-				 "\"tool\":" + 			tool.toJson() + "," +
-				 "\"versionNumber\":" + versionNumber + "}";
+		return "{\"homeToolId\":" + homeToolId + "," +
+				"\"homeScreenId\":" + homeScreenId + "," +
+				"\"toolId\":" + toolId + "," +
+				"\"order\":" + order + "," +
+				"\"tool\":" + tool.toJson() + "," +
+				"\"versionNumber\":" + versionNumber + "}";
 	}
 
-	
-	
+
 }

@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.library.controllers;
 
@@ -47,6 +46,7 @@ import java.util.*;
 
 /**
  * Controller for Library
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  * @since 2.3.0
  */
@@ -54,10 +54,10 @@ import java.util.*;
 @RequestMapping("/library")
 public class LibraryControllerImpl {
 
-	/** 
-	 * A reference to a Logger 
+	/**
+	 * A reference to a Logger
 	 */
-	private static final Logger LOG = LoggerFactory.getLogger( LibraryControllerImpl.class );
+	private static final Logger LOG = LoggerFactory.getLogger(LibraryControllerImpl.class);
 
 	/**
 	 * A reference to the <code>service</code>
@@ -69,7 +69,7 @@ public class LibraryControllerImpl {
 	/**
 	 * A reference to the KME properties
 	 */
-	@Resource(name="kmeProperties")
+	@Resource(name = "kmeProperties")
 	private Properties kmeProperties;
 
 	/**
@@ -79,63 +79,61 @@ public class LibraryControllerImpl {
 		this.service = service;
 	}
 
-	
+
 	/**
 	 * The main menu for the library tool
 	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String index() {
-		if("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion","classic"))) {
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
 			return "ui3/library/index";
-		}
-		else{
+		} else {
 			return "library/index";
 		}
 	}
 
 
-    /**
-     * The main menu for the library tool
-     */
-    @RequestMapping(value="home", method = RequestMethod.GET)
-    public String ui3Home() {
-            return "ui3/library/partials/home";
-    }
+	/**
+	 * The main menu for the library tool
+	 */
+	@RequestMapping(value = "home", method = RequestMethod.GET)
+	public String ui3Home() {
+		return "ui3/library/partials/home";
+	}
 
 	/**
-	 *	Used to retrieve libraries and then displays the menu selection for the Library Contact Details selection screen 
+	 * Used to retrieve libraries and then displays the menu selection for the Library Contact Details selection screen
 	 */
 	@RequestMapping(value = "/viewContact", method = RequestMethod.GET)
 	public String viewContact(Model uiModel) {
-		
+
 		Map<String, List<Library>> libraryMap = this.service.getLibrariesByCampus();
 		List<String> campusCodes = this.service.getCampusWithLibraries();
-		
-		uiModel.addAttribute("campusCodes" , campusCodes);
-		uiModel.addAttribute("libraryMap" , libraryMap);
+
+		uiModel.addAttribute("campusCodes", campusCodes);
+		uiModel.addAttribute("libraryMap", libraryMap);
 		uiModel.addAttribute("actionPage", "viewContact");
 
-		if("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion","classic"))) {
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
 			return "ui3/library/partials/selectLibrary";
-		}
-		else{
+		} else {
 			return "library/selectLibrary";
 		}
 	}
 
-	
+
 	/**
-	 *	Display the Library contact details for the selected library 
+	 * Display the Library contact details for the selected library
 	 */
 	@RequestMapping(value = "/viewContact/{id}", method = RequestMethod.GET)
 	public String viewContact(
 			HttpServletRequest request,
-			@PathVariable(value="id") int libraryId,
+			@PathVariable(value = "id") int libraryId,
 			Model uiModel) {
-		
+
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
 		boolean isAdmin = LibraryPermissions.ADMIN_EXPRESSION.evaluate(user);
-		
+
 		// Get lib id from get request. Retrieve Library record from DB.
 		Library library = service.getLibrary(libraryId);
 		LibraryContactDetail lcd = library.getLibraryContactDetail();
@@ -145,14 +143,13 @@ public class LibraryControllerImpl {
 		uiModel.addAttribute("libraryContactDetail", lcd);
 		uiModel.addAttribute("isAdmin", isAdmin);
 
-		if("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion","classic"))) {
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
 			return "ui3/library/partials/viewContact";
-		}
-		else{
+		} else {
 			return "library/viewContact";
 		}
 	}
-	
+
 	/**
 	 * Admin page to allow users to edit contact details of a specific library
 	 */
@@ -160,59 +157,58 @@ public class LibraryControllerImpl {
 	public String editContact(
 			HttpServletRequest request,
 			@PathVariable(value = "id") int libraryId,
-			Model uiModel){
-		
+			Model uiModel) {
+
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
-		
+
 		// If the user is not admin take him away from here
-		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)){
-			return "redirect:/library/viewContact/"+libraryId;
+		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)) {
+			return "redirect:/library/viewContact/" + libraryId;
 		}
-		
+
 		Library library = service.getLibrary(libraryId);
 		uiModel.addAttribute("contactDetail", library.getLibraryContactDetail());
 		uiModel.addAttribute("libraryId", libraryId);
-        uiModel.addAttribute("library", library);
+		uiModel.addAttribute("library", library);
 
-		if("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion","classic"))) {
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
 			return "ui3/library/partials/editContact";
-		}
-		else{
+		} else {
 			return "library/editContact";
 		}
 	}
-	
-	
+
+
 	/**
 	 * Invoked when the user submits the form to edit the contact details of a library
 	 */
 	@RequestMapping(value = "/editContact/{id}", method = RequestMethod.POST)
 	public String editContact(
 			HttpServletRequest request,
-			@PathVariable(value="id") long libraryId,
-			@RequestParam(value="telephone") String telephone,
-			@RequestParam(value="fax") String fax,
-			@RequestParam(value="generalInfoDesk") String generalInfoDesk,
-			@RequestParam(value="email") String email,
-			@RequestParam(value="postalAddress") String postalAddress,
-			@RequestParam(value="physicalAddress") String physicalAddress,
-			@RequestParam(value="latitude") String latitude,
-			@RequestParam(value="longitude") String longitude,
-			Model uiModel){
-		
+			@PathVariable(value = "id") long libraryId,
+			@RequestParam(value = "telephone") String telephone,
+			@RequestParam(value = "fax") String fax,
+			@RequestParam(value = "generalInfoDesk") String generalInfoDesk,
+			@RequestParam(value = "email") String email,
+			@RequestParam(value = "postalAddress") String postalAddress,
+			@RequestParam(value = "physicalAddress") String physicalAddress,
+			@RequestParam(value = "latitude") String latitude,
+			@RequestParam(value = "longitude") String longitude,
+			Model uiModel) {
+
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
 
 		// If the user is not admin take him away from here
-		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)){
-			return "redirect:/library/viewContact/"+libraryId;
+		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)) {
+			return "redirect:/library/viewContact/" + libraryId;
 		}
-		
+
 		Library library = service.getLibrary(libraryId);
 		LibraryContactDetail lcd = library.getLibraryContactDetail();
-		if (lcd == null){
+		if (lcd == null) {
 			lcd = new LibraryContactDetail();
 		}
-		
+
 		lcd.setEmail(email);
 		lcd.setFax(fax);
 		lcd.setGeneralInfoDesk(generalInfoDesk);
@@ -221,41 +217,40 @@ public class LibraryControllerImpl {
 		lcd.setPhysicalAddress(fixNewLines(physicalAddress));
 		lcd.setPostalAddress(fixNewLines(postalAddress));
 		lcd.setTelephone(telephone);
-		
+
 		library = service.saveLibrary(library);
-		
+
 		uiModel.addAttribute("library", library);
-		return "redirect:/library/viewContact/"+libraryId;
+		return "redirect:/library/viewContact/" + libraryId;
 	}
-	
-	
+
+
 	/**
-	 *	Used to retrieve libraries and then displays the menu selection for the Library operating hours selection screen 
+	 * Used to retrieve libraries and then displays the menu selection for the Library operating hours selection screen
 	 */
 	@RequestMapping(value = "/viewHours", method = RequestMethod.GET)
 	public String viewHours(
 			HttpServletRequest request,
 			Model uiModel) {
-		
+
 		Map<String, List<Library>> libraryMap = this.service.getLibrariesByCampus();
 		List<String> campusCodes = this.service.getCampusWithLibraries();
 		// TODO get the campus objects for these campuses to get the campus names
-		
-		uiModel.addAttribute("campusCodes" , campusCodes);
-		uiModel.addAttribute("libraryMap" , libraryMap );
+
+		uiModel.addAttribute("campusCodes", campusCodes);
+		uiModel.addAttribute("libraryMap", libraryMap);
 		uiModel.addAttribute("actionPage", "viewHours");
 
 
-		if("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion","classic"))) {
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
 			return "ui3/library/partials/selectLibrary";
-		}
-		else{
+		} else {
 			return "library/selectLibrary";
 		}
 
 	}
-	
-	
+
+
 	/**
 	 * Allows the user to view the hours for a library
 	 */
@@ -264,135 +259,134 @@ public class LibraryControllerImpl {
 			HttpServletRequest request,
 			@PathVariable(value = "id") int libraryId,
 			Model uiModel) {
-		
-		
+
+
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
 		boolean isAdmin = LibraryPermissions.ADMIN_EXPRESSION.evaluate(user);
-		
+
 		Library library = service.getLibrary(libraryId);
 		List<LibraryHourSet> hourSets = service.getLibraryHourSets(libraryId);
 		List<LibraryHourSet> displayHourSets = new ArrayList<LibraryHourSet>(hourSets.size());
-		for (LibraryHourSet lhs : hourSets){
+		for (LibraryHourSet lhs : hourSets) {
 			displayHourSets.add(service.getDisplayableHoursSet(lhs));
 		}
 		// Based on Library record get Library Contact Details
 		LibraryContactDetail lcd = library.getLibraryContactDetail();
-		
+
 		uiModel.addAttribute("hourSets", displayHourSets);
 		uiModel.addAttribute("library", library);
 		uiModel.addAttribute("libraryContactDetails", lcd);
 		uiModel.addAttribute("isAdmin", isAdmin);
 
 
-		if("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion","classic"))) {
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
 			return "ui3/library/partials/viewHours";
-		}
-		else{
+		} else {
 			return "library/viewHours";
 		}
 	}
-	
-	
+
+
 	/**
 	 * Admin page to edit the hours
 	 */
-	@RequestMapping(value="/editHours/{id}" , method = RequestMethod.GET)
+	@RequestMapping(value = "/editHours/{id}", method = RequestMethod.GET)
 	public String editHours(
 			HttpServletRequest request,
-			@PathVariable(value="id") long libraryId,
-			Model uiModel){
-		
+			@PathVariable(value = "id") long libraryId,
+			Model uiModel) {
+
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
-		
+
 		// If the user is not admin take him away from here
-		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)){
-			return "redirect:/library/viewHours/"+libraryId;
+		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)) {
+			return "redirect:/library/viewHours/" + libraryId;
 		}
-		
+
 		// Get lib id from get request. Retrieve Library record from DB.
 		Library library = service.getLibrary(libraryId);
 		List<LibraryHourSet> hourSets = service.getLibraryHourSets(libraryId);
-		
+
 		uiModel.addAttribute("library", library);
 		uiModel.addAttribute("libraryId", libraryId);
 		uiModel.addAttribute("hourSets", hourSets);
 
 
-        if("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion","classic"))) {
-            return "ui3/library/partials/editHours";
-        }
-        else{
-            return "library/editHours";
-        }
+		if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
+			return "ui3/library/partials/editHours";
+		} else {
+			return "library/editHours";
+		}
 
-		
+
 	}
-	
+
 	/**
 	 * Invoked when the user saves edited hours.
 	 */
-	@RequestMapping(value="/editHours/{id}" , method = RequestMethod.POST)
+	@RequestMapping(value = "/editHours/{id}", method = RequestMethod.POST)
 	public String editHours(
 			HttpServletRequest request,
-			@PathVariable(value="id") int libraryId){
-		
+			@PathVariable(value = "id") int libraryId) {
+
 		User user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
-		
+
 		// If the user is not admin take him away from here
-		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)){
-			return "redirect:/library/viewHours/"+libraryId;
+		if (!LibraryPermissions.ADMIN_EXPRESSION.evaluate(user)) {
+			return "redirect:/library/viewHours/" + libraryId;
 		}
-		
+
 		List<LibraryHourSet> hourSets = service.getLibraryHourSets(libraryId);
 		LibraryHourSet hourSet;
 		List<LibraryHour> hours;
 		LibraryHour hour;
 
-		for (int hsIdx = 0 ; hsIdx < hourSets.size() ; hsIdx++){
+		for (int hsIdx = 0; hsIdx < hourSets.size(); hsIdx++) {
 			hourSet = hourSets.get(hsIdx);
 			hours = hourSet.getHours();
-			
-			for(int hIdx = 0 ; hIdx < hours.size() ; hIdx++){
+
+			for (int hIdx = 0; hIdx < hours.size(); hIdx++) {
 				hour = hours.get(hIdx);
 				int hourSetIndex = hsIdx + 1;
 				int hourIndex = hIdx + 1;
-				if( request.getParameter("s"+ hourSetIndex +"h"+ hourIndex + "closed") == null){
-					hour.setFromTime(this.stringToDate("HH:mm:ss" , request.getParameter("s"+ hourSetIndex +"h"+ hourIndex +"fromTime")));
-					hour.setToTime(this.stringToDate("HH:mm:ss" , request.getParameter("s"+ hourSetIndex +"h"+ hourIndex +"toTime")));
-				}else{
+				if (request.getParameter("s" + hourSetIndex + "h" + hourIndex + "closed") == null) {
+					hour.setFromTime(this.stringToDate("HH:mm:ss", request.getParameter("s" + hourSetIndex + "h" + hourIndex + "fromTime")));
+					hour.setToTime(this.stringToDate("HH:mm:ss", request.getParameter("s" + hourSetIndex + "h" + hourIndex + "toTime")));
+				} else {
 					hour.setFromTime(null);
 					hour.setToTime(null);
 				}
-				hours.set(hIdx , hour);
+				hours.set(hIdx, hour);
 			}
 			hourSet.setHours(hours);
 			service.saveLibraryHourSets(hourSet);
 		}
 
-        // Call the view hours controller
-        return "redirect:/library/viewHours/"+libraryId;
+		// Call the view hours controller
+		return "redirect:/library/viewHours/" + libraryId;
 	}
-	
+
 
 	/**
 	 * Replace new lines with HTML friendly versions
+	 *
 	 * @param string
 	 * @return
 	 */
-	private static final String fixNewLines(String string){
+	private static final String fixNewLines(String string) {
 		string = string.replace("\r\n", "\n");
 		string = string.replace("\r", "\n");
 		string = string.replace("\n", "<br/>");
 		return string;
 	}
-	
-	private Date stringToDate(String format, String time ){
+
+	private Date stringToDate(String format, String time) {
 		Date date = null;
 		DateFormat formatter = new SimpleDateFormat(format);
-		try{
-			date = formatter.parse(time+":00");
-		}catch(Exception e){
-			LOG.error(">>>> stringToDate : "+e.getMessage());
+		try {
+			date = formatter.parse(time + ":00");
+		} catch (Exception e) {
+			LOG.error(">>>> stringToDate : " + e.getMessage());
 		}
 		return date;
 	}

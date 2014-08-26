@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.people.entity;
 
@@ -37,8 +36,8 @@ import org.kuali.mobility.people.service.util.PersonTransform;
 
 /**
  * An implementation of a group
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
- * @since
  */
 //@SuppressWarnings("serial")
 @XmlRootElement(name = "group")
@@ -48,51 +47,51 @@ public class GroupImpl implements Serializable, Group {
 	 * UUID for this class
 	 */
 	private static final long serialVersionUID = 5993041300536395824L;
-	
+
 	/**
 	 * Distinguished Name
 	 */
 	private String distinguishedName;
-	
+
 	/**
 	 * Display Name
 	 */
 	private String displayName;
-	
+
 	/**
 	 * Descriptions
 	 */
 	private List<String> descriptions;
-	
+
 	/**
 	 * Email
 	 */
 	private String email;
-	
+
 	/**
 	 * Telephone Number
 	 */
 	private String telephoneNumber;
-	
+
 	/**
 	 * Facsimile Telephone Number
 	 */
 	private String facsimileTelephoneNumber;
-	
+
 	/**
 	 * Members
 	 */
 	//    @XmlElementWrapper
 	//    @XmlElement(name = "member")
 	private List<PersonImpl> members;
-	
+
 	/**
 	 * Owners
 	 */
 	//    @XmlElementWrapper
 	//    @XmlElement(name = "owner")
 	private List<PersonImpl> owners;
-	
+
 	/**
 	 * Subgroups
 	 */
@@ -179,35 +178,35 @@ public class GroupImpl implements Serializable, Group {
 	 */
 	@Override
 	public String getEmail() {
-		 return email;
+		return email;
 	}
-	
-	
+
+
 	/*
 	 * (non-Javadoc)
 	 * @see org.kuali.mobility.people.entity.Group#setEmail(java.lang.String)
 	 */
 	@Override
 	public void setEmail(String email) {
-		 this.email = email;
+		this.email = email;
 	}
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see org.kuali.mobility.people.entity.Group#getTelephoneNumber()
 	 */
 	@Override
 	public String getTelephoneNumber() {
-		 return telephoneNumber;
+		return telephoneNumber;
 	}
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see org.kuali.mobility.people.entity.Group#setTelephoneNumber(java.lang.String)
 	 */
 	@Override
 	public void setTelephoneNumber(String telephoneNumber) {
-		 this.telephoneNumber = telephoneNumber;
+		this.telephoneNumber = telephoneNumber;
 	}
 
 	/*
@@ -215,7 +214,7 @@ public class GroupImpl implements Serializable, Group {
 	 * @see org.kuali.mobility.people.entity.Group#getFacsimileTelephoneNumber()
 	 */
 	public String getFacsimileTelephoneNumber() {
-		 return facsimileTelephoneNumber;
+		return facsimileTelephoneNumber;
 	}
 
 	/*
@@ -232,7 +231,7 @@ public class GroupImpl implements Serializable, Group {
 	 */
 	@XmlElement
 	public List<PersonImpl> getMembers() {
-		 return members;
+		return members;
 	}
 
 	/*
@@ -240,7 +239,7 @@ public class GroupImpl implements Serializable, Group {
 	 * @see org.kuali.mobility.people.entity.Group#setMembers(java.util.List)
 	 */
 	public void setMembers(List<? extends Person> members) {
-		 CollectionUtils.collect( members, new PersonTransform(), this.members );
+		CollectionUtils.collect(members, new PersonTransform(), this.members);
 	}
 
 	/*
@@ -248,8 +247,8 @@ public class GroupImpl implements Serializable, Group {
 	 * @see org.kuali.mobility.people.entity.Group#getOwners()
 	 */
 	@XmlElement
-	 public List<PersonImpl> getOwners() {
-		 return owners;
+	public List<PersonImpl> getOwners() {
+		return owners;
 	}
 
 	/*
@@ -257,7 +256,7 @@ public class GroupImpl implements Serializable, Group {
 	 * @see org.kuali.mobility.people.entity.Group#setOwners(java.util.List)
 	 */
 	public void setOwners(List<? extends Person> owners) {
-		 CollectionUtils.collect( owners, new PersonTransform(), this.owners );
+		CollectionUtils.collect(owners, new PersonTransform(), this.owners);
 	}
 
 	/*
@@ -266,7 +265,7 @@ public class GroupImpl implements Serializable, Group {
 	 */
 	@XmlElement
 	public List<GroupImpl> getSubGroups() {
-		 return subGroups;
+		return subGroups;
 	}
 
 	/*
@@ -274,7 +273,7 @@ public class GroupImpl implements Serializable, Group {
 	 * @see org.kuali.mobility.people.entity.Group#setSubGroups(java.util.List)
 	 */
 	public void setSubGroups(List<? extends Group> subGroups) {
-		 CollectionUtils.collect( subGroups, new GroupTransform(), this.subGroups );
+		CollectionUtils.collect(subGroups, new GroupTransform(), this.subGroups);
 	}
 
 }

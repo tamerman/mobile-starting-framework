@@ -1,26 +1,26 @@
 /*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
 
 //  Copyright 2014 The Kuali Foundation Licensed under the Educational Community
 //  License, Version 2.0 (the "License"); you may not use this file except in
@@ -37,10 +37,11 @@
  * Controller for the form
  */
 grades.factory("GradesService",
-    ['$q','$http',
-        function($q, $http) {
+    ['$q', '$http',
+        function ($q, $http) {
 
-            function GradesService(){}
+            function GradesService() {
+            }
 
             /**
              * Gets the grade from the start and end date
@@ -48,23 +49,24 @@ grades.factory("GradesService",
              * @param endDate End date to filter the results
              * @returns {*}
              */
-            GradesService.prototype.getGrades = function(startDate, endDate){
+            GradesService.prototype.getGrades = function (startDate, endDate) {
                 var deferred = $q.defer();
-                var parameters = {'startDate' : startDate, 'endDate' : endDate};
+                var parameters = {'startDate': startDate, 'endDate': endDate};
                 $http({
                     method: 'GET',
-                    url: window.kme.serverDetails.getContextPath()+ "/services/grades/getModuleResults",
-                    params : parameters
-                }).success(function(data, status, headers, config) {
-                        if( status != 200 ) {
-                            deferred.reject({code : 1 , message : "Error from server"});
-                        }
-                        else{
-                            deferred.resolve(data);
-                        };
-                    }).error(function(data, status, headers, config) {
-                        deferred.reject({code : 1 , message : "Error from server"});
-                    });
+                    url: window.kme.serverDetails.getContextPath() + "/services/grades/getModuleResults",
+                    params: parameters
+                }).success(function (data, status, headers, config) {
+                    if (status != 200) {
+                        deferred.reject({code: 1, message: "Error from server"});
+                    }
+                    else {
+                        deferred.resolve(data);
+                    }
+                    ;
+                }).error(function (data, status, headers, config) {
+                    deferred.reject({code: 1, message: "Error from server"});
+                });
                 return deferred.promise;
             };
 

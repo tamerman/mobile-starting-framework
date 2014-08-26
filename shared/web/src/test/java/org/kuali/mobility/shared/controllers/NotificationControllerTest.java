@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.shared.controllers;
 
@@ -63,15 +62,15 @@ import static org.mockito.Mockito.when;
 public class NotificationControllerTest {
 	private static final Logger LOG = LoggerFactory.getLogger(NotificationControllerTest.class);
 
-	private static final String[] CAMPUS = {"ALL","C1","C2","C3"};
+	private static final String[] CAMPUS = {"ALL", "C1", "C2", "C3"};
 	private static final String TITLE = "Faux Title";
 	private static final String MESSAGE = "Faux message";
-	private static final String[] DEVICE_ID = {"1234567890","0987654321"};
+	private static final String[] DEVICE_ID = {"1234567890", "0987654321"};
 	private static final String EMPTY_JSON = "[]";
 	private static final String FULL_JSON = "[{\"message\":\"Faux message\",\"primaryCampus\":\"ALL\",\"title\":\"Faux Title\"},{\"message\":\"Faux message\",\"primaryCampus\":\"C1\",\"title\":\"Faux Title\"},{\"message\":\"Faux message\",\"primaryCampus\":\"C2\",\"title\":\"Faux Title\"},{\"message\":\"Faux message\",\"primaryCampus\":\"C3\",\"title\":\"Faux Title\"},{\"message\":\"Faux message\",\"primaryCampus\":\"ALL\",\"title\":\"Faux Title\"},{\"message\":\"Faux message\",\"primaryCampus\":\"C1\",\"title\":\"Faux Title\"},{\"message\":\"Faux message\",\"primaryCampus\":\"C2\",\"title\":\"Faux Title\"},{\"message\":\"Faux message\",\"primaryCampus\":\"C3\",\"title\":\"Faux Title\"}]";
 	private static final String FILTERED_JSON = "[{\"message\":\"Faux message\",\"primaryCampus\":\"ALL\",\"title\":\"Faux Title\"}]";
 	private static final String REQUEST_URL = "/woot";
-	private static final String VIEW_NAME = "redirect:"+REQUEST_URL;
+	private static final String VIEW_NAME = "redirect:" + REQUEST_URL;
 
 	private static MockServletContext servletContext;
 	private NotificationController controller;
@@ -100,14 +99,14 @@ public class NotificationControllerTest {
 	public void testNotificationsWithNullUserNotifications() {
 		when(getService().findAllValidNotifications(any(Date.class))).thenReturn(getNotificationList());
 		when(getService().findUserNotificationByNotificationId(any(Long.class))).thenReturn(null);
-		String json = getController().notifications(getRequest(),null,getUiModel());
+		String json = getController().notifications(getRequest(), null, getUiModel());
 		assertTrue("Did not received notifications and should have.", FULL_JSON.equals(json));
 	}
 
 	@Test
 	public void testNotificationsWithNullNotifications() {
 		when(getService().findAllValidNotifications(any(Date.class))).thenReturn(null);
-		String json = getController().notifications(getRequest(),null,getUiModel());
+		String json = getController().notifications(getRequest(), null, getUiModel());
 		assertTrue("Received notifications and should not have.", EMPTY_JSON.equals(json));
 	}
 
@@ -115,19 +114,20 @@ public class NotificationControllerTest {
 	public void testNotificationsWithUserNotifications() {
 		when(getService().findAllValidNotifications(any(Date.class))).thenReturn(getNotificationList());
 		when(getService().findUserNotificationByNotificationId(any(Long.class))).thenAnswer(
-			new Answer<UserNotification>() {
-				boolean didAnswer = false;
-				@Override
-				public UserNotification answer(InvocationOnMock invocationOnMock) throws Throwable {
-					if(didAnswer) {
-						return new UserNotification();
-					} else {
-						didAnswer = true;
-						return null;
+				new Answer<UserNotification>() {
+					boolean didAnswer = false;
+
+					@Override
+					public UserNotification answer(InvocationOnMock invocationOnMock) throws Throwable {
+						if (didAnswer) {
+							return new UserNotification();
+						} else {
+							didAnswer = true;
+							return null;
+						}
 					}
-				}
-		});
-		String json = getController().notifications(getRequest(),DEVICE_ID[0],getUiModel());
+				});
+		String json = getController().notifications(getRequest(), DEVICE_ID[0], getUiModel());
 		assertTrue("Did not receive notifications and should have.", FILTERED_JSON.equals(json));
 	}
 
@@ -135,9 +135,9 @@ public class NotificationControllerTest {
 	public void testSubmit() {
 		User user = new UserImpl();
 		user.setRequestURL(REQUEST_URL);
-		getRequest().getSession().setAttribute(Constants.KME_USER_KEY,user);
-		String viewName = getController().submit(getRequest(),getUiModel(),null,null);
-		assertTrue("Failed to find proper view name.",VIEW_NAME.equals(viewName));
+		getRequest().getSession().setAttribute(Constants.KME_USER_KEY, user);
+		String viewName = getController().submit(getRequest(), getUiModel(), null, null);
+		assertTrue("Failed to find proper view name.", VIEW_NAME.equals(viewName));
 	}
 
 	protected List<Notification> getNotificationList() {
@@ -148,30 +148,30 @@ public class NotificationControllerTest {
 		// The other should start tomorrow and end the following day
 		int i = 0;
 		Notification notice;
-		for(String s : CAMPUS) {
+		for (String s : CAMPUS) {
 			i++;
 			notice = new Notification();
 			notice.setPrimaryCampus(s);
 			notice.setTitle(TITLE);
 			notice.setMessage(MESSAGE);
 			Calendar cal = Calendar.getInstance();
-			notice.setStartDate(new Timestamp( cal.getTimeInMillis()));
-			cal.add(Calendar.DATE,1);
+			notice.setStartDate(new Timestamp(cal.getTimeInMillis()));
+			cal.add(Calendar.DATE, 1);
 			notice.setEndDate(new Timestamp(cal.getTimeInMillis()));
 			notice.setNotificationId(new Long(i));
 			notice.setNotificationType(new Long(42));
 			notices.add(notice);
 		}
-		for(String s : CAMPUS) {
+		for (String s : CAMPUS) {
 			i++;
 			notice = new Notification();
 			notice.setPrimaryCampus(s);
 			notice.setTitle(TITLE);
 			notice.setMessage(MESSAGE);
 			Calendar cal = Calendar.getInstance();
-			cal.add(Calendar.DATE,1);
-			notice.setStartDate(new Timestamp( cal.getTimeInMillis()));
-			cal.add(Calendar.DATE,1);
+			cal.add(Calendar.DATE, 1);
+			notice.setStartDate(new Timestamp(cal.getTimeInMillis()));
+			cal.add(Calendar.DATE, 1);
 			notice.setEndDate(new Timestamp(cal.getTimeInMillis()));
 			notice.setNotificationId(new Long(i));
 			notice.setNotificationType(new Long(53));

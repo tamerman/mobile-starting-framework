@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.computerlabs.dao;
 
@@ -55,94 +54,89 @@ import java.util.List;
  */
 public class ComputerLabsDaoHTCImpl implements ComputerLabsDao, ApplicationContextAware {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ComputerLabsDaoHTCImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ComputerLabsDaoHTCImpl.class);
 
-    private ApplicationContext applicationContext;
-    private List<? extends LabGroup> labGroups;
+	private ApplicationContext applicationContext;
+	private List<? extends LabGroup> labGroups;
 
-    @Override
-    public Lab getLab( String labUid ) {
-        Lab myLab = null;
-        return myLab;
-    }
+	@Override
+	public Lab getLab(String labUid) {
+		Lab myLab = null;
+		return myLab;
+	}
 
-    @Override
-    public List<? extends Lab> getLabs( String locationId, String buildingCode ) {
-        List<? extends Lab> myLabs = new ArrayList<Lab>();
-        return myLabs;
-    }
+	@Override
+	public List<? extends Lab> getLabs(String locationId, String buildingCode) {
+		List<? extends Lab> myLabs = new ArrayList<Lab>();
+		return myLabs;
+	}
 
-    @Override
-    public List<? extends Location> getLocations( String groupId ) {
-        List<? extends Location> myLocations = null;
-        return myLocations;
-    }
+	@Override
+	public List<? extends Location> getLocations(String groupId) {
+		List<? extends Location> myLocations = null;
+		return myLocations;
+	}
 
-    @Override
-    public List<? extends LabGroup> getLabGroups() {
-        return labGroups;
-    }
+	@Override
+	public List<? extends LabGroup> getLabGroups() {
+		return labGroups;
+	}
 
-    @Override
-    public LabGroup getLabGroup(String groupId) {
-        LabGroup myGroup = null;
-        return myGroup;
-    }
+	@Override
+	public LabGroup getLabGroup(String groupId) {
+		LabGroup myGroup = null;
+		return myGroup;
+	}
 
-    /**
-     * @return the applicationContext
-     */
-    public ApplicationContext getApplicationContext() {
-        return applicationContext;
-    }
+	/**
+	 * @return the applicationContext
+	 */
+	public ApplicationContext getApplicationContext() {
+		return applicationContext;
+	}
 
-    /**
-     * @param applicationContext the applicationContext to set
-     */
-    public void setApplicationContext(ApplicationContext applicationContext) {
-        this.applicationContext = applicationContext;
-    }
+	/**
+	 * @param applicationContext the applicationContext to set
+	 */
+	public void setApplicationContext(ApplicationContext applicationContext) {
+		this.applicationContext = applicationContext;
+	}
 
-    @Override
-    public void setLabGroups(List<? extends LabGroup> labGroups) {
-        this.labGroups = labGroups;
-    }
-    
-    /*
+	@Override
+	public void setLabGroups(List<? extends LabGroup> labGroups) {
+		this.labGroups = labGroups;
+	}
+
+	/*
      * 	retrieveAndSaveSpreadsheetDataAsXML() method reads the feed url, parses the xml and writes the whole content to a xml
      *  file namely SpreadsheetData.xml under docs part of computerlabs tool. This xml can be used by computerlabs tool.
      *  
      *  NOTE: To get the feed url, create a spreadsheet, share it publicly(public on the web) and click on "Publish to the Web"
      *  under File section.
      */
-    public void retrieveAndSaveSpreadsheetDataAsXML(String feedURL) {
-        try {
-            URL url = new URL(feedURL);
-            URLConnection conn = url.openConnection();
+	public void retrieveAndSaveSpreadsheetDataAsXML(String feedURL) {
+		try {
+			URL url = new URL(feedURL);
+			URLConnection conn = url.openConnection();
 
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse(conn.getInputStream());
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			Document doc = builder.parse(conn.getInputStream());
 
-            TransformerFactory tfactory = TransformerFactory.newInstance();
-            Transformer transformer = tfactory.newTransformer();
+			TransformerFactory tfactory = TransformerFactory.newInstance();
+			Transformer transformer = tfactory.newTransformer();
 
-            transformer.transform(new DOMSource(doc), new StreamResult("../computerlabs/docs/SpreadsheetData.xml"));
-        }
-        catch( IOException ioe) {
-            LOG.info( "Exception:"+ioe.getMessage() );
-        }
-        catch( ParserConfigurationException pce) {
-            LOG.info( "Exception:"+pce.getMessage() );
-        }
-        catch( SAXException se) {
-            LOG.info( "Exception:"+se.getMessage() );
-        }
-        catch( TransformerConfigurationException tce) {
-            LOG.info( "Exception:"+tce.getMessage() );
-        }
-        catch( TransformerException te) {
-            LOG.info( "Exception:"+te.getMessage() );
-        }
-    }
+			transformer.transform(new DOMSource(doc), new StreamResult("../computerlabs/docs/SpreadsheetData.xml"));
+		} catch (IOException ioe) {
+			LOG.info("Exception:" + ioe.getMessage());
+		} catch (ParserConfigurationException pce) {
+			LOG.info("Exception:" + pce.getMessage());
+		} catch (SAXException se) {
+			LOG.info("Exception:" + se.getMessage());
+		} catch (TransformerConfigurationException tce) {
+			LOG.info("Exception:" + tce.getMessage());
+		} catch (TransformerException te) {
+			LOG.info("Exception:" + te.getMessage());
+		}
+	}
 }

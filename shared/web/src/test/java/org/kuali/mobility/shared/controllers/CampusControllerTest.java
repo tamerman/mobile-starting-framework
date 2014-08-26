@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.shared.controllers;
 
@@ -64,10 +63,10 @@ public class CampusControllerTest {
 	private static ApplicationContext applicationContext;
 
 	private static MockServletContext servletContext;
-	
+
 	@Mock
 	private AdminService adminService;
-	
+
 	private CampusController controller;
 	private Properties kmeProperties;
 
@@ -77,11 +76,11 @@ public class CampusControllerTest {
 	private static final String REDIRECT_GRADES = "redirect:/grades";
 	private static final String REDIRECT_CAMPUS = "campus";
 	private static final String USER = "fauxUser";
-	private static final String[] VIEW_CAMPUS = {"ALL","BL","CO","TEST"};
-	private static final String[] TOOL_NAMES = {"home","dining","computerlabs","",null,"TEST_TOOL","grades","maps"};
+	private static final String[] VIEW_CAMPUS = {"ALL", "BL", "CO", "TEST"};
+	private static final String[] TOOL_NAMES = {"home", "dining", "computerlabs", "", null, "TEST_TOOL", "grades", "maps"};
 
 	private static String[] getConfigLocations() {
-		return new String[] { "classpath:/CampusSpringBeans.xml" };
+		return new String[]{"classpath:/CampusSpringBeans.xml"};
 	}
 
 	@BeforeClass
@@ -96,20 +95,20 @@ public class CampusControllerTest {
 
 	@Before
 	public void preTest() {
-		this.setController((CampusController)getApplicationContext().getBean("campusController"));
+		this.setController((CampusController) getApplicationContext().getBean("campusController"));
 		this.getController().setAdminService(getAdminService());
 
 		setKmeProperties(new Properties());
 		getKmeProperties().setProperty("kme.secure.cookie", "false");
 		getController().setKmeProperties(this.getKmeProperties());
-		
+
 		when(getAdminService().getAllTools()).thenReturn(getMockToolsList());
 	}
 
 	private List<Tool> getMockToolsList() {
 		ArrayList<Tool> toolsList = new ArrayList<Tool>();
-		
-		Tool dining = new Tool();		
+
+		Tool dining = new Tool();
 		dining.setToolId(4L);
 		dining.setAlias("dining");
 		dining.setDescription("dining.home.description");
@@ -119,8 +118,8 @@ public class CampusControllerTest {
 		dining.setUrl("dining");
 		dining.setVersionNumber(0L);
 		toolsList.add(dining);
-		
-		Tool computerLabs = new Tool();		
+
+		Tool computerLabs = new Tool();
 		computerLabs.setToolId(5L);
 		computerLabs.setAlias("computerlabs");
 		computerLabs.setDescription("computerlabs.home.description");
@@ -130,7 +129,7 @@ public class CampusControllerTest {
 		computerLabs.setUrl("computerlabs");
 		computerLabs.setVersionNumber(0L);
 		toolsList.add(computerLabs);
-		
+
 		Tool grades = new Tool();
 		grades.setToolId(7L);
 		grades.setAlias("grades");
@@ -141,7 +140,7 @@ public class CampusControllerTest {
 		grades.setUrl("grades");
 		grades.setVersionNumber(0L);
 		toolsList.add(grades);
-		
+
 		Tool maps = new Tool();
 		maps.setToolId(10L);
 		maps.setAlias("maps");
@@ -151,8 +150,8 @@ public class CampusControllerTest {
 		maps.setTitle("maps.home.title");
 		maps.setUrl("maps");
 		maps.setVersionNumber(0L);
-		toolsList.add(maps);		
-		
+		toolsList.add(maps);
+
 		return toolsList;
 	}
 
@@ -166,11 +165,11 @@ public class CampusControllerTest {
 		user.setViewCampus(VIEW_CAMPUS[0]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
-		String viewName = getController().getList(request,uiModel,TOOL_NAMES[0]);
+		String viewName = getController().getList(request, uiModel, TOOL_NAMES[0]);
 
 		assertTrue("View name is incorrect.", REDIRECT_HOME.equals(viewName));
 	}
@@ -185,16 +184,16 @@ public class CampusControllerTest {
 		user.setViewCampus(VIEW_CAMPUS[0]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
-			viewName = getController().getList(request,uiModel,TOOL_NAMES[1]);
-		} catch(NullPointerException npe) {
-			LOG.error(npe.getLocalizedMessage(),npe);
-			viewName=null;
+			viewName = getController().getList(request, uiModel, TOOL_NAMES[1]);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
+			viewName = null;
 		}
 
 		assertTrue("View name is incorrect.", REDIRECT_DINING.equals(viewName));
@@ -210,16 +209,16 @@ public class CampusControllerTest {
 		user.setViewCampus(VIEW_CAMPUS[3]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
-			viewName = getController().getList(request,uiModel,TOOL_NAMES[5]);
-		} catch(NullPointerException npe) {
-			LOG.error(npe.getLocalizedMessage(),npe);
-			viewName=null;
+			viewName = getController().getList(request, uiModel, TOOL_NAMES[5]);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
+			viewName = null;
 		}
 
 		assertTrue("View name is incorrect: Expected " + REDIRECT_HOME + " and found " + viewName, REDIRECT_HOME.equals(viewName));
@@ -235,19 +234,19 @@ public class CampusControllerTest {
 		user.setViewCampus(VIEW_CAMPUS[3]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
-			viewName = getController().getList(request,uiModel,TOOL_NAMES[6]);
-		} catch(NullPointerException npe) {
-			LOG.error(npe.getLocalizedMessage(),npe);
-			viewName=null;
+			viewName = getController().getList(request, uiModel, TOOL_NAMES[6]);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
+			viewName = null;
 		}
 
-		assertTrue("View name is incorrect: Expected "+REDIRECT_GRADES+" and found "+viewName, REDIRECT_GRADES.equals(viewName));
+		assertTrue("View name is incorrect: Expected " + REDIRECT_GRADES + " and found " + viewName, REDIRECT_GRADES.equals(viewName));
 	}
 
 	@Test
@@ -260,19 +259,19 @@ public class CampusControllerTest {
 		user.setViewCampus(VIEW_CAMPUS[3]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
-			viewName = getController().getList(request,uiModel,TOOL_NAMES[7]);
-		} catch(NullPointerException npe) {
-			LOG.error(npe.getLocalizedMessage(),npe);
-			viewName=null;
+			viewName = getController().getList(request, uiModel, TOOL_NAMES[7]);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
+			viewName = null;
 		}
 
-		assertTrue("View name is incorrect: Expected "+REDIRECT_CAMPUS+" and found "+viewName, REDIRECT_CAMPUS.equals(viewName));
+		assertTrue("View name is incorrect: Expected " + REDIRECT_CAMPUS + " and found " + viewName, REDIRECT_CAMPUS.equals(viewName));
 	}
 
 	@Test
@@ -286,19 +285,19 @@ public class CampusControllerTest {
 		user.setViewCampus(VIEW_CAMPUS[3]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
 		String viewName;
 		try {
-			viewName = getController().selectCampus(request,response,uiModel,VIEW_CAMPUS[3],TOOL_NAMES[2]);
-		} catch(NullPointerException npe) {
-			LOG.error(npe.getLocalizedMessage(),npe);
-			viewName=null;
+			viewName = getController().selectCampus(request, response, uiModel, VIEW_CAMPUS[3], TOOL_NAMES[2]);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
+			viewName = null;
 		}
 
-		assertTrue("View name is incorrect: Expected "+REDIRECT_LABS+" and found "+viewName, REDIRECT_LABS.equals(viewName));
+		assertTrue("View name is incorrect: Expected " + REDIRECT_LABS + " and found " + viewName, REDIRECT_LABS.equals(viewName));
 	}
 
 	@Test
@@ -312,7 +311,7 @@ public class CampusControllerTest {
 		user.setViewCampus(VIEW_CAMPUS[3]);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_USER_KEY,user);
+		session.setAttribute(Constants.KME_USER_KEY, user);
 
 		request.setSession(session);
 
@@ -320,20 +319,20 @@ public class CampusControllerTest {
 
 		String viewName;
 		try {
-			viewName = getController().selectCampus(request,response,uiModel,VIEW_CAMPUS[3],TOOL_NAMES[5]);
-		} catch(NullPointerException npe) {
-			LOG.error(npe.getLocalizedMessage(),npe);
-			viewName=null;
+			viewName = getController().selectCampus(request, response, uiModel, VIEW_CAMPUS[3], TOOL_NAMES[5]);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
+			viewName = null;
 		}
 
-		assertTrue("View name is incorrect: Expected "+REDIRECT_HOME+" and found "+viewName, REDIRECT_HOME.equals(viewName));
+		assertTrue("View name is incorrect: Expected " + REDIRECT_HOME + " and found " + viewName, REDIRECT_HOME.equals(viewName));
 	}
 
 	@Test
 	public void testGetService() {
 		CampusService testService = getController().getCampusService();
-		assertTrue("Failed to find campus service.",testService!=null && testService.equals((CampusService)getApplicationContext().getBean("campusService")));
-		assertTrue("Failed to find a admin service",getController().getAdminService()==getAdminService());
+		assertTrue("Failed to find campus service.", testService != null && testService.equals((CampusService) getApplicationContext().getBean("campusService")));
+		assertTrue("Failed to find a admin service", getController().getAdminService() == getAdminService());
 	}
 
 	public static ApplicationContext getApplicationContext() {
@@ -367,6 +366,7 @@ public class CampusControllerTest {
 	public void setKmeProperties(Properties kmeProperties) {
 		this.kmeProperties = kmeProperties;
 	}
+
 	public AdminService getAdminService() {
 		return adminService;
 	}

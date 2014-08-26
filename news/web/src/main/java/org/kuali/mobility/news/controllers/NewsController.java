@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.news.controllers;
 
@@ -60,10 +59,10 @@ public class NewsController {
 	private NewsService newsService;
 
 	@Autowired
-    private ConfigParamService configParamService;
+	private ConfigParamService configParamService;
 
-    @Resource(name="kmeProperties")
-    private Properties kmeProperties;
+	@Resource(name = "kmeProperties")
+	private Properties kmeProperties;
 
 	/**
 	 * The main entry point for the News tool. Sets an ordered list of active
@@ -80,9 +79,9 @@ public class NewsController {
 		String campus = null;
 		if (user.getViewCampus() == null) {
 			viewName = "redirect:/campus?toolName=news";
-		} else if( "3".equalsIgnoreCase( getKmeProperties().getProperty("kme.uiVersion","classic") ) ) {
-            viewName = "ui3/news/index";
-        } else {
+		} else if ("3".equalsIgnoreCase(getKmeProperties().getProperty("kme.uiVersion", "classic"))) {
+			viewName = "ui3/news/index";
+		} else {
 			campus = user.getViewCampus();
 			List<NewsSource> sources = (List<NewsSource>) getNewsService().getNewsSources(Long.valueOf(0), ACTIVE);
 			int sampleSize = 2;
@@ -107,7 +106,7 @@ public class NewsController {
 			uiModel.addAttribute("basicSearchDiv", "div1");
 			uiModel.addAttribute("advancedSearchDiv", "div2");
 
-			
+
 			viewName = "news/newsHome";
 		}
 		return viewName;
@@ -117,9 +116,9 @@ public class NewsController {
 	 * Handles requests for feeds and articles.
 	 *
 	 * @param request
-	 * @param sourceId the id of the NewsSource for the feed/article to retrieve
+	 * @param sourceId  the id of the NewsSource for the feed/article to retrieve
 	 * @param articleId (optional) the id of an article to retrieve. If this is
-	 * not present, the whole feed is returned.
+	 *                  not present, the whole feed is returned.
 	 * @param uiModel
 	 * @return the path to the feed page or the article page, depending on the
 	 * presence of articleId
@@ -161,41 +160,41 @@ public class NewsController {
 		return viewName;
 	}
 
-    @RequestMapping(value="/templates/{key}")
-    public String getAngularTemplates(
-            @PathVariable("key") String key,
-            HttpServletRequest request,
-            Model uiModel ) {
-        return "ui3/news/templates/"+key;
-    }
+	@RequestMapping(value = "/templates/{key}")
+	public String getAngularTemplates(
+			@PathVariable("key") String key,
+			HttpServletRequest request,
+			Model uiModel) {
+		return "ui3/news/templates/" + key;
+	}
 
-    @RequestMapping(value = "/js/news.js")
-    public String getJavaScript(Model uiModel, HttpServletRequest request) {
-        return "ui3/news/js/news";
-    }
+	@RequestMapping(value = "/js/news.js")
+	public String getJavaScript(Model uiModel, HttpServletRequest request) {
+		return "ui3/news/js/news";
+	}
 
 
-    public NewsService getNewsService() {
-        return newsService;
-    }
+	public NewsService getNewsService() {
+		return newsService;
+	}
 
-    public void setNewsService(NewsService newsService) {
-        this.newsService = newsService;
-    }
+	public void setNewsService(NewsService newsService) {
+		this.newsService = newsService;
+	}
 
-    public ConfigParamService getConfigParamService() {
-        return configParamService;
-    }
+	public ConfigParamService getConfigParamService() {
+		return configParamService;
+	}
 
-    public void setConfigParamService(ConfigParamService configParamService) {
-        this.configParamService = configParamService;
-    }
+	public void setConfigParamService(ConfigParamService configParamService) {
+		this.configParamService = configParamService;
+	}
 
-    public Properties getKmeProperties() {
-        return kmeProperties;
-    }
+	public Properties getKmeProperties() {
+		return kmeProperties;
+	}
 
-    public void setKmeProperties(Properties kmeProperties) {
-        this.kmeProperties = kmeProperties;
-    }
+	public void setKmeProperties(Properties kmeProperties) {
+		this.kmeProperties = kmeProperties;
+	}
 }

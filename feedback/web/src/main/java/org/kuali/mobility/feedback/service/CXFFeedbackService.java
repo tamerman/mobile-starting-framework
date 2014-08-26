@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.feedback.service;
 
@@ -68,101 +67,105 @@ import org.springframework.web.servlet.LocaleResolver;
 
 /**
  * Implementation of the CXF Sender Service
- * 
+ *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
  * @since 3.0
  */
 @Service
 public class CXFFeedbackService implements ApplicationContextAware {
 
-	/** A reference to a logger for this service */
+	/**
+	 * A reference to a logger for this service
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(CXFFeedbackService.class);
 
-    private ApplicationContext applicationContext;
+	private ApplicationContext applicationContext;
 
-    @Context
-    private MessageContext messageContext;
+	@Context
+	private MessageContext messageContext;
 
-    /**
-     * A reference to the Spring Locale Resolver
-     */
-    @Resource(name="localeResolver")
-    private LocaleResolver localeResolver;
+	/**
+	 * A reference to the Spring Locale Resolver
+	 */
+	@Resource(name = "localeResolver")
+	private LocaleResolver localeResolver;
 
-	@Resource(name="kmeProperties")
+	@Resource(name = "kmeProperties")
 	private Properties kmeProperties;
-	
-	/** A reference to the FeedbackService */
-    @Autowired
-    private FeedbackService feedbackService;
+
+	/**
+	 * A reference to the FeedbackService
+	 */
+	@Autowired
+	private FeedbackService feedbackService;
 
 	@GET
 	@Path("/ping/get")
-	public String pingGet(){
+	public String pingGet() {
 		return "{\"status\":\"OK\"}";
 	}
 
 	@POST
 	@Path("/ping/post")
-	public String pingPost(){
+	public String pingPost() {
 		return "{\"status\":\"OK\"}";
 	}
-    	
+
 	@POST
 	@Path("/send")
-	public Response sendFeedback(@RequestBody String data){
-        if (data == null) {
-            return Response.status(Response.Status.NO_CONTENT.getStatusCode()).build();
-        }
+	public Response sendFeedback(@RequestBody String data) {
+		if (data == null) {
+			return Response.status(Response.Status.NO_CONTENT.getStatusCode()).build();
+		}
 
-        JSONObject queryParams;
-        try {
-            queryParams = (JSONObject) JSONSerializer.toJSON(data);
-            LOG.info(queryParams.toString());
-        } catch (JSONException je) {
-            LOG.error("JSONException in :" + data + " : " + je.getMessage());
-			return Response.status(Response.Status.BAD_REQUEST.getStatusCode()).build();
-        }
-        
-        try {
-        	// -----------------------
-        	// SAVE FEED BACK AND SEND
-        	// -----------------------
-            HttpServletRequest request;
-            if( getMessageContext() != null ) {
-                request = (HttpServletRequest) getMessageContext().getHttpServletRequest();
-            } else {
-                request = (HttpServletRequest) PhaseInterceptorChain.getCurrentMessage().get("HTTP.REQUEST");
-            }
-            User user = null;
-            if (request !=null) {
-                user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
-            }
-
-            Locale userLocale = this.localeResolver.resolveLocale(request);
-		    Feedback fb = new Feedback();
-		    fb.setNoteText(queryParams.getString("noteText"));
-		    fb.setDeviceType(queryParams.getString("deviceType"));
-		    fb.setUserAgent(queryParams.getString("userAgent"));
-		    fb.setService(queryParams.getString("service"));
-		    fb.setEmail(queryParams.getString("email"));
-            if ( user != null  ) {
-                if (user.getLoginName()!=null)
-                    fb.setUserId(user.getLoginName());
-                if (fb.getCampus()==null || fb.getCampus().trim().isEmpty())
-                    fb.setCampus(user.getViewCampus());
-            }
-
-        	this.getFeedbackService().saveFeedback(fb, userLocale);
-            LOG.info("Boom, all saved & sent! userLocale=" + userLocale);
-		} catch (Exception e) {
-            LOG.error("Exception while trying to send feedback", e);
+		JSONObject queryParams;
+		try {
+			queryParams = (JSONObject) JSONSerializer.toJSON(data);
+			LOG.info(queryParams.toString());
+		} catch (JSONException je) {
+			LOG.error("JSONException in :" + data + " : " + je.getMessage());
 			return Response.status(Response.Status.BAD_REQUEST.getStatusCode()).build();
 		}
-        
+
+		try {
+			// -----------------------
+			// SAVE FEED BACK AND SEND
+			// -----------------------
+			HttpServletRequest request;
+			if (getMessageContext() != null) {
+				request = (HttpServletRequest) getMessageContext().getHttpServletRequest();
+			} else {
+				request = (HttpServletRequest) PhaseInterceptorChain.getCurrentMessage().get("HTTP.REQUEST");
+			}
+			User user = null;
+			if (request != null) {
+				user = (User) request.getSession().getAttribute(Constants.KME_USER_KEY);
+			}
+
+			Locale userLocale = this.localeResolver.resolveLocale(request);
+			Feedback fb = new Feedback();
+			fb.setNoteText(queryParams.getString("noteText"));
+			fb.setDeviceType(queryParams.getString("deviceType"));
+			fb.setUserAgent(queryParams.getString("userAgent"));
+			fb.setService(queryParams.getString("service"));
+			fb.setEmail(queryParams.getString("email"));
+			if (user != null) {
+				if (user.getLoginName() != null)
+					fb.setUserId(user.getLoginName());
+				if (fb.getCampus() == null || fb.getCampus().trim().isEmpty())
+					fb.setCampus(user.getViewCampus());
+			}
+
+			this.getFeedbackService().saveFeedback(fb, userLocale);
+			LOG.info("Boom, all saved & sent! userLocale=" + userLocale);
+		} catch (Exception e) {
+			LOG.error("Exception while trying to send feedback", e);
+			return Response.status(Response.Status.BAD_REQUEST.getStatusCode()).build();
+		}
+
 		return Response.status(Response.Status.OK.getStatusCode()).build();
-	}	
-	
+	}
+
 	public Properties getKmeProperties() {
 		return kmeProperties;
 	}
@@ -179,19 +182,19 @@ public class CXFFeedbackService implements ApplicationContextAware {
 		this.feedbackService = feedbackService;
 	}
 
-    public ApplicationContext getApplicationContext() {
-        return applicationContext;
-    }
+	public ApplicationContext getApplicationContext() {
+		return applicationContext;
+	}
 
-    public void setApplicationContext(ApplicationContext applicationContext) {
-        this.applicationContext = applicationContext;
-    }
+	public void setApplicationContext(ApplicationContext applicationContext) {
+		this.applicationContext = applicationContext;
+	}
 
-    public MessageContext getMessageContext() {
-        return messageContext;
-    }
+	public MessageContext getMessageContext() {
+		return messageContext;
+	}
 
-    public void setMessageContext(MessageContext messageContext) {
-        this.messageContext = messageContext;
-    }
+	public void setMessageContext(MessageContext messageContext) {
+		this.messageContext = messageContext;
+	}
 }

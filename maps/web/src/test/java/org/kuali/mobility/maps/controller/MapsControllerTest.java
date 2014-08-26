@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.maps.controller;
 
@@ -59,11 +58,11 @@ import static org.mockito.Mockito.when;
 
 @RunWith(org.mockito.runners.MockitoJUnitRunner.class)
 public class MapsControllerTest {
-	
+
 	private static final String USER = "fauxUser";
 	private static final String REDIRECT_HOME = "redirect:/campus?toolName=maps";
-	private static final String[] VIEW_CAMPUS = {"ALL","BL","CO","TEST"};
-	
+	private static final String[] VIEW_CAMPUS = {"ALL", "BL", "CO", "TEST"};
+
 	private static MockServletContext servletContext;
 	private MockHttpServletRequest request;
 	private MockHttpServletResponse response;
@@ -77,12 +76,12 @@ public class MapsControllerTest {
 	private Properties kmeProperties;
 	@Mock
 	private ConfigParamService configParamService;
-	
+
 	@BeforeClass
 	public static void setUpClass() throws Exception {
 		setServletContext(new MockServletContext());
 	}
-	
+
 	@Before
 	public void preTest() {
 		this.setMapsController(new MapsController());
@@ -91,42 +90,42 @@ public class MapsControllerTest {
 		this.getMapsController().setKmeProperties(kmeProperties);
 		this.getMapsController().setConfigParamService(getConfigParamService());
 		this.setRequest(new MockHttpServletRequest(servletContext));
-    	this.setResponse(new MockHttpServletResponse());
-    	this.setUiModel(new ExtendedModelMap());
-    	this.getRequest().setSession(new MockHttpSession());
+		this.setResponse(new MockHttpServletResponse());
+		this.setUiModel(new ExtendedModelMap());
+		this.getRequest().setSession(new MockHttpSession());
 	}
-	
+
 	@AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-	
+	public static void tearDownClass() throws Exception {
+	}
+
 	@Test
 	public void testGetHome() {
 		User user = new UserImpl();
 		user.setLoginName(USER);
-		this.getRequest().getSession().setAttribute(Constants.KME_USER_KEY,user);
+		this.getRequest().getSession().setAttribute(Constants.KME_USER_KEY, user);
 		String viewName = getMapsController().getHome(getUiModel(), getRequest(), "", "", "", "", "");
 		assertTrue("did not return " + REDIRECT_HOME + " but instead " + viewName, REDIRECT_HOME.equalsIgnoreCase(viewName));
-		
+
 		user.setViewCampus(VIEW_CAMPUS[1]);
 		Properties properties = new Properties();
 		properties.setProperty("maps.center.lat", "1");
 		properties.setProperty("maps.center.lon", "-1");
 		properties.setProperty("maps.useCampusBounds", "true");
-        when(kmeProperties.getProperty("maps.api","google")).thenReturn("mapquest");
-        when(kmeProperties.getProperty("kme.uiVersion","classic")).thenReturn("classic");
+		when(kmeProperties.getProperty("maps.api", "google")).thenReturn("mapquest");
+		when(kmeProperties.getProperty("kme.uiVersion", "classic")).thenReturn("classic");
 		when(applicationContext.getBean(any(String.class))).thenReturn(null).thenReturn(properties);
 		viewName = getMapsController().getHome(getUiModel(), getRequest(), "", "", "", "", "");
 		assertTrue("uiModel initialLatitude was not set to 0.0!", getUiModel().asMap().get("initialLatitude").equals("0.0"));
-    	assertTrue("uiModel initialLongitude was not set to 0.0!", getUiModel().asMap().get("initialLongitude").equals("0.0"));
-    	assertTrue("view name did not return correct string, expected maps/mapquest and got "+viewName, "maps/mapquest".equalsIgnoreCase(viewName));
-        when(kmeProperties.getProperty("maps.api","google")).thenReturn("google");
-    	viewName = getMapsController().getHome(getUiModel(), getRequest(), "", "", "", "", "");
-    	assertTrue("uiModel initialLatitude was not set to 1!", getUiModel().asMap().get("initialLatitude").equals("1"));
-    	assertTrue("uiModel initialLongitude was not set to -1!", getUiModel().asMap().get("initialLongitude").equals("-1"));
-    	assertTrue("view name did not return correct string, expected maps/home and got "+viewName, "maps/home".equalsIgnoreCase(viewName));
+		assertTrue("uiModel initialLongitude was not set to 0.0!", getUiModel().asMap().get("initialLongitude").equals("0.0"));
+		assertTrue("view name did not return correct string, expected maps/mapquest and got " + viewName, "maps/mapquest".equalsIgnoreCase(viewName));
+		when(kmeProperties.getProperty("maps.api", "google")).thenReturn("google");
+		viewName = getMapsController().getHome(getUiModel(), getRequest(), "", "", "", "", "");
+		assertTrue("uiModel initialLatitude was not set to 1!", getUiModel().asMap().get("initialLatitude").equals("1"));
+		assertTrue("uiModel initialLongitude was not set to -1!", getUiModel().asMap().get("initialLongitude").equals("-1"));
+		assertTrue("view name did not return correct string, expected maps/home and got " + viewName, "maps/home".equalsIgnoreCase(viewName));
 	}
-	
+
 	@Test
 	public void testGetBuildings() {
 		MapsGroup group = new MapsGroup();
@@ -137,7 +136,7 @@ public class MapsControllerTest {
 		viewObject = getMapsController().getBuildings("1");
 		assertTrue("returned object does not match test object", viewObject.equals(group.toJson()));
 	}
-	
+
 	@Test
 	public void testGet() {
 		Location location = new Location();
@@ -148,7 +147,7 @@ public class MapsControllerTest {
 		viewObject = getMapsController().get("1");
 		assertTrue("returned object does not match test object", viewObject.equals(location.toJson()));
 	}
-	
+
 	@Test
 	public void testGet2() {
 		Location location = new Location();
@@ -160,7 +159,7 @@ public class MapsControllerTest {
 		assertTrue("location Id does not match test location Id", getUiModel().asMap().get("id").equals(location.getId()));
 		assertTrue("string maps/building was not returned", "maps/building".equalsIgnoreCase(viewObject.toString()));
 	}
-	
+
 	@Test
 	public void testSearchBuildings() {
 		Location location1 = new Location();

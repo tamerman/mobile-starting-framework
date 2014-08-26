@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.shared.controllers;
 
@@ -70,7 +69,7 @@ public class MockLoginControllerTest {
 	private static final String INVALID = "1234567890";
 
 	private static String[] getConfigLocations() {
-		return new String[] { "classpath:/MockLoginControllerSpringBeans.xml" };
+		return new String[]{"classpath:/MockLoginControllerSpringBeans.xml"};
 	}
 
 	@BeforeClass
@@ -94,7 +93,7 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		String viewName = getController().mockLogin(request,response,uiModel);
+		String viewName = getController().mockLogin(request, response, uiModel);
 
 		assertTrue("View name is incorrect.", LOGIN_VIEW.equals(viewName));
 	}
@@ -105,16 +104,16 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		MockUser user = (MockUser)getApplicationContext().getBean("user");
+		MockUser user = (MockUser) getApplicationContext().getBean("user");
 		user.setUserId(TEST_USER);
 		user.setPassword(TEST_PASSWORD);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_MOCK_USER_KEY,user);
+		session.setAttribute(Constants.KME_MOCK_USER_KEY, user);
 
 		request.setSession(session);
 
-		String viewName = getController().mockLogin(request,response,uiModel);
+		String viewName = getController().mockLogin(request, response, uiModel);
 
 		assertTrue("View name is incorrect.", LOGIN_VIEW.equals(viewName));
 	}
@@ -125,22 +124,22 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		MockUser user = (MockUser)getApplicationContext().getBean("user");
+		MockUser user = (MockUser) getApplicationContext().getBean("user");
 		user.setUserId(TEST_USER);
 		user.setPassword(TEST_PASSWORD);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_MOCK_USER_KEY,user);
+		session.setAttribute(Constants.KME_MOCK_USER_KEY, user);
 
 		request.setSession(session);
 
-		BindingResult result = new MapBindingResult(new HashMap<String,String>(),new String());
+		BindingResult result = new MapBindingResult(new HashMap<String, String>(), new String());
 
 		String viewName;
 		try {
-			viewName = getController().submit(request, response, uiModel, user, result );
-		} catch( NullPointerException npe ) {
-			LOG.error(npe.getLocalizedMessage(),npe);
+			viewName = getController().submit(request, response, uiModel, user, result);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
 			viewName = null;
 		}
 		assertTrue("View name is incorrect.", REDIRECT_VIEW.equals(viewName));
@@ -152,22 +151,22 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		MockUser user = (MockUser)getApplicationContext().getBean("user");
+		MockUser user = (MockUser) getApplicationContext().getBean("user");
 		user.setUserId(TEST_USER);
 		user.setPassword(INVALID);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_MOCK_USER_KEY,user);
+		session.setAttribute(Constants.KME_MOCK_USER_KEY, user);
 
 		request.setSession(session);
 
-		BindingResult result = new MapBindingResult(new HashMap<String,String>(),new String());
+		BindingResult result = new MapBindingResult(new HashMap<String, String>(), new String());
 
 		String viewName;
 		try {
-			viewName = getController().submit(request, response, uiModel, user, result );
-		} catch( NullPointerException npe ) {
-			LOG.error(npe.getLocalizedMessage(),npe);
+			viewName = getController().submit(request, response, uiModel, user, result);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
 			viewName = null;
 		}
 		assertTrue("View name is incorrect.", LOGIN_VIEW.equals(viewName));
@@ -179,21 +178,21 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		MockUser user = (MockUser)getApplicationContext().getBean("user");
+		MockUser user = (MockUser) getApplicationContext().getBean("user");
 		user.setUserId(TEST_USER);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_MOCK_USER_KEY,user);
+		session.setAttribute(Constants.KME_MOCK_USER_KEY, user);
 
 		request.setSession(session);
 
-		BindingResult result = new MapBindingResult(new HashMap<String,String>(),new String());
+		BindingResult result = new MapBindingResult(new HashMap<String, String>(), new String());
 
 		String viewName;
 		try {
-			viewName = getController().submit(request, response, uiModel, user, result );
-		} catch( NullPointerException npe ) {
-			LOG.error(npe.getLocalizedMessage(),npe);
+			viewName = getController().submit(request, response, uiModel, user, result);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
 			viewName = null;
 		}
 		assertTrue("View name is incorrect.", LOGIN_VIEW.equals(viewName));
@@ -205,22 +204,22 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		MockUser user = (MockUser)getApplicationContext().getBean("user");
+		MockUser user = (MockUser) getApplicationContext().getBean("user");
 		user.setUserId(TEST_USER);
 		user.setPassword(EMPTY);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_MOCK_USER_KEY,user);
+		session.setAttribute(Constants.KME_MOCK_USER_KEY, user);
 
 		request.setSession(session);
 
-		BindingResult result = new MapBindingResult(new HashMap<String,String>(),new String());
+		BindingResult result = new MapBindingResult(new HashMap<String, String>(), new String());
 
 		String viewName;
 		try {
-			viewName = getController().submit(request, response, uiModel, user, result );
-		} catch( NullPointerException npe ) {
-			LOG.error(npe.getLocalizedMessage(),npe);
+			viewName = getController().submit(request, response, uiModel, user, result);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
 			viewName = null;
 		}
 		assertTrue("View name is incorrect.", LOGIN_VIEW.equals(viewName));
@@ -232,22 +231,22 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		MockUser user = (MockUser)getApplicationContext().getBean("user");
+		MockUser user = (MockUser) getApplicationContext().getBean("user");
 		user.setUserId(null);
 		user.setPassword(TEST_PASSWORD);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_MOCK_USER_KEY,user);
+		session.setAttribute(Constants.KME_MOCK_USER_KEY, user);
 
 		request.setSession(session);
 
-		BindingResult result = new MapBindingResult(new HashMap<String,String>(),new String());
+		BindingResult result = new MapBindingResult(new HashMap<String, String>(), new String());
 
 		String viewName;
 		try {
-			viewName = getController().submit(request, response, uiModel, user, result );
-		} catch( NullPointerException npe ) {
-			LOG.error(npe.getLocalizedMessage(),npe);
+			viewName = getController().submit(request, response, uiModel, user, result);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
 			viewName = null;
 		}
 		assertTrue("View name is incorrect.", LOGIN_VIEW.equals(viewName));
@@ -259,22 +258,22 @@ public class MockLoginControllerTest {
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		Model uiModel = new ExtendedModelMap();
 
-		MockUser user = (MockUser)getApplicationContext().getBean("user");
+		MockUser user = (MockUser) getApplicationContext().getBean("user");
 		user.setUserId(EMPTY);
 		user.setPassword(TEST_PASSWORD);
 
 		MockHttpSession session = new MockHttpSession();
-		session.setAttribute(Constants.KME_MOCK_USER_KEY,user);
+		session.setAttribute(Constants.KME_MOCK_USER_KEY, user);
 
 		request.setSession(session);
 
-		BindingResult result = new MapBindingResult(new HashMap<String,String>(),new String());
+		BindingResult result = new MapBindingResult(new HashMap<String, String>(), new String());
 
 		String viewName;
 		try {
-			viewName = getController().submit(request, response, uiModel, user, result );
-		} catch( NullPointerException npe ) {
-			LOG.error(npe.getLocalizedMessage(),npe);
+			viewName = getController().submit(request, response, uiModel, user, result);
+		} catch (NullPointerException npe) {
+			LOG.error(npe.getLocalizedMessage(), npe);
 			viewName = null;
 		}
 		assertTrue("View name is incorrect.", LOGIN_VIEW.equals(viewName));
@@ -284,13 +283,13 @@ public class MockLoginControllerTest {
 	public void testCalculateHash() {
 		String expected = "2a7ee8b03046524ae8b6fcdc88345fa5";
 		try {
-			String response = MockLoginController.calculateHash(MessageDigest.getInstance("MD5"),TEST_PASSWORD);
-			assertTrue("Expected "+expected+" and got "+response,expected.equals(response));
-		} catch( NoSuchAlgorithmException nsae ) {
-			LOG.error(nsae.getLocalizedMessage(),nsae);
+			String response = MockLoginController.calculateHash(MessageDigest.getInstance("MD5"), TEST_PASSWORD);
+			assertTrue("Expected " + expected + " and got " + response, expected.equals(response));
+		} catch (NoSuchAlgorithmException nsae) {
+			LOG.error(nsae.getLocalizedMessage(), nsae);
 			fail("Class being tested threw an exception.");
-		} catch( Exception e ) {
-			LOG.error(e.getLocalizedMessage(),e);
+		} catch (Exception e) {
+			LOG.error(e.getLocalizedMessage(), e);
 			fail("Class being tested threw an exception.");
 		}
 	}
@@ -298,7 +297,7 @@ public class MockLoginControllerTest {
 	@Test
 	public void testGetService() {
 		LoginService testService = getController().getLoginService();
-		assertTrue("Failed to find login service.",testService!=null && testService.equals((LoginService)getApplicationContext().getBean("loginService")));
+		assertTrue("Failed to find login service.", testService != null && testService.equals((LoginService) getApplicationContext().getBean("loginService")));
 	}
 
 	public static ApplicationContext getApplicationContext() {

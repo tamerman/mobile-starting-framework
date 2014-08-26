@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.academics.dao;
 
@@ -120,10 +119,10 @@ public class GradesPostedNoticeDaoImpl implements GradesPostedNoticeDao, Applica
 
 	@Override
 	public GradesPostedNotice loadGradesPostedNotice(Long id) {
-		LOG.debug("Looking up grade notice for "+id);
+		LOG.debug("Looking up grade notice for " + id);
 		Query query = getEntityManager().createNamedQuery("GradesPostedNotice.findById");
-		query.setParameter("id",id);
-		return (GradesPostedNotice)query.getSingleResult();
+		query.setParameter("id", id);
+		return (GradesPostedNotice) query.getSingleResult();
 	}
 
 	@Override
@@ -133,30 +132,28 @@ public class GradesPostedNoticeDaoImpl implements GradesPostedNoticeDao, Applica
 		return count;
 	}
 
-    @Transactional
-  	public List<? extends GradesPostedNotice> getGradesToProcess(boolean getAll) {
-        List<GradesPostedNotice> notices = null;
-        try {
-		Query query = getEntityManager().createNamedQuery("GradesPostedNotice.getUnsent");
-		if (!getAll) {
-			query.setMaxResults(Integer.parseInt(getAcademicsProperties().getProperty("academics.grade.alert.batch.size", "10")));
+	@Transactional
+	public List<? extends GradesPostedNotice> getGradesToProcess(boolean getAll) {
+		List<GradesPostedNotice> notices = null;
+		try {
+			Query query = getEntityManager().createNamedQuery("GradesPostedNotice.getUnsent");
+			if (!getAll) {
+				query.setMaxResults(Integer.parseInt(getAcademicsProperties().getProperty("academics.grade.alert.batch.size", "10")));
+			}
+			query.setLockMode(LockModeType.PESSIMISTIC_WRITE);
+			notices = query.getResultList();
+
+			for (GradesPostedNotice notice : notices) {
+				notice.setInProcess(true);
+				getEntityManager().merge(notice);
+			}
+
+
+		} catch (OptimisticLockException oe) {
+			LOG.error(oe.toString());
+		} catch (Exception e) {
+			LOG.error(e.toString());
 		}
-        query.setLockMode(LockModeType.PESSIMISTIC_WRITE);
-		notices = query.getResultList();
-
-        for( GradesPostedNotice notice : notices ) {
-            notice.setInProcess(true);
-            getEntityManager().merge(notice);
-        }
-
-
-        }
-        catch (OptimisticLockException oe) {
-            LOG.error( oe.toString() );
-        }
-        catch (Exception e)  {
-            LOG.error( e.toString() );
-        }
 
 		return notices;
 	}

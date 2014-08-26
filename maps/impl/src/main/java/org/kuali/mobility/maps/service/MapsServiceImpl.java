@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.maps.service;
 /**
@@ -48,6 +47,7 @@ import org.kuali.mobility.maps.entity.MapsGroup;
 import org.kuali.mobility.maps.util.MapsConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import javax.annotation.Resource;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -56,47 +56,46 @@ import java.net.URL;
 import java.util.*;
 
 /**
- *
  * @author Kuali Mobility Team <mobility.collab@kuali.org>
  */
 public class MapsServiceImpl implements MapsService {
-	
+
 	private static final Logger LOG = LoggerFactory.getLogger(MapsServiceImpl.class);
-	
+
 	private String kmlUrl;
 	private String arcGisUrl;
-	
+
 	private Map<String, MapsGroup> mapsGroups;
 	private Map<String, Location> locations;
-	
+
 	private boolean dataLoaded = false;
 
-    @Resource(name="mapsDao")
-    private MapsDao dao;
+	@Resource(name = "mapsDao")
+	private MapsDao dao;
 
 	public MapsServiceImpl() {
 		mapsGroups = new HashMap<String, MapsGroup>();
 		locations = new HashMap<String, Location>();
 	}
 
-    @GET
-    @Path("/search")
-    @Override
-    public List<Location> search(
-            @QueryParam(value="searchText") String searchText,
-            @QueryParam(value="campus") String searchGroupId) {
-        Map<String,String> query = new HashMap<String,String>();
-        query.put(MapsConstants.SEARCH_TEXT,searchText);
-        query.put(MapsConstants.GROUP_ID,searchGroupId);
+	@GET
+	@Path("/search")
+	@Override
+	public List<Location> search(
+			@QueryParam(value = "searchText") String searchText,
+			@QueryParam(value = "campus") String searchGroupId) {
+		Map<String, String> query = new HashMap<String, String>();
+		query.put(MapsConstants.SEARCH_TEXT, searchText);
+		query.put(MapsConstants.GROUP_ID, searchGroupId);
 
-        List<Location> locations = getDao().search(query);
+		List<Location> locations = getDao().search(query);
 
-        Collections.sort(locations, new LocationSort());
-        return locations;
-    }
+		Collections.sort(locations, new LocationSort());
+		return locations;
+	}
 
-    @Override
-    @Deprecated
+	@Override
+	@Deprecated
 	public void loadKml() {
 		try {
 			URL url = new URL(kmlUrl);
@@ -105,7 +104,7 @@ public class MapsServiceImpl implements MapsService {
 			List<Feature> features = document.getFeature();
 			for (Feature feature : features) {
 				if (feature instanceof Folder) {
-					parseFolder((Folder)feature);
+					parseFolder((Folder) feature);
 				}
 			}
 			dataLoaded = true;
@@ -113,21 +112,21 @@ public class MapsServiceImpl implements MapsService {
 			LOG.error("Error reading maps kml data", e);
 		}
 	}
-	
+
 	@GET
 	@Path("/group/search")
 	@Override
 	public MapsGroup getMapsGroupById(@QueryParam(value = "id") String id) {
 		return getDao().getMapGroupById(id);
 	}
-	
+
 	@GET
 	@Path("/location/search")
 	@Override
 	public Location getLocationById(@QueryParam(value = "id") String id) {
 		return getDao().getLocationById(id);
 	}
-	
+
 	private MapsGroup parseFolder(Folder folder) {
 		if (folder.getId() != null) {
 			MapsGroup mapsGroup = new MapsGroup();
@@ -137,9 +136,9 @@ public class MapsServiceImpl implements MapsService {
 			List<Feature> features = folder.getFeature();
 			for (Feature feature : features) {
 				if (feature instanceof Folder) {
-					mapsGroup.getMapsGroupChildren().add(parseFolder((Folder)feature));
+					mapsGroup.getMapsGroupChildren().add(parseFolder((Folder) feature));
 				} else if (feature instanceof Placemark) {
-					mapsGroup.getMapsLocations().add(parseLocation((Placemark)feature));
+					mapsGroup.getMapsLocations().add(parseLocation((Placemark) feature));
 				}
 			}
 			getMapsGroups().put(mapsGroup.getId(), mapsGroup);
@@ -147,7 +146,7 @@ public class MapsServiceImpl implements MapsService {
 		}
 		return null;
 	}
-	
+
 	private Location parseLocation(Placemark placemark) {
 		if (placemark.getId() != null) {
 			Location location = new Location();
@@ -156,7 +155,7 @@ public class MapsServiceImpl implements MapsService {
 			location.setName(placemark.getName());
 			location.setDescription(placemark.getDescription());
 			if (placemark.getGeometry() instanceof Point) {
-				Point point = (Point)placemark.getGeometry();
+				Point point = (Point) placemark.getGeometry();
 				Coordinate coordinates = point.getCoordinates().get(0);
 				location.setLatitude(coordinates.getLatitude());
 				location.setLongitude(coordinates.getLongitude());
@@ -180,7 +179,7 @@ public class MapsServiceImpl implements MapsService {
 		}
 		return null;
 	}
-	
+
 	public String getKmlUrl() {
 		return kmlUrl;
 	}
@@ -197,39 +196,39 @@ public class MapsServiceImpl implements MapsService {
 		this.arcGisUrl = arcGisUrl;
 	}
 
-    /**
-     * @return the mapsGroups
-     */
-    public Map<String, MapsGroup> getMapsGroups() {
-        return mapsGroups;
-    }
+	/**
+	 * @return the mapsGroups
+	 */
+	public Map<String, MapsGroup> getMapsGroups() {
+		return mapsGroups;
+	}
 
-    /**
-     * @param mapsGroups the mapsGroups to set
-     */
-    public void setMapsGroups(Map<String, MapsGroup> mapsGroups) {
-        this.mapsGroups = mapsGroups;
-    }
+	/**
+	 * @param mapsGroups the mapsGroups to set
+	 */
+	public void setMapsGroups(Map<String, MapsGroup> mapsGroups) {
+		this.mapsGroups = mapsGroups;
+	}
 
-    /**
-     * @return the locations
-     */
-    public Map<String, Location> getLocations() {
-        return locations;
-    }
+	/**
+	 * @return the locations
+	 */
+	public Map<String, Location> getLocations() {
+		return locations;
+	}
 
-    /**
-     * @param locations the locations to set
-     */
-    public void setLocations(Map<String, Location> locations) {
-        this.locations = locations;
-    }
+	/**
+	 * @param locations the locations to set
+	 */
+	public void setLocations(Map<String, Location> locations) {
+		this.locations = locations;
+	}
 
-    public MapsDao getDao() {
-        return dao;
-    }
+	public MapsDao getDao() {
+		return dao;
+	}
 
-    public void setDao(MapsDao dao) {
-        this.dao = dao;
-    }
+	public void setDao(MapsDao dao) {
+		this.dao = dao;
+	}
 }

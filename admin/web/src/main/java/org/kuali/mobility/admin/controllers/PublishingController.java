@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.admin.controllers;
 
@@ -64,7 +63,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Controller for performing publishing actions
- * 
+ *
  * @author Kuali Mobility Team (mobility.dev@kuali.org)
  */
 @Controller
@@ -106,7 +105,7 @@ public class PublishingController extends AbstractMobilityController {
 	/**
 	 * The main entry point for publishing. Provides links to more specific
 	 * publishing tools.
-	 * 
+	 *
 	 * @param uiModel
 	 * @return
 	 */
@@ -124,7 +123,7 @@ public class PublishingController extends AbstractMobilityController {
 	/**
 	 * The main entry point for publishing. Provides links to more specific
 	 * publishing tools.
-	 * 
+	 *
 	 * @param uiModel
 	 * @return
 	 */
@@ -143,7 +142,7 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Entry point for publishing Tools. Lists currently defined Tools.
-	 * 
+	 *
 	 * @param uiModel
 	 * @return the tool publishing entry page
 	 */
@@ -164,7 +163,7 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Create a new Tool
-	 * 
+	 *
 	 * @param uiModel
 	 * @return the edit tool page
 	 */
@@ -185,15 +184,14 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Edit an existing Tool
-	 * 
+	 *
 	 * @param uiModel
-	 * @param toolId
-	 *            id of the Tool to edit
+	 * @param toolId  id of the Tool to edit
 	 * @return the edit tool page
 	 */
 	@RequestMapping(value = "tool/edit/{toolId}", method = RequestMethod.GET)
 	public String editTool(HttpServletRequest request, Model uiModel,
-			@PathVariable("toolId") long toolId) {
+						   @PathVariable("toolId") long toolId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -207,15 +205,14 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Delete a Tool
-	 * 
+	 *
 	 * @param uiModel
-	 * @param toolId
-	 *            id of the Tool to delete
+	 * @param toolId  id of the Tool to delete
 	 * @return back to the tool publishing entry page
 	 */
 	@RequestMapping(value = "tool/delete/{toolId}", method = RequestMethod.GET)
 	public String deleteTool(HttpServletRequest request, Model uiModel,
-			@PathVariable("toolId") long toolId) {
+							 @PathVariable("toolId") long toolId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -228,17 +225,15 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Save a Tool
-	 * 
+	 *
 	 * @param uiModel
-	 * @param tool
-	 *            the Tool object to save
-	 * @param result
-	 *            binding validation result
+	 * @param tool    the Tool object to save
+	 * @param result  binding validation result
 	 * @return back to the tool publishing entry page
 	 */
 	@RequestMapping(value = "tool/edit", method = RequestMethod.POST)
 	public String editTool(Model uiModel, @ModelAttribute("tool") Tool tool,
-			BindingResult result, HttpServletRequest request) {
+						   BindingResult result, HttpServletRequest request) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -267,14 +262,14 @@ public class PublishingController extends AbstractMobilityController {
 			// Clear out empty Publishing expression
 			if (tool.getPublishingPermission() != null
 					&& StringUtils.isEmpty(tool.getPublishingPermission()
-							.getExpression())) {
+					.getExpression())) {
 				tool.setPublishingPermission(null);
 				tool.setAclPublishingId(null);
 			}
 			// Clear out empty Viewing expression
 			if (tool.getViewingPermission() != null
 					&& StringUtils.isEmpty(tool.getViewingPermission()
-							.getExpression())) {
+					.getExpression())) {
 				tool.setViewingPermission(null);
 				tool.setAclViewingId(null);
 			}
@@ -289,7 +284,7 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * The entry point for publishing HomeScreen layouts
-	 * 
+	 *
 	 * @param uiModel
 	 * @return the home screen publishing entry page
 	 */
@@ -307,7 +302,7 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Create a new HomeScreen
-	 * 
+	 *
 	 * @param uiModel
 	 * @return the home screen editing page
 	 */
@@ -327,15 +322,14 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Edit an existing HomeScreen
-	 * 
+	 *
 	 * @param uiModel
-	 * @param layoutId
-	 *            the id of the HomeScreen to edit
+	 * @param layoutId the id of the HomeScreen to edit
 	 * @return the home screen editing page
 	 */
 	@RequestMapping(value = "layout/edit/{layoutId}", method = RequestMethod.GET)
 	public String editLayout(HttpServletRequest request, Model uiModel,
-			@PathVariable("layoutId") long layoutId) {
+							 @PathVariable("layoutId") long layoutId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -351,18 +345,16 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Save a HomeScreen
-	 * 
+	 *
 	 * @param uiModel
-	 * @param homeScreen
-	 *            the HomeScreen to save
-	 * @param result
-	 *            binding validation result
+	 * @param homeScreen the HomeScreen to save
+	 * @param result     binding validation result
 	 * @return the home screen publishing entry page
 	 */
 	@RequestMapping(value = "layout/edit", method = RequestMethod.POST)
 	public String editLayout(HttpServletRequest request, Model uiModel,
-			@ModelAttribute("layout") HomeScreen homeScreen,
-			BindingResult result) {
+							 @ModelAttribute("layout") HomeScreen homeScreen,
+							 BindingResult result) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -379,15 +371,14 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Delete a HomeScreen
-	 * 
+	 *
 	 * @param uiModel
-	 * @param layoutId
-	 *            the id of the HomeScren to delete
+	 * @param layoutId the id of the HomeScren to delete
 	 * @return the home screen publishing entry page
 	 */
 	@RequestMapping(value = "layout/delete/{layoutId}", method = RequestMethod.GET)
 	public String deleteLayout(HttpServletRequest request, Model uiModel,
-			@PathVariable("layoutId") long layoutId) {
+							   @PathVariable("layoutId") long layoutId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -400,20 +391,17 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Associate a Tool with a HomeScreen if it isn't already associated
-	 * 
+	 *
 	 * @param uiModel
-	 * @param homeScreen
-	 *            the HomeScreen to which to add the Tool
-	 * @param result
-	 *            binding validation result for the HomeScreen
-	 * @param toolId
-	 *            the id of the Tool to associate with the HomeSreen
+	 * @param homeScreen the HomeScreen to which to add the Tool
+	 * @param result     binding validation result for the HomeScreen
+	 * @param toolId     the id of the Tool to associate with the HomeSreen
 	 * @return the home screen editing page
 	 */
 	@RequestMapping(value = "layout/edit", method = RequestMethod.POST, params = "add")
 	public String addTool(HttpServletRequest request, Model uiModel,
-			@ModelAttribute("layout") HomeScreen homeScreen,
-			BindingResult result, @RequestParam("toolToAdd") Long toolId) {
+						  @ModelAttribute("layout") HomeScreen homeScreen,
+						  BindingResult result, @RequestParam("toolToAdd") Long toolId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -441,27 +429,24 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Remove a Tool's association with a HomeScreen
-	 * 
+	 *
 	 * @param uiModel
-	 * @param homeScreen
-	 *            the HomeScreen from which to remove the Tool association
-	 * @param result
-	 *            the binding validation result for the HomeScreen
-	 * @param toolId
-	 *            the id of the Tool to remove
+	 * @param homeScreen the HomeScreen from which to remove the Tool association
+	 * @param result     the binding validation result for the HomeScreen
+	 * @param toolId     the id of the Tool to remove
 	 * @return the home screen editing page
 	 */
 	@RequestMapping(value = "layout/edit", method = RequestMethod.POST, params = "remove")
 	public String removeTool(HttpServletRequest request, Model uiModel,
-			@ModelAttribute("layout") HomeScreen homeScreen,
-			BindingResult result, @RequestParam("removeId") Long toolId) {
+							 @ModelAttribute("layout") HomeScreen homeScreen,
+							 BindingResult result, @RequestParam("removeId") Long toolId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
 		} else {
 			Integer removedOrder = null;
 			for (Iterator<HomeTool> iter = homeScreen.getHomeTools().iterator(); iter
-					.hasNext();) {
+					.hasNext(); ) {
 				HomeTool homeTool = iter.next();
 				if (homeTool.getToolId().equals(toolId)) {
 					removedOrder = homeTool.getOrder();
@@ -485,20 +470,17 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Move a tool up in the Tool list display order
-	 * 
+	 *
 	 * @param uiModel
-	 * @param homeScreen
-	 *            the HomeScreen to edit
-	 * @param result
-	 *            binding validation result for the HomeScreen
-	 * @param toolId
-	 *            the id of the Tool to move
+	 * @param homeScreen the HomeScreen to edit
+	 * @param result     binding validation result for the HomeScreen
+	 * @param toolId     the id of the Tool to move
 	 * @return the home screen editing page
 	 */
 	@RequestMapping(value = "layout/edit", method = RequestMethod.POST, params = "up")
 	public String moveToolUp(HttpServletRequest request, Model uiModel,
-			@ModelAttribute("layout") HomeScreen homeScreen,
-			BindingResult result, @RequestParam("removeId") Long toolId) {
+							 @ModelAttribute("layout") HomeScreen homeScreen,
+							 BindingResult result, @RequestParam("removeId") Long toolId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -531,20 +513,17 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Move a tool down in the Tool list display order
-	 * 
+	 *
 	 * @param uiModel
-	 * @param homeScreen
-	 *            the HomeScreen to edit
-	 * @param result
-	 *            binding validation result for the HomeScreen
-	 * @param toolId
-	 *            the id of the Tool to move
+	 * @param homeScreen the HomeScreen to edit
+	 * @param result     binding validation result for the HomeScreen
+	 * @param toolId     the id of the Tool to move
 	 * @return the home screen editing page
 	 */
 	@RequestMapping(value = "layout/edit", method = RequestMethod.POST, params = "down")
 	public String moveToolDown(HttpServletRequest request, Model uiModel,
-			@ModelAttribute("layout") HomeScreen homeScreen,
-			BindingResult result, @RequestParam("removeId") Long toolId) {
+							   @ModelAttribute("layout") HomeScreen homeScreen,
+							   BindingResult result, @RequestParam("removeId") Long toolId) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -580,7 +559,7 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * the main entry point for notifications
-	 * 
+	 *
 	 * @param uiModel
 	 * @return the notifications entry page
 	 */
@@ -599,9 +578,8 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Create or edit a notification
-	 * 
-	 * @param id
-	 *            (optional) the id of the notification to edit
+	 *
+	 * @param id      (optional) the id of the notification to edit
 	 * @param uiModel
 	 * @return the notification edit form
 	 */
@@ -625,9 +603,8 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Edit a notification
-	 * 
-	 * @param id
-	 *            the id of the notification to edit
+	 *
+	 * @param id      the id of the notification to edit
 	 * @param uiModel
 	 * @return the notification edit form
 	 */
@@ -648,9 +625,8 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Delete a notification
-	 * 
-	 * @param id
-	 *            the id of the notification to delete
+	 *
+	 * @param id      the id of the notification to delete
 	 * @param uiModel
 	 * @return the notifications entry page
 	 */
@@ -670,19 +646,17 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Save a notification
-	 * 
+	 *
 	 * @param request
 	 * @param uiModel
-	 * @param notification
-	 *            the Notification to save
-	 * @param result
-	 *            binding validation result
+	 * @param notification the Notification to save
+	 * @param result       binding validation result
 	 * @return the notifications entry page
 	 */
 	@RequestMapping(value = "notificationSubmit", method = RequestMethod.POST)
 	public String submit(HttpServletRequest request, Model uiModel,
-			@ModelAttribute("notification") Notification notification,
-			BindingResult result) {
+						 @ModelAttribute("notification") Notification notification,
+						 BindingResult result) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
@@ -707,14 +681,13 @@ public class PublishingController extends AbstractMobilityController {
 
 	/**
 	 * Validate a Notification
-	 * 
-	 * @param notification
-	 *            the Notification to validate
+	 *
+	 * @param notification the Notification to validate
 	 * @param result
 	 * @return true if valid
 	 */
 	private boolean isValidNotification(Notification notification,
-			BindingResult result) {
+										BindingResult result) {
 		// TODO Localisation!!
 		boolean hasErrors = false;
 		Errors errors = ((Errors) result);
@@ -745,9 +718,10 @@ public class PublishingController extends AbstractMobilityController {
 	}
 
 	// ----------------News------------------
+
 	/**
 	 * The main entry point for News publishing
-	 * 
+	 *
 	 * @param uiModel
 	 * @return the news entry page
 	 */
@@ -758,14 +732,14 @@ public class PublishingController extends AbstractMobilityController {
 			viewName = "redirect:/errors/404";
 		} else {
 			uiModel.addAttribute("sources", newsService.getAllNewsSources());
-			viewName="publishing/news";
+			viewName = "publishing/news";
 		}
 		return viewName;
 	}
 
 	/**
 	 * Create a new NewsSource
-	 * 
+	 *
 	 * @param uiModel
 	 * @return the news source editing page
 	 */
@@ -779,29 +753,28 @@ public class PublishingController extends AbstractMobilityController {
 			source.setOrder(newsService.getAllNewsSources().size());
 			source.setActive(true);
 			uiModel.addAttribute("source", source);
-			viewName="publishing/editNews";
+			viewName = "publishing/editNews";
 		}
 		return viewName;
 	}
 
 	/**
 	 * Edit an existing NewsSource
-	 * 
+	 *
 	 * @param uiModel
-	 * @param id
-	 *            the id of the NewsSource to edit
+	 * @param id      the id of the NewsSource to edit
 	 * @return the news source editing page
 	 */
 	@RequestMapping(value = "news/edit/{id}", method = RequestMethod.GET)
 	public String editNews(HttpServletRequest request, Model uiModel,
-			@PathVariable("id") long id) {
+						   @PathVariable("id") long id) {
 		String viewName;
 		if (!isAllowedAccess("KME-ADMINISTRATOR", request)) {
 			viewName = "redirect:/errors/404";
 		} else {
 			NewsSource newsSource = newsService.getNewsSourceById(id);
 			uiModel.addAttribute("source", newsSource);
-			viewName="publishing/editNews";
+			viewName = "publishing/editNews";
 		}
 		return viewName;
 	}

@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.security.user.entity;
 
@@ -34,26 +33,27 @@ import java.io.Serializable;
 @Embeddable
 public class GroupMembershipPK implements Serializable {
 
-	@Column(name="GROUP_ID",nullable = false)
+	@Column(name = "GROUP_ID", nullable = false)
 	public Long groupId;
 
-	@Column(name="USER_ID",nullable = false)
+	@Column(name = "USER_ID", nullable = false)
 	public Long userId;
 
-	public GroupMembershipPK(Long groupId,Long userId) {
+	public GroupMembershipPK(Long groupId, Long userId) {
 		this.userId = userId;
 		this.groupId = groupId;
 	}
 
-	public GroupMembershipPK() {}
+	public GroupMembershipPK() {
+	}
 
 	public boolean equals(Object obj) {
 		boolean isEquals = false;
-		if( obj != null && obj instanceof GroupMembershipPK ) {
-			if( groupId != null
-				&& 0 == groupId.compareTo(((GroupMembershipPK)obj).groupId)
-				&& userId != null
-				&& 0 == userId.compareTo(((GroupMembershipPK)obj).userId) ) {
+		if (obj != null && obj instanceof GroupMembershipPK) {
+			if (groupId != null
+					&& 0 == groupId.compareTo(((GroupMembershipPK) obj).groupId)
+					&& userId != null
+					&& 0 == userId.compareTo(((GroupMembershipPK) obj).userId)) {
 				isEquals = true;
 			}
 		}
@@ -62,8 +62,8 @@ public class GroupMembershipPK implements Serializable {
 
 	public int hashCode() {
 		int code = 42;
-		if( groupId != null ) code += groupId.intValue();
-		if( userId != null ) code += (-2*userId.intValue());
+		if (groupId != null) code += groupId.intValue();
+		if (userId != null) code += (-2 * userId.intValue());
 		return code;
 	}
 }

@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.academics.service;
 
@@ -49,81 +48,83 @@ import java.util.Map;
 
 @Service
 public class CXFAcademicsService {
-	/** A reference to a logger for this service */
+	/**
+	 * A reference to a logger for this service
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(CXFAcademicsService.class);
-	
+
 	private AcademicsDao dao;
-	
+
 	@GET
 	@Path("/getTerms")
 	public List<Term> getTerms() {
 		return getDao().getTerms();
 	}
-	
+
 	@POST
 	@Path("/getCareers")
 	public List<Career> getCareers(@RequestBody String data) {
 		if (data == null) {
 			return null; //and sadness
 		}
-		
+
 		JSONObject queryParams;
 		try {
 			queryParams = (JSONObject) JSONSerializer.toJSON(data);
-		} catch(JSONException je) {
+		} catch (JSONException je) {
 			LOG.error("JSONException in :" + data + " : " + je.getMessage());
 			return null; //and more sadness
 		}
 		Map<String, String> query = new HashMap<String, String>();
-        query.put(AcademicsConstants.TERM_ID, queryParams.getString("termId"));
-        return getDao().getCareers(query);
+		query.put(AcademicsConstants.TERM_ID, queryParams.getString("termId"));
+		return getDao().getCareers(query);
 	}
-	
+
 	@POST
 	@Path("/getSubjects")
 	public List<Subject> getSubjects(@RequestBody String data) {
 		if (data == null) {
 			return null; //and sadness
 		}
-		
+
 		JSONObject queryParams;
 		try {
 			queryParams = (JSONObject) JSONSerializer.toJSON(data);
-		} catch(JSONException je) {
+		} catch (JSONException je) {
 			LOG.error("JSONException in :" + data + " : " + je.getMessage());
 			return null; //and more sadness
 		}
 		Map<String, String> query = new HashMap<String, String>();
-        query.put(AcademicsConstants.TERM_ID, queryParams.getString("termId"));
-        query.put(AcademicsConstants.CAREER_ID, queryParams.getString("careerId"));
-        List<Subject> subjects = getDao().getSubjects(query);
-        return subjects;
+		query.put(AcademicsConstants.TERM_ID, queryParams.getString("termId"));
+		query.put(AcademicsConstants.CAREER_ID, queryParams.getString("careerId"));
+		List<Subject> subjects = getDao().getSubjects(query);
+		return subjects;
 	}
-	
+
 	@POST
 	@Path("/searchClasses")
 	public SearchResult searchClasses(@RequestBody String data) {
 		//TODO: Have this actually search for classes
-        if (data == null) {
-            return null;
-        }
+		if (data == null) {
+			return null;
+		}
 
-        Map<String, String[]> queryParams;
-        JSONObject jsonObject;
-        try {
-            jsonObject = (JSONObject) JSONSerializer.toJSON(data);
+		Map<String, String[]> queryParams;
+		JSONObject jsonObject;
+		try {
+			jsonObject = (JSONObject) JSONSerializer.toJSON(data);
 
-            queryParams = toMap(jsonObject);
+			queryParams = toMap(jsonObject);
 
-        } catch(JSONException je) {
-            LOG.error("JSONException in :" + data + " : " + je.getMessage());
-            return null; //and more sadness
-        }
+		} catch (JSONException je) {
+			LOG.error("JSONException in :" + data + " : " + je.getMessage());
+			return null; //and more sadness
+		}
 
-        LOG.debug(queryParams.toString());
+		LOG.debug(queryParams.toString());
 
-        SearchResult result = getDao().getSearchResults(queryParams);
-        return result;
+		SearchResult result = getDao().getSearchResults(queryParams);
+		return result;
 
 /*
 		List<Section> dumbyList = new ArrayList<Section>();
@@ -202,30 +203,29 @@ public class CXFAcademicsService {
 */
 	}
 
-    private Map<String, String[]> toMap(JSONObject jsonObject) throws JSONException {
-        Map<String, String[]> queryMap = new HashMap<String, String[]>();
-        Iterator keys = jsonObject.keys();
-        while (keys.hasNext()) {
-            String key = (String) keys.next();
-            Object val = jsonObject.get(key);
-            if (val != null) {
-                if (val instanceof JSONArray) {
-                    JSONArray valJsonArr = (JSONArray)val;
-                    int arrLength = valJsonArr.size();
-                    String[] valArr =new String[arrLength];
-                    for(int i=0; i<arrLength; i++) {
-                        valArr[i] = valJsonArr.getString(i);
-                    }
-                    queryMap.put(key, valArr);
-                }
-                else {
-                    String[] valArr = { val.toString() } ;
-                    queryMap.put(key, valArr);
-                }
-            }
-        }
-        return queryMap;
-    }
+	private Map<String, String[]> toMap(JSONObject jsonObject) throws JSONException {
+		Map<String, String[]> queryMap = new HashMap<String, String[]>();
+		Iterator keys = jsonObject.keys();
+		while (keys.hasNext()) {
+			String key = (String) keys.next();
+			Object val = jsonObject.get(key);
+			if (val != null) {
+				if (val instanceof JSONArray) {
+					JSONArray valJsonArr = (JSONArray) val;
+					int arrLength = valJsonArr.size();
+					String[] valArr = new String[arrLength];
+					for (int i = 0; i < arrLength; i++) {
+						valArr[i] = valJsonArr.getString(i);
+					}
+					queryMap.put(key, valArr);
+				} else {
+					String[] valArr = {val.toString()};
+					queryMap.put(key, valArr);
+				}
+			}
+		}
+		return queryMap;
+	}
 
 	public AcademicsDao getDao() {
 		return dao;

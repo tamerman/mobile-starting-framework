@@ -1,26 +1,26 @@
 /*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
 
 //  Copyright 2014 The Kuali Foundation Licensed under the Educational Community
 //  License, Version 2.0 (the "License"); you may not use this file except in
@@ -37,13 +37,13 @@
  * Controller for the form
  */
 grades.controller("FormCtrl",
-    ['$scope', '$window','GradesSession',
-        function($scope, $window, GradesSession) {
+    ['$scope', '$window', 'GradesSession',
+        function ($scope, $window, GradesSession) {
 
             /*
              * Function to hide messages
              */
-            $scope.clickHideMessages = function(){
+            $scope.clickHideMessages = function () {
                 $scope.$parent.errors = [];
                 $scope.$parent.infos = [];
                 $scope.$parent.alerts = [];
@@ -51,11 +51,11 @@ grades.controller("FormCtrl",
             };
             $scope.clickHideMessages();
 
-            $scope.$root.kmeNavLeft = function() {
+            $scope.$root.kmeNavLeft = function () {
                 $scope.clickHideMessages();
                 window.history.back();
             };
-             /**
+            /**
              * Defaults for date fields
              */
             var year = new Date().getFullYear();
@@ -65,15 +65,15 @@ grades.controller("FormCtrl",
             $scope.gradesSession = GradesSession;
 
 
-            $scope.open = function(flag, $event) {
+            $scope.open = function (flag, $event) {
                 $event.preventDefault();
                 $event.stopPropagation();
 
-                if('start' === flag){
+                if ('start' === flag) {
                     $scope.endDateOpen = false;
                     $scope.startDateOpen = true;
                 }
-                else if ('end' === flag){
+                else if ('end' === flag) {
                     $scope.startDateOpen = false;
                     $scope.endDateOpen = true;
                 }
@@ -82,8 +82,8 @@ grades.controller("FormCtrl",
             /**
              * Handler for submit click
              */
-            $scope.submit = function(){
-                $window.location ="#/results";
+            $scope.submit = function () {
+                $window.location = "#/results";
             };
         }]);
 
@@ -91,13 +91,13 @@ grades.controller("FormCtrl",
  * Controller for the results partial
  */
 grades.controller("ResultsCtrl",
-    ['$scope', '$window','GradesSession', 'GradesService',
-        function($scope,$location,GradesSession,GradesService) {
+    ['$scope', '$window', 'GradesSession', 'GradesService',
+        function ($scope, $location, GradesSession, GradesService) {
 
             /*
              * Function to hide messages
              */
-            $scope.clickHideMessages = function(){
+            $scope.clickHideMessages = function () {
                 $scope.$parent.errors = [];
                 $scope.$parent.infos = [];
                 $scope.$parent.alerts = [];
@@ -105,26 +105,30 @@ grades.controller("ResultsCtrl",
             };
             $scope.clickHideMessages();
 
-            $scope.$root.kmeNavLeft = function() {
+            $scope.$root.kmeNavLeft = function () {
                 $scope.clickHideMessages();
                 window.history.back();
             };
-            $scope.$parent.infos = [{'name' : msgCat_Loading}];
+            $scope.$parent.infos = [
+                {'name': msgCat_Loading}
+            ];
 
             GradesService.getGrades(
-                    moment(GradesSession.startDate).format("YYYY-MM-DD"),
-                    moment(GradesSession.endDate).format("YYYY-MM-DD")
-                ).then(
+                moment(GradesSession.startDate).format("YYYY-MM-DD"),
+                moment(GradesSession.endDate).format("YYYY-MM-DD")
+            ).then(
                 // Success
-                function(results){
+                function (results) {
                     $scope.clickHideMessages();
                     $scope.serverSuccess = true;
                     $scope.results = results;
                 },
                 // Failed
-                function(error){
+                function (error) {
                     $scope.clickHideMessages();
-                    $scope.$parent.errors = [{'name' : msgCat_Error}];
+                    $scope.$parent.errors = [
+                        {'name': msgCat_Error}
+                    ];
                 });
 
 

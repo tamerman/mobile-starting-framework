@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.academics.dao;
 
@@ -44,7 +43,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
  * @author Kuali Mobility Team <mobility.collab@kuali.org>
  */
 public class AcademicsDaoJSONImpl extends AcademicsDaoImpl {
@@ -64,7 +62,7 @@ public class AcademicsDaoJSONImpl extends AcademicsDaoImpl {
 
 			String jsonData = IOUtils.toString(response, DEFAULT_CHARACTER_SET);
 
-			LOG.debug( "JSON Data is: ["+jsonData+"]");
+			LOG.debug("JSON Data is: [" + jsonData + "]");
 
 			JSONParser parser = new JSONParser();
 
@@ -73,24 +71,24 @@ public class AcademicsDaoJSONImpl extends AcademicsDaoImpl {
 			JSONObject jsonObject = (JSONObject) rootObj;
 			JSONArray jsonTerms = (JSONArray) jsonObject.get("term");
 
-			for( Object o : jsonTerms ) {
-				Term term = (Term)getApplicationContext().getBean("termBean");
+			for (Object o : jsonTerms) {
+				Term term = (Term) getApplicationContext().getBean("termBean");
 
-				JSONObject jsonTerm = (JSONObject)o;
+				JSONObject jsonTerm = (JSONObject) o;
 
-				if( jsonTerm.get("id") instanceof Long ) {
-					term.setId( ((Long)(jsonTerm.get("id"))).toString() );
+				if (jsonTerm.get("id") instanceof Long) {
+					term.setId(((Long) (jsonTerm.get("id"))).toString());
 				} else {
-					term.setId( (String)jsonTerm.get("id") );
+					term.setId((String) jsonTerm.get("id"));
 				}
-				term.setDescription( (String)jsonTerm.get("description") );
-				term.setShortDescription( (String)jsonTerm.get("shortDescription"));
-				if( jsonTerm.get("active") instanceof Boolean ) {
-					term.setActive( ((Boolean)jsonTerm.get("active")).booleanValue() );
+				term.setDescription((String) jsonTerm.get("description"));
+				term.setShortDescription((String) jsonTerm.get("shortDescription"));
+				if (jsonTerm.get("active") instanceof Boolean) {
+					term.setActive(((Boolean) jsonTerm.get("active")).booleanValue());
 				} else {
-					term.setActive( Boolean.parseBoolean((String)jsonTerm.get("active")) );
+					term.setActive(Boolean.parseBoolean((String) jsonTerm.get("active")));
 				}
-				lTerms.add( term );
+				lTerms.add(term);
 			}
 		} catch (UnsupportedEncodingException uee) {
 			LOG.error(uee.getLocalizedMessage());
@@ -112,7 +110,7 @@ public class AcademicsDaoJSONImpl extends AcademicsDaoImpl {
 
 			String jsonData = IOUtils.toString(response, DEFAULT_CHARACTER_SET);
 
-			LOG.debug( "JSON Data is: ["+jsonData+"]");
+			LOG.debug("JSON Data is: [" + jsonData + "]");
 
 			JSONParser parser = new JSONParser();
 
@@ -121,19 +119,19 @@ public class AcademicsDaoJSONImpl extends AcademicsDaoImpl {
 			JSONObject jsonObject = (JSONObject) rootObj;
 			JSONArray jsonTerms = (JSONArray) jsonObject.get("academicCareer");
 
-			for( Object o : jsonTerms ) {
-				Career career = (Career)getApplicationContext().getBean("careerBean");
+			for (Object o : jsonTerms) {
+				Career career = (Career) getApplicationContext().getBean("careerBean");
 
-				JSONObject jsonTerm = (JSONObject)o;
+				JSONObject jsonTerm = (JSONObject) o;
 
-				if( jsonTerm.get("id") instanceof Long ) {
-					career.setId( ((Long)(jsonTerm.get("id"))).toString() );
+				if (jsonTerm.get("id") instanceof Long) {
+					career.setId(((Long) (jsonTerm.get("id"))).toString());
 				} else {
-					career.setId( (String)jsonTerm.get("id") );
+					career.setId((String) jsonTerm.get("id"));
 				}
-				career.setDescription( (String)jsonTerm.get("description") );
-				career.setShortDescription( (String)jsonTerm.get("shortDescription"));
-				lCareers.add( career );
+				career.setDescription((String) jsonTerm.get("description"));
+				career.setShortDescription((String) jsonTerm.get("shortDescription"));
+				lCareers.add(career);
 			}
 		} catch (UnsupportedEncodingException uee) {
 			LOG.error(uee.getLocalizedMessage());

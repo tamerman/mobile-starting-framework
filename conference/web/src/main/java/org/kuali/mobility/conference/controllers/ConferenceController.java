@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.conference.controllers;
 
@@ -70,7 +69,7 @@ public class ConferenceController {
 		DateFormat formatter = new SimpleDateFormat("MMddyy");
 		String today = formatter.format(d);
 		if ("092811".equals(today) || "092911".equals(today) || "093011".equals(today) || "100111".equals(today)) {
-		} else { 
+		} else {
 			today = "";
 		}
 		//List<MenuItem> menuItems = conferenceService.findAllMenuItems();
@@ -78,13 +77,13 @@ public class ConferenceController {
 		//uiModel.addAttribute("today", today);
 		return "conference/index";
 	}
-	
-    @RequestMapping(method = RequestMethod.GET, headers = "Accept=application/json")
-    @ResponseBody
-    public String getMenuJson(@RequestParam(value="lang", required = false) String lang) {
-    	List<MenuItem> menuItems = conferenceService.findAllMenuItems(lang);
-    	return new JSONSerializer().exclude("*.class").deepSerialize(menuItems);
-    }
+
+	@RequestMapping(method = RequestMethod.GET, headers = "Accept=application/json")
+	@ResponseBody
+	public String getMenuJson(@RequestParam(value = "lang", required = false) String lang) {
+		List<MenuItem> menuItems = conferenceService.findAllMenuItems(lang);
+		return new JSONSerializer().exclude("*.class").deepSerialize(menuItems);
+	}
 
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	public String welcome(Model uiModel) {
@@ -92,14 +91,14 @@ public class ConferenceController {
 		uiModel.addAttribute("contentBlocks", contentBlocks);
 		return "conference/welcome";
 	}
-	
+
 	@RequestMapping(value = "/featuredSpeakers", method = RequestMethod.GET)
 	public String featuredSpeakers(Model uiModel) {
 		List<ContentBlock> contentBlocks = conferenceService.findFeaturedSpeakers();
 		uiModel.addAttribute("contentBlocks", contentBlocks);
 		return "conference/featuredSpeakers";
 	}
-	
+
 	@RequestMapping(value = "/attendeeGroups", method = RequestMethod.GET)
 	public String attendeeGroups(Model uiModel) {
 		return attendees("A", "Z", uiModel);
@@ -107,7 +106,7 @@ public class ConferenceController {
 	}
 
 	@RequestMapping(value = "/attendees", method = RequestMethod.GET)
-	public String attendees(@RequestParam(value="start", required=true) String start, @RequestParam(value="end", required=true) String end, Model uiModel) {
+	public String attendees(@RequestParam(value = "start", required = true) String start, @RequestParam(value = "end", required = true) String end, Model uiModel) {
 		List<Attendee> attendees = conferenceService.findAllAttendees(start.charAt(0), end.charAt(0));
 		uiModel.addAttribute("attendees", attendees);
 		return "conference/attendees";
@@ -121,7 +120,7 @@ public class ConferenceController {
 	}
 
 	@RequestMapping(value = "/sessions", method = RequestMethod.GET)
-	public String sessions(@RequestParam(value="date", required=false) String date, Model uiModel) {
+	public String sessions(@RequestParam(value = "date", required = false) String date, Model uiModel) {
 		List<Session> sessions = conferenceService.findAllSessions(date);
 		uiModel.addAttribute("sessions", sessions);
 		return "conference/sessions";
@@ -151,8 +150,9 @@ public class ConferenceController {
 
 	private void sendEmail(SessionFeedback f) {
 		try {
-			emailService.sendEmail(f.toString(), "SWITC Feedback; "+f.getSessionId()+":"+f.getRating(), conferenceService.getToEmailAddress(), conferenceService.getFromEmailAddress());
-		} catch (Exception e) {}
+			emailService.sendEmail(f.toString(), "SWITC Feedback; " + f.getSessionId() + ":" + f.getRating(), conferenceService.getToEmailAddress(), conferenceService.getFromEmailAddress());
+		} catch (Exception e) {
+		}
 	}
 
 }

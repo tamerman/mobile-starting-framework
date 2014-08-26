@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.writer.boot;
 
@@ -56,16 +55,16 @@ public class WriterBootListener implements ServletContextListener {
 	@Qualifier("bootables")
 	private Bootables bootables;
 
-    /**
-     * A reference to the writer service.
-     */
+	/**
+	 * A reference to the writer service.
+	 */
 	private WriterService writerService;
 
 
 	/**
 	 *
 	 */
-	public void initialise(){
+	public void initialise() {
 		bootables.registeredBootable(this);
 	}
 
@@ -73,12 +72,12 @@ public class WriterBootListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent sce) {
 
 		ApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext());
-        Properties writerProperties = (Properties)ctx.getBean("writerProperties");
-        writerService = (WriterService)ctx.getBean("writerService");
+		Properties writerProperties = (Properties) ctx.getBean("writerProperties");
+		writerService = (WriterService) ctx.getBean("writerService");
 		/*
 		 * If the writer tool is not configured to do bootstrapping we will exit
 		 */
-		if (!"true".equals(writerProperties.getProperty("writer.bootstrap"))){
+		if (!"true".equals(writerProperties.getProperty("writer.bootstrap"))) {
 			return;
 		}
 
@@ -91,9 +90,9 @@ public class WriterBootListener implements ServletContextListener {
 	/**
 	 * Create dummy articles
 	 */
-	private void createArticles(Topic[] topics, Category[] categories){
+	private void createArticles(Topic[] topics, Category[] categories) {
 		// Create a few published articles
-		for(int idx = 0 ; idx < 15 ; idx++){
+		for (int idx = 0; idx < 15; idx++) {
 			Article article = new Article();
 			article.setCategory(categories[0].getId());
 			article.setEditorId("the_editor");
@@ -115,11 +114,12 @@ public class WriterBootListener implements ServletContextListener {
 
 	/**
 	 * Create dummy comments on the article
+	 *
 	 * @param article
 	 */
-	private void createComments(Article article){
+	private void createComments(Article article) {
 		// Add a view comments to the article
-		for(int cdx = 0 ; cdx < 3 ; cdx++){
+		for (int cdx = 0; cdx < 3; cdx++) {
 			Comment c = new Comment();
 			c.setTimestamp(new Date());
 			c.setText("Dummy article comment text #" + cdx);
@@ -132,9 +132,10 @@ public class WriterBootListener implements ServletContextListener {
 
 	/**
 	 * Create categories
+	 *
 	 * @return
 	 */
-	private Category[] createCategories(){
+	private Category[] createCategories() {
 		Category[] categories = new Category[2];
 		// Create categories
 		categories[0] = new Category();
@@ -152,10 +153,11 @@ public class WriterBootListener implements ServletContextListener {
 
 	/**
 	 * Create some dummy article topics
+	 *
 	 * @return
 	 */
-	private Topic[] createTopics(){
-		Topic [] topics = new Topic[4];
+	private Topic[] createTopics() {
+		Topic[] topics = new Topic[4];
 
 		topics[0] = new Topic();
 		topics[0].setLabel("writer.sport");

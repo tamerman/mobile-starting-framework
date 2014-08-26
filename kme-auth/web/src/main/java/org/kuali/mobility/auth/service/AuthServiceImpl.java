@@ -1,26 +1,25 @@
-/*
-  The MIT License (MIT)
-  
-  Copyright (C) 2014 by Kuali Foundation
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
- 
-  The above copyright notice and this permission notice shall be included in
-
-  all copies or substantial portions of the Software.
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
+/**
+ * The MIT License
+ * Copyright (c) 2011 Kuali Mobility Team
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 package org.kuali.mobility.auth.service;
 
@@ -44,69 +43,74 @@ import javax.ws.rs.core.Context;
 
 /**
  * Implementation of the <code>AuthService</code>
+ *
  * @author Kuali Mobility Team (mobility.collab@kuali.org)
  * @since 3.2.0-SNAPSHOT
  */
 @Service
 @WebService(endpointInterface = "org.kuali.mobility.auth.service.AuthService")
 public class AuthServiceImpl implements AuthService {
-	
-	/** A reference to a logger */
-	private static final Logger LOG = LoggerFactory.getLogger( AuthServiceImpl.class );
 
-    @Context
-    private MessageContext messageContext;
+	/**
+	 * A reference to a logger
+	 */
+	private static final Logger LOG = LoggerFactory.getLogger(AuthServiceImpl.class);
+
+	@Context
+	private MessageContext messageContext;
 
 	/**
 	 * A reference to the <code>AuthDao</code>.
 	 */
-	@Resource(name="authDao")
-    private AuthDao dao;
+	@Resource(name = "authDao")
+	private AuthDao dao;
 
-    @Override
-    @POST
-    @Path("/login")
-    public AuthResponse authenticate(@FormParam("loginName") String loginName,
-        @FormParam("password") String password) {
-        AuthResponse response = getDao().authenticate(loginName,password);
+	@Override
+	@POST
+	@Path("/login")
+	public AuthResponse authenticate(@FormParam("loginName") String loginName,
+									 @FormParam("password") String password) {
+		AuthResponse response = getDao().authenticate(loginName, password);
 
-        if( response.didAuthenticate() ) {
-            HttpServletRequest request;
-            if( getMessageContext() != null ) {
-                request = (HttpServletRequest) getMessageContext().getHttpServletRequest();
-            } else {
-                request = (HttpServletRequest) PhaseInterceptorChain.getCurrentMessage().get("HTTP.REQUEST");
-            }
-            HttpSession session = request.getSession();
-            session.setAttribute(AuthenticationConstants.KME_USER_KEY,response.getUser());
-        }
+		if (response.didAuthenticate()) {
+			HttpServletRequest request;
+			if (getMessageContext() != null) {
+				request = (HttpServletRequest) getMessageContext().getHttpServletRequest();
+			} else {
+				request = (HttpServletRequest) PhaseInterceptorChain.getCurrentMessage().get("HTTP.REQUEST");
+			}
+			HttpSession session = request.getSession();
+			session.setAttribute(AuthenticationConstants.KME_USER_KEY, response.getUser());
+		}
 
-        response.setUser(null);
+		response.setUser(null);
 
-        return response;
-    }
+		return response;
+	}
 
 	/**
 	 * Sets the reference to the <code>AuthDao</code>.
+	 *
 	 * @param dao The reference to the <code>AuthDao</code>.
 	 */
 	public void setDao(AuthDao dao) {
 		this.dao = dao;
 	}
-	
+
 	/**
 	 * Gets the reference to the <code>AuthDao</code>.
+	 *
 	 * @returns The reference to the <code>AuthDao</code>.
 	 */
 	public AuthDao getDao() {
 		return dao;
 	}
 
-    public MessageContext getMessageContext() {
-        return messageContext;
-    }
+	public MessageContext getMessageContext() {
+		return messageContext;
+	}
 
-    public void setMessageContext(MessageContext messageContext) {
-        this.messageContext = messageContext;
-    }
+	public void setMessageContext(MessageContext messageContext) {
+		this.messageContext = messageContext;
+	}
 }

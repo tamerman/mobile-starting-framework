@@ -40,7 +40,7 @@ var cacheProperties = {
 // Get the total number of files in the cache manifest - manually parse the manifest file.
 function getTotalFiles() {
     // Init.
-    console.info("Entering getTotalFiles()");
+	console.info("Entering getTotalFiles()");
     cacheProperties.filesDownloaded = 0;
     cacheProperties.totalFiles = 0;
 
@@ -92,45 +92,34 @@ function displayProgress() {
         var percentDownloaded = 0;
 
         percentDownloaded = (cacheProperties.filesDownloaded / cacheProperties.totalFiles) * 100;
-        if (percentDownloaded > 99) {
-            percentDownloaded = 99;
-        }
+        if (percentDownloaded > 99) { percentDownloaded = 99; }
 
         var progressBar = '<div id="appcacheProgressBar"><div id="appcacheProgressAmount" style="width:' + percentDownloaded.toFixed() + '%">&nbsp;' + percentDownloaded.toFixed() + '%</div></div>';
         cacheProgress.html(progressBar);
 
-        if (percentDownloaded > 1) {
-            cacheProgressText.text("Downloading KME App Foundation...");
-            if (percentDownloaded > 20) {
-                cacheProgressText.text("Updating Session Schedules...");
-                if (percentDownloaded > 30) {
-                    cacheProgressText.text("Downloading Monday Schedule...");
-                    if (percentDownloaded > 35) {
-                        cacheProgressText.text("Downloading Tuesday Schedule...");
-                        if (percentDownloaded > 41) {
-                            cacheProgressText.text("Downloading Wednesday Schedule...");
-                            if (percentDownloaded > 58) {
-                                cacheProgressText.text("Processing Sessions Schedule...");
-                                if (percentDownloaded > 66) {
-                                    cacheProgressText.text("Updating Caches...");
-                                    if (percentDownloaded > 75) {
-                                        cacheProgressText.text("Downloading Map Data...");
-                                        if (percentDownloaded > 90) {
-                                            cacheProgressText.text("Processing HTML5 AppCache...");
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        if (percentDownloaded > 1) { cacheProgressText.text("Downloading KME App Foundation...");
+	        if (percentDownloaded > 20) { cacheProgressText.text("Updating Session Schedules...");
+		        if (percentDownloaded > 30) { cacheProgressText.text("Downloading Monday Schedule...");
+		        	if (percentDownloaded > 35) { cacheProgressText.text("Downloading Tuesday Schedule...");
+			        	if (percentDownloaded > 41) { cacheProgressText.text("Downloading Wednesday Schedule...");
+				        	if (percentDownloaded > 58) { cacheProgressText.text("Processing Sessions Schedule...");
+					        	if (percentDownloaded > 66) { cacheProgressText.text("Updating Caches...");
+						        	if (percentDownloaded > 75) { cacheProgressText.text("Downloading Map Data...");
+							        	if (percentDownloaded > 90) { cacheProgressText.text("Processing HTML5 AppCache...");
+							            }
+						            }
+					            }
+				            }
+			            }
+		        	}
+		        }
+	        }
+	    }
 
         /*if (percentDownloaded > 95) {
-         $('div#cacheProgressModal').fadeOut();
-         $('div#cacheProgressMessage').fadeOut();
-         }*/
+        	$('div#cacheProgressModal').fadeOut();
+            $('div#cacheProgressMessage').fadeOut();
+        }*/
     } else {
         // If we don't know the total number of files, just output the running total.
         //cacheProgress.text(cacheProperties.filesDownloaded + " files downloaded.");
@@ -139,10 +128,10 @@ function displayProgress() {
 
 // Bind the manual update link.
 manualUpdate.click(function (event) {
-    // Prevent the default event.
-    event.preventDefault();
-    // Manually ask the cache to update.
-    appCache.update();
+	// Prevent the default event.
+	event.preventDefault();
+	// Manually ask the cache to update.
+	appCache.update();
 });
 
 // Bind to online/offline events.
@@ -158,14 +147,14 @@ appStatus.text(navigator.onLine ? "Online" : "Offline");
 // is checking for an udpated manifest file or is attempting
 // to download it for the first time.
 $(appCache).bind("checking", function (event) {
-    //alert('checking for new manifest');
+	//alert('checking for new manifest');
     // Do nothing.
 });
 
 // There is no update to the manifest file that has just been checked.
 $(appCache).bind("noupdate", function (event) {
-    // Do nothing.
-    //alert('Cache NoUpdate');
+	// Do nothing.
+	//alert('Cache NoUpdate');
 });
 
 // The browser is downloading the files defined in the cache manifest.
@@ -178,7 +167,7 @@ $(appCache).bind("downloading", function (event) {
 //	      $('div#cacheProgressMessage').fadeOut();
 //	  }, 100000)); // 100 second timeout
 //	}
-    );
+	);
 
     $('div#cacheProgressMessage').css('top', '60px');
     // Get the total number of files in our manifest.
@@ -196,7 +185,7 @@ $(appCache).bind("progress", function (event) {
 $(appCache).bind("cached", function (event) {
     $('div#cacheProgressModal').fadeOut();
     $('div#cacheProgressMessage').fadeOut(1000, function () {
-        window.location.reload();
+    	window.location.reload();
     });
     //alert('Cache Cached');
 });
@@ -205,7 +194,7 @@ $(appCache).bind("cached", function (event) {
 $(appCache).bind("updateready", function (event) {
     $('div#cacheProgressModal').fadeOut();
     $('div#cacheProgressMessage').fadeOut(1000, function () {
-        window.location.reload();
+    	window.location.reload();
     });
     //alert('Cache UpdateReady');
     appCache.swapCache();
@@ -213,14 +202,14 @@ $(appCache).bind("updateready", function (event) {
 
 // The cache manifest cannot be found.
 $(appCache).bind("obsolete", function (event) {
-    $('div#cacheProgressModal').fadeOut();
+	$('div#cacheProgressModal').fadeOut();
     $('div#cacheProgressMessage').fadeOut();
     //alert('Cache Obsolete');
 });
 
 // An error occurred.
 $(appCache).bind("error", function (event) {
-    $('div#cacheProgressModal').fadeOut();
+	$('div#cacheProgressModal').fadeOut();
     $('div#cacheProgressMessage').fadeOut();
     //alert('Cache Error');
 });

@@ -104,8 +104,6 @@
 		<project.scm.vendor>git</project.scm.vendor>
 		<project.license.url>http://opensource.org/licenses/MIT</project.license.url>
 		<!-- DevOps tweaks -->
-        <kuali.release.goals>deploy</kuali.release.goals>
-        <kuali.release.arguments>-DskipTests</kuali.release.arguments>
         <maven.min.version>3.0.4</maven.min.version>
         <project.jdk.min.version>1.7.0-21</project.jdk.min.version>
         <enforcer.phase>validate</enforcer.phase>
